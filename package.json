@@ -1,0 +1,26 @@
+{
+  "name": "ai-radar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Persoonlijk, statisch overzicht van praktische AI-coding-ontwikkelingen.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "ingest": "node --experimental-strip-types scripts/ingest.ts",
+    "test": "node --experimental-strip-types --test scripts/lib/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint scripts web",
+    "build": "node --experimental-strip-types scripts/build-site.ts",
+    "check": "npm test && npm run typecheck && npm run lint"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^22.19.0",
+    "eslint": "^9.39.1",
+    "globals": "^16.4.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3"
+  }
+}
