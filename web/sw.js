@@ -1,4 +1,4 @@
-const CACHE = "ai-radar-v1";
+const CACHE = "ai-radar-v2";
 const SHELL = [
   "./",
   "./index.html",
@@ -29,6 +29,15 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+  const path = new URL(event.request.url).pathname;
+  if (path.includes("/data/") && path.endsWith(".json")) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => response)
+        .catch(() => caches.match(event.request)),
+    );
+    return;
+  }
   event.respondWith(
     fetch(event.request)
       .then((response) => {

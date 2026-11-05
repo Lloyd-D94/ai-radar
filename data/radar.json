@@ -1,0 +1,405 @@
+{
+  "generatedAt": "2026-11-05T07:44:00.000Z",
+  "updates": [
+    {
+      "id": "upd-grok-bot-bellen",
+      "date": "2026-11-04T21:45:34.248Z",
+      "tool": "Grok Bot",
+      "title_nl": "Grok Bot kan telefoongesprekken voeren",
+      "summary_nl": "Grok Bot voert telefoongesprekken in de VS: de bot wacht, loopt menu’s door en praat met mensen. Mensen laten de bot bellen voor afspraken, om een abonnement op te zeggen, een collega te bellen of een vlucht te herboeken.",
+      "can_do_nl": [
+        "Een afspraak laten maken door Grok Bot te laten bellen",
+        "Een abonnement laten opzeggen via een telefoongesprek",
+        "Een collega laten bellen",
+        "Een airline laten bellen om een vlucht te herboeken",
+        "Een gesprek laten voeren waarin de bot wacht, menu’s doorloopt en met een mens praat"
+      ],
+      "example_ids": [
+        "ex-mntruell-bellen",
+        "ex-eric-airline",
+        "ex-rundown-calls"
+      ],
+      "source_urls": [
+        "https://x.com/mntruell/status/2118054007579296069",
+        "https://x.com/ericzakariasson/status/2118097345829052427",
+        "https://x.com/TheRundownAI/status/2118057565607367147"
+      ],
+      "importance": 5,
+      "seed": true
+    },
+    {
+      "id": "upd-grok-build-multi-agent",
+      "date": "2026-11-05T02:58:54.487Z",
+      "tool": "Grok Build",
+      "title_nl": "Multi-agent workflows in Grok Build",
+      "summary_nl": "Een Grok Build-update maakt multi-agent workflows betrouwbaarder. Background agents zijn zichtbaar op het dashboard.",
+      "can_do_nl": [
+        "Multi-agent workflows draaien die betrouwbaarder zijn",
+        "Background agents op het dashboard zien"
+      ],
+      "example_ids": ["ex-xfreeze-multi-agent"],
+      "source_urls": ["https://x.com/XFreeze/status/2118176199746965741"],
+      "importance": 5,
+      "seed": true
+    },
+    {
+      "id": "upd-grok-build-1077",
+      "date": "2026-11-05T04:47:34.427Z",
+      "tool": "Grok Build",
+      "title_nl": "Grok Build 1.0.77",
+      "summary_nl": "De release notes van Grok Build 1.0.77 noemen Shift+Enter voor een nieuwe regel. In dezelfde notities staat dat een MCP-server verbindt.",
+      "can_do_nl": [
+        "Met Shift+Enter een nieuwe regel invoegen",
+        "Een MCP-server verbinden"
+      ],
+      "example_ids": ["ex-blank-1077"],
+      "source_urls": ["https://x.com/blankspeaker/status/2118203546357391509"],
+      "importance": 4,
+      "seed": true
+    },
+    {
+      "id": "upd-grok-bot-slack",
+      "date": "2026-11-05T03:11:06.641Z",
+      "tool": "Grok Bot",
+      "title_nl": "Team-bots in Slack en op de desktop",
+      "summary_nl": "Grok Bot-team-bots draaien in Slack en op de desktop van een Mac mini. De post laat de orkestratie in de praktijk zien.",
+      "can_do_nl": [
+        "Een team-bot in Slack laten meedraaien",
+        "Een team-bot op de desktop van een Mac mini draaien",
+        "Bots in de praktijk laten orkestreren"
+      ],
+      "example_ids": ["ex-bacon-slack"],
+      "source_urls": ["https://x.com/Baconbrix/status/2118179270623453255"],
+      "importance": 4,
+      "seed": true
+    },
+    {
+      "id": "upd-grok-bot-tryon",
+      "date": "2026-11-04T21:16:07.034Z",
+      "tool": "Grok Bot",
+      "title_nl": "Virtual try-on op je selfie",
+      "summary_nl": "Een test laat zien dat Grok Bot een product virtueel op je selfie past.",
+      "can_do_nl": [
+        "Een product virtueel op je selfie laten passen",
+        "Op een selfie zien hoe een product eruitziet"
+      ],
+      "example_ids": ["ex-blank-tryon"],
+      "source_urls": ["https://x.com/blankspeaker/status/2118089933596610865"],
+      "importance": 4,
+      "seed": true
+    },
+    {
+      "id": "upd-grok-bot-shoppen",
+      "date": "2026-11-03T21:52:00.589Z",
+      "tool": "Grok Bot",
+      "title_nl": "Shoppen via Grok Bot",
+      "summary_nl": "Shoppen via Grok Bot is verbeterd. Er is een nieuwe commerce-flow.",
+      "can_do_nl": [
+        "Shoppen via Grok Bot",
+        "De nieuwe commerce-flow voor shoppen gebruiken"
+      ],
+      "example_ids": ["ex-mili-shop"],
+      "source_urls": ["https://x.com/milichab/status/2117736578395295970"],
+      "importance": 3,
+      "seed": true
+    },
+    {
+      "id": "upd-grok-bot-marketing",
+      "date": "2026-11-04T21:04:43.699Z",
+      "tool": "Grok Bot",
+      "title_nl": "Negen Grok Bots voor marketing",
+      "summary_nl": "Een builder zette negen Grok Bots op marketing. Binnen één dag kwam er een sponsor van $99 per maand binnen, en backlinks liepen geautomatiseerd.",
+      "can_do_nl": [
+        "Meerdere Grok Bots op marketing zetten",
+        "Een sponsor laten binnenhalen, in dit voorbeeld $99 per maand binnen één dag",
+        "Backlinks laten automatiseren"
+      ],
+      "example_ids": ["ex-paul-marketing"],
+      "source_urls": ["https://x.com/0xPaulvibe/status/2118087067481629045"],
+      "importance": 3,
+      "seed": true
+    },
+    {
+      "id": "upd-claude-linear",
+      "date": "2026-11-04T18:42:00.377Z",
+      "tool": "Claude Code",
+      "title_nl": "Claude Code en Codex vanaf een Linear-ticket",
+      "summary_nl": "Claude Code en Codex draaien in de cloud vanaf een Linear-ticket. Bij grote tickets gaan parallelle agents aan het werk.",
+      "can_do_nl": [
+        "Een Linear-ticket als startpunt nemen voor Claude Code in de cloud",
+        "Codex in de cloud vanaf hetzelfde ticket laten meedraaien",
+        "Bij een groot ticket parallelle agents inzetten"
+      ],
+      "example_ids": ["ex-svpino-linear"],
+      "source_urls": ["https://x.com/svpino/status/2118051150306173116"],
+      "importance": 4,
+      "seed": true
+    },
+    {
+      "id": "upd-claude-workflows",
+      "date": "2026-09-18T18:04:08.989Z",
+      "tool": "Claude Code",
+      "title_nl": "Workflows, mods en AGENTS.md in Claude Code",
+      "summary_nl": "De maker van Claude Code laat workflows, mods en extensibility in productie zien. Een andere post laat AGENTS.md, mods en gebruik buiten coderen zien.",
+      "can_do_nl": [
+        "Workflows in Claude Code in productie draaien",
+        "Mods en extensibility gebruiken",
+        "AGENTS.md gebruiken om de agent te sturen",
+        "Claude Code inzetten voor taken die geen code zijn"
+      ],
+      "example_ids": ["ex-bcherny-workflows", "ex-trq-agents"],
+      "source_urls": [
+        "https://x.com/bcherny/status/2095590515765060076",
+        "https://x.com/trq212/status/2101009393731223817"
+      ],
+      "importance": 4,
+      "seed": true
+    }
+  ],
+  "examples": [
+    {
+      "id": "ex-xfreeze-multi-agent",
+      "date": "2026-11-05T02:58:54.487Z",
+      "author_handle": "XFreeze",
+      "post_url": "https://x.com/XFreeze/status/2118176199746965741",
+      "note_nl": "Grok Build-update: multi-agent workflows betrouwbaarder, background agents zichtbaar op het dashboard.",
+      "tool": "Grok Build",
+      "kind": "workflow",
+      "from_followed": true,
+      "seed": true
+    },
+    {
+      "id": "ex-blank-1077",
+      "date": "2026-11-05T04:47:34.427Z",
+      "author_handle": "blankspeaker",
+      "post_url": "https://x.com/blankspeaker/status/2118203546357391509",
+      "note_nl": "Grok Build v1.0.77 release notes: Shift+Enter voor nieuwe regels, en een MCP-server die verbindt.",
+      "tool": "Grok Build",
+      "kind": "release",
+      "from_followed": true,
+      "seed": true
+    },
+    {
+      "id": "ex-blank-tryon",
+      "date": "2026-11-04T21:16:07.034Z",
+      "author_handle": "blankspeaker",
+      "post_url": "https://x.com/blankspeaker/status/2118089933596610865",
+      "note_nl": "Grok Bot-test: virtual try-on van producten op je selfie.",
+      "tool": "Grok Bot",
+      "kind": "demo",
+      "from_followed": true,
+      "seed": true
+    },
+    {
+      "id": "ex-mntruell-bellen",
+      "date": "2026-11-04T18:53:21.604Z",
+      "author_handle": "mntruell",
+      "post_url": "https://x.com/mntruell/status/2118054007579296069",
+      "note_nl": "Grok Bot belt voor afspraken, zegt abonnementen op of belt collega’s.",
+      "tool": "Grok Bot",
+      "kind": "demo",
+      "from_followed": false,
+      "seed": true
+    },
+    {
+      "id": "ex-eric-airline",
+      "date": "2026-11-04T21:45:34.248Z",
+      "author_handle": "ericzakariasson",
+      "post_url": "https://x.com/ericzakariasson/status/2118097345829052427",
+      "note_nl": "Grok Bot belt airlines om vluchten te herboeken, en dat werkt echt.",
+      "tool": "Grok Bot",
+      "kind": "demo",
+      "from_followed": false,
+      "seed": true
+    },
+    {
+      "id": "ex-rundown-calls",
+      "date": "2026-11-04T19:07:29.904Z",
+      "author_handle": "TheRundownAI",
+      "post_url": "https://x.com/TheRundownAI/status/2118057565607367147",
+      "note_nl": "Grok Bot kan telefoongesprekken in de VS voeren: wachten, menu’s en met mensen praten.",
+      "tool": "Grok Bot",
+      "kind": "demo",
+      "from_followed": false,
+      "seed": true
+    },
+    {
+      "id": "ex-bacon-slack",
+      "date": "2026-11-05T03:11:06.641Z",
+      "author_handle": "Baconbrix",
+      "post_url": "https://x.com/Baconbrix/status/2118179270623453255",
+      "note_nl": "Grok Bot-team-bots in Slack en op de desktop van een Mac mini, orkestratie in de praktijk.",
+      "tool": "Grok Bot",
+      "kind": "workflow",
+      "from_followed": false,
+      "seed": true
+    },
+    {
+      "id": "ex-paul-marketing",
+      "date": "2026-11-04T21:04:43.699Z",
+      "author_handle": "0xPaulvibe",
+      "post_url": "https://x.com/0xPaulvibe/status/2118087067481629045",
+      "note_nl": "Negen Grok Bots voor marketing: een sponsor van $99 per maand binnen één dag, backlinks geautomatiseerd.",
+      "tool": "Grok Bot",
+      "kind": "workflow",
+      "from_followed": false,
+      "seed": true
+    },
+    {
+      "id": "ex-mili-shop",
+      "date": "2026-11-03T21:52:00.589Z",
+      "author_handle": "milichab",
+      "post_url": "https://x.com/milichab/status/2117736578395295970",
+      "note_nl": "Shoppen via Grok Bot is verbeterd, met een nieuwe commerce-flow.",
+      "tool": "Grok Bot",
+      "kind": "demo",
+      "from_followed": false,
+      "seed": true
+    },
+    {
+      "id": "ex-bcherny-workflows",
+      "date": "2026-09-03T19:11:27.804Z",
+      "author_handle": "bcherny",
+      "post_url": "https://x.com/bcherny/status/2095590515765060076",
+      "note_nl": "De maker van Claude Code laat workflows, mods en extensibility in productie zien.",
+      "tool": "Claude Code",
+      "kind": "workflow",
+      "from_followed": false,
+      "seed": true
+    },
+    {
+      "id": "ex-trq-agents",
+      "date": "2026-09-18T18:04:08.989Z",
+      "author_handle": "trq212",
+      "post_url": "https://x.com/trq212/status/2101009393731223817",
+      "note_nl": "Claude Code: AGENTS.md, mods en gebruik dat geen code is.",
+      "tool": "Claude Code",
+      "kind": "tutorial",
+      "from_followed": false,
+      "seed": true
+    },
+    {
+      "id": "ex-svpino-linear",
+      "date": "2026-11-04T18:42:00.377Z",
+      "author_handle": "svpino",
+      "post_url": "https://x.com/svpino/status/2118051150306173116",
+      "note_nl": "Claude Code en Codex in de cloud vanaf een Linear-ticket, met parallelle agents bij grote tickets.",
+      "tool": "Claude Code",
+      "kind": "workflow",
+      "from_followed": false,
+      "seed": true
+    }
+  ],
+  "startups": [
+    {
+      "id": "startup-conductor",
+      "name": "Conductor",
+      "handle": "conductor_build",
+      "url": "https://x.com/conductor_build",
+      "one_liner_nl": "Team van coding agents, lokaal op een Mac en in de cloud.",
+      "why_new_nl": "Het voegt een team van coding agents toe dat zowel op je Mac als in de cloud draait.",
+      "date_found": "2026-11-04T18:19:50.473Z",
+      "proof_url": "https://x.com/conductor_build/status/2118045572284526788",
+      "seed": true
+    },
+    {
+      "id": "startup-amp",
+      "name": "Amp",
+      "handle": "AmpCode",
+      "url": "https://x.com/AmpCode",
+      "one_liner_nl": "Frontier multi-model coding agent, met wortels bij Sourcegraph.",
+      "why_new_nl": "Een frontier coding agent die meerdere modellen gebruikt.",
+      "date_found": "2026-11-04T15:00:01.732Z",
+      "proof_url": "https://x.com/AmpCode/status/2117995287859929166",
+      "seed": true
+    },
+    {
+      "id": "startup-nitpick",
+      "name": "Nitpick",
+      "handle": "brimskeau",
+      "url": "https://x.com/brimskeau",
+      "one_liner_nl": "Amsterdam: in-app feedback voor AI coding agents.",
+      "why_new_nl": "Feedback zit in de app zelf en is gericht op AI coding agents.",
+      "date_found": "2026-10-20T15:30:47.436Z",
+      "proof_url": "https://x.com/brimskeau/status/2112567211319533659",
+      "seed": true
+    },
+    {
+      "id": "startup-cline",
+      "name": "Cline",
+      "handle": "cline",
+      "url": "https://x.com/cline",
+      "one_liner_nl": "Open-source coding agent voor editor, terminal en browser.",
+      "why_new_nl": "Eén open-source agent die in de editor, de terminal en de browser werkt.",
+      "date_found": "2026-10-29T19:13:55.123Z",
+      "proof_url": "https://x.com/cline/status/2115884854139380134",
+      "seed": true
+    },
+    {
+      "id": "startup-kilo",
+      "name": "Kilo",
+      "handle": "kilocode",
+      "url": "https://x.com/kilocode",
+      "one_liner_nl": "Open-source platform voor agentic engineering, met meer dan 500 modellen.",
+      "why_new_nl": "Agentic engineering met een keuze uit meer dan 500 modellen.",
+      "date_found": "2026-11-02T20:22:21.783Z",
+      "proof_url": "https://x.com/kilocode/status/2117351630182232537",
+      "seed": true
+    },
+    {
+      "id": "startup-opencode",
+      "name": "OpenCode",
+      "handle": "opencode",
+      "url": "https://x.com/opencode",
+      "one_liner_nl": "Open-source coding agent met snelle feature-releases.",
+      "why_new_nl": "Een open-source coding agent die features snel uitbrengt.",
+      "date_found": "2026-11-05T00:15:34.022Z",
+      "proof_url": "https://x.com/opencode/status/2118135093617393774",
+      "seed": true
+    },
+    {
+      "id": "startup-warp",
+      "name": "Warp",
+      "handle": "warpdotdev",
+      "url": "https://x.com/warpdotdev",
+      "one_liner_nl": "Agentic terminal en infra voor een software-fabriek.",
+      "why_new_nl": "De terminal wordt een agent, als infra voor een software-fabriek.",
+      "date_found": "2026-11-04T18:19:44.203Z",
+      "proof_url": "https://x.com/warpdotdev/status/2118045545986240919",
+      "seed": true
+    },
+    {
+      "id": "startup-firecrawl",
+      "name": "Firecrawl",
+      "handle": "firecrawl",
+      "url": "https://x.com/firecrawl",
+      "one_liner_nl": "Webdata voor AI agents en enrichment-pipelines.",
+      "why_new_nl": "Agents kunnen het web als databron gebruiken, inclusief enrichment.",
+      "date_found": "2026-11-02T16:47:34.293Z",
+      "proof_url": "https://x.com/firecrawl/status/2117297576131060140",
+      "seed": true
+    },
+    {
+      "id": "startup-browserbase",
+      "name": "Browserbase",
+      "handle": "browserbase",
+      "url": "https://x.com/browserbase",
+      "one_liner_nl": "Browser-infra voor agents, met Stagehand.",
+      "why_new_nl": "Browser-infra zodat agents het web kunnen bedienen, via Stagehand.",
+      "date_found": "2026-11-02T20:20:29.034Z",
+      "proof_url": "https://x.com/browserbase/status/2117351157278625827",
+      "seed": true
+    },
+    {
+      "id": "startup-thinking-machines",
+      "name": "Thinking Machines",
+      "handle": "thinkymachines",
+      "url": "https://x.com/thinkymachines",
+      "one_liner_nl": "Lab van Mira Murati; klanten maken eigen cutting-edge modellen.",
+      "why_new_nl": "Klanten kunnen er hun eigen cutting-edge modellen maken.",
+      "date_found": "2026-10-15T21:53:50.492Z",
+      "proof_url": "https://x.com/thinkymachines/status/2110851669915570685",
+      "seed": true
+    }
+  ]
+}

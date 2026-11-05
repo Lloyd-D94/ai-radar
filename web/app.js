@@ -1,4 +1,29 @@
-const CATEGORIES = {
+const TABS = [
+  ["vandaag", "Vandaag"],
+  ["voorbeelden", "Voorbeelden"],
+  ["startups", "Startups"],
+  ["ontdek", "Ontdek"],
+  ["zoeken", "Zoeken"],
+  ["bronnen", "Bronnen"],
+];
+
+const ACCOUNT_CATS = {
+  official_product: "Officieel product",
+  builder_demo: "Builders en demo’s",
+  engineer_explainer: "Uitleg",
+  founder_investor: "Oprichters en investeerders",
+  xai_grok: "xAI en Grok",
+  dutch_eu: "Nederland en Europa",
+};
+
+const KINDS = {
+  demo: "Demo",
+  workflow: "Workflow",
+  release: "Release",
+  tutorial: "Tutorial",
+};
+
+const RELEASE_CATS = {
   "nieuwe-functie": "Nieuwe functie",
   prijswijziging: "Prijswijziging",
   model: "Model",
@@ -8,46 +33,29 @@ const CATEGORIES = {
   overig: "Overig",
 };
 
-const TABS = [
-  ["vandaag", "Vandaag"],
-  ["week", "Week"],
-  ["kennisbank", "Kennisbank"],
-  ["bronnen", "Bronnen"],
-];
-
 const app = document.querySelector("#app");
 const state = {
   tab: "vandaag",
+  radar: { updates: [], examples: [], startups: [] },
+  accounts: [],
   items: [],
   sources: [],
   tools: [],
   generatedAt: null,
   error: "",
-  shown: 30,
-  filters: {
-    q: "",
-    tool: "",
-    category: "",
-    minScore: 4,
-    from: "",
-    patches: false,
-    community: false,
-  },
+  shown: 20,
+  examples: { tool: "", kind: "", onlyNew: true },
+  ontdek: { q: "", category: "" },
+  zoek: "",
+  bronnenMore: 20,
 };
 
 const dateFmt = new Intl.DateTimeFormat("nl-NL", {
   timeZone: "Europe/Amsterdam",
   day: "numeric",
   month: "short",
-  year: "numeric",
 });
-const timeFmt = new Intl.DateTimeFormat("nl-NL", {
-  timeZone: "Europe/Amsterdam",
-  day: "numeric",
-  month: "short",
-  hour: "2-digit",
-  minute: "2-digit",
-});
+const followersFmt = new Intl.NumberFormat("nl-NL");
 
 function esc(value) {
   return String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -59,274 +67,270 @@ function esc(value) {
   })[char]);
 }
 
-function toolLabel(id) {
-  return state.tools.find((tool) => tool.id === id)?.label ?? id;
-}
-
-function sourceName(id) {
-  return state.sources.find((source) => source.id === id)?.name ?? id;
-}
-
-function categoryLabel(id) {
-  return CATEGORIES[id] ?? id;
-}
-
-function host(url) {
-  try {
-    return new URL(url).hostname.replace(/^www\./, "");
-  } catch {
-    return "bron";
-  }
-}
-
 function formatDate(iso) {
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return "datum onbekend";
   return dateFmt.format(date);
 }
 
-function formatStamp(iso) {
-  const date = new Date(iso);
-  if (!iso || Number.isNaN(date.getTime())) return "nog niet";
-  return timeFmt.format(date);
+function inLastDays(iso, days) {
+  const time = Date.parse(iso);
+  if (Number.isNaN(time)) return false;
+  const delta = Date.now() - time;
+  return delta <= days * 86_400_000 && delta >= -3_600_000;
 }
 
-function relative(iso) {
-  if (!iso) return "nog niet gelukt";
-  const delta = Date.now() - new Date(iso).getTime();
-  if (Number.isNaN(delta)) return "onbekend";
-  const minutes = Math.round(delta / 60000);
-  if (minutes < 2) return "zojuist";
-  if (minutes < 60) return `${minutes} min geleden`;
-  const hours = Math.round(minutes / 60);
-  if (hours < 24) return `${hours} uur geleden`;
-  const days = Math.round(hours / 24);
-  if (days === 1) return "gisteren";
-  if (days < 21) return `${days} dagen geleden`;
-  return formatDate(iso);
+function byImportance(a, b) {
+  if (b.importance !== a.importance) return b.importance - a.importance;
+  return Date.parse(b.date) - Date.parse(a.date);
 }
 
-function passesDefault(item) {
-  return item.score >= 4 || item.belangrijk;
+function toolLabel(id) {
+  return state.tools.find((tool) => tool.id === id)?.label ?? id;
 }
 
-function bySignal(left, right) {
-  const rank = { primair: 0, secundair: 1, community: 2 };
-  const priority = (rank[left.priority] ?? 9) - (rank[right.priority] ?? 9);
-  if (priority !== 0) return priority;
-  if (right.score !== left.score) return right.score - left.score;
-  return Date.parse(right.publishedAt) - Date.parse(left.publishedAt);
+function exampleById(id) {
+  return state.radar.examples.find((item) => item.id === id);
 }
 
-function highlights() {
-  const cutoff = Date.now() - 21 * 86400000;
-  return state.items
-    .filter((item) => Date.parse(item.publishedAt) >= cutoff)
-    .filter((item) => item.score >= 5 || (item.belangrijk && item.score >= 4))
-    .filter((item) => !(item.isPatch && !item.belangrijk))
-    .sort(bySignal)
-    .slice(0, 4);
+function dots(score, label) {
+  const bits = [1, 2, 3, 4, 5].map((step) => `<i class="${step <= score ? "" : "off"}"></i>`).join("");
+  return `<span class="score" role="img" aria-label="${esc(label)} ${score} van 5">${bits}</span>`;
 }
 
-function latestPriority(tool) {
-  const list = state.items.filter((item) => item.tool === tool);
-  const preferred = list.filter((item) => item.sourceId === "grok-build" || item.sourceId === "releasebot-xai");
-  const pool = tool === "grok-build" && preferred.length ? preferred : list;
-  return [...pool].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt))[0] ?? null;
+function xLink(url, text) {
+  return `<a class="x" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(text)}</a>`;
 }
 
-function scoreTicks(score) {
-  const bits = [1, 2, 3, 4, 5]
-    .map((step) => `<i class="${step <= score ? "" : "off"}"></i>`)
-    .join("");
-  return `<span class="score" role="img" aria-label="Relevantie ${score} van 5">${bits}</span>`;
-}
-
-function card(item) {
-  const also = item.alsoSeenAt?.length
-    ? `<p class="also">Ook gezien bij ${item.alsoSeenAt.map((seen) => esc(sourceName(seen.sourceId))).join(", ")}</p>`
-    : "";
-  const reasons = (item.scoreReasons ?? []).map((reason) => `<li>${esc(reason)}</li>`).join("");
-  return `<article class="card ${item.priority === "primair" ? "primary" : ""}">
+function exampleRow(example) {
+  if (!example) return "";
+  return `<article class="example">
     <div class="meta">
-      <span class="tool">${esc(toolLabel(item.tool))}</span>
-      <span class="cat">${esc(categoryLabel(item.category))}</span>
-      ${item.isPatch ? '<span class="pill">patch</span>' : ""}
-      ${item.belangrijk ? '<span class="pill">belangrijk</span>' : ""}
-      ${scoreTicks(item.score)}
+      <span class="tool">${esc(example.tool)}</span>
+      <span class="pill">${esc(KINDS[example.kind] ?? example.kind)}</span>
+      ${example.from_followed ? '<span class="pill">volg je al</span>' : '<span class="pill new">nog niet gevolgd</span>'}
     </div>
-    <h3><a href="${esc(item.url)}">${esc(item.title)}</a></h3>
-    <p class="when">${esc(formatDate(item.publishedAt))}${item.points ? ` · ${item.points} punten` : ""}</p>
-    ${item.excerpt ? `<p class="excerpt">${esc(item.excerpt)}</p>` : ""}
-    ${item.actionLine ? `<p class="action"><span>Nu</span> ${esc(item.actionLine)}</p>` : ""}
-    ${also}
-    <details class="why"><summary>Waarom deze score</summary><ul>${reasons}</ul></details>
-    <a class="source" href="${esc(item.url)}">Bron op ${esc(host(item.url))}</a>
+    <p class="who">@${esc(example.author_handle)} · ${esc(formatDate(example.date))}</p>
+    <p class="excerpt">${esc(example.note_nl)}</p>
+    ${xLink(example.post_url, "Open op X")}
   </article>`;
 }
 
-function priorityBlock() {
-  const tools = ["grok-build", "grok-bot"];
-  const cards = tools
-    .map((tool) => {
-      const item = latestPriority(tool);
-      if (!item) {
-        return `<article class="card primary"><h3>${esc(toolLabel(tool))}</h3><p class="quiet">Nog geen item. Kijk bij Bronnen of de feed gezond is.</p></article>`;
-      }
-      const fresh = Date.now() - Date.parse(item.publishedAt) <= 24 * 3600 * 1000;
-      const note = fresh ? "" : `<p class="quiet">Laatste release, ouder dan 24 uur.</p>`;
-      return `<div>${card(item)}${note}</div>`;
-    })
-    .join("");
-  return `<section><h2>Grok, bovenaan</h2><div class="pair">${cards}</div></section>`;
+function updateCard(update) {
+  const examples = update.example_ids.map(exampleById).filter(Boolean);
+  return `<article class="card">
+    <div class="meta">
+      <span class="tool">${esc(update.tool)}</span>
+      ${update.seed ? '<span class="pill">startset</span>' : ""}
+      ${dots(update.importance, "Belang")}
+    </div>
+    <h3>${esc(update.title_nl)}</h3>
+    <p class="when">${esc(formatDate(update.date))}</p>
+    <p class="excerpt">${esc(update.summary_nl)}</p>
+    <div class="cando">
+      <p>Dit kun je ermee</p>
+      <ul>${update.can_do_nl.map((point) => `<li>${esc(point)}</li>`).join("")}</ul>
+    </div>
+    ${examples.length ? `<div class="stack">${examples.map(exampleRow).join("")}</div>` : ""}
+  </article>`;
 }
 
-function highlightBlock() {
-  const items = highlights();
-  if (!items.length) return "";
-  return `<section aria-label="Grote ontwikkelingen"><h2>Grote ontwikkelingen</h2><div class="strip">${items.map(card).join("")}</div></section>`;
+function weekUpdates() {
+  return state.radar.updates.filter((update) => inLastDays(update.date, 7)).sort(byImportance);
 }
 
 function viewToday() {
-  const cutoff = Date.now() - 24 * 3600 * 1000;
-  const recent = state.items.filter((item) => Date.parse(item.publishedAt) >= cutoff);
-  const featured = new Set(
-    ["grok-build", "grok-bot"].map((tool) => latestPriority(tool)?.id).filter(Boolean),
-  );
-  const shown = recent
-    .filter(passesDefault)
-    .filter((item) => item.priority !== "community" && !featured.has(item.id));
-  const hiddenPatches = recent.filter((item) => item.isPatch && !item.belangrijk && !passesDefault(item)).length;
-  const body = shown.length
-    ? `<div class="stack">${shown.sort(bySignal).map(card).join("")}</div>`
-    : `<div class="empty"><p>Geen items met score 4 of hoger in de afgelopen 24 uur.</p><p>Belangrijke beveiligings-, prijs- en breaking-wijzigingen zouden hier wel staan.</p></div>`;
-  const patchNote = hiddenPatches
-    ? `<p class="note">${hiddenPatches} patchrelease${hiddenPatches === 1 ? "" : "s"} in dit etmaal weggelaten om ruis te beperken.</p>`
-    : "";
-  return `${highlightBlock()}${priorityBlock()}<section><h2>Afgelopen 24 uur</h2>${body}${patchNote}</section>`;
-}
-
-function viewWeek() {
-  const cutoff = Date.now() - 7 * 86400000;
-  const recent = state.items.filter((item) => Date.parse(item.publishedAt) >= cutoff && item.priority !== "community");
-  const primary = ["grok-build", "grok-bot"];
-  const rest = [];
-  for (const item of recent) if (!primary.includes(item.tool) && !rest.includes(item.tool)) rest.push(item.tool);
-  const order = [...primary, ...rest];
-  const blocks = order
-    .map((tool) => {
-      const all = recent.filter((item) => item.tool === tool);
-      const visible = all.filter(passesDefault).sort(bySignal);
-      const patches = all.filter((item) => item.isPatch && !item.belangrijk).length;
-      const latest = latestPriority(tool);
-      const head = `<header><h3>${esc(toolLabel(tool))}</h3><p class="quiet">${visible.length} relevant${patches ? ` · ${patches} patches` : ""}</p></header>`;
-      if (!all.length && primary.includes(tool)) {
-        const extra = latest ? `<p class="quiet">Geen updates deze week. Laatste: ${esc(latest.title)} (${esc(formatDate(latest.publishedAt))}).</p>` : `<p class="quiet">Geen updates deze week.</p>`;
-        return `<section class="tool-block">${head}${extra}</section>`;
-      }
-      if (!all.length) return "";
-      const top = visible.slice(0, 3).map(card).join("");
-      const empty = visible.length
-        ? `<div class="stack">${top}</div>`
-        : `<p class="quiet">Geen items boven de ruisdrempel.${patches ? ` ${patches} patchreleases niet uitgeschreven.` : ""}</p>`;
-      return `<section class="tool-block">${head}${empty}</section>`;
-    })
-    .join("");
-  const community = state.items.filter(
-    (item) => item.priority === "community" && Date.parse(item.publishedAt) >= cutoff,
-  );
-  const communityBlock = community.length
-    ? `<details class="community"><summary>Community (${community.length}, standaard verborgen)</summary><div class="stack">${community
-        .sort(bySignal)
-        .slice(0, 8)
-        .map(card)
-        .join("")}</div></details>`
-    : "";
-  return `${highlightBlock()}<section><h2>Afgelopen 7 dagen</h2><div class="tools">${blocks}</div>${communityBlock}</section>`;
-}
-
-function knowledgeItems() {
-  const query = state.filters.q.trim().toLowerCase();
-  return state.items.filter((item) => {
-    if (!state.filters.community && item.priority === "community") return false;
-    if (!state.filters.patches && item.isPatch && !item.belangrijk) return false;
-    if (item.score < Number(state.filters.minScore) && !item.belangrijk) return false;
-    if (state.filters.tool && item.tool !== state.filters.tool) return false;
-    if (state.filters.category && item.category !== state.filters.category) return false;
-    if (state.filters.from && item.publishedAt.slice(0, 10) < state.filters.from) return false;
-    if (!query) return true;
-    const haystack = [item.title, item.excerpt, item.actionLine, toolLabel(item.tool), categoryLabel(item.category), item.url]
-      .join(" ")
-      .toLowerCase();
-    return haystack.includes(query);
-  });
-}
-
-function viewKnowledge() {
-  const matches = knowledgeItems();
-  const slice = matches.slice(0, state.shown);
-  const toolOptions = state.tools
-    .map((tool) => `<option value="${esc(tool.id)}" ${state.filters.tool === tool.id ? "selected" : ""}>${esc(tool.label)}</option>`)
-    .join("");
-  const categoryOptions = Object.entries(CATEGORIES)
-    .map(([id, label]) => `<option value="${esc(id)}" ${state.filters.category === id ? "selected" : ""}>${esc(label)}</option>`)
-    .join("");
-  const list = slice.length
-    ? `<div class="stack">${slice.map(card).join("")}</div>`
-    : `<div class="empty"><p>Geen items voor deze zoekopdracht of filters.</p><p>Zet de minimumscore lager, of vink patches en community aan.</p></div>`;
-  const more = matches.length > slice.length ? `<button class="more" type="button" data-more>Toon meer (${matches.length - slice.length})</button>` : "";
-  return `<section><h2>Kennisbank</h2>
-    <form class="filters" id="zoek" role="search">
-      <label class="wide">Zoeken
-        <input id="q" type="search" placeholder="Titel, tool, fragment…" autocomplete="off" value="${esc(state.filters.q)}" />
-      </label>
-      <label>Tool
-        <select id="tool"><option value="">Alle tools</option>${toolOptions}</select>
-      </label>
-      <label>Categorie
-        <select id="category"><option value="">Alle categorieën</option>${categoryOptions}</select>
-      </label>
-      <label>Minimumscore
-        <select id="minScore">${[1, 2, 3, 4, 5].map((score) => `<option value="${score}" ${Number(state.filters.minScore) === score ? "selected" : ""}>${score}</option>`).join("")}</select>
-      </label>
-      <label>Vanaf
-        <input id="from" type="date" value="${esc(state.filters.from)}" />
-      </label>
-      <div class="checks wide">
-        <label><input id="patches" type="checkbox" ${state.filters.patches ? "checked" : ""} /> Patches</label>
-        <label><input id="community" type="checkbox" ${state.filters.community ? "checked" : ""} /> Community</label>
-      </div>
-    </form>
-    <p class="count">${matches.length} items. Beveiliging, prijs en breaking changes blijven zichtbaar.</p>
-    ${list}
-    ${more}
+  const updates = weekUpdates();
+  const top = updates.slice(0, 3);
+  const summary = top.length
+    ? `<ol class="five">${top
+        .map(
+          (update, index) =>
+            `<li><span>${index + 1}</span><div><strong>${esc(update.tool)}</strong> ${esc(update.title_nl)}<br /><em>${esc(update.can_do_nl[0] ?? "")}</em></div></li>`,
+        )
+        .join("")}</ol>`
+    : `<p class="quiet">Geen vertaalslag uit de laatste 7 dagen.</p>`;
+  const cards = updates.length
+    ? `<div class="stack">${updates.map(updateCard).join("")}</div>`
+    : `<div class="empty"><p>Nog niets in de laatste 7 dagen.</p><p>Kijk bij Voorbeelden of Startups, of wacht op de volgende radar-update.</p></div>`;
+  return `<section>
+    <h2>In 5 minuten</h2>
+    ${summary}
+    <h2>Laatste 7 dagen</h2>
+    ${cards}
   </section>`;
 }
 
-function viewSources() {
-  if (!state.sources.length) return `<div class="empty"><p>Nog geen bronstatus. De ingest heeft nog niet gedraaid.</p></div>`;
-  const rows = state.sources
-    .map((source) => {
-      const health = source.health === "ok" ? "gezond" : source.health === "fout" ? "storing" : "onbekend";
-      return `<article class="source-row">
-        <span class="dot ${esc(source.health)}" aria-hidden="true"></span>
-        <div>
-          <h3>${esc(source.name)} <span class="pill">${esc(health)}</span></h3>
-          <p>${esc(source.description)}</p>
-          <p>Laatste geslaagde ophaling: ${esc(relative(source.lastSuccessAt))}.</p>
-          ${source.note ? `<p>${esc(source.note)}</p>` : ""}
-          ${source.lastError ? `<p class="error">${esc(source.lastError)}</p>` : ""}
-          <p><a href="${esc(source.url)}">Bron openen</a> · ${source.itemsFetched ?? 0} nieuwe items deze run</p>
-        </div>
-      </article>`;
+function viewExamples() {
+  const tools = [...new Set(state.radar.examples.map((item) => item.tool))].sort((a, b) => a.localeCompare(b, "nl"));
+  const filtered = state.radar.examples
+    .filter((item) => (state.examples.onlyNew ? item.from_followed === false : true))
+    .filter((item) => (state.examples.tool ? item.tool === state.examples.tool : true))
+    .filter((item) => (state.examples.kind ? item.kind === state.examples.kind : true))
+    .sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+  const list = filtered.length
+    ? `<div class="stack">${filtered.map(exampleRow).join("")}</div>`
+    : `<div class="empty"><p>Geen voorbeelden voor deze filters.</p><p>Zet “alleen accounts die ik nog niet volg” uit om ook posts van accounts die je al volgt te zien.</p></div>`;
+  return `<section>
+    <h2>Voorbeelden</h2>
+    <form class="filters">
+      <label>Tool
+        <select id="ex-tool"><option value="">Alle tools</option>${tools.map((tool) => `<option value="${esc(tool)}" ${state.examples.tool === tool ? "selected" : ""}>${esc(tool)}</option>`).join("")}</select>
+      </label>
+      <label>Soort
+        <select id="ex-kind"><option value="">Alles</option>${Object.entries(KINDS).map(([id, label]) => `<option value="${id}" ${state.examples.kind === id ? "selected" : ""}>${label}</option>`).join("")}</select>
+      </label>
+      <label class="check wide"><input id="ex-new" type="checkbox" ${state.examples.onlyNew ? "checked" : ""} /> Alleen van accounts die ik nog niet volg</label>
+    </form>
+    <p class="count">${filtered.length} posts</p>
+    ${list}
+  </section>`;
+}
+
+function viewStartups() {
+  const cards = [...state.radar.startups]
+    .sort((a, b) => Date.parse(b.date_found) - Date.parse(a.date_found))
+    .map(
+      (startup) => `<article class="card">
+        <div class="meta"><span class="tool">@${esc(startup.handle)}</span>${startup.seed ? '<span class="pill">startset</span>' : ""}</div>
+        <h3>${esc(startup.name)}</h3>
+        <p class="excerpt">${esc(startup.one_liner_nl)}</p>
+        <p class="cando-line"><span>Waarom nieuw</span> ${esc(startup.why_new_nl)}</p>
+        <p class="when">Gezien ${esc(formatDate(startup.date_found))}</p>
+        <p class="links">${xLink(startup.url, "Account op X")} · ${xLink(startup.proof_url, "Bewijs-post")}</p>
+      </article>`,
+    )
+    .join("");
+  return `<section><h2>Startups</h2>${cards || `<div class="empty"><p>Nog geen startups.</p></div>`}</section>`;
+}
+
+function accountRow(account) {
+  return `<article class="account">
+    <div>
+      <h3><a href="https://x.com/${esc(account.handle)}" target="_blank" rel="noopener noreferrer">${esc(account.name)}</a></h3>
+      <p class="who">@${esc(account.handle)} · ${esc(followersFmt.format(account.followers))} volgers</p>
+      <p class="excerpt">${esc(account.note_nl)}</p>
+    </div>
+  </article>`;
+}
+
+function viewDiscover() {
+  const query = state.ontdek.q.trim().toLowerCase();
+  const match = (account) => {
+    if (state.ontdek.category && account.category !== state.ontdek.category) return false;
+    if (!query) return true;
+    return `${account.name} ${account.handle} ${account.note_nl}`.toLowerCase().includes(query);
+  };
+  const fresh = state.accounts.filter((account) => !account.already_followed && match(account));
+  const known = state.accounts.filter((account) => account.already_followed && match(account));
+  const groups = Object.keys(ACCOUNT_CATS)
+    .map((category) => {
+      const rows = fresh.filter((account) => account.category === category);
+      if (!rows.length) return "";
+      return `<section class="tool-block"><h3>${esc(ACCOUNT_CATS[category])}</h3><div class="stack">${rows.map(accountRow).join("")}</div></section>`;
     })
     .join("");
-  return `<section><h2>Bronnen</h2>${rows}</section>`;
+  return `<section>
+    <h2>Ontdek</h2>
+    <p class="lede">Accounts die je nog niet volgt.</p>
+    <form class="filters">
+      <label class="wide">Zoeken
+        <input id="ontdek-q" type="search" placeholder="Naam, handle, notitie…" value="${esc(state.ontdek.q)}" autocomplete="off" />
+      </label>
+      <label class="wide">Categorie
+        <select id="ontdek-cat"><option value="">Alle categorieën</option>${Object.entries(ACCOUNT_CATS).map(([id, label]) => `<option value="${id}" ${state.ontdek.category === id ? "selected" : ""}>${label}</option>`).join("")}</select>
+      </label>
+    </form>
+    <p class="count">${fresh.length} nieuwe accounts</p>
+    ${groups || `<div class="empty"><p>Geen accounts voor deze zoekopdracht.</p></div>`}
+    <details class="followed"><summary>Je volgt al (${known.length})</summary><div class="stack">${known.map(accountRow).join("")}</div></details>
+  </section>`;
+}
+
+function hit(kind, title, meta, text) {
+  return `<article class="card slim"><p class="pill">${esc(kind)}</p><h3>${title}</h3><p class="who">${meta}</p><p class="excerpt">${esc(text)}</p></article>`;
+}
+
+function viewSearch() {
+  const query = state.zoek.trim().toLowerCase();
+  if (!query) {
+    return `<section><h2>Zoeken</h2><form class="filters"><label class="wide">Zoek in updates, voorbeelden, startups, accounts en releases
+      <input id="zoek" type="search" placeholder="Bijvoorbeeld bellen, startup, Copilot…" value="" autocomplete="off" />
+    </label></form><p class="quiet">Eén veld over de hele radar.</p></section>`;
+  }
+  const updates = state.radar.updates.filter((item) =>
+    `${item.title_nl} ${item.summary_nl} ${item.tool} ${item.can_do_nl.join(" ")}`.toLowerCase().includes(query),
+  );
+  const examples = state.radar.examples.filter((item) =>
+    `${item.note_nl} ${item.author_handle} ${item.tool} ${item.kind}`.toLowerCase().includes(query),
+  );
+  const startups = state.radar.startups.filter((item) =>
+    `${item.name} ${item.handle} ${item.one_liner_nl} ${item.why_new_nl}`.toLowerCase().includes(query),
+  );
+  const accounts = state.accounts.filter((item) => `${item.name} ${item.handle} ${item.note_nl}`.toLowerCase().includes(query));
+  const releases = state.items.filter((item) =>
+    `${item.title} ${item.excerpt} ${toolLabel(item.tool)}`.toLowerCase().includes(query),
+  );
+  const blocks = [
+    updates.map((item) => hit("Update", esc(item.title_nl), esc(item.tool), item.summary_nl)),
+    examples.map((item) => hit("Voorbeeld", `@${esc(item.author_handle)}`, esc(item.tool), item.note_nl)),
+    startups.map((item) => hit("Startup", esc(item.name), `@${esc(item.handle)}`, item.one_liner_nl)),
+    accounts.map((item) => hit("Account", esc(item.name), `@${esc(item.handle)}`, item.note_nl)),
+    releases.slice(0, 12).map((item) => hit("Release", esc(item.title), esc(toolLabel(item.tool)), item.excerpt ?? "")),
+  ].flat();
+  return `<section>
+    <h2>Zoeken</h2>
+    <form class="filters"><label class="wide">Zoek in updates, voorbeelden, startups, accounts en releases
+      <input id="zoek" type="search" value="${esc(state.zoek)}" autocomplete="off" />
+    </label></form>
+    <p class="count">${blocks.length} treffers</p>
+    ${blocks.length ? `<div class="stack">${blocks.join("")}</div>` : `<div class="empty"><p>Niets gevonden voor “${esc(state.zoek.trim())}”.</p></div>`}
+  </section>`;
+}
+
+function passesRelease(item) {
+  return item.score >= 4 || item.belangrijk;
+}
+
+function viewSources() {
+  const visible = state.items
+    .filter(passesRelease)
+    .sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
+  const slice = visible.slice(0, state.bronnenMore);
+  const cards = slice
+    .map(
+      (item) => `<article class="card slim">
+        <div class="meta"><span class="tool">${esc(toolLabel(item.tool))}</span><span class="pill">${esc(RELEASE_CATS[item.category] ?? item.category)}</span>${dots(item.score, "Relevantie")}</div>
+        <h3><a href="${esc(item.url)}">${esc(item.title)}</a></h3>
+        <p class="when">${esc(formatDate(item.publishedAt))}</p>
+        ${item.excerpt ? `<p class="excerpt">${esc(item.excerpt)}</p>` : ""}
+      </article>`,
+    )
+    .join("");
+  const health = state.sources
+    .map(
+      (source) =>
+        `<p class="who"><span class="dot ${esc(source.health)}"></span> ${esc(source.name)} · ${source.health === "ok" ? "gezond" : "storing"}${source.note ? ` · ${esc(source.note)}` : ""}</p>`,
+    )
+    .join("");
+  const more =
+    visible.length > slice.length
+      ? `<button class="more" type="button" data-more>Toon meer releases (${visible.length - slice.length})</button>`
+      : "";
+  return `<section>
+    <h2>Bronnen</h2>
+    <p class="lede">Secundair: automatische releases en changelogs. De vertaalslag staat bij Vandaag.</p>
+    ${cards ? `<div class="stack">${cards}</div>` : `<div class="empty"><p>Geen releases boven de drempel.</p></div>`}
+    ${more}
+    <details class="followed"><summary>Gezondheid van de feeds</summary>${health || `<p class="quiet">Nog geen ingest.</p>`}</details>
+  </section>`;
 }
 
 function panel() {
-  if (state.tab === "week") return viewWeek();
-  if (state.tab === "kennisbank") return viewKnowledge();
+  if (state.tab === "voorbeelden") return viewExamples();
+  if (state.tab === "startups") return viewStartups();
+  if (state.tab === "ontdek") return viewDiscover();
+  if (state.tab === "zoeken") return viewSearch();
   if (state.tab === "bronnen") return viewSources();
   return viewToday();
 }
@@ -337,56 +341,61 @@ function render() {
   const selectionStart = active?.selectionStart;
   const selectionEnd = active?.selectionEnd;
   const scrollY = window.scrollY;
-  const failed = state.sources.filter((source) => source.health === "fout").length;
   const tabs = TABS.map(
     ([id, label]) =>
-      `<button type="button" role="tab" id="tab-${id}" data-tab="${id}" aria-selected="${state.tab === id}" aria-controls="inhoud" tabindex="${state.tab === id ? "0" : "-1"}">${label}</button>`,
+      `<button type="button" data-tab="${id}" aria-current="${state.tab === id ? "page" : "false"}">${label}</button>`,
   ).join("");
   app.innerHTML = `<div class="wrap">
     <header class="mast">
       <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M16 16 L16 6 A10 10 0 0 1 24.5 19 Z" fill="currentColor"/><circle cx="16" cy="16" r="1.7" fill="#f4f0e8"/></svg>
       <div>
         <h1>AI Radar</h1>
-        <p class="updated">Laatst bijgewerkt ${esc(formatStamp(state.generatedAt))}${failed ? ` · ${failed} bron${failed === 1 ? "" : "nen"} met storing` : ""}</p>
-        <p class="lede">Bijblijven met AI-coding, zonder ruis. Alleen wat de bron zelf zegt.</p>
+        <p class="lede">Wat kun je er nu mee. Geen ruis, geen meldingen buiten de app.</p>
       </div>
     </header>
-    <div class="tabs" role="tablist" aria-label="Weergaven">${tabs}</div>
-    <main id="inhoud" role="tabpanel" aria-labelledby="tab-${state.tab}" tabindex="-1">${state.error ? `<div class="empty"><p>${esc(state.error)}</p><button class="retry" type="button" data-retry>Opnieuw proberen</button></div>` : panel()}</main>
-    <p class="foot">Standaard alleen score 4 of hoger, plus beveiliging, prijswijzigingen en breaking changes. Geen e-mail, geen push.</p>
-  </div>`;
+    <main id="inhoud" tabindex="-1">${state.error ? `<div class="empty"><p>${esc(state.error)}</p><button class="retry" type="button" data-retry>Opnieuw proberen</button></div>` : panel()}</main>
+  </div>
+  <nav class="tabbar" aria-label="Onderdelen">${tabs}</nav>`;
   app.removeAttribute("aria-busy");
   if (activeId) {
     const next = document.getElementById(activeId);
     if (next) {
       next.focus();
-      if (typeof selectionStart === "number" && next.setSelectionRange) {
-        next.setSelectionRange(selectionStart, selectionEnd);
-      }
+      if (typeof selectionStart === "number" && next.setSelectionRange) next.setSelectionRange(selectionStart, selectionEnd);
     }
   }
   window.scrollTo(0, scrollY);
+}
+
+async function loadJson(path) {
+  const response = await fetch(new URL(path, document.baseURI));
+  if (!response.ok) throw new Error(path);
+  return response.json();
 }
 
 async function load() {
   state.error = "";
   app.setAttribute("aria-busy", "true");
   try {
-    const [itemsRes, sourcesRes, toolsRes] = await Promise.all([
-      fetch(new URL("data/items.json", document.baseURI)),
-      fetch(new URL("data/sources.json", document.baseURI)),
-      fetch(new URL("data/tools.json", document.baseURI)),
+    const [radar, accounts, items, sources, tools] = await Promise.all([
+      loadJson("data/radar.json"),
+      loadJson("data/accounts.json"),
+      loadJson("data/items.json").catch(() => ({ items: [] })),
+      loadJson("data/sources.json").catch(() => ({ sources: [] })),
+      loadJson("data/tools.json").catch(() => ({ tools: [] })),
     ]);
-    if (!itemsRes.ok || !sourcesRes.ok || !toolsRes.ok) throw new Error("De gegevens konden niet geladen worden.");
-    const itemsJson = await itemsRes.json();
-    const sourcesJson = await sourcesRes.json();
-    const toolsJson = await toolsRes.json();
-    state.items = Array.isArray(itemsJson.items) ? itemsJson.items : [];
-    state.sources = Array.isArray(sourcesJson.sources) ? sourcesJson.sources : [];
-    state.tools = Array.isArray(toolsJson.tools) ? toolsJson.tools : [];
-    state.generatedAt = itemsJson.generatedAt ?? sourcesJson.generatedAt ?? null;
+    state.radar = {
+      updates: Array.isArray(radar.updates) ? radar.updates : [],
+      examples: Array.isArray(radar.examples) ? radar.examples : [],
+      startups: Array.isArray(radar.startups) ? radar.startups : [],
+    };
+    state.accounts = Array.isArray(accounts) ? accounts : [];
+    state.items = Array.isArray(items.items) ? items.items : [];
+    state.sources = Array.isArray(sources.sources) ? sources.sources : [];
+    state.tools = Array.isArray(tools.tools) ? tools.tools : [];
+    state.generatedAt = radar.generatedAt ?? null;
   } catch {
-    state.error = "De gegevens konden niet geladen worden. Controleer of data/items.json bereikbaar is.";
+    state.error = "De radar-gegevens konden niet geladen worden.";
   }
   render();
 }
@@ -396,13 +405,12 @@ app.addEventListener("click", (event) => {
   const tab = target?.closest("[data-tab]");
   if (tab instanceof HTMLElement && tab.dataset.tab) {
     state.tab = tab.dataset.tab;
-    state.shown = 30;
     history.replaceState(null, "", `#${state.tab}`);
     render();
     return;
   }
   if (target?.closest("[data-more]")) {
-    state.shown += 30;
+    state.bronnenMore += 20;
     render();
   }
   if (target?.closest("[data-retry]")) load();
@@ -410,15 +418,12 @@ app.addEventListener("click", (event) => {
 
 app.addEventListener("input", (event) => {
   const target = event.target;
-  if (!(target instanceof HTMLInputElement || target instanceof HTMLSelectElement)) return;
-  if (target.id === "q") state.filters.q = target.value;
-  if (target.id === "tool") state.filters.tool = target.value;
-  if (target.id === "category") state.filters.category = target.value;
-  if (target.id === "minScore") state.filters.minScore = Number(target.value);
-  if (target.id === "from") state.filters.from = target.value;
-  if (target.id === "patches" && target instanceof HTMLInputElement) state.filters.patches = target.checked;
-  if (target.id === "community" && target instanceof HTMLInputElement) state.filters.community = target.checked;
-  state.shown = 30;
+  if (target instanceof HTMLSelectElement && target.id === "ex-tool") state.examples.tool = target.value;
+  if (target instanceof HTMLSelectElement && target.id === "ex-kind") state.examples.kind = target.value;
+  if (target instanceof HTMLInputElement && target.id === "ex-new") state.examples.onlyNew = target.checked;
+  if (target instanceof HTMLInputElement && target.id === "ontdek-q") state.ontdek.q = target.value;
+  if (target instanceof HTMLSelectElement && target.id === "ontdek-cat") state.ontdek.category = target.value;
+  if (target instanceof HTMLInputElement && target.id === "zoek") state.zoek = target.value;
   render();
 });
 
@@ -432,8 +437,11 @@ window.addEventListener("hashchange", () => {
   }
 });
 
+const params = new URLSearchParams(location.search);
+if (params.get("q")) state.zoek = params.get("q") ?? "";
 const initial = location.hash.replace("#", "");
 if (TABS.some(([id]) => id === initial)) state.tab = initial;
+else if (params.get("q")) state.tab = "zoeken";
 
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   navigator.serviceWorker.register(new URL("sw.js", document.baseURI)).catch(() => {});

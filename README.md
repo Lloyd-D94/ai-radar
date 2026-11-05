@@ -1,8 +1,8 @@
 # AI Radar
 
-Persoonlijk, mobiel overzicht van praktische ontwikkelingen in AI-coding en vibe coding. Weinig ruis: je ziet standaard alleen wat relevant is, met een directe link naar de bron. De site verzint geen samenvattingen. Een item toont de titel, de datum en een fragment uit de bron zelf.
+Persoonlijk, mobiel overzicht van wat je nú kunt doen met nieuwe AI-coding-mogelijkheden. Geen saaie changelog: per update een korte Nederlandse samenvatting, concrete “dit kun je ermee”-punten, en de X-posts die het laten zien. Daarnaast nieuwe vibe-coding-startups en accounts die je nog niet volgt.
 
-Alles blijft in dit dashboard. Geen e-mail, geen push, geen externe meldingen.
+Alles blijft in dit dashboard. Geen e-mail, geen push, geen meldingen buiten de app. Geen betaalde API.
 
 ## Eenmalige stap: GitHub Pages aanzetten
 
@@ -19,7 +19,9 @@ Deze README kan niet controleren of de live site al bereikbaar is. Kijk na het a
 
 ## Hoe het bijwerken werkt
 
-Een geplande workflow (`.github/workflows/ingest.yml`) draait elke drie uur:
+De hoofdinhoud (Vandaag, Voorbeelden, Startups, Ontdek) komt uit `data/radar.json` en `data/accounts.json`. Die werk je bij met `radar-update.json`, zie hieronder. Elke wijziging in `data/` publiceert de site opnieuw.
+
+Daarnaast draait een geplande workflow (`.github/workflows/ingest.yml`) elke drie uur voor het secundaire tabblad Bronnen:
 
 - hij haalt de bronnen op, met time-out en retries;
 - een bron die faalt stopt de rest niet;
@@ -40,23 +42,62 @@ Blijft een run om een andere reden 30 dagen zonder commit, dan schrijft dezelfde
 
 ## Schermen
 
-- **Vandaag** — ongeveer vijf minuten: grote ontwikkelingen, de laatste stand van Grok Build en Grok Bot, en wat er in 24 uur boven de drempel uitkomt.
-- **Week** — de afgelopen zeven dagen per tool, met aantallen en de sterkste items. Lege weken bij Grok tonen de laatste echte release, met datum.
-- **Kennisbank** — zoeken en filteren op tool, categorie, score en datum. Patches en community staan standaard uit.
-- **Bronnen** — elke bron, het moment van de laatste geslaagde ophaling, en of die gezond is.
+Onderaan het scherm:
 
-Standaard: score 4 of hoger. Beveiliging, prijswijzigingen en breaking changes blijven altijd zichtbaar.
+- **Vandaag** — laatste 7 dagen. Bovenaan een 5-minuten-samenvatting (top 3), daaronder kaarten met “Dit kun je ermee” en de gekoppelde posts.
+- **Voorbeelden** — X-posts. Filter op tool en soort. “Alleen van accounts die ik nog niet volg” staat standaard aan.
+- **Startups** — naam, één zin, waarom het nieuw is, link naar het account en de bewijs-post.
+- **Ontdek** — accounts die je nog niet volgt, per categorie, met notitie en volgers. Onderaan een kleinere lijst “Je volgt al”.
+- **Zoeken** — één veld over updates, voorbeelden, startups, accounts en de automatische releases.
+- **Bronnen** — secundair. De automatische RSS/sitemap/HN-feed (changelogs). Standaard alleen score 4 of hoger, plus beveiliging, prijs en breaking changes.
+
+Items met `"seed": true` zijn de startset uit het rapport van 5 nov 2026. Latere items zonder dat veld komen uit `radar-update.json`.
 
 ## Data
 
 | Bestand | Inhoud |
 | --- | --- |
-| `data/items.json` | Items die de site toont |
-| `data/sources.json` | Bronnen en hun gezondheid |
-| `data/tools.json` | Toolnamen voor de interface |
-| `data/state.json` | Sitemap-URL’s, paginahashes en al opgehaalde nieuws-URL’s |
+| `data/radar.json` | `updates`, `examples`, `startups` |
+| `data/accounts.json` | 129 X-accounts; `already_followed` zegt of je het account al volgt |
+| `data/items.json` | Automatische release-items (tab Bronnen) |
+| `data/sources.json` | Gezondheid van die feeds |
+| `data/tools.json` | Toolnamen voor de release-feed |
+| `data/state.json` | Sitemap-URL’s en paginahashes; gaat niet mee naar de site |
 
-`data/state.json` gaat niet mee naar de website. De site is statisch: `web/` plus die drie JSON-bestanden, gebouwd naar `dist/`.
+## Dagelijkse radar-update
+
+Een externe routine levert `radar-update.json` in de root, met dezelfde vorm:
+
+```json
+{
+  "updates": [],
+  "examples": [],
+  "startups": [],
+  "accounts": []
+}
+```
+
+`accounts` mag weg. Elk onderdeel mag een lege lijst zijn.
+
+```bash
+npm run radar:apply
+npm run radar:apply -- pad/naar/radar-update.json
+```
+
+Het script valideert en stopt met een foutmelding als iets niet klopt. Het schrijft dan niets weg. Geldige items worden samengevoegd op id of URL. Er blijven maximaal 400 updates en 1500 voorbeelden; de oudste vallen weg.
+
+Regels, kort:
+
+- Datums zijn ISO. Belang is een geheel getal van 1 tot 5.
+- `summary_nl` is maximaal twee zinnen. `note_nl` is één zin. `can_do_nl` heeft 2 tot 5 punten.
+- Elke URL is `https`. Een voorbeeldpost is precies `https://x.com/<handle>/status/<id>`, en die handle is `author_handle`.
+- `example_ids` moeten bestaan, in dit bestand of al in `data/radar.json`.
+- `kind` is `demo`, `workflow`, `release` of `tutorial`.
+- Accountcategorie is `official_product`, `builder_demo`, `engineer_explainer`, `founder_investor`, `xai_grok` of `dutch_eu`.
+
+Staat `radar-update.json` op `main`, dan draait `.github/workflows/radar-apply.yml`: valideren, mergen, committen en de site publiceren. Elke andere push die `data/` wijzigt, publiceert ook via **Site publiceren**.
+
+Verzin geen feiten in die JSON. Alleen wat een bron echt laat zien.
 
 ## Een bron toevoegen
 

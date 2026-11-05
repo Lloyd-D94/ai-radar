@@ -50,7 +50,7 @@ a { color: var(--amber); }
 .wrap {
   width: min(100%, 44rem);
   margin: 0 auto;
-  padding: 0.85rem 1rem 3.5rem;
+  padding: 0.85rem 1rem 6.2rem;
 }
 
 .boot { padding: 2rem 1rem; color: var(--muted); }
@@ -322,6 +322,123 @@ input, select {
   color: var(--faint);
   font-size: 0.82rem;
 }
+
+.tabbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  background: rgba(9, 10, 13, 0.96);
+  border-top: 1px solid var(--line);
+  padding-bottom: env(safe-area-inset-bottom);
+  backdrop-filter: blur(10px);
+}
+
+.tabbar button {
+  min-height: 52px;
+  border: 0;
+  background: transparent;
+  color: var(--faint);
+  font-size: 0.62rem;
+  line-height: 1.15;
+  padding: 0.45rem 0.05rem 0.4rem;
+}
+
+.tabbar button[aria-current="page"] {
+  color: var(--amber);
+  font-weight: 650;
+}
+
+.five {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.five li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.65rem;
+  align-items: start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.7rem 0.75rem;
+}
+
+.five span {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 99px;
+  display: grid;
+  place-items: center;
+  background: var(--amber);
+  color: var(--amber-ink);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.five em {
+  color: var(--muted);
+  font-style: normal;
+  font-size: 0.88rem;
+}
+
+.cando {
+  margin: 0.7rem 0;
+  padding: 0.7rem 0.75rem 0.35rem;
+  border-radius: 14px;
+  background: rgba(230, 177, 90, 0.08);
+}
+
+.cando p, .cando-line span {
+  margin: 0 0 0.35rem;
+  color: var(--amber);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cando ul { margin: 0; padding-left: 1.1rem; }
+.cando li { margin: 0 0 0.4rem; }
+
+.cando-line { margin: 0.45rem 0; }
+.cando-line span { display: block; }
+
+.example, .account {
+  border-top: 1px solid var(--line);
+  padding-top: 0.7rem;
+}
+
+.card .example:first-child { border-top: 0; padding-top: 0.2rem; }
+
+.who { margin: 0.15rem 0; color: var(--muted); font-size: 0.88rem; }
+
+.pill.new { color: var(--good); border-color: rgba(157, 206, 173, 0.4); }
+
+.links { margin: 0.4rem 0 0; }
+
+.card.slim h3 { font-size: 1rem; }
+
+.followed { margin-top: 1rem; }
+.followed summary { min-height: 44px; cursor: pointer; color: var(--muted); }
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+.check input { width: 1.1rem; height: 1.1rem; min-height: 0; }
 
 details.community { margin-top: 1rem; }
 

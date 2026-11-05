@@ -13,7 +13,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint scripts web",
     "build": "node --experimental-strip-types scripts/build-site.ts",
-    "check": "npm test && npm run typecheck && npm run lint"
+    "radar:apply": "node --experimental-strip-types scripts/apply-radar-update.ts",
+    "check": "npm run typecheck && npm run lint && npm test && npm run build"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

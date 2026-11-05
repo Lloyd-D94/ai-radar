@@ -5,9 +5,7 @@ on:
     branches: [main]
     paths:
       - "web/**"
-      - "data/items.json"
-      - "data/sources.json"
-      - "data/tools.json"
+      - "data/**"
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/pages.yml"

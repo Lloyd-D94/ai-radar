@@ -2,7 +2,7 @@ import { cpSync, existsSync, mkdirSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 
-const REQUIRED = ["items.json", "sources.json", "tools.json"];
+const REQUIRED = ["items.json", "sources.json", "tools.json", "radar.json", "accounts.json"];
 
 export function buildSite(root = process.cwd()): void {
   const dist = join(root, "dist");
