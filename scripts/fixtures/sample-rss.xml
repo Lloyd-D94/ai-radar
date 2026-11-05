@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Example</title>
+    <item>
+      <title>Grok Build 1.0.70</title>
+      <link>https://x.ai/changelog/build#v1.0.70-2026-10-23</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;Answered questions now have a blank line between them.&lt;/li&gt;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Nov 4, 2026</title>
+      <link>https://docs.lovable.dev/changelog?utm_source=test#nov-4-2026</link>
+      <pubDate>Wed, 04 Nov 2026 16:36:11 GMT</pubDate>
+      <content:encoded><![CDATA[<h3>Dreaming: memory</h3><p>Lovable now tidies up project memory in the background.</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>GitHub Copilot is now available in Xcode&#8217;s coding assistant</title>
+      <link>https://github.blog/changelog/2026-11-04-copilot-xcode</link>
+      <pubDate>Wed, 04 Nov 2026 19:10:40 +0000</pubDate>
+      <description><![CDATA[<p>You can now work with GitHub Copilot directly in Xcode.</p>
+<p>The post Example appeared first on The GitHub Blog.</p>]]></description>
+    </item>
+  </channel>
+</rss>

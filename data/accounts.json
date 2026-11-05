@@ -1,0 +1,1163 @@
+[
+  {
+    "handle": "_akhaliq",
+    "name": "AK",
+    "category": "engineer_explainer",
+    "note_nl": "Dagelijkse AI paper drops met weinig fluff.",
+    "already_followed": false,
+    "followers": 538995,
+    "example_url": "https://x.com/_akhaliq/status/2118079011159195882"
+  },
+  {
+    "handle": "0xGenAi",
+    "name": "GenAI",
+    "category": "builder_demo",
+    "note_nl": "Praktische prompts, configs en automations.",
+    "already_followed": true,
+    "followers": 2435,
+    "example_url": "https://x.com/0xGenAi"
+  },
+  {
+    "handle": "0xMorlex",
+    "name": "Morlex",
+    "category": "builder_demo",
+    "note_nl": "Agents met Claude + Grok; praktische systemen.",
+    "already_followed": true,
+    "followers": 4345,
+    "example_url": "https://x.com/0xMorlex"
+  },
+  {
+    "handle": "0xPaulvibe",
+    "name": "Paul",
+    "category": "dutch_eu",
+    "note_nl": "NL builder; automations en vibe coding products.",
+    "already_followed": false,
+    "followers": 3415,
+    "example_url": "https://x.com/0xPaulvibe/status/2118087067481629045"
+  },
+  {
+    "handle": "a16z",
+    "name": "a16z",
+    "category": "founder_investor",
+    "note_nl": "Andreessen Horowitz; AI startup theses en launches.",
+    "already_followed": false,
+    "followers": 1104462,
+    "example_url": "https://x.com/a16z/status/2117308274433511930"
+  },
+  {
+    "handle": "AIatMeta",
+    "name": "AI at Meta",
+    "category": "official_product",
+    "note_nl": "Llama en Meta AI research/product.",
+    "already_followed": false,
+    "followers": 879309,
+    "example_url": "https://x.com/AIatMeta/status/2112265822274302066"
+  },
+  {
+    "handle": "aiDotEngineer",
+    "name": "AI.Engineer",
+    "category": "engineer_explainer",
+    "note_nl": "Hoog-signaal AI engineering conferenties.",
+    "already_followed": false,
+    "followers": 67575,
+    "example_url": "https://x.com/aiDotEngineer/status/2118085881001295972"
+  },
+  {
+    "handle": "AiEvolutio58513",
+    "name": "AI Evolution",
+    "category": "engineer_explainer",
+    "note_nl": "ChatGPT/Claude/tool updates en memes.",
+    "already_followed": true,
+    "followers": 26481,
+    "example_url": "https://x.com/AiEvolutio58513"
+  },
+  {
+    "handle": "aleabitoreddit",
+    "name": "Serenity",
+    "category": "engineer_explainer",
+    "note_nl": "AI/semi supply chain research (expliciet gevraagd).",
+    "already_followed": true,
+    "followers": 1065606,
+    "example_url": "https://x.com/aleabitoreddit"
+  },
+  {
+    "handle": "alexalbert__",
+    "name": "Alex Albert",
+    "category": "builder_demo",
+    "note_nl": "Anthropic research; Claude product transparantie.",
+    "already_followed": false,
+    "followers": 154721,
+    "example_url": "https://x.com/alexalbert__/status/2116185803433071061"
+  },
+  {
+    "handle": "AlexFinn",
+    "name": "Alex Finn",
+    "category": "builder_demo",
+    "note_nl": "Claude Code/Grok Bot maximalist; agent architecture posts.",
+    "already_followed": false,
+    "followers": 486516,
+    "example_url": "https://x.com/AlexFinn/status/2117127095038218733"
+  },
+  {
+    "handle": "Alibaba_Qwen",
+    "name": "Qwen",
+    "category": "official_product",
+    "note_nl": "Qwen open foundation models.",
+    "already_followed": false,
+    "followers": 300476,
+    "example_url": "https://x.com/Alibaba_Qwen/status/2109633085658808515"
+  },
+  {
+    "handle": "amasad",
+    "name": "Amjad Masad",
+    "category": "builder_demo",
+    "note_nl": "Replit CEO; vibe coding en AI agents in productie.",
+    "already_followed": false,
+    "followers": 503896,
+    "example_url": "https://x.com/amasad/status/2117027771260207364"
+  },
+  {
+    "handle": "ammaar",
+    "name": "Ammaar Reshi",
+    "category": "builder_demo",
+    "note_nl": "Google AI Studio product/design; vibe coding demos.",
+    "already_followed": false,
+    "followers": 111164,
+    "example_url": "https://x.com/ammaar/status/2117289887535964555"
+  },
+  {
+    "handle": "AmpCode",
+    "name": "Amp",
+    "category": "official_product",
+    "note_nl": "Frontier coding agent (multi-model, Sourcegraph-roots).",
+    "already_followed": false,
+    "followers": 29951,
+    "example_url": "https://x.com/AmpCode/status/2117995287859929166"
+  },
+  {
+    "handle": "AndrewYNg",
+    "name": "Andrew Ng",
+    "category": "engineer_explainer",
+    "note_nl": "Praktische AI-educatie en DeepLearning.AI.",
+    "already_followed": true,
+    "followers": 1959047,
+    "example_url": "https://x.com/AndrewYNg"
+  },
+  {
+    "handle": "AnjneyMidha",
+    "name": "Anjney Midha",
+    "category": "founder_investor",
+    "note_nl": "Agent infra / MCP startup mapping (ex-a16z style).",
+    "already_followed": false,
+    "followers": 52314,
+    "example_url": "https://x.com/AnjneyMidha/status/2117698455443574820"
+  },
+  {
+    "handle": "AnthropicAI",
+    "name": "Anthropic",
+    "category": "official_product",
+    "note_nl": "Claude model releases, research en safety papers.",
+    "already_followed": false,
+    "followers": 1879111,
+    "example_url": "https://x.com/AnthropicAI/status/2118073665296228863"
+  },
+  {
+    "handle": "antonosika",
+    "name": "Anton Osika",
+    "category": "builder_demo",
+    "note_nl": "Lovable founder; vibe coding product vision.",
+    "already_followed": false,
+    "followers": 85488,
+    "example_url": "https://x.com/antonosika/status/2118006845432594573"
+  },
+  {
+    "handle": "AravSrinivas",
+    "name": "Aravind Srinivas",
+    "category": "founder_investor",
+    "note_nl": "Perplexity CEO; product roadmap en agent browser.",
+    "already_followed": false,
+    "followers": 1166753,
+    "example_url": "https://x.com/AravSrinivas/status/2118093720243560711"
+  },
+  {
+    "handle": "Argona0x",
+    "name": "Argona",
+    "category": "builder_demo",
+    "note_nl": "Jonge vibe coder; AI-monetisatie in de praktijk.",
+    "already_followed": true,
+    "followers": 40318,
+    "example_url": "https://x.com/Argona0x"
+  },
+  {
+    "handle": "arthurmensch",
+    "name": "Arthur Mensch",
+    "category": "founder_investor",
+    "note_nl": "Mistral CEO; Europese open AI (bonus EU).",
+    "already_followed": false,
+    "followers": 90801,
+    "example_url": "https://x.com/arthurmensch/status/2115820723767783634"
+  },
+  {
+    "handle": "ArtificialAnlys",
+    "name": "Artificial Analysis",
+    "category": "engineer_explainer",
+    "note_nl": "Onafhankelijke AI-modelbenchmarks en analyses.",
+    "already_followed": true,
+    "followers": 175495,
+    "example_url": "https://x.com/ArtificialAnlys"
+  },
+  {
+    "handle": "Baconbrix",
+    "name": "Evan Bacon",
+    "category": "xai_grok",
+    "note_nl": "Frontend lead Grok Bot @SpaceXSI; Grok Build/orchestratie.",
+    "already_followed": false,
+    "followers": 68832,
+    "example_url": "https://x.com/Baconbrix/status/2118179270623453255"
+  },
+  {
+    "handle": "bamieater",
+    "name": "Melvin Rook",
+    "category": "dutch_eu",
+    "note_nl": "Den Haag builder; AI productivity apps in public.",
+    "already_followed": false,
+    "followers": 1240,
+    "example_url": "https://x.com/bamieater/status/2118213470403318146"
+  },
+  {
+    "handle": "bcherny",
+    "name": "Boris Cherny",
+    "category": "builder_demo",
+    "note_nl": "Maker van Claude Code; workflows, mods, extensibility.",
+    "already_followed": false,
+    "followers": 634629,
+    "example_url": "https://x.com/bcherny/status/2095590515765060076"
+  },
+  {
+    "handle": "Bencera",
+    "name": "Ben Cera",
+    "category": "builder_demo",
+    "note_nl": "Bouwt Polsia; AI die bedrijven runt.",
+    "already_followed": true,
+    "followers": 62167,
+    "example_url": "https://x.com/Bencera"
+  },
+  {
+    "handle": "bentossell",
+    "name": "Ben Tossell",
+    "category": "founder_investor",
+    "note_nl": "Devtools/infra investor; AI builder community.",
+    "already_followed": false,
+    "followers": 202931,
+    "example_url": "https://x.com/bentossell/status/2117360437909942599"
+  },
+  {
+    "handle": "blankspeaker",
+    "name": "blankspeaker",
+    "category": "xai_grok",
+    "note_nl": "SpaceXSI Grok community mod; Grok Bot nieuws.",
+    "already_followed": true,
+    "followers": 16775,
+    "example_url": "https://x.com/blankspeaker/status/2118203546357391509"
+  },
+  {
+    "handle": "boltdotnew",
+    "name": "bolt.new",
+    "category": "official_product",
+    "note_nl": "StackBlitz AI app builder (echte handle, niet bolt_new).",
+    "already_followed": false,
+    "followers": 123136,
+    "example_url": "https://x.com/boltdotnew/status/2118062031538466819"
+  },
+  {
+    "handle": "bot",
+    "name": "Grok Bot",
+    "category": "xai_grok",
+    "note_nl": "Officieel Grok Bot-productaccount; AI teammates die echt werk doen.",
+    "already_followed": true,
+    "followers": 508359,
+    "example_url": "https://x.com/bot"
+  },
+  {
+    "handle": "brimskeau",
+    "name": "Stijn",
+    "category": "dutch_eu",
+    "note_nl": "Amsterdam indie; Nitpick (in-app feedback voor AI coding agents).",
+    "already_followed": false,
+    "followers": 704,
+    "example_url": "https://x.com/brimskeau/status/2112567211319533659"
+  },
+  {
+    "handle": "browserbase",
+    "name": "Browserbase",
+    "category": "official_product",
+    "note_nl": "Browser infra voor agents; Stagehand.",
+    "already_followed": false,
+    "followers": 22196,
+    "example_url": "https://x.com/browserbase/status/2117351157278625827"
+  },
+  {
+    "handle": "claudeai",
+    "name": "Claude",
+    "category": "official_product",
+    "note_nl": "Claude product demos, UI-updates en use cases.",
+    "already_followed": false,
+    "followers": 1996104,
+    "example_url": "https://x.com/claudeai/status/2106125474900701633"
+  },
+  {
+    "handle": "ClementDelangue",
+    "name": "clem",
+    "category": "founder_investor",
+    "note_nl": "Hugging Face CEO; open-source AI ecosystem.",
+    "already_followed": false,
+    "followers": 729204,
+    "example_url": "https://x.com/ClementDelangue/status/2117640747344404786"
+  },
+  {
+    "handle": "cline",
+    "name": "Cline",
+    "category": "official_product",
+    "note_nl": "Open-source coding agent (editor/terminal/browser).",
+    "already_followed": false,
+    "followers": 81659,
+    "example_url": "https://x.com/cline/status/2115884854139380134"
+  },
+  {
+    "handle": "Cloudflare",
+    "name": "Cloudflare",
+    "category": "official_product",
+    "note_nl": "Workers/AI edge infra voor agents en apps.",
+    "already_followed": false,
+    "followers": 326614,
+    "example_url": "https://x.com/Cloudflare/status/2117983857773310086"
+  },
+  {
+    "handle": "cognition",
+    "name": "Cognition",
+    "category": "official_product",
+    "note_nl": "Makers of Devin; SWE-modellen en agent-engineering.",
+    "already_followed": false,
+    "followers": 195445,
+    "example_url": "https://x.com/cognition/status/2118069614521241739"
+  },
+  {
+    "handle": "conductor_build",
+    "name": "Conductor",
+    "category": "official_product",
+    "note_nl": "Team van coding agents op Mac + cloud.",
+    "already_followed": false,
+    "followers": 27230,
+    "example_url": "https://x.com/conductor_build/status/2118045572284526788"
+  },
+  {
+    "handle": "corbin_braun",
+    "name": "corbin",
+    "category": "builder_demo",
+    "note_nl": "Cursor workflows en AI coding rabbit holes op YT.",
+    "already_followed": false,
+    "followers": 67301,
+    "example_url": "https://x.com/corbin_braun/status/2118148540367245517"
+  },
+  {
+    "handle": "cursor_ai",
+    "name": "Cursor",
+    "category": "official_product",
+    "note_nl": "Cursor IDE: design mode, Agent SDK, model-integraties.",
+    "already_followed": false,
+    "followers": 497113,
+    "example_url": "https://x.com/cursor_ai/status/2115159585548021814"
+  },
+  {
+    "handle": "DarioAmodei",
+    "name": "Dario Amodei",
+    "category": "founder_investor",
+    "note_nl": "Anthropic CEO; strategische AI-signalen.",
+    "already_followed": true,
+    "followers": 865782,
+    "example_url": "https://x.com/DarioAmodei"
+  },
+  {
+    "handle": "deepseek_ai",
+    "name": "DeepSeek",
+    "category": "official_product",
+    "note_nl": "Open-weight models; agent harness updates.",
+    "already_followed": false,
+    "followers": 1201562,
+    "example_url": "https://x.com/deepseek_ai/status/2112476496283775135"
+  },
+  {
+    "handle": "demishassabis",
+    "name": "Demis Hassabis",
+    "category": "engineer_explainer",
+    "note_nl": "DeepMind CEO; AGI en wetenschappelijke AI-mijlpalen.",
+    "already_followed": true,
+    "followers": 1956370,
+    "example_url": "https://x.com/demishassabis"
+  },
+  {
+    "handle": "dharmesh",
+    "name": "dharmesh",
+    "category": "founder_investor",
+    "note_nl": "HubSpot CTO; AI side projects op schaal.",
+    "already_followed": false,
+    "followers": 600374,
+    "example_url": "https://x.com/dharmesh/status/2115632560554287462"
+  },
+  {
+    "handle": "doganuraldesign",
+    "name": "Dogan Ural",
+    "category": "xai_grok",
+    "note_nl": "xAI Creative Ambassador; Grok Bot creatieve demos.",
+    "already_followed": true,
+    "followers": 212264,
+    "example_url": "https://x.com/doganuraldesign"
+  },
+  {
+    "handle": "DrJimFan",
+    "name": "Jim Fan",
+    "category": "engineer_explainer",
+    "note_nl": "NVIDIA robotics/agents; physical AGI signalen.",
+    "already_followed": false,
+    "followers": 602960,
+    "example_url": "https://x.com/DrJimFan/status/2112597587987689912"
+  },
+  {
+    "handle": "ElevenLabs",
+    "name": "ElevenLabs",
+    "category": "official_product",
+    "note_nl": "Voice AI; ElevenAgents voor call flows.",
+    "already_followed": false,
+    "followers": 209661,
+    "example_url": "https://x.com/ElevenLabs/status/2118062782562312416"
+  },
+  {
+    "handle": "emollick",
+    "name": "Ethan Mollick",
+    "category": "engineer_explainer",
+    "note_nl": "Wharton; praktische impact van LLMs op werk (demos).",
+    "already_followed": false,
+    "followers": 414071,
+    "example_url": "https://x.com/emollick/status/2117346417979384162"
+  },
+  {
+    "handle": "ericzakariasson",
+    "name": "eric zakariasson",
+    "category": "xai_grok",
+    "note_nl": "ex-Cursor tooling; nu SpaceXSI tinkering.",
+    "already_followed": false,
+    "followers": 98934,
+    "example_url": "https://x.com/ericzakariasson/status/2118097345829052427"
+  },
+  {
+    "handle": "erwblo",
+    "name": "Erwin Blom",
+    "category": "dutch_eu",
+    "note_nl": "Amsterdam; Vibecoders Unite nieuwsbrief + AI handpicks.",
+    "already_followed": false,
+    "followers": 28971,
+    "example_url": "https://x.com/erwblo/status/2118076985327128708"
+  },
+  {
+    "handle": "firecrawl",
+    "name": "Firecrawl",
+    "category": "official_product",
+    "note_nl": "Web data voor AI agents; headless Clay enrichment.",
+    "already_followed": false,
+    "followers": 95885,
+    "example_url": "https://x.com/firecrawl/status/2117297576131060140"
+  },
+  {
+    "handle": "fofrAI",
+    "name": "fofr",
+    "category": "builder_demo",
+    "note_nl": "Google DeepMind; generative model experiments (EU/London).",
+    "already_followed": false,
+    "followers": 91683,
+    "example_url": "https://x.com/fofrAI/status/2117011478029222075"
+  },
+  {
+    "handle": "garrytan",
+    "name": "Garry Tan",
+    "category": "founder_investor",
+    "note_nl": "YC president; founders + AI tooling (GStack).",
+    "already_followed": false,
+    "followers": 1143019,
+    "example_url": "https://x.com/garrytan/status/2117384926052135106"
+  },
+  {
+    "handle": "gdb",
+    "name": "Greg Brockman",
+    "category": "founder_investor",
+    "note_nl": "OpenAI president; technische demos en infra.",
+    "already_followed": false,
+    "followers": 1085962,
+    "example_url": "https://x.com/gdb/status/2118129547443056763"
+  },
+  {
+    "handle": "GeminiApp",
+    "name": "Google Gemini",
+    "category": "official_product",
+    "note_nl": "Gemini app consumer features en demos.",
+    "already_followed": false,
+    "followers": 608768,
+    "example_url": "https://x.com/GeminiApp/status/2116304609383710988"
+  },
+  {
+    "handle": "GeoffreyHuntley",
+    "name": "geoff",
+    "category": "builder_demo",
+    "note_nl": "Experimentele Claude Code/Codex hive-swarm technieken.",
+    "already_followed": false,
+    "followers": 91189,
+    "example_url": "https://x.com/GeoffreyHuntley/status/2111037032659079517"
+  },
+  {
+    "handle": "github",
+    "name": "GitHub",
+    "category": "official_product",
+    "note_nl": "Copilot, Spec Kit, Universe AI coding features.",
+    "already_followed": false,
+    "followers": 2734008,
+    "example_url": "https://x.com/github/status/2117366336632594598"
+  },
+  {
+    "handle": "gledhill_scales",
+    "name": "Jamie Gledhill",
+    "category": "builder_demo",
+    "note_nl": "Test AI-tools en deelt werkende workflows.",
+    "already_followed": true,
+    "followers": 1427,
+    "example_url": "https://x.com/gledhill_scales"
+  },
+  {
+    "handle": "goodside",
+    "name": "Riley Goodside",
+    "category": "engineer_explainer",
+    "note_nl": "Prompt/frontier LLM craft; DeepMind/Scale roots.",
+    "already_followed": false,
+    "followers": 238685,
+    "example_url": "https://x.com/goodside/status/2118169998799642664"
+  },
+  {
+    "handle": "GoogleAI",
+    "name": "Google AI",
+    "category": "official_product",
+    "note_nl": "Google AI productlijn en Gemini-updates.",
+    "already_followed": false,
+    "followers": 2483210,
+    "example_url": "https://x.com/GoogleAI/status/2115489593818816591"
+  },
+  {
+    "handle": "GoogleAIStudio",
+    "name": "Google AI Studio",
+    "category": "official_product",
+    "note_nl": "Gemini API/Studio; computer use GA, prototypes.",
+    "already_followed": false,
+    "followers": 211492,
+    "example_url": "https://x.com/GoogleAIStudio/status/2118025709146829218"
+  },
+  {
+    "handle": "GoogleDeepMind",
+    "name": "Google DeepMind",
+    "category": "official_product",
+    "note_nl": "DeepMind papers, benchmarks, wetenschappelijke AI.",
+    "already_followed": false,
+    "followers": 1598526,
+    "example_url": "https://x.com/GoogleDeepMind/status/2116524000977285321"
+  },
+  {
+    "handle": "gregisenberg",
+    "name": "GREG ISENBERG",
+    "category": "founder_investor",
+    "note_nl": "Dagelijkse startup ideas; AI business angles.",
+    "already_followed": false,
+    "followers": 758057,
+    "example_url": "https://x.com/gregisenberg/status/2118087733205717440"
+  },
+  {
+    "handle": "grok",
+    "name": "Grok",
+    "category": "xai_grok",
+    "note_nl": "Officiële Grok AI assistant op X.",
+    "already_followed": true,
+    "followers": 9328924,
+    "example_url": "https://x.com/grok"
+  },
+  {
+    "handle": "heyBarsee",
+    "name": "Barsee",
+    "category": "engineer_explainer",
+    "note_nl": "Dagelijkse AI/tech updates met hoog signaal.",
+    "already_followed": true,
+    "followers": 268149,
+    "example_url": "https://x.com/heyBarsee"
+  },
+  {
+    "handle": "huggingface",
+    "name": "Hugging Face",
+    "category": "official_product",
+    "note_nl": "Open-source AI hub; models, datasets, evals.",
+    "already_followed": false,
+    "followers": 836585,
+    "example_url": "https://x.com/huggingface/status/2118004921597665638"
+  },
+  {
+    "handle": "hwchase17",
+    "name": "Harrison Chase",
+    "category": "engineer_explainer",
+    "note_nl": "LangChain founder; agent frameworks in productie.",
+    "already_followed": false,
+    "followers": 138393,
+    "example_url": "https://x.com/hwchase17/status/2117345786715607062"
+  },
+  {
+    "handle": "iannuttall",
+    "name": "Ian Nuttall",
+    "category": "builder_demo",
+    "note_nl": "Claude Code/Cursor best practices; agentic SEO/AEO.",
+    "already_followed": false,
+    "followers": 81815,
+    "example_url": "https://x.com/iannuttall/status/2118051655128424566"
+  },
+  {
+    "handle": "janwilmake",
+    "name": "Jan Wilmake",
+    "category": "dutch_eu",
+    "note_nl": "Amsterdam; AI recruitment + open tooling (uithub).",
+    "already_followed": false,
+    "followers": 2797,
+    "example_url": "https://x.com/janwilmake/status/2117615054564577785"
+  },
+  {
+    "handle": "JensenHuang",
+    "name": "Jensen Huang",
+    "category": "founder_investor",
+    "note_nl": "NVIDIA CEO; AI-infra en agent-security aankondigingen.",
+    "already_followed": true,
+    "followers": 1154879,
+    "example_url": "https://x.com/JensenHuang"
+  },
+  {
+    "handle": "jsngr",
+    "name": "Jordan Singer",
+    "category": "builder_demo",
+    "note_nl": "Mainframe CEO; AI design-to-code product builder.",
+    "already_followed": false,
+    "followers": 181134,
+    "example_url": "https://x.com/jsngr/status/2118003477674668488"
+  },
+  {
+    "handle": "jxnlco",
+    "name": "jason",
+    "category": "builder_demo",
+    "note_nl": "OpenAI Codex DX; structured outputs / Instructor roots.",
+    "already_followed": false,
+    "followers": 140603,
+    "example_url": "https://x.com/jxnlco/status/2117373174543454224"
+  },
+  {
+    "handle": "karatademada",
+    "name": "Karata",
+    "category": "xai_grok",
+    "note_nl": "Grok Build → betaalde app (VitaSnap) + Grok Bot marketing.",
+    "already_followed": false,
+    "followers": 23209,
+    "example_url": "https://x.com/karatademada/status/2109635430630998223"
+  },
+  {
+    "handle": "karpathy",
+    "name": "Andrej Karpathy",
+    "category": "engineer_explainer",
+    "note_nl": "Diepe technische threads over LLMs en pretraining.",
+    "already_followed": true,
+    "followers": 4427651,
+    "example_url": "https://x.com/karpathy"
+  },
+  {
+    "handle": "kilocode",
+    "name": "Kilo",
+    "category": "official_product",
+    "note_nl": "Open-source agentic engineering platform (500+ models).",
+    "already_followed": false,
+    "followers": 29335,
+    "example_url": "https://x.com/kilocode/status/2117351630182232537"
+  },
+  {
+    "handle": "Kimi_Moonshot",
+    "name": "Kimi.ai",
+    "category": "official_product",
+    "note_nl": "Moonshot AI / Kimi model updates.",
+    "already_followed": true,
+    "followers": 391352,
+    "example_url": "https://x.com/Kimi_Moonshot"
+  },
+  {
+    "handle": "kimmonismus",
+    "name": "Chubby",
+    "category": "engineer_explainer",
+    "note_nl": "Duitse tech-analist; Superintelligence community.",
+    "already_followed": true,
+    "followers": 156365,
+    "example_url": "https://x.com/kimmonismus"
+  },
+  {
+    "handle": "KingBootoshi",
+    "name": "BOOTOSHI",
+    "category": "builder_demo",
+    "note_nl": "Agentic engineer; real projects met vibe coding.",
+    "already_followed": false,
+    "followers": 54826,
+    "example_url": "https://x.com/KingBootoshi/status/2118039815354814710"
+  },
+  {
+    "handle": "LangChain",
+    "name": "LangChain",
+    "category": "official_product",
+    "note_nl": "LangSmith + agent frameworks voor production.",
+    "already_followed": false,
+    "followers": 272705,
+    "example_url": "https://x.com/LangChain/status/2118038238871048516"
+  },
+  {
+    "handle": "latentspacepod",
+    "name": "Latent.Space",
+    "category": "engineer_explainer",
+    "note_nl": "AI engineering podcast/nieuwsbrief van swyx.",
+    "already_followed": false,
+    "followers": 34871,
+    "example_url": "https://x.com/latentspacepod/status/2117721636195663898"
+  },
+  {
+    "handle": "leerob",
+    "name": "Lee Robinson",
+    "category": "xai_grok",
+    "note_nl": "ex-Cursor/Vercel DX; nu SpaceXSI / Grok Bot.",
+    "already_followed": false,
+    "followers": 304201,
+    "example_url": "https://x.com/leerob/status/2117333463292670448"
+  },
+  {
+    "handle": "levelsio",
+    "name": "levelsio",
+    "category": "builder_demo",
+    "note_nl": "Indie hacker; ship in public met AI, revenue receipts.",
+    "already_followed": false,
+    "followers": 989653,
+    "example_url": "https://x.com/levelsio/status/2118218346881515532"
+  },
+  {
+    "handle": "lingxi",
+    "name": "Lingxi Li",
+    "category": "xai_grok",
+    "note_nl": "Engineering bij SpaceXSI; werkt aan Grok Bot.",
+    "already_followed": true,
+    "followers": 17514,
+    "example_url": "https://x.com/lingxi"
+  },
+  {
+    "handle": "Lovable",
+    "name": "Lovable",
+    "category": "official_product",
+    "note_nl": "Stockholm vibe-coding: chat → software (echte handle, niet lovable_dev).",
+    "already_followed": false,
+    "followers": 159767,
+    "example_url": "https://x.com/Lovable/status/2118018251670303231"
+  },
+  {
+    "handle": "mattpocockuk",
+    "name": "Matt Pocock",
+    "category": "builder_demo",
+    "note_nl": "TypeScript + AI Hero; Cursor/Claude Code best practices.",
+    "already_followed": false,
+    "followers": 385490,
+    "example_url": "https://x.com/mattpocockuk/status/2117359735007748127"
+  },
+  {
+    "handle": "mattshumer_",
+    "name": "Matt Shumer",
+    "category": "builder_demo",
+    "note_nl": "HyperWrite; agent architectures die in productie werken.",
+    "already_followed": false,
+    "followers": 402172,
+    "example_url": "https://x.com/mattshumer_/status/2117673664615203186"
+  },
+  {
+    "handle": "mckaywrigley",
+    "name": "Mckay Wrigley",
+    "category": "builder_demo",
+    "note_nl": "Bouwt en leert AI-devtools; concrete tutorials.",
+    "already_followed": true,
+    "followers": 229842,
+    "example_url": "https://x.com/mckaywrigley"
+  },
+  {
+    "handle": "milichab",
+    "name": "Andrew Milich",
+    "category": "xai_grok",
+    "note_nl": "ex-Cursor; Grok coding rebuild lead bij SpaceXSI.",
+    "already_followed": false,
+    "followers": 65010,
+    "example_url": "https://x.com/milichab/status/2117736578395295970"
+  },
+  {
+    "handle": "MistralAI",
+    "name": "Mistral AI",
+    "category": "official_product",
+    "note_nl": "Europese frontier models; Studio & Vibe coding.",
+    "already_followed": false,
+    "followers": 227822,
+    "example_url": "https://x.com/MistralAI/status/2117925908572991748"
+  },
+  {
+    "handle": "mntruell",
+    "name": "Michael Truell",
+    "category": "founder_investor",
+    "note_nl": "ex-Cursor CEO; nu SpaceXSI — coding agent product vision.",
+    "already_followed": false,
+    "followers": 234097,
+    "example_url": "https://x.com/mntruell/status/2118054007579296069"
+  },
+  {
+    "handle": "NathanLands",
+    "name": "Nathan Lands",
+    "category": "founder_investor",
+    "note_nl": "Investeerder in Factory/AI infra; America-win thesis.",
+    "already_followed": true,
+    "followers": 78687,
+    "example_url": "https://x.com/NathanLands"
+  },
+  {
+    "handle": "Netlify",
+    "name": "Netlify",
+    "category": "official_product",
+    "note_nl": "Build with AI/code; Claude marketplace deploy.",
+    "already_followed": false,
+    "followers": 106516,
+    "example_url": "https://x.com/Netlify/status/2118070179674681465"
+  },
+  {
+    "handle": "OfficialLoganK",
+    "name": "Logan Kilpatrick",
+    "category": "builder_demo",
+    "note_nl": "Gemini/AI Studio; developer-facing Google AI releases.",
+    "already_followed": false,
+    "followers": 385434,
+    "example_url": "https://x.com/OfficialLoganK/status/2117325033920217439"
+  },
+  {
+    "handle": "OpenAI",
+    "name": "OpenAI",
+    "category": "official_product",
+    "note_nl": "OpenAI releases, research en productupdates.",
+    "already_followed": true,
+    "followers": 5506492,
+    "example_url": "https://x.com/OpenAI"
+  },
+  {
+    "handle": "OpenAIDevs",
+    "name": "OpenAI Developers",
+    "category": "official_product",
+    "note_nl": "Codex & OpenAI Platform updates voor developers.",
+    "already_followed": false,
+    "followers": 472247,
+    "example_url": "https://x.com/OpenAIDevs/status/2118124753340756055"
+  },
+  {
+    "handle": "opencode",
+    "name": "OpenCode",
+    "category": "official_product",
+    "note_nl": "Open-source coding agent; snelle feature releases.",
+    "already_followed": false,
+    "followers": 229300,
+    "example_url": "https://x.com/opencode/status/2118135093617393774"
+  },
+  {
+    "handle": "perplexity_ai",
+    "name": "Perplexity",
+    "category": "official_product",
+    "note_nl": "Perplexity Computer; agentische search/e-commerce.",
+    "already_followed": false,
+    "followers": 510624,
+    "example_url": "https://x.com/perplexity_ai/status/2118035494898704781"
+  },
+  {
+    "handle": "polynoamial",
+    "name": "Noam Brown",
+    "category": "engineer_explainer",
+    "note_nl": "OpenAI reasoning (o-series); self-play en RL threads.",
+    "already_followed": false,
+    "followers": 183623,
+    "example_url": "https://x.com/polynoamial/status/2118140090631495703"
+  },
+  {
+    "handle": "ProductHunt",
+    "name": "Product Hunt",
+    "category": "founder_investor",
+    "note_nl": "Dagelijkse product launches; vibe-coding tools.",
+    "already_followed": false,
+    "followers": 565978,
+    "example_url": "https://x.com/ProductHunt/status/2117350282661372149"
+  },
+  {
+    "handle": "rauchg",
+    "name": "Guillermo Rauch",
+    "category": "builder_demo",
+    "note_nl": "Vercel CEO; Next.js/v0/agentic infra signalen.",
+    "already_followed": false,
+    "followers": 917051,
+    "example_url": "https://x.com/rauchg/status/2117394353304052210"
+  },
+  {
+    "handle": "Replit",
+    "name": "Replit",
+    "category": "official_product",
+    "note_nl": "Idea-to-app met Replit AI Agent.",
+    "already_followed": false,
+    "followers": 240032,
+    "example_url": "https://x.com/Replit/status/2118016670270926973"
+  },
+  {
+    "handle": "rileybrown",
+    "name": "Riley Brown",
+    "category": "builder_demo",
+    "note_nl": "Vibe coding YouTuber; agents + concrete app builds.",
+    "already_followed": false,
+    "followers": 263337,
+    "example_url": "https://x.com/rileybrown/status/2117339927398789220"
+  },
+  {
+    "handle": "rowancheung",
+    "name": "Rowan Cheung",
+    "category": "engineer_explainer",
+    "note_nl": "The Rundown AI; snelle AI-nieuws digest.",
+    "already_followed": false,
+    "followers": 602826,
+    "example_url": "https://x.com/rowancheung/status/2115818656307265852"
+  },
+  {
+    "handle": "rronak_",
+    "name": "Ronak Malde",
+    "category": "builder_demo",
+    "note_nl": "ex-DeepMind/Windsurf; agentic coding builder.",
+    "already_followed": true,
+    "followers": 12432,
+    "example_url": "https://x.com/rronak_"
+  },
+  {
+    "handle": "sama",
+    "name": "Sam Altman",
+    "category": "founder_investor",
+    "note_nl": "OpenAI CEO; strategische product/infra aankondigingen.",
+    "already_followed": false,
+    "followers": 6424133,
+    "example_url": "https://x.com/sama/status/2117794005165748448"
+  },
+  {
+    "handle": "SamuelBeek",
+    "name": "sam",
+    "category": "dutch_eu",
+    "note_nl": "Amsterdam; Schematik — 'cursor for hardware'; ex-VEED/WeTransfer.",
+    "already_followed": false,
+    "followers": 16383,
+    "example_url": "https://x.com/SamuelBeek/status/2118166037187453180"
+  },
+  {
+    "handle": "sequoia",
+    "name": "Sequoia Capital",
+    "category": "founder_investor",
+    "note_nl": "Top-tier VC; AI company building from idea to IPO.",
+    "already_followed": false,
+    "followers": 820109,
+    "example_url": "https://x.com/sequoia/status/2118077159856288108"
+  },
+  {
+    "handle": "shadcn",
+    "name": "shadcn",
+    "category": "builder_demo",
+    "note_nl": "shadcn/ui + v0; UI-component vibe coding.",
+    "already_followed": false,
+    "followers": 248023,
+    "example_url": "https://x.com/shadcn/status/2118209162081640731"
+  },
+  {
+    "handle": "shl",
+    "name": "Sahil Lavingia",
+    "category": "builder_demo",
+    "note_nl": "Gumroad; production-scale vibe coding lessons.",
+    "already_followed": false,
+    "followers": 394606,
+    "example_url": "https://x.com/shl/status/2118112782419968019"
+  },
+  {
+    "handle": "simonw",
+    "name": "Simon Willison",
+    "category": "builder_demo",
+    "note_nl": "LLM CLI tooling; praktisch uitleggen wat nieuw werkt.",
+    "already_followed": false,
+    "followers": 250183,
+    "example_url": "https://x.com/simonw/status/2110757925161755020"
+  },
+  {
+    "handle": "skcd42",
+    "name": "skcd",
+    "category": "xai_grok",
+    "note_nl": "ex-xAI coding; SWEBench Grok-code work.",
+    "already_followed": false,
+    "followers": 44227,
+    "example_url": "https://x.com/skcd42/status/2117698833581068598"
+  },
+  {
+    "handle": "SpaceXSI",
+    "name": "SpaceX Super Intelligence",
+    "category": "official_product",
+    "note_nl": "Officieel Grok/xAI-bedrijfsaccount (opvolger van @xai).",
+    "already_followed": false,
+    "followers": 2087466,
+    "example_url": "https://x.com/SpaceXSI/status/2110416580899168305"
+  },
+  {
+    "handle": "steipete",
+    "name": "Peter Steinberger",
+    "category": "builder_demo",
+    "note_nl": "OpenClaw/agent frameworks; Claude Code power user.",
+    "already_followed": false,
+    "followers": 614056,
+    "example_url": "https://x.com/steipete/status/2118202003784704167"
+  },
+  {
+    "handle": "supabase",
+    "name": "Supabase",
+    "category": "official_product",
+    "note_nl": "Postgres platform; Claude auto-connect, AI backends.",
+    "already_followed": false,
+    "followers": 216177,
+    "example_url": "https://x.com/supabase/status/2117683774200709510"
+  },
+  {
+    "handle": "svpino",
+    "name": "Santiago",
+    "category": "engineer_explainer",
+    "note_nl": "Computer science YouTube; AI coding uitleg.",
+    "already_followed": false,
+    "followers": 457392,
+    "example_url": "https://x.com/svpino/status/2118051150306173116"
+  },
+  {
+    "handle": "swyx",
+    "name": "swyx",
+    "category": "builder_demo",
+    "note_nl": "Latent Space; AI engineering map en nieuwe modelreleases.",
+    "already_followed": false,
+    "followers": 210667,
+    "example_url": "https://x.com/swyx/status/2118208851506036989"
+  },
+  {
+    "handle": "theo",
+    "name": "Theo - t3.gg",
+    "category": "builder_demo",
+    "note_nl": "Hands-on Cursor/Claude/v0 vergelijkingen en demos.",
+    "already_followed": false,
+    "followers": 420932,
+    "example_url": "https://x.com/theo/status/2118209748873150521"
+  },
+  {
+    "handle": "TheRundownAI",
+    "name": "The Rundown AI",
+    "category": "engineer_explainer",
+    "note_nl": "Grootste AI-nieuwsbrief; wat is nieuw en toepasbaar.",
+    "already_followed": false,
+    "followers": 231030,
+    "example_url": "https://x.com/TheRundownAI/status/2118057565607367147"
+  },
+  {
+    "handle": "thinkymachines",
+    "name": "Thinking Machines",
+    "category": "official_product",
+    "note_nl": "Mira Murati lab; Inkling base models (o.a. voor Cognition).",
+    "already_followed": false,
+    "followers": 184778,
+    "example_url": "https://x.com/thinkymachines/status/2110851669915570685"
+  },
+  {
+    "handle": "trq212",
+    "name": "Thariq",
+    "category": "builder_demo",
+    "note_nl": "ex-Claude Code engineer; AGENTS.md, mods, non-coding use.",
+    "already_followed": false,
+    "followers": 401655,
+    "example_url": "https://x.com/trq212/status/2101009393731223817"
+  },
+  {
+    "handle": "v0",
+    "name": "v0",
+    "category": "official_product",
+    "note_nl": "Vercel vibe-coding platform; artifacts en teams.",
+    "already_followed": false,
+    "followers": 116746,
+    "example_url": "https://x.com/v0/status/2115154412788461862"
+  },
+  {
+    "handle": "venturetwins",
+    "name": "Justine Moore",
+    "category": "founder_investor",
+    "note_nl": "a16z AI partner; creative AI startups.",
+    "already_followed": true,
+    "followers": 248552,
+    "example_url": "https://x.com/venturetwins"
+  },
+  {
+    "handle": "vercel",
+    "name": "Vercel",
+    "category": "official_product",
+    "note_nl": "Agentic infra; Security Review + Vercel Agent.",
+    "already_followed": false,
+    "followers": 470378,
+    "example_url": "https://x.com/vercel/status/2117726156992753721"
+  },
+  {
+    "handle": "warpdotdev",
+    "name": "Warp",
+    "category": "official_product",
+    "note_nl": "Agentic terminal / software factory infra.",
+    "already_followed": false,
+    "followers": 59431,
+    "example_url": "https://x.com/warpdotdev/status/2118045545986240919"
+  },
+  {
+    "handle": "XFreeze",
+    "name": "X Freeze",
+    "category": "xai_grok",
+    "note_nl": "Grok Bot templates en concrete Grok Build demos.",
+    "already_followed": true,
+    "followers": 295024,
+    "example_url": "https://x.com/XFreeze/status/2118176199746965741"
+  },
+  {
+    "handle": "ycombinator",
+    "name": "Y Combinator",
+    "category": "founder_investor",
+    "note_nl": "YC batches; AI coding tool startups (bijv. Weave).",
+    "already_followed": false,
+    "followers": 1664912,
+    "example_url": "https://x.com/ycombinator/status/2118040581574213691"
+  },
+  {
+    "handle": "ylecun",
+    "name": "Yann LeCun",
+    "category": "engineer_explainer",
+    "note_nl": "ex-Meta Chief AI Scientist; world models vs pure LLMs.",
+    "already_followed": false,
+    "followers": 1356796,
+    "example_url": "https://x.com/ylecun/status/2116977821088096276"
+  },
+  {
+    "handle": "zeddotdev",
+    "name": "Zed",
+    "category": "official_product",
+    "note_nl": "Snelle open-source IDE; Delta multiplayer agents.",
+    "already_followed": false,
+    "followers": 86084,
+    "example_url": "https://x.com/zeddotdev/status/2118032264013492536"
+  }
+]

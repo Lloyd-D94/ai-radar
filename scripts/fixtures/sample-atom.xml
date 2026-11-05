@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Releases</title>
+  <entry>
+    <title>v2.1.318</title>
+    <updated>2026-11-04T00:01:03Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.318"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;Fixed a security fix for a sandbox escape.&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Release v0.67.0-nightly.20261104</title>
+    <updated>2026-11-04T01:20:49Z</updated>
+    <link rel="alternate" href="https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.1"/>
+    <content type="html">nightly build</content>
+  </entry>
+  <entry>
+    <title>libcap 2.75 source archive</title>
+    <updated>2026-11-03T23:04:31Z</updated>
+    <link rel="alternate" href="https://github.com/openai/codex/releases/tag/libcap"/>
+    <content type="html">archive</content>
+  </entry>
+</feed>

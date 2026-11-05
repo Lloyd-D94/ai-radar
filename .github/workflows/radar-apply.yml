@@ -1,0 +1,53 @@
+name: Radar-update toepassen
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - radar-update.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run radar:apply
+      - name: Data vastleggen
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "Geen wijziging in data/."
+          else
+            git commit -m "chore: pas radar-update toe"
+            git push origin HEAD:main
+          fi
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - name: Pages-waarschuwing
+        if: steps.deployment.outcome == 'failure'
+        run: echo "::warning::Pages-deploy mislukte. Zet Settings → Pages → Source op GitHub Actions. Zie README."

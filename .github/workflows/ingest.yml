@@ -1,0 +1,66 @@
+name: Bronnen bijwerken
+
+on:
+  schedule:
+    # Elke 3 uur. De minuut is bewust niet :00, zodat de run niet samenvalt met de drukste minuut.
+    - cron: "20 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run ingest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Wijzigingen vastleggen
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "Geen inhoudelijke wijziging."
+            last="$(git log -1 --format=%ct)"
+            now="$(date +%s)"
+            if [ $((now - last)) -gt 2592000 ]; then
+              mkdir -p data
+              date -u +"%Y-%m-%dT%H:%M:%SZ" > data/heartbeat.json
+              git add data/heartbeat.json
+              git commit -m "chore: heartbeat zodat de planning actief blijft"
+              git push origin HEAD:main
+            fi
+          else
+            git commit -m "chore: werk AI Radar-data bij"
+            git push origin HEAD:main
+          fi
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - name: Pages-waarschuwing
+        if: steps.deployment.outcome == 'failure'
+        run: echo "::warning::Pages-deploy mislukte. Zet Settings → Pages → Build and deployment → Source op GitHub Actions. Zie README."

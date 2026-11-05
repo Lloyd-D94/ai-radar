@@ -1,0 +1,478 @@
+{
+  "version": 1,
+  "sitemaps": {
+    "xai-news": {
+      "etag": null,
+      "urls": [
+        {
+          "loc": "https://x.ai/news/grok-voice-3",
+          "lastmod": "2026-10-14T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/data-bot",
+          "lastmod": "2026-11-02T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-bot-sales",
+          "lastmod": "2026-10-27T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/partnernetworkannouncement",
+          "lastmod": "2026-10-22T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/incident-sweep",
+          "lastmod": "2026-10-20T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/x-subscription",
+          "lastmod": "2026-10-12T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/team-bots",
+          "lastmod": "2026-09-28T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-bot-customer-support",
+          "lastmod": "2026-09-22T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-4-7",
+          "lastmod": "2026-09-21T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-voice-transcribe-2",
+          "lastmod": "2026-09-18T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-build-memory",
+          "lastmod": "2026-09-16T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-bot-procurement",
+          "lastmod": "2026-09-04T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/designing-grok-bot",
+          "lastmod": "2026-09-03T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-bot-for-enterprise",
+          "lastmod": "2026-09-03T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/biosafety-at-the-frontier",
+          "lastmod": "2026-09-01T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-bot-and-x",
+          "lastmod": "2026-08-29T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-4-6-microsoft-foundry",
+          "lastmod": "2026-08-26T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-bot-more-plans",
+          "lastmod": "2026-08-26T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-4-6-vertex-ai",
+          "lastmod": "2026-08-21T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-4-6-amazon-bedrock",
+          "lastmod": "2026-08-19T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-build-for-everyone",
+          "lastmod": "2026-08-19T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-4-6-github-copilot",
+          "lastmod": "2026-08-14T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-4-6",
+          "lastmod": "2026-08-12T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/introducing-grok-bot",
+          "lastmod": "2026-08-11T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-imagine-image-2",
+          "lastmod": "2026-08-07T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-imagine-video-1-5-references",
+          "lastmod": "2026-07-31T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-voice-think-fast-2",
+          "lastmod": "2026-07-29T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-build-mode",
+          "lastmod": "2026-07-28T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-github-copilot",
+          "lastmod": "2026-07-28T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/introducing-google-workspace-addon",
+          "lastmod": "2026-07-24T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/workflows",
+          "lastmod": "2026-07-23T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-4-5-everywhere",
+          "lastmod": "2026-07-22T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/introducing-outlook-addin",
+          "lastmod": "2026-07-21T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/introducing-excel-addin",
+          "lastmod": "2026-07-20T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-4-5",
+          "lastmod": "2026-07-16T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-automations",
+          "lastmod": "2026-07-16T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-build-open-source",
+          "lastmod": "2026-07-15T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/new-flagship-voices",
+          "lastmod": "2026-07-06T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-voice-agent-builder",
+          "lastmod": "2026-07-01T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/introducing-goal",
+          "lastmod": "2026-06-22T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-databricks",
+          "lastmod": "2026-06-18T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/introducing-word-addin",
+          "lastmod": "2026-06-18T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-amazon-bedrock",
+          "lastmod": "2026-06-17T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-imagine-video-1-5",
+          "lastmod": "2026-06-16T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/introducing-powerpoint-addin",
+          "lastmod": "2026-06-16T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/agent-dashboard",
+          "lastmod": "2026-06-15T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-warp",
+          "lastmod": "2026-06-15T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-plugin-marketplace",
+          "lastmod": "2026-06-11T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-imagine-1-5",
+          "lastmod": "2026-06-03T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/composer-2-5",
+          "lastmod": "2026-06-01T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-build-0-1",
+          "lastmod": "2026-05-29T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-kilocode",
+          "lastmod": "2026-05-27T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-build-cli",
+          "lastmod": "2026-05-25T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-opencode",
+          "lastmod": "2026-05-21T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-openclaw",
+          "lastmod": "2026-05-19T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-skills",
+          "lastmod": "2026-05-18T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-hermes",
+          "lastmod": "2026-05-15T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/anthropic-compute-partnership",
+          "lastmod": "2026-05-06T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-connectors",
+          "lastmod": "2026-05-06T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-imagine-quality-mode",
+          "lastmod": "2026-05-06T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-custom-voices",
+          "lastmod": "2026-04-30T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-voice-think-fast-1",
+          "lastmod": "2026-04-23T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-stt-and-tts-apis",
+          "lastmod": "2026-04-17T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/xai-joins-spacex",
+          "lastmod": "2026-02-02T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-imagine-api",
+          "lastmod": "2026-01-28T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/series-e",
+          "lastmod": "2026-01-06T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-business",
+          "lastmod": "2025-12-30T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-collections-api",
+          "lastmod": "2025-12-22T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/us-gov-dept-of-war",
+          "lastmod": "2025-12-22T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-voice-agent-api",
+          "lastmod": "2025-12-17T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/el-salvador-partnership",
+          "lastmod": "2025-12-11T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-4-1-fast",
+          "lastmod": "2025-11-19T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-goes-global",
+          "lastmod": "2025-11-19T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-4-1",
+          "lastmod": "2025-11-17T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/onegov",
+          "lastmod": "2025-09-25T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-4-fast",
+          "lastmod": "2025-09-19T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-code-fast-1",
+          "lastmod": "2025-08-28T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/government",
+          "lastmod": "2025-07-14T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-4",
+          "lastmod": "2025-07-09T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-3",
+          "lastmod": "2025-02-19T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/series-c",
+          "lastmod": "2024-12-23T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-1212",
+          "lastmod": "2024-12-12T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-image-generation-release",
+          "lastmod": "2024-12-09T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/api",
+          "lastmod": "2024-11-04T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-2",
+          "lastmod": "2024-08-13T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/series-b",
+          "lastmod": "2024-05-26T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-1.5v",
+          "lastmod": "2024-04-12T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-1.5",
+          "lastmod": "2024-03-28T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-os",
+          "lastmod": "2024-03-17T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/prompt-ide",
+          "lastmod": "2023-11-06T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok",
+          "lastmod": "2023-11-03T00:00:00.000Z"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "https://docs.x.ai/docs/release-notes": {
+      "hash": "3edad7ce560bc2f12239c2edd5f8fb7d761997fb49762b04aad8c7cef08c0a61",
+      "etag": null
+    }
+  },
+  "news": {
+    "https://x.ai/news/data-bot": {
+      "lastmod": "2026-11-02T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:52:37.114Z"
+    },
+    "https://x.ai/news/grok-bot-sales": {
+      "lastmod": "2026-10-27T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:52:37.154Z"
+    },
+    "https://x.ai/news/partnernetworkannouncement": {
+      "lastmod": "2026-10-22T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:52:37.202Z"
+    },
+    "https://x.ai/news/incident-sweep": {
+      "lastmod": "2026-10-20T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:52:37.250Z"
+    },
+    "https://x.ai/news/grok-voice-3": {
+      "lastmod": "2026-10-14T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:52:37.299Z"
+    },
+    "https://x.ai/news/x-subscription": {
+      "lastmod": "2026-10-12T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:52:37.344Z"
+    },
+    "https://x.ai/news/team-bots": {
+      "lastmod": "2026-09-28T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:52:37.389Z"
+    },
+    "https://x.ai/news/grok-bot-customer-support": {
+      "lastmod": "2026-09-22T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:52:37.427Z"
+    },
+    "https://x.ai/news/grok-4-7": {
+      "lastmod": "2026-09-21T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:52:37.472Z"
+    },
+    "https://x.ai/news/grok-voice-transcribe-2": {
+      "lastmod": "2026-09-18T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:52:37.508Z"
+    },
+    "https://x.ai/news/grok-build-memory": {
+      "lastmod": "2026-09-16T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:52:37.541Z"
+    },
+    "https://x.ai/news/grok-bot-procurement": {
+      "lastmod": "2026-09-04T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:52:37.578Z"
+    },
+    "https://x.ai/news/designing-grok-bot": {
+      "lastmod": "2026-09-03T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:53:58.210Z"
+    },
+    "https://x.ai/news/grok-bot-for-enterprise": {
+      "lastmod": "2026-09-03T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:53:58.262Z"
+    },
+    "https://x.ai/news/biosafety-at-the-frontier": {
+      "lastmod": "2026-09-01T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:53:58.314Z"
+    },
+    "https://x.ai/news/grok-bot-and-x": {
+      "lastmod": "2026-08-29T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:53:58.369Z"
+    },
+    "https://x.ai/news/grok-4-6-microsoft-foundry": {
+      "lastmod": "2026-08-26T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:53:58.436Z"
+    },
+    "https://x.ai/news/grok-bot-more-plans": {
+      "lastmod": "2026-08-26T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:53:58.496Z"
+    },
+    "https://x.ai/news/grok-4-6-vertex-ai": {
+      "lastmod": "2026-08-21T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:53:58.554Z"
+    },
+    "https://x.ai/news/grok-4-6-amazon-bedrock": {
+      "lastmod": "2026-08-19T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:53:58.654Z"
+    },
+    "https://x.ai/news/grok-build-for-everyone": {
+      "lastmod": "2026-08-19T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:53:58.702Z"
+    },
+    "https://x.ai/news/grok-4-6-github-copilot": {
+      "lastmod": "2026-08-14T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:53:58.750Z"
+    },
+    "https://x.ai/news/grok-4-6": {
+      "lastmod": "2026-08-12T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:53:58.814Z"
+    },
+    "https://x.ai/news/introducing-grok-bot": {
+      "lastmod": "2026-08-11T00:00:00.000Z",
+      "fetchedAt": "2026-11-04T20:53:58.860Z"
+    }
+  }
+}
