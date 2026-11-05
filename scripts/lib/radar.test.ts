@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { describe, it } from "node:test";
 
 import { applyRadarUpdate } from "../apply-radar-update.ts";
-import { LIMITS, mergeAccounts, mergeRadar, parseAccount, sentenceCount, validateIncoming, type RadarExample, type RadarFile } from "./radar.ts";
+import { LIMITS, mergeAccounts, mergeRadar, parseAccount, sentenceCount, validateIncoming, type RadarAccount, type RadarCreation, type RadarExample, type RadarFile, type RadarStartup } from "./radar.ts";
 
 const example = (patch: Partial<RadarExample> = {}): RadarExample => ({
   id: "ex-demo",
@@ -19,6 +19,29 @@ const example = (patch: Partial<RadarExample> = {}): RadarExample => ({
   ...patch,
 });
 
+const startup = (patch: Partial<RadarStartup> = {}): RadarStartup => ({
+  id: "startup-demo",
+  name: "Demo Lab",
+  handle: "demolab",
+  url: "https://x.com/demolab",
+  one_liner_nl: "Een fictief lab voor de test.",
+  why_new_nl: "Het lab staat er omdat de test een startup nodig heeft.",
+  date_found: "2026-11-04T18:00:00.000Z",
+  proof_url: "https://x.com/demolab/status/2118054007579296069",
+  ...patch,
+});
+
+const account = (patch: Partial<RadarAccount> = {}): RadarAccount => ({
+  handle: "demolab",
+  name: "Demo Lab",
+  category: "builder_demo",
+  note_nl: "Een account voor de test.",
+  already_followed: false,
+  followers: 12,
+  example_url: "https://x.com/demolab",
+  ...patch,
+});
+
 const update = (exampleId = "ex-demo") => ({
   id: "upd-demo",
   date: "2026-11-04T18:00:00.000Z",
@@ -29,6 +52,21 @@ const update = (exampleId = "ex-demo") => ({
   example_ids: [exampleId],
   source_urls: ["https://x.com/someone/status/2118054007579296069"],
   importance: 4,
+});
+
+const creation = (patch: Partial<RadarCreation> = {}): RadarCreation => ({
+  id: "cr-demo",
+  date: "2026-11-05T09:00:00.000Z",
+  platform: "x",
+  url: "https://x.com/someone/status/2118054007579296069",
+  author_handle: "someone",
+  author_name: "Iemand",
+  author_avatar_url: "https://cdn.example.com/avatar.jpg",
+  title_nl: "Een voorbeeldspel",
+  what_nl: "Iemand bouwde een klein spel met Claude Code.",
+  tools: ["Claude Code"],
+  category: "apps_games_websites",
+  ...patch,
 });
 
 describe("radar-validatie", () => {
@@ -45,7 +83,7 @@ describe("radar-validatie", () => {
         {
           ...update(),
           summary_nl: "Eén. Twee. Drie.",
-          can_do_nl: ["alleen dit"],
+          can_do_nl: [],
           source_urls: ["http://x.com/someone/status/1"],
           example_ids: ["bestaat-niet"],
         },
@@ -65,6 +103,189 @@ describe("radar-validatie", () => {
     const current: RadarFile = { updates: [], examples: [example()], startups: [] };
     const issues = validateIncoming({ updates: [update()], examples: [], startups: [] }, current.examples).issues;
     assert.deepEqual(issues, []);
+  });
+
+  it("bewaart optionele post-, startup- en accountvelden", () => {
+    const rich = example({
+      author_name: "Voorbeeld Auteur",
+      author_avatar_url: "https://cdn.example.com/avatar.jpg",
+      text: "Eerste zin van de post. Tweede zin mag hier wel.",
+      media: [
+        {
+          type: "photo",
+          url: "https://cdn.example.com/full.jpg",
+          preview_url: "https://cdn.example.com/preview.jpg",
+          alt: "Een schets",
+        },
+      ],
+      metrics: { likes: 0, reposts: 2, replies: 1, views: 40 },
+      lang: "nl",
+    });
+    const checked = validateIncoming({
+      updates: [],
+      examples: [rich],
+      startups: [startup({ website_url: "https://example.com/lab", logo_url: "https://cdn.example.com/logo.png" })],
+      accounts: [account({ avatar_url: "https://cdn.example.com/avatar.jpg" })],
+    });
+    assert.deepEqual(checked.issues, []);
+    assert.equal(checked.examples[0]?.author_name, "Voorbeeld Auteur");
+    assert.equal(checked.examples[0]?.text?.includes("Tweede zin"), true);
+    assert.equal(checked.examples[0]?.media?.[0]?.preview_url, "https://cdn.example.com/preview.jpg");
+    assert.equal(checked.examples[0]?.metrics?.likes, 0);
+    assert.equal(checked.examples[0]?.lang, "nl");
+    assert.equal(checked.startups[0]?.website_url, "https://example.com/lab");
+    assert.equal(checked.startups[0]?.logo_url, "https://cdn.example.com/logo.png");
+    assert.equal(checked.accounts[0]?.avatar_url, "https://cdn.example.com/avatar.jpg");
+    const merged = mergeRadar({ updates: [], examples: [], startups: [] }, checked);
+    assert.equal(merged.examples[0]?.media?.[0]?.type, "photo");
+    const photoOnly = validateIncoming({
+      updates: [],
+      examples: [example({ media: [{ type: "photo", url: "https://cdn.example.com/only.jpg" }] })],
+      startups: [],
+    });
+    assert.deepEqual(photoOnly.issues, []);
+    assert.equal(photoOnly.examples[0]?.media?.[0]?.url, "https://cdn.example.com/only.jpg");
+    const videoOnly = validateIncoming({
+      updates: [],
+      examples: [
+        example({
+          id: "ex-video",
+          post_url: "https://x.com/someone/status/2118054007579296070",
+          media: [{ type: "video", preview_url: "https://cdn.example.com/thumb.jpg" }],
+        }),
+      ],
+      startups: [],
+    });
+    assert.deepEqual(videoOnly.issues, []);
+    assert.equal(videoOnly.examples[0]?.media?.[0]?.preview_url, "https://cdn.example.com/thumb.jpg");
+    const playable = validateIncoming({
+      updates: [],
+      examples: [
+        example({
+          id: "ex-mp4",
+          post_url: "https://x.com/someone/status/2118054007579296071",
+          media: [
+            {
+              type: "video",
+              preview_url: "https://cdn.example.com/thumb.jpg",
+              video_url: "https://video.example.com/clip.mp4?tag=14",
+              width: 1920,
+              height: 1080,
+              duration_ms: 42033,
+            },
+          ],
+        }),
+      ],
+      startups: [],
+    });
+    assert.deepEqual(playable.issues, []);
+    assert.equal(playable.examples[0]?.media?.[0]?.video_url, "https://video.example.com/clip.mp4?tag=14");
+    assert.equal(playable.examples[0]?.media?.[0]?.duration_ms, 42033);
+    const badVideo = validateIncoming({
+      updates: [],
+      examples: [
+        example({
+          id: "ex-bad-mp4",
+          post_url: "https://x.com/someone/status/2118054007579296072",
+          media: [{ type: "video", preview_url: "https://cdn.example.com/thumb.jpg", video_url: "https://video.example.com/clip.m3u8" }],
+        }),
+      ],
+      startups: [],
+    }).issues;
+    assert.ok(badVideo.some((issue) => issue.includes("video_url")));
+    assert.equal(merged.startups[0]?.website_url, "https://example.com/lab");
+    assert.equal(mergeAccounts([], checked.accounts)[0]?.avatar_url, "https://cdn.example.com/avatar.jpg");
+  });
+
+  it("weigert kapotte avatars, media, metrics en HTML in de posttekst", () => {
+    const issues = validateIncoming({
+      updates: [],
+      examples: [
+        {
+          ...example(),
+          author_avatar_url: "http://cdn.example.com/a.jpg",
+          text: `<p>${"x".repeat(500)}</p>`,
+          lang: "nederlands",
+          media: [
+            { type: "audio", url: "notaurl", preview_url: "https://cdn.example.com/p.jpg" },
+            { type: "photo", url: "https://cdn.example.com/a.jpg", preview_url: "https://cdn.example.com/b.jpg" },
+            { type: "photo", url: "https://cdn.example.com/c.jpg", preview_url: "https://cdn.example.com/d.jpg" },
+            { type: "gif", url: "https://cdn.example.com/e.jpg", preview_url: "https://cdn.example.com/f.jpg" },
+            { type: "video", url: "https://cdn.example.com/g.jpg", preview_url: "https://cdn.example.com/h.jpg" },
+          ],
+          metrics: { likes: -1, views: 1.5, saves: 3 },
+        },
+      ],
+      startups: [startup({ website_url: "http://example.com", logo_url: "data:image/svg+xml,abc" })],
+      accounts: [account({ avatar_url: "data:image/svg+xml,abc" })],
+    }).issues;
+    assert.ok(issues.some((issue) => issue.includes("author_avatar_url")));
+    assert.ok(issues.some((issue) => issue.includes("platte tekst")));
+    assert.ok(issues.some((issue) => issue.includes("text") && issue.includes("500")));
+    assert.ok(issues.some((issue) => issue.includes("lang")));
+    assert.ok(issues.some((issue) => issue.includes("media")));
+    assert.ok(issues.some((issue) => issue.includes("type")));
+    assert.ok(issues.some((issue) => issue.includes("likes")));
+    assert.ok(issues.some((issue) => issue.includes("views")));
+    assert.ok(issues.some((issue) => issue.includes("saves")));
+    assert.ok(issues.some((issue) => issue.includes("website_url")));
+    assert.ok(issues.some((issue) => issue.includes("logo_url")));
+    assert.ok(issues.some((issue) => issue.includes("avatar_url")));
+  });
+
+  it("accepteert een creatie en weigert een kapotte YouTube-url", () => {
+    const ok = validateIncoming({
+      updates: [update("ex-demo")],
+      examples: [example()],
+      startups: [],
+      creations: [creation({ update_id: "upd-demo" }), creation({ id: "cr-yt", platform: "youtube", url: "https://www.youtube.com/watch?v=M7lc1UVf-VE", author_handle: "Voorbeeldkanaal", youtube_id: "M7lc1UVf-VE", duration_s: 42 })],
+    });
+    assert.deepEqual(ok.issues, []);
+    assert.equal(ok.creations[1]?.youtube_id, "M7lc1UVf-VE");
+    const rich = validateIncoming({
+      updates: [],
+      examples: [],
+      startups: [],
+      creations: [
+        creation({
+          id: "cr-yt-AbC_def-12",
+          platform: "youtube",
+          url: "https://www.youtube.com/watch?v=AbC_def-123",
+          author_handle: "kanaal_1",
+          youtube_id: "AbC_def-123",
+          duration_s: 90,
+          what_nl: "Eerste zin. Tweede zin. Derde zin.",
+          text: `Prompt <inputs> en nog wat. ${"a".repeat(460)}`,
+          lloyd_pick: true,
+          channel_id: "UC_ILSBQyvg-TlqVt9DJGWPQ",
+          title_original: "Original title",
+        }),
+      ],
+    });
+    assert.deepEqual(rich.issues, []);
+    assert.equal(rich.creations[0]?.lloyd_pick, true);
+    assert.equal(rich.creations[0]?.channel_id, "UC_ILSBQyvg-TlqVt9DJGWPQ");
+    assert.ok(validateIncoming({ creations: [creation({ platform: "x", channel_id: "UCh13OyDSm-Kb8ij3yZArtFg" })] }).issues.some((issue) => issue.includes("YouTube")));
+    const bad = validateIncoming({
+      updates: [],
+      examples: [],
+      startups: [],
+      creations: [
+        {
+          ...creation({
+            platform: "youtube",
+            url: "https://youtu.be/abcdefghijk",
+            youtube_id: "abcdefghijk",
+            author_handle: "kanaal",
+            update_id: "bestaat-niet",
+          }),
+          category: "onzin",
+        },
+      ],
+    }).issues;
+    assert.ok(bad.some((issue) => issue.includes("youtube.com/watch")));
+    assert.ok(bad.some((issue) => issue.includes("category")));
+    assert.ok(bad.some((issue) => issue.includes("onbekende update")));
   });
 
   it("weigert dubbele ids in hetzelfde bestand", () => {
@@ -93,6 +314,11 @@ describe("radar-merge", () => {
     assert.equal(next.updates[0]?.title_nl, "Nieuw");
     assert.equal(next.examples.length, 1);
     assert.equal(next.examples[0]?.id, "ex-ander");
+    const kept = mergeRadar({ updates: [], examples: [], startups: [], creations: [creation()] }, { updates: [], examples: [], startups: [] });
+    assert.equal(kept.creations?.[0]?.id, "cr-demo");
+    const replaced = mergeRadar(kept, { updates: [], examples: [], startups: [], creations: [creation({ title_nl: "Nieuw spel" })] });
+    assert.equal(replaced.creations?.length, 1);
+    assert.equal(replaced.creations?.[0]?.title_nl, "Nieuw spel");
     assert.equal(mergeAccounts([{ handle: "Bot", name: "Oud", category: "xai_grok", note_nl: "a", already_followed: true, followers: 1, example_url: "https://x.com/bot" }], [{ handle: "bot", name: "Nieuw", category: "xai_grok", note_nl: "b", already_followed: false, followers: 2, example_url: "https://x.com/bot" }])[0]?.name, "Nieuw");
   });
 
@@ -122,6 +348,20 @@ describe("radar-merge", () => {
     assert.equal(readFileSync(join(radarPath, "radar.json"), "utf8"), before);
   });
 
+  it("de fixture is voorbeelddata en blijft buiten data/", () => {
+    const fixture = JSON.parse(readFileSync("web/dev/fixtures/radar.fixture.json", "utf8")) as {
+      fixture?: boolean;
+      notice?: string;
+      examples?: Array<{ text?: string; author_name?: string; author_avatar_url?: string }>;
+    };
+    assert.equal(fixture.fixture, true);
+    assert.match(fixture.notice ?? "", /voorbeeld/i);
+    assert.ok((fixture.examples?.length ?? 0) >= 8 && (fixture.examples?.length ?? 0) <= 12);
+    assert.ok(fixture.examples?.every((item) => /voorbeeld/i.test(item.text ?? "") && String(item.author_avatar_url).startsWith("data:image/")));
+    const production = readFileSync("data/radar.json", "utf8");
+    assert.equal(production.includes("voorbeeld_a"), false);
+  });
+
   it("de startset in data/ is geldig en komt uit het rapport", () => {
     const radar = JSON.parse(readFileSync("data/radar.json", "utf8")) as RadarFile & { examples: RadarExample[] };
     const accounts = JSON.parse(readFileSync("data/accounts.json", "utf8")) as unknown[];
@@ -134,6 +374,8 @@ describe("radar-merge", () => {
       }),
     ];
     assert.deepEqual(issues, []);
+    assert.equal(radar.creations?.length, 35);
+    assert.equal(radar.creations?.filter((item) => item.lloyd_pick).length, 3);
     assert.equal(radar.examples.length, 12);
     assert.equal(radar.updates.length, 9);
     assert.equal(radar.startups.length, 10);

@@ -42,14 +42,15 @@ Blijft een run om een andere reden 30 dagen zonder commit, dan schrijft dezelfde
 
 ## Schermen
 
-Onderaan het scherm:
+Onderaan het scherm, vijf knoppen:
 
-- **Vandaag** — laatste 7 dagen. Bovenaan een 5-minuten-samenvatting (top 3), daaronder kaarten met “Dit kun je ermee” en de gekoppelde posts.
-- **Voorbeelden** — X-posts. Filter op tool en soort. “Alleen van accounts die ik nog niet volg” staat standaard aan.
-- **Startups** — naam, één zin, waarom het nieuw is, link naar het account en de bewijs-post.
-- **Ontdek** — accounts die je nog niet volgt, per categorie, met notitie en volgers. Onderaan een kleinere lijst “Je volgt al”.
-- **Zoeken** — één veld over updates, voorbeelden, startups, accounts en de automatische releases.
-- **Bronnen** — secundair. De automatische RSS/sitemap/HN-feed (changelogs). Standaard alleen score 4 of hoger, plus beveiliging, prijs en breaking changes.
+- **Vandaag** — één feed voor de laatste 7 dagen. Per update een titel, hooguit twee zinnen uitleg, maximaal drie concrete “dit kun je ermee”-regels (de titel wordt niet herhaald) en twee postkaarten. Startups en een paar accounts die je nog niet volgt staan ertussen. Alleen belang 5 krijgt het label “Groot nieuws”. Gelezen en bewaren blijven in deze browser (`localStorage`), zonder account.
+- **Voorbeelden** — dezelfde postkaarten. Filter met chips op tool en soort. “Nog niet gevolgd” staat standaard aan; dat is een filter, geen badge op elke post.
+- **Startups** — logo of initiaal, naam, één zin, één regel “waarom nieuw”, de website als die bekend is, en de bewijs-post.
+- **Ontdek** — accounts per categorie, met avatar of initialen, een korte notitie en een knop om op X te volgen.
+- **Meer** — Zoeken, Bronnen en Bewaard.
+
+Zoeken toont suggesties (tools en woorden uit de data) en recente zoekopdrachten in deze browser. Bronnen blijft secundair: opgeschoonde changelogs, ingekort met “Meer lezen”. Bewaard is wat je in deze browser bewaart.
 
 Items met `"seed": true` zijn de startset uit het rapport van 5 nov 2026. Latere items zonder dat veld komen uit `radar-update.json`.
 
@@ -57,7 +58,7 @@ Items met `"seed": true` zijn de startset uit het rapport van 5 nov 2026. Latere
 
 | Bestand | Inhoud |
 | --- | --- |
-| `data/radar.json` | `updates`, `examples`, `startups` |
+| `data/radar.json` | `updates`, `examples`, `startups`, optioneel `creations` |
 | `data/accounts.json` | 129 X-accounts; `already_followed` zegt of je het account al volgt |
 | `data/items.json` | Automatische release-items (tab Bronnen) |
 | `data/sources.json` | Gezondheid van die feeds |
@@ -73,6 +74,7 @@ Een externe routine levert `radar-update.json` in de root, met dezelfde vorm:
   "updates": [],
   "examples": [],
   "startups": [],
+  "creations": [],
   "accounts": []
 }
 ```
@@ -84,20 +86,108 @@ npm run radar:apply
 npm run radar:apply -- pad/naar/radar-update.json
 ```
 
-Het script valideert en stopt met een foutmelding als iets niet klopt. Het schrijft dan niets weg. Geldige items worden samengevoegd op id of URL. Er blijven maximaal 400 updates en 1500 voorbeelden; de oudste vallen weg.
+Het script valideert en stopt met een foutmelding als iets niet klopt. Het schrijft dan niets weg. Geldige items worden samengevoegd op id of URL. Er blijven maximaal 400 updates, 1500 voorbeelden en 600 creaties; de oudste vallen weg. Ontbreekt `creations` in het bestand, dan blijven de bestaande creaties staan.
 
 Regels, kort:
 
-- Datums zijn ISO. Belang is een geheel getal van 1 tot 5.
-- `summary_nl` is maximaal twee zinnen. `note_nl` is één zin. `can_do_nl` heeft 2 tot 5 punten.
+- Datums zijn ISO. Belang is een geheel getal van 1 tot 5. De feed zet alleen bij 5 het label “Groot nieuws”.
+- `summary_nl` is maximaal twee zinnen. `note_nl` is één zin. `can_do_nl` heeft 1 tot 5 punten.
+- Schrijf `can_do_nl` als concrete acties. Herhaal de titel niet: de feed toont hooguit drie punten en laat punten weg die bijna hetzelfde zijn als de titel of als elkaar.
 - Elke URL is `https`. Een voorbeeldpost is precies `https://x.com/<handle>/status/<id>`, en die handle is `author_handle`.
-- `example_ids` moeten bestaan, in dit bestand of al in `data/radar.json`.
+- `example_ids` moeten bestaan, in dit bestand of al in `data/radar.json`. In de feed staan de eerste twee gekoppelde posts direct onder de update.
 - `kind` is `demo`, `workflow`, `release` of `tutorial`.
 - Accountcategorie is `official_product`, `builder_demo`, `engineer_explainer`, `founder_investor`, `xai_grok` of `dutch_eu`.
+- Een voorbeeld met hetzelfde id of dezelfde `post_url` vervangt het vorige volledig. Stuur bij een aanvulling het hele object opnieuw, anders vallen optionele velden die je weglaat weg.
+
+### Optionele velden
+
+Alles hieronder mag ontbreken. Oude updates blijven geldig, en de site valt terug op een initiaal, op `note_nl` als posttekst, en op geen beeld.
+
+Voorbeelden, zodat de feed een echte postkaart kan tekenen (avatar, naam, tekst, beeld) zonder embed-script en zonder API-sleutel:
+
+| Veld | Vorm |
+| --- | --- |
+| `author_name` | Weergavenaam, tekst |
+| `author_avatar_url` | `https`-URL van de avatar |
+| `text` | Platte tekst van de post, maximaal 500 tekens, geen HTML. Meerdere zinnen mag. Dit is niet `note_nl`. |
+| `media` | Lijst van hooguit 4 objecten. `type` is `photo`, `video` of `gif`. Minstens één van `url` en `preview_url` is een `https`-URL. Een foto mag alleen `url` hebben. Een video mag alleen `preview_url` hebben: dat is het stilstaande beeld in het raster. `alt` is optionele tekst, maximaal 180 tekens. `video_url` is een optionele `https`-mp4; alleen dan speelt de viewer de video inline (gedempt, met bediening). `width` en `height` zijn optioneel de originele afmetingen in pixels, `duration_ms` de lengte in milliseconden. |
+| `metrics` | Object met `likes`, `reposts`, `replies` en/of `views`: gehele getallen van 0 of hoger. Elk getal mag ontbreken. |
+| `lang` | Korte taalcode, bijvoorbeeld `nl` of `en`. |
+
+`note_nl` blijft de Nederlandse takeaway. Die verschijnt op de kaart als “Wat is hier gaaf aan”, onder de post. Zonder `text` gebruikt de kaart `note_nl` als posttekst en laat die regel weg, zodat de zin niet twee keer staat.
+
+Startups:
+
+| Veld | Vorm |
+| --- | --- |
+| `website_url` | `https` van de eigen site. Los van `url`, dat het X-account blijft. |
+| `logo_url` | `https` van een logo. Zonder logo toont de kaart een initiaal. |
+
+Accounts (`data/accounts.json`, veld `name` bestaat al):
+
+| Veld | Vorm |
+| --- | --- |
+| `avatar_url` | `https` van de avatar. Zonder avatar toont Ontdek initialen. |
+
+Voorbeeld van een post met de nieuwe velden:
+
+```json
+{
+  "id": "ex-voorbeeld",
+  "date": "2026-11-05T08:00:00.000Z",
+  "author_handle": "voorbeeld",
+  "author_name": "Voorbeeld",
+  "author_avatar_url": "https://pbs.twimg.com/profile_images/voorbeeld.jpg",
+  "post_url": "https://x.com/voorbeeld/status/1",
+  "text": "Platte tekst van de post, zoals die op X staat.",
+  "note_nl": "Dit is de Nederlandse takeaway in één zin.",
+  "tool": "Grok Bot",
+  "kind": "demo",
+  "from_followed": false,
+  "lang": "nl",
+  "metrics": { "likes": 12, "reposts": 1, "replies": 0, "views": 340 },
+  "media": [
+    {
+      "type": "photo",
+      "url": "https://pbs.twimg.com/media/voorbeeld.jpg",
+      "preview_url": "https://pbs.twimg.com/media/voorbeeld.jpg",
+      "alt": "Korte beschrijving van het beeld"
+    }
+  ]
+}
+```
+
+Avatars en media mogen hotlinken (bijvoorbeeld `pbs.twimg.com`). De site laadt ze lui, in een vast kader, met `referrerpolicy="no-referrer"`, en valt terug op een initiaal of een leeg kader als het beeld faalt. Geen betaalde API, geen X-widget. Een sitebrede `no-referrer` zorgt dat een mp4 van `video.twimg.com` niet wordt geweigerd omdat de browser een andere herkomst meestuurt.
+
+### Creaties (`creations`)
+
+Concrete resultaten die iemand met AI maakte: een app, een film, een agent, een robot. Ongeveer vijf per dag. De feed toont ze visueel, bovenaan als rij en als kaart. Een YouTube-filmpje opent in de viewer via `youtube-nocookie.com`, pas na een tik op afspelen.
+
+| Veld | Vorm |
+| --- | --- |
+| `id`, `date` | `id` mag letters, cijfers, streepjes en underscores, ook een YouTube-id erin. `date` is ISO |
+| `platform` | `x` of `youtube` |
+| `url` | Bij `x`: precies `https://x.com/<handle>/status/<id>`, en die handle is `author_handle`. Bij `youtube`: precies `https://www.youtube.com/watch?v=<id>` |
+| `author_handle`, `author_name`, `author_avatar_url` | Naam en https-avatar. Een YouTube-handle is 1–30 tekens |
+| `title_nl` | Korte titel |
+| `what_nl` | Eén tot drie Nederlandse zinnen: wat er gemaakt is en waarmee |
+| `tools` | 1 tot 6 namen, bijvoorbeeld `Claude Code` |
+| `category` | `apps_games_websites`, `design_3d`, `film_video`, `agents_automation` of `hardware_robots` |
+| `update_id` | Optioneel. Moet een bestaand update-id zijn. De feed zet het resultaat dan ook onder die update als “Hiermee gemaakt” |
+| `text` | Optioneel, de oorspronkelijke tekst, maximaal 800 tekens. Een prompt mag hoekige haken bevatten; de site toont ze als tekst |
+| `media` | Zelfde vorm als bij een voorbeeld, inclusief optionele `video_url` |
+| `youtube_id` | Verplicht bij YouTube, dezelfde 11 tekens als in de URL |
+| `duration_s` | Seconden, geheel getal van 0 of hoger. Verplicht bij YouTube |
+| `metrics`, `lang` | Optioneel, zelfde vorm als bij een voorbeeld |
+| `lloyd_pick` | Optioneel, `true` of `false`. `true` is een favoriet van de eigenaar; de feed zet er “Jouw favoriet” bij |
+| `channel_id` | Optioneel, alleen bij YouTube. Vorm `UC` plus 22 tekens |
+| `title_original` | Optioneel, alleen bij YouTube. De titel op YouTube, maximaal 140 tekens |
+
+Clickbait en geldclaims horen niet in dit bestand; die filtert de routine vóór het schrijven. Verzin ook hier geen feiten.
 
 Staat `radar-update.json` op `main`, dan draait `.github/workflows/radar-apply.yml`: valideren, mergen, committen en de site publiceren. Elke andere push die `data/` wijzigt, publiceert ook via **Site publiceren**.
 
-Verzin geen feiten in die JSON. Alleen wat een bron echt laat zien.
+Verzin geen feiten in die JSON. Alleen wat een bron echt laat zien. Voor de vormgeving ligt er losse voorbeelddata in `web/dev/fixtures/radar.fixture.json`. Die hoort niet in `data/` en gaat niet mee naar de live site. Lokaal open je de site met `?fixture=1`.
 
 ## Een bron toevoegen
 
@@ -122,6 +212,8 @@ python3 -m http.server 4173 --directory dist
 ```
 
 Open daarna `http://127.0.0.1:4173`. De interface is Nederlands (`nl-NL`). Titels en technische termen blijven Engels als de bron Engels is.
+
+`npm run build` kopieert `web/` naar `dist/` zonder `web/dev/`. De voorbeeldposts (`?fixture=1`) zijn er daardoor alleen als je `web/` zelf serveert en `data/` op `/data` beschikbaar is, niet op de gepubliceerde site.
 
 ## Relevantie, in het kort
 

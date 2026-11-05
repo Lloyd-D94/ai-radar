@@ -1,5 +1,5 @@
 import { cpSync, existsSync, mkdirSync, rmSync } from "node:fs";
-import { join } from "node:path";
+import { join, sep } from "node:path";
 import { pathToFileURL } from "node:url";
 
 const REQUIRED = ["items.json", "sources.json", "tools.json", "radar.json", "accounts.json"];
@@ -8,7 +8,11 @@ export function buildSite(root = process.cwd()): void {
   const dist = join(root, "dist");
   rmSync(dist, { recursive: true, force: true });
   mkdirSync(join(dist, "data"), { recursive: true });
-  cpSync(join(root, "web"), dist, { recursive: true });
+  const devFixtures = join(root, "web", "dev");
+  cpSync(join(root, "web"), dist, {
+    recursive: true,
+    filter: (source) => source !== devFixtures && !source.startsWith(`${devFixtures}${sep}`),
+  });
   for (const file of REQUIRED) {
     const from = join(root, "data", file);
     if (!existsSync(from)) {
