@@ -1,0 +1,81 @@
+{
+ "channels": [
+  {
+   "name": "Samnang Aing | Build with AI",
+   "handle": "@samnang_aing",
+   "channel_id": "UCsKYafvITnbkdEdqwSzlW9Q",
+   "url": "https://www.youtube.com/@samnang_aing",
+   "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsKYafvITnbkdEdqwSzlW9Q",
+   "avatar_url": "https://yt3.googleusercontent.com/GS6623jC1zwAtzN4rqjtRacWB82SngWD111PRqRX1h1Nda9nr52zKaAb0ftJuosmkz1_AOr2ww=s400-c-k-c0x00ffffff-no-rj",
+   "why": "Lloyds voorbeeld. Bouwt 3D-scroll-ervaringen in code met Opus 5.5/Gemini, deelt live demo, prompts en code; eerlijk over iteraties.",
+   "latest_upload_checked": "2026-11-03",
+   "verified": "feed opgehaald 2026-11-05"
+  },
+  {
+   "name": "GritAI Studio",
+   "handle": "@GritAIStudio",
+   "channel_id": "UC5Ls4Ms_OFhUXIAm3iScyYQ",
+   "url": "https://www.youtube.com/@GritAIStudio",
+   "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC5Ls4Ms_OFhUXIAm3iScyYQ",
+   "avatar_url": "https://yt3.googleusercontent.com/ZKtnXRtzguoMlwS-9KrVJsSB-oWt3uk8RXeon9fy2oR62DOTQslfi_aim3uUAsRljYVPHaAjEg=s400-c-k-c0x00ffffff-no-rj",
+   "why": "Claude Code-deep dives; recent een volledige 3D-game met subagents, Blender en ElevenLabs (incl. wat misging). Uploadt onregelmatig.",
+   "latest_upload_checked": "2026-10-30",
+   "verified": "feed opgehaald 2026-11-05"
+  },
+  {
+   "name": "Chong-U — AI Oriented Dev",
+   "handle": "@AIOriented",
+   "channel_id": "UCE4PyAWiZ5gdPVFxDe4lLPQ",
+   "url": "https://www.youtube.com/@AIOriented",
+   "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCE4PyAWiZ5gdPVFxDe4lLPQ",
+   "avatar_url": "https://yt3.googleusercontent.com/uNjM2ZryBCZ_5YtW95-9fJc-XZNV_n6gRxmLvjup9-JJ0O9DlkmPlEUdrjTt-QTWaGW0vanx5A=s400-c-k-c0x00ffffff-no-rj",
+   "why": "Vibe-coded (multiplayer)games met nieuwe modellen (GPT 6.1 Terra, Opus 5.5), vrijwel dagelijkse shorts. Veel eigen cursus-links.",
+   "latest_upload_checked": "2026-11-03",
+   "verified": "feed opgehaald 2026-11-05"
+  },
+  {
+   "name": "Stefan 3D AI",
+   "handle": "@stefan_3d_ai",
+   "channel_id": "UCRW08KcTVjXEmBzBsVl7XjA",
+   "url": "https://www.youtube.com/@stefan_3d_ai",
+   "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCRW08KcTVjXEmBzBsVl7XjA",
+   "avatar_url": "https://yt3.googleusercontent.com/54lui0TsgO7vyRqJPKvvnJQG6wtmslDej7iL5oBo-EdzE_kH9su6I98DmDoBuvffzVi_b58NLw=s400-c-k-c0x00ffffff-no-rj",
+   "why": "Games en 3D-printprojecten met Claude/GPT-6/Tripo; laat fysieke resultaten zien. Let op: sommige titels gaan over verdiensten/prijzen.",
+   "latest_upload_checked": "2026-11-04",
+   "verified": "feed opgehaald 2026-11-05"
+  },
+  {
+   "name": "Jack Vs. AI",
+   "handle": "@JackVsAI",
+   "channel_id": "UCKBj5HPTd64zoQmkGNseKUw",
+   "url": "https://www.youtube.com/@JackVsAI",
+   "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCKBj5HPTd64zoQmkGNseKUw",
+   "avatar_url": "https://yt3.googleusercontent.com/nYgc4NZKwB7CIs0dMV7DErSy1oeFgwXHl4o_CVyrueJ8R-w7lbn69c5QhP5i2RCeZvQJKMSr=s400-c-k-c0x00ffffff-no-rj",
+   "why": "AI-film-workflows (Seedance, Kling, Suno, Blender via GPT-6) met volledige pijplijn. Veel affiliate-links.",
+   "latest_upload_checked": "2026-11-01",
+   "verified": "feed opgehaald 2026-11-05"
+  },
+  {
+   "name": "Higgsfield AI",
+   "handle": "@HiggsfieldAI",
+   "channel_id": "UCh13OyDSm-Kb8ij3yZArtFg",
+   "url": "https://www.youtube.com/@HiggsfieldAI",
+   "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCh13OyDSm-Kb8ij3yZArtFg",
+   "avatar_url": "https://yt3.googleusercontent.com/DwOz1PXnpU28q68bR0NRuZj8QbzJn8BiN7fWhFET6u1LPmPZlNGTkfbNJYbNY_VdTvrvfxnTBMs=s400-c-k-c0x00ffffff-no-rj",
+   "why": "Officieel Higgsfield-kanaal: AI-reclames en korte films. Merkkanaal, dus promotioneel; tonen wel concreet eindresultaat.",
+   "latest_upload_checked": "2026-11-05",
+   "verified": "feed opgehaald 2026-11-05"
+  },
+  {
+   "name": "Danny Why",
+   "handle": "@danny_why",
+   "channel_id": "UC_ILSBQyvg-TlqVt9DJGWPQ",
+   "url": "https://www.youtube.com/@danny_why",
+   "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_ILSBQyvg-TlqVt9DJGWPQ",
+   "avatar_url": "https://yt3.googleusercontent.com/eaJ9Rf-a7Mukm-3GlgY8rnavC98QJwBCSROJUNO2nDUBYaruePIL64RtCCPMjoHv_MbBwK-PalA=s400-c-k-c0x00ffffff-no-rj",
+   "why": "Seed-kanaal. Meeste titels gaan over monetisatie; alleen video's over motion graphics/3D-animatie met Claude Code of ChatGPT in CapCut/DaVinci tonen een creatie.",
+   "latest_upload_checked": "2026-11-02",
+   "verified": "feed opgehaald 2026-11-05"
+  }
+ ]
+}

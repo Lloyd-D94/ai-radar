@@ -1,0 +1,749 @@
+{
+ "generated": "2026-11-05",
+ "accounts": [
+  {
+   "handle": "minchoi",
+   "name": "Min Choi",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1638359113221517312/CBZaJFyA_400x400.jpg",
+   "followers": 392241,
+   "why": "Kandidaat uit analysis.md: Building with Super Intelligence. Sharing what's wild, what's practical, and what's next.",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "RoundtableSpace",
+   "name": "0xMarioNawfal",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2012162102283407360/U-fPj6wg_400x400.jpg",
+   "followers": 271073,
+   "why": "Creatie in seed: Vijf glas-in-lood 3D-scènes met Opus 5.5",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "LinusEkenstam",
+   "name": "Linus ✦ Ekenstam",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2000865949298176002/0GW70YnP_400x400.jpg",
+   "followers": 245815,
+   "why": "Creatie in seed: Stacks Project volledig omgezet naar Lean",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "EHuanglu",
+   "name": "el.cine",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1793460098867838976/hoeoWt9M_400x400.jpg",
+   "followers": 148071,
+   "why": "Kandidaat uit analysis.md: AI consultant | film director | sharing practical ways to use AI for you and your business. all view",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "viktoroddy",
+   "name": "Viktor Oddy",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2095368366693466112/1vPxOkT8_400x400.jpg",
+   "followers": 75626,
+   "why": "Creatie in seed: Workflow achter AI-gegenereerde 3D-websites",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "BenjaminDEKR",
+   "name": "Benjamin De Kraker",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2006784699251748864/fZ1xQPWe_400x400.jpg",
+   "followers": 46099,
+   "why": "Kandidaat uit analysis.md: AI + tech.\n\nDayjob: Nuclear power\nPrev: Grok / xAI",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "exploraX_",
+   "name": "m0h",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2098086248992931840/5KYpNM8S_400x400.jpg",
+   "followers": 26663,
+   "why": "Kandidaat uit analysis.md: exploring AI models | https://t.co/iToThATakz",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "k2sbhai",
+   "name": "K2S",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1970889208421093379/3aRQZYaf_400x400.jpg",
+   "followers": 14542,
+   "why": "Creatie in seed: BMW M5-racegame met Tripo en Codex",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "RyanSael",
+   "name": "Ryan Sael",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2070153731409350656/Q2dbbhA3_400x400.jpg",
+   "followers": 12054,
+   "why": "Lloyds favoriet: 3D/gamedev-praktijk, eerlijke iteratie (Opus 5.5 + Tripo).",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "Texas_Twins_Dad",
+   "name": "Texas Twins Dad",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2001129830213967874/zFqUgDus_400x400.jpg",
+   "followers": 11881,
+   "why": "Creatie in seed: Grok Bot krijgt een eigen robotlichaam",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "BGKuaci",
+   "name": "BGKuaci",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2100571139571593216/XvCSVdsy_400x400.jpg",
+   "followers": 10836,
+   "why": "Kandidaat uit analysis.md: BrainGlitch\nAI Powered Content 💯\nAI Filmmaker | Animator | Visual Artist. Obsessed with experimental",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "mrdejie",
+   "name": "MrDejie",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2047587292928524288/ocf-T57x_400x400.jpg",
+   "followers": 10198,
+   "why": "Creatie in seed: Kort filmpje in snoep-speeltuin met Seedance 2.5",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "rewind02",
+   "name": "rewind",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2036190950545084416/aHeLH6m__400x400.jpg",
+   "followers": 8019,
+   "why": "Kandidaat uit analysis.md: AI systems & workflows | Running distribution via AI UGC",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "hasibdreamer35",
+   "name": "Hasibul Hasan",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2103933369809788928/3wace2Dh_400x400.jpg",
+   "followers": 5652,
+   "why": "Creatie in seed: Mossback Strider: 3D-wezen met Opus 5.5 en Blender",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "finnardley",
+   "name": "Finn",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2112026983429271552/H29UtM5d_400x400.jpg",
+   "followers": 3931,
+   "why": "Creatie in seed: Dierenfeiten-short volledig in code",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "himanshubuildss",
+   "name": "Himanshu Hingorani",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2040486128294436864/JziGJtod_400x400.jpg",
+   "followers": 3719,
+   "why": "Kandidaat uit analysis.md: Founder @ https://t.co/eyXWXWp3kR\nTurning static websites into interactive experiences with AI\n200+ ",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "kinderlayer",
+   "name": "Kinder",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2094852501551853568/qeVVexdw_400x400.jpg",
+   "followers": 3158,
+   "why": "Kandidaat uit analysis.md: All of AI, minus the hype. Just what actually works.",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "hakimieiqbal",
+   "name": "Hakimi Eiqbal",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2069346359296102400/-Pjssq32_400x400.jpg",
+   "followers": 2629,
+   "why": "Kandidaat uit analysis.md: Turning AI & Tech into real business results • Practical insights, tested tools, and workflows you c",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "Octoberry",
+   "name": "O🌷",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2117036137290047489/e1Eh8F6f_400x400.jpg",
+   "followers": 2563,
+   "why": "Kandidaat uit analysis.md: Developer | Shitposting about Ai",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "Beamsters1",
+   "name": "Beamsters",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1556665100945072128/sRFkRrzm_400x400.jpg",
+   "followers": 1454,
+   "why": "Creatie in seed: Retro FPS-level in één keer door DeepSeek",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "seeksteve",
+   "name": "seeksteve",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1995686191903936512/G6b49wqW_400x400.jpg",
+   "followers": 1311,
+   "why": "Creatie in seed: Fanfare-video met Midjourney, Suno en Grok Imagine",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "rajkoshik",
+   "name": "Koshik",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2020892188062969856/BwB7MLyo_400x400.jpg",
+   "followers": 1213,
+   "why": "Creatie in seed: Agent-bus tussen Grok Bot en Claude Code",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "sleepclip",
+   "name": "sleep",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2040732935624507392/ynlHogMT_400x400.jpg",
+   "followers": 1185,
+   "why": "Kandidaat uit analysis.md: your scroll habit is my paycheck | creator at @affiliatenw\n\nFree library of viral UGC formats: https",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "sorenxet",
+   "name": "sorenxet",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2104698608545075200/8KHf4z52_400x400.jpg",
+   "followers": 1076,
+   "why": "Kandidaat uit analysis.md: figuring out AI in public | video, images & posting what survives the render",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "PawelJLisowski",
+   "name": "Paweł J Lisowski",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2056401454991028225/NxRdmjpr_400x400.jpg",
+   "followers": 1020,
+   "why": "Kandidaat uit analysis.md: Full-stack dev. Building awesome software and some games too!",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "cabbitar",
+   "name": "cabbit",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2108130833446096896/H2vFcZIj_400x400.jpg",
+   "followers": 1014,
+   "why": "Door Lloyd aangedragen voorbeeld (REA + Claude Code/Codex: app ontleden en feature nabouwen). Stijl bevat hype ('most dangerous thing'), inhoud is concreet.",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "LotusesK",
+   "name": "Lotuses and Kontomire 🥬🍵",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1967371365385703424/piQ2oQdH_400x400.jpg",
+   "followers": 917,
+   "why": "Creatie in seed: Eigen notch-app voor de Mac",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "figelwump",
+   "name": "Vishal Kapur",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1409938156246364163/wQ5wLT8i_400x400.jpg",
+   "followers": 777,
+   "why": "Creatie in seed: Voedingsdashboard gevoed door Grok Bot",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "avgvstvs96",
+   "name": "bassim",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1893112157920780288/qH_CXDO-_400x400.jpg",
+   "followers": 575,
+   "why": "Creatie in seed: iOS-camera-app nagebouwd met Codex",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "javierbch",
+   "name": "Javier Ballesteros Chassaigne",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1636324369524727809/Ik8tlzD0_400x400.jpg",
+   "followers": 135,
+   "why": "Creatie in seed: Animatiekortfilm \"Special Delivery\" met 3D en AI",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "icegamingdev",
+   "name": "iCe",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1969708940142301184/Xo5gieUa_400x400.jpg",
+   "followers": 48,
+   "why": "Creatie in seed: Bureaulampje dat de status van je agents toont",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "Bengiyai",
+   "name": "Bengi",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2113641224611475456/H1NbHI-o_400x400.jpg",
+   "followers": 45,
+   "why": "Kandidaat uit analysis.md: Testing AI so you don’t have to. Real tools, real results, zero hype.",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "fussss4",
+   "name": "小火龙会喷火（薄肌版）",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2108581537864409088/sVC3xT_R_400x400.jpg",
+   "followers": 37,
+   "why": "Creatie in seed: Draagbare pixel-visgame op een ESP32",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "Wildernut",
+   "name": "Wildernut",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2114201963432742912/aJdHiw8o_400x400.jpg",
+   "followers": 35,
+   "why": "Creatie in seed: Raspberry Pi-dashboard ingericht via Grok-voice",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "evals_ag",
+   "name": "Evals",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2110665381782388737/2a-o1a54_400x400.jpg",
+   "followers": 20,
+   "why": "Creatie in seed: Vier modellen bouwen de Melkweg in Blender",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "alexbiemann",
+   "name": "Alexander Biemann",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2102193348048244736/jLVP9nQj_400x400.jpg",
+   "followers": 19,
+   "why": "Creatie in seed: Duck Hunt op tafel met projector en webcam",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "RedMuffinGaming",
+   "name": "Red Muffin Gaming",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1998953920039616512/G2C5BEJx_400x400.jpg",
+   "followers": 18,
+   "why": "Creatie in seed: Voertuigen voor eigen game in Blender met Claude",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "TwinBuildss",
+   "name": "TwinBuilds",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2104578905399316480/JfRGbHQk_400x400.jpg",
+   "followers": 15,
+   "why": "Kandidaat uit analysis.md: Twin brothers shipping apps, games and one-prompt 3D web scenes with Claude Code. Live demos + the o",
+   "quality": "strong",
+   "in_seed": false
+  },
+  {
+   "handle": "MIAaaa981028",
+   "name": "Happypepper",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1543246274681397248/TmStKLeG_400x400.jpg",
+   "followers": 10,
+   "why": "Creatie in seed: Metro-animatie zonder After Effects",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "AttachaiCNX",
+   "name": "Attachai",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2112063598021459968/9vaSSu50_400x400.jpg",
+   "followers": 0,
+   "why": "Creatie in seed: Speelbaar oorlogslevel in Unreal met Claude Code",
+   "quality": "strong",
+   "in_seed": true
+  },
+  {
+   "handle": "Ronald_vanLoon",
+   "name": "Ronald van Loon",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1107936345769607169/sJKWJd7g_400x400.png",
+   "followers": 357427,
+   "why": "Kandidaat uit analysis.md: Helping AI driven companies generate value•Top10Influencer #AI #BigData #DataScience #IoT #MachineLe",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "lukas_m_ziegler",
+   "name": "Lukas Ziegler",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2076008715522568192/dUB1oyiU_400x400.jpg",
+   "followers": 65688,
+   "why": "Kandidaat uit analysis.md: robotics evangelist | riding the wave of robotics | angel investing 🕵🏼‍♂️",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "nataliexbz",
+   "name": "natalie",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2099499727763210241/qHW1qalv_400x400.jpg",
+   "followers": 43892,
+   "why": "Kandidaat uit analysis.md: meta paid me to leave / ads via @CELE8EX",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "basit_designs",
+   "name": "Basit A. Khan",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2035703029631201280/MiiHz_yG_400x400.jpg",
+   "followers": 25640,
+   "why": "Kandidaat uit analysis.md: Design & engineering partner for Startups & AI tech founders.\n\nRunning: https://t.co/PzQyeQ6YtS | ht",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "AbhinavXJ",
+   "name": "abhinav",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1998929325962457088/W98D3IpW_400x400.jpg",
+   "followers": 16329,
+   "why": "Kandidaat uit analysis.md: founding backend engineer: @hydra_db | @cognition ambassador | building https://t.co/eo31h3c9Hd and ",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "rosemoni18",
+   "name": "Helena AI",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1995166902155616256/tFpiUC1W_400x400.jpg",
+   "followers": 10598,
+   "why": "Kandidaat uit analysis.md: AI Content & Graphics Creator 🚀\nHelping SaaS & creator brands grow with viral AI content\nAI Tools • ",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "runable_hq",
+   "name": "Runable",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2091784345648336896/ppDHg8vE_400x400.jpg",
+   "followers": 9295,
+   "why": "Kandidaat uit analysis.md: Build • Run • Grow your business with Runable",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "Manixh02",
+   "name": "Manish Kumar",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2063627005753778176/JVC810VY_400x400.jpg",
+   "followers": 8629,
+   "why": "Kandidaat uit analysis.md: Developer | @ossium_inc | @mx_icons | Open to Accept Freelance Work / Collab | Wanna talk? Dm 📥",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "OxShamss",
+   "name": "Shams",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1991250747917279232/oK2yGuy5_400x400.jpg",
+   "followers": 8487,
+   "why": "Kandidaat uit analysis.md: Crypto markets & AI experiments.\n\nLearning. Building. Sharing.\n\n— I post what I like.",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "imryven",
+   "name": "Ryven",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2100987922824466432/_MdfbWzE_400x400.jpg",
+   "followers": 2355,
+   "why": "Kandidaat uit analysis.md: Exploring open-source AI and sharing what matters.",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "RealMarvelX",
+   "name": "MAIL",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2072087413862625280/2czrbEBw_400x400.jpg",
+   "followers": 2120,
+   "why": "Kandidaat uit analysis.md: ai & web3 tools, workflows & opportunities that matter.\nopen for collabs.",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "evgenia_vibes",
+   "name": "꧁EVGENIA꧂🐉",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2079847431592673280/lOYMvZYG_400x400.jpg",
+   "followers": 1720,
+   "why": "Kandidaat uit analysis.md: AI tools • Content trends • Real numbers\nFinding what actually works in the AI noise.\n@CELE8EX team",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "Slonski_rt",
+   "name": "Slonski",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2066543417723658240/XyLXVjHK_400x400.jpg",
+   "followers": 1440,
+   "why": "Kandidaat uit analysis.md: learning AI × agents × models",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "k0dzilla",
+   "name": "Kodzilla",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2115495117071044609/p6Fk9D0k_400x400.jpg",
+   "followers": 1304,
+   "why": "Kandidaat uit analysis.md: Professionally curious. Artificially intelligent.",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "ghosstty_",
+   "name": "GHOST 🌙",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2076320228917534721/v5Tcsb-r_400x400.jpg",
+   "followers": 1087,
+   "why": "Kandidaat uit analysis.md: AI Researcher 🔎 | Marketer | KOL’s manager: @backstage_web3",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "0xWroomie",
+   "name": "Wroomie",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2113248422161514496/07KdyTyQ_400x400.jpg",
+   "followers": 198,
+   "why": "Kandidaat uit analysis.md: Crypto enthusiast",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "wolfmilk2022",
+   "name": "wolfmilk",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2097197781945360384/DWd4Pfrk_400x400.jpg",
+   "followers": 21,
+   "why": "Kandidaat uit analysis.md: do more of what makes you happy\nhttps://t.co/wVWUTnd116",
+   "quality": "ok",
+   "in_seed": false
+  },
+  {
+   "handle": "de1lymoon",
+   "name": "Alex",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2067534774424436736/SYC1c-TG_400x400.jpg",
+   "followers": 3986,
+   "why": "Grok Build-stappenplan, past bij update; hype-taal ('goldmine'), geen eigen eindresultaat.",
+   "quality": "caution",
+   "in_seed": true
+  },
+  {
+   "handle": "0xCodez",
+   "name": "Codez",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2054197823738871808/3M0Lf362_400x400.jpg",
+   "followers": 52452,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "0xMovez",
+   "name": "Movez",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1998148360478322688/851J4fBL_400x400.jpg",
+   "followers": 47450,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "Aurex_Labs23",
+   "name": "Aurex",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2115476272746995712/U2IW8GYU_400x400.jpg",
+   "followers": 46650,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "noisyb0y1",
+   "name": "Noisy",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2026302540434767872/rtRKmitd_400x400.jpg",
+   "followers": 28956,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "The_techAI",
+   "name": "Tech Logic",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2094060193726500864/KChjUhVa_400x400.jpg",
+   "followers": 15244,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "gippp69",
+   "name": "Gipp 🦅",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2086516032408104960/2Io2TYZc_400x400.jpg",
+   "followers": 12580,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "Origin_AI_01",
+   "name": "OriginAI",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2102478029859807232/usHb2nVg_400x400.jpg",
+   "followers": 10875,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "aaassa120",
+   "name": "Rshhad",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2095256547635191808/N3hbL8dN_400x400.jpg",
+   "followers": 10198,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "0xWast3",
+   "name": "wast3",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1978452473338880000/_lIVCi0x_400x400.jpg",
+   "followers": 7525,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "0x_rody",
+   "name": "rody",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2041947351120572416/4IBmZ3QT_400x400.jpg",
+   "followers": 4998,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "fluixoo",
+   "name": "Fluixo",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2078173426775207936/EhjS5ipU_400x400.jpg",
+   "followers": 4990,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "0xCarnagee",
+   "name": "Carnage",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2054559765347311616/4WpsW9RL_400x400.jpg",
+   "followers": 4646,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "0xMorlex",
+   "name": "Morlex",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2060665433926086660/8PnnU2pY_400x400.jpg",
+   "followers": 4351,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "Supriik_",
+   "name": "Suprik",
+   "avatar_url": "https://pbs.twimg.com/profile_images/1891189968896159745/xV8-t13q_400x400.jpg",
+   "followers": 2759,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "0xGenAi",
+   "name": "GenAI",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2083289176343027712/63iXpID5_400x400.jpg",
+   "followers": 2436,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "0xCodio",
+   "name": "Codio",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2084957021330190336/EwOqdybe_400x400.jpg",
+   "followers": 2253,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  },
+  {
+   "handle": "vartekxx",
+   "name": "vartekx",
+   "avatar_url": "https://pbs.twimg.com/profile_images/2067266541582725120/9WxDS5EC_400x400.jpg",
+   "followers": 1596,
+   "why": "Template/engagement-stijl gezien (zie analysis.md)",
+   "quality": "bait",
+   "in_seed": false
+  }
+ ],
+ "search_queries": [
+  {
+   "name": "built_with_model",
+   "category_hint": "mixed",
+   "query": "(\"built this\" OR \"built with\" OR \"made with\" OR \"made this with\") (\"Opus 5.5\" OR Claude OR \"Claude Code\" OR Grok OR GrokBot OR Gemini OR GPT OR Codex) has:videos -is:retweet -is:reply lang:en min_likes:30",
+   "worked": "deels: veel ruis (Grok Imagine-clips, bait); handmatig filteren"
+  },
+  {
+   "name": "one_prompt_vibe",
+   "category_hint": "apps_games_websites/design_3d",
+   "query": "(\"one prompt\" OR \"1 prompt\" OR \"single prompt\" OR \"vibe coded\" OR \"vibe-coded\") (3D OR game OR website OR app OR simulation OR animation) has:videos -is:retweet -is:reply lang:en min_likes:20",
+   "worked": "ja (RoundtableSpace); veel trading-bait, filteren op $-bedragen"
+  },
+  {
+   "name": "3d_tools_x_llm",
+   "category_hint": "design_3d/apps_games_websites",
+   "query": "(Tripo OR \"Three.js\" OR Godot OR Unreal OR Blender OR Spline) (\"Opus 5.5\" OR Claude OR Grok OR Codex OR Gemini) has:videos -is:retweet lang:en min_likes:20",
+   "worked": "ja, beste query (k2sbhai, AttachaiCNX, RedMuffinGaming, hasibdreamer35, evals_ag)"
+  },
+  {
+   "name": "ai_video",
+   "category_hint": "film_video",
+   "query": "(Kling OR Veo OR Seedance OR Higgsfield OR \"Nano Banana\" OR Midjourney OR Runway) (\"short film\" OR commercial OR \"music video\" OR animation) has:videos -is:retweet lang:en min_likes:100",
+   "worked": "ja (mrdejie, MIAaaa981028, javierbch); veel kopie-accounts met \"This AI animation is literally a masterpiece\" — uitsluiten"
+  },
+  {
+   "name": "hardware_physical",
+   "category_hint": "hardware_robots",
+   "query": "(Claude OR Grok OR Opus OR Codex OR Gemini) (robot OR Raspberry OR ESP32 OR router OR camera OR sensor OR \"smart home\" OR drone OR 3D-printed) (built OR turned OR made) has:videos -is:retweet lang:en min_likes:30",
+   "worked": "deels (seeksteve, finnardley, alexbiemann); veel spooky/bait-verhalen"
+  },
+  {
+   "name": "hardware_first_person",
+   "category_hint": "hardware_robots",
+   "query": "(\"I built\" OR \"I made\" OR \"built my\") (robot OR robotic OR ESP32 OR Arduino OR \"Raspberry Pi\" OR drone OR \"robot arm\" OR LeRobot OR \"3D printed\") (Claude OR Codex OR Grok OR Gemini OR GPT OR Opus) has:videos -is:retweet -is:reply lang:en",
+   "sort_order": "relevancy",
+   "worked": "ja (icegamingdev, fussss4, Wildernut); let op cluster \"I built a robotic <dier> with Claude Opus 5.5\" (template)"
+  },
+  {
+   "name": "agents_first_person",
+   "category_hint": "agents_automation",
+   "query": "(\"Grok Build\" OR \"Claude Code\" OR Codex OR GrokBot OR \"Grok Bot\") (\"I built\" OR \"I set up\" OR \"my agents\" OR \"built an agent\") has:videos -is:retweet -is:reply lang:en min_likes:30",
+   "sort_order": "relevancy",
+   "worked": "ja (rajkoshik, figelwump); veel tool-promo"
+  },
+  {
+   "name": "agent_tools",
+   "category_hint": "agents_automation",
+   "query": "(\"Claude Code\" OR \"Grok Build\" OR Codex OR Cursor OR GrokBot OR \"Grok Bot\") (subagents OR worktrees OR \"agent team\" OR swarm OR built OR automated OR \"set up\") has:videos -is:retweet -is:reply lang:en min_likes:50",
+   "worked": "matig: min_likes lijkt niet streng te filteren; veel trading-bait"
+  }
+ ],
+ "start_time_used": "2026-10-29T10:00:00Z (start_time = nu min 7 dagen)",
+ "notes": [
+  "Operators: min_likes:/min_reposts: (niet min_faves:), has:videos, lang:en; start_time ISO in UTC (laatste 7 dagen).",
+  "In deze run leverde min_likes ook posts met 0 likes op; filter likes zelf na, maar niet alleen op likes.",
+  "Uitsluiten: tekst met 'comment \"', \"I'll DM\", 'Save this', '$X → $Y'/'overnight' trading, 'This AI animation is literally a masterpiece', 'HOLY'/'f*cking crazy' templates, 'reportedly/allegedly'."
+ ],
+ "bait_patterns": [
+  "comment \\\"",
+  "I'll DM",
+  "Save this",
+  "\\$[0-9,.]+ (→|->|to) \\$",
+  "overnight",
+  "literally a masterpiece",
+  "reportedly",
+  "allegedly",
+  "most dangerous thing"
+ ]
+}
