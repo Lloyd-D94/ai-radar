@@ -37,8 +37,12 @@
         "Multi-agent workflows draaien die betrouwbaarder zijn",
         "Background agents op het dashboard zien"
       ],
-      "example_ids": ["ex-xfreeze-multi-agent"],
-      "source_urls": ["https://x.com/XFreeze/status/2118176199746965741"],
+      "example_ids": [
+        "ex-xfreeze-multi-agent"
+      ],
+      "source_urls": [
+        "https://x.com/XFreeze/status/2118176199746965741"
+      ],
       "importance": 5,
       "seed": true
     },
@@ -47,13 +51,17 @@
       "date": "2026-11-05T04:47:34.427Z",
       "tool": "Grok Build",
       "title_nl": "Grok Build 1.0.77",
-      "summary_nl": "De release notes van Grok Build 1.0.77 noemen Shift+Enter voor een nieuwe regel. In dezelfde notities staat dat een MCP-server verbindt.",
+      "summary_nl": "Grok Build 1.0.77 voegt Shift+Enter voor een nieuwe regel toe. MCP-servers herstarten ook niet meer onnodig.",
       "can_do_nl": [
         "Met Shift+Enter een nieuwe regel invoegen",
-        "Een MCP-server verbinden"
+        "MCP-servers laten verbonden blijven bij herladen en updates"
       ],
-      "example_ids": ["ex-blank-1077"],
-      "source_urls": ["https://x.com/blankspeaker/status/2118203546357391509"],
+      "example_ids": [
+        "ex-blank-1077"
+      ],
+      "source_urls": [
+        "https://x.com/blankspeaker/status/2118203546357391509"
+      ],
       "importance": 4,
       "seed": true
     },
@@ -62,14 +70,17 @@
       "date": "2026-11-05T03:11:06.641Z",
       "tool": "Grok Bot",
       "title_nl": "Team-bots in Slack en op de desktop",
-      "summary_nl": "Grok Bot-team-bots draaien in Slack en op de desktop van een Mac mini. De post laat de orkestratie in de praktijk zien.",
+      "summary_nl": "Grok Bot-teambots draaien in Slack en de desktop-app draait op een Mac mini.",
       "can_do_nl": [
-        "Een team-bot in Slack laten meedraaien",
-        "Een team-bot op de desktop van een Mac mini draaien",
-        "Bots in de praktijk laten orkestreren"
+        "Een teambot in Slack laten meedraaien",
+        "De desktop-app op een Mac mini laten draaien"
       ],
-      "example_ids": ["ex-bacon-slack"],
-      "source_urls": ["https://x.com/Baconbrix/status/2118179270623453255"],
+      "example_ids": [
+        "ex-bacon-slack"
+      ],
+      "source_urls": [
+        "https://x.com/Baconbrix/status/2118179270623453255"
+      ],
       "importance": 4,
       "seed": true
     },
@@ -83,8 +94,12 @@
         "Een product virtueel op je selfie laten passen",
         "Op een selfie zien hoe een product eruitziet"
       ],
-      "example_ids": ["ex-blank-tryon"],
-      "source_urls": ["https://x.com/blankspeaker/status/2118089933596610865"],
+      "example_ids": [
+        "ex-blank-tryon"
+      ],
+      "source_urls": [
+        "https://x.com/blankspeaker/status/2118089933596610865"
+      ],
       "importance": 4,
       "seed": true
     },
@@ -93,13 +108,16 @@
       "date": "2026-11-03T21:52:00.589Z",
       "tool": "Grok Bot",
       "title_nl": "Shoppen via Grok Bot",
-      "summary_nl": "Shoppen via Grok Bot is verbeterd. Er is een nieuwe commerce-flow.",
+      "summary_nl": "Shoppen via Grok Bot is verbeterd, volgens een post over de nieuwe mogelijkheden.",
       "can_do_nl": [
-        "Shoppen via Grok Bot",
-        "De nieuwe commerce-flow voor shoppen gebruiken"
+        "Dingen laten kopen via Grok Bot"
       ],
-      "example_ids": ["ex-mili-shop"],
-      "source_urls": ["https://x.com/milichab/status/2117736578395295970"],
+      "example_ids": [
+        "ex-mili-shop"
+      ],
+      "source_urls": [
+        "https://x.com/milichab/status/2117736578395295970"
+      ],
       "importance": 3,
       "seed": true
     },
@@ -114,8 +132,12 @@
         "Een sponsor laten binnenhalen, in dit voorbeeld $99 per maand binnen één dag",
         "Backlinks laten automatiseren"
       ],
-      "example_ids": ["ex-paul-marketing"],
-      "source_urls": ["https://x.com/0xPaulvibe/status/2118087067481629045"],
+      "example_ids": [
+        "ex-paul-marketing"
+      ],
+      "source_urls": [
+        "https://x.com/0xPaulvibe/status/2118087067481629045"
+      ],
       "importance": 3,
       "seed": true
     },
@@ -130,8 +152,12 @@
         "Codex in de cloud vanaf hetzelfde ticket laten meedraaien",
         "Bij een groot ticket parallelle agents inzetten"
       ],
-      "example_ids": ["ex-svpino-linear"],
-      "source_urls": ["https://x.com/svpino/status/2118051150306173116"],
+      "example_ids": [
+        "ex-svpino-linear"
+      ],
+      "source_urls": [
+        "https://x.com/svpino/status/2118051150306173116"
+      ],
       "importance": 4,
       "seed": true
     },
@@ -139,15 +165,17 @@
       "id": "upd-claude-workflows",
       "date": "2026-09-18T18:04:08.989Z",
       "tool": "Claude Code",
-      "title_nl": "Workflows, mods en AGENTS.md in Claude Code",
-      "summary_nl": "De maker van Claude Code laat workflows, mods en extensibility in productie zien. Een andere post laat AGENTS.md, mods en gebruik buiten coderen zien.",
+      "title_nl": "Claude Code wordt uitbreidbaar met mods en AGENTS.md",
+      "summary_nl": "Het Claude Code-team geeft een eerste blik op mods, een manier om de agent aan te passen. AGENTS.md-ondersteuning is erop gebouwd.",
       "can_do_nl": [
-        "Workflows in Claude Code in productie draaien",
-        "Mods en extensibility gebruiken",
+        "Straks eigen projectinstructies voor Claude Code maken",
         "AGENTS.md gebruiken om de agent te sturen",
-        "Claude Code inzetten voor taken die geen code zijn"
+        "Zien wat het team aan uitbreidbaarheid plant"
       ],
-      "example_ids": ["ex-bcherny-workflows", "ex-trq-agents"],
+      "example_ids": [
+        "ex-bcherny-workflows",
+        "ex-trq-agents"
+      ],
       "source_urls": [
         "https://x.com/bcherny/status/2095590515765060076",
         "https://x.com/trq212/status/2101009393731223817"
@@ -166,18 +194,50 @@
       "tool": "Grok Build",
       "kind": "workflow",
       "from_followed": true,
-      "seed": true
+      "seed": true,
+      "author_name": "X Freeze",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1876785200010539008/2_HFJjq9_400x400.jpg",
+      "text": "Grok Build packed a serious upgrade into this release, making multi-agent workflows more reliable, easier to control, and much smoother to manage\n\nBackground agents and workflows now stay visible as active work on the dashboard, workflow status shows how many agents are still running, and stop controls work even when approval prompts are open. Permission rules that fail to load now trigger warnings instead of silently being ignored\n\nSession recovery is also more reliable, manually saved file edi",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HWVF_8KbgAAkbc9.jpg"
+        }
+      ],
+      "metrics": {
+        "likes": 81,
+        "reposts": 10,
+        "replies": 17,
+        "views": 6314
+      },
+      "lang": "en"
     },
     {
       "id": "ex-blank-1077",
       "date": "2026-11-05T04:47:34.427Z",
       "author_handle": "blankspeaker",
       "post_url": "https://x.com/blankspeaker/status/2118203546357391509",
-      "note_nl": "Grok Build v1.0.77 release notes: Shift+Enter voor nieuwe regels, en een MCP-server die verbindt.",
+      "note_nl": "Grok Build 1.0.77: Shift+Enter voor een nieuwe regel en MCP-servers die niet onnodig herstarten.",
       "tool": "Grok Build",
       "kind": "release",
       "from_followed": true,
-      "seed": true
+      "seed": true,
+      "author_name": "️",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1748285412404068352/J9W8f5iE_400x400.png",
+      "text": "Grok Build v1.0.77 is out with a few practical updates. Standouts include new [ui] kitty_keyboard = \"query\" setting lets Shift+Enter insert newlines. Quote copy now preserves & in links and double-clicks no longer fold thoughts when. Also worth noting: mCP server connections no longer restart unnecessarily on session reloads or updates.\n\nRelease Notes: v1.0.77 - 2026-11-05\n\nFeatures\n\n- New [ui] kitty_keyboard = \"query\" setting lets Shift+Enter insert newlines in unidentified terminals.\n\nBug Fixe",
+      "media": [
+        {
+          "type": "video",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118203448382623744/img/3f4v5T0pSRehNVGw.jpg"
+        }
+      ],
+      "metrics": {
+        "likes": 7,
+        "reposts": 1,
+        "replies": 1,
+        "views": 607
+      },
+      "lang": "en"
     },
     {
       "id": "ex-blank-tryon",
@@ -188,7 +248,23 @@
       "tool": "Grok Bot",
       "kind": "demo",
       "from_followed": true,
-      "seed": true
+      "seed": true,
+      "author_name": "️",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1748285412404068352/J9W8f5iE_400x400.png",
+      "text": "SpaceXSI is testing virtual try-on in Grok Bot. When the bot suggests a product, you can tap Try On to see it on your own selfie, then describe a change, like adding sunglasses, and get an updated look without leaving the product view.\n\nNote: This feature is in testing and not available to the public yet, so there's no official announcement or documentation yet because it may change or never ship at all.",
+      "media": [
+        {
+          "type": "video",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118089859281895424/img/gG2nNvnd5WL_gMjq.jpg"
+        }
+      ],
+      "metrics": {
+        "likes": 19,
+        "reposts": 0,
+        "replies": 3,
+        "views": 9323
+      },
+      "lang": "en"
     },
     {
       "id": "ex-mntruell-bellen",
@@ -199,7 +275,17 @@
       "tool": "Grok Bot",
       "kind": "demo",
       "from_followed": false,
-      "seed": true
+      "seed": true,
+      "author_name": "Michael Truell",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1887065642261737472/QdLiAFfD_400x400.jpg",
+      "text": "Ask Bot to schedule appointments, cancel subscriptions, or coordinate with colleagues over the phone. https://twitter.com/bot/status/2118043939592942052",
+      "metrics": {
+        "likes": 758,
+        "reposts": 36,
+        "replies": 62,
+        "views": 29126
+      },
+      "lang": "en"
     },
     {
       "id": "ex-eric-airline",
@@ -210,7 +296,17 @@
       "tool": "Grok Bot",
       "kind": "demo",
       "from_followed": false,
-      "seed": true
+      "seed": true,
+      "author_name": "eric zakariasson",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1841151626456801283/HnXqy3TQ_400x400.jpg",
+      "text": "ive had @bot called airlines to help me rebook flights when needed, incredibly good https://twitter.com/bot/status/2118043939592942052",
+      "metrics": {
+        "likes": 151,
+        "reposts": 2,
+        "replies": 23,
+        "views": 8635
+      },
+      "lang": "en"
     },
     {
       "id": "ex-rundown-calls",
@@ -221,18 +317,44 @@
       "tool": "Grok Bot",
       "kind": "demo",
       "from_followed": false,
-      "seed": true
+      "seed": true,
+      "author_name": "The Rundown AI",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1672707817197965312/zsxkJv_T_400x400.jpg",
+      "text": "NEW:  Grok Bot now has the ability to place phone calls for users.\n\nCalls are limited to the U.S. for now, with Washington and Illinois blocked. \n\nOnce a user approves a call, Grok Bot can wait on hold, press through automated menus, and talk to whoever picks up. The user can follow along on a live transcript and gets a summary after.",
+      "media": [
+        {
+          "type": "video",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118043621249433600/img/wbtqZXaA0cWZe1Kd.jpg"
+        }
+      ],
+      "metrics": {
+        "likes": 23,
+        "reposts": 3,
+        "replies": 18,
+        "views": 5065
+      },
+      "lang": "en"
     },
     {
       "id": "ex-bacon-slack",
       "date": "2026-11-05T03:11:06.641Z",
       "author_handle": "Baconbrix",
       "post_url": "https://x.com/Baconbrix/status/2118179270623453255",
-      "note_nl": "Grok Bot-team-bots in Slack en op de desktop van een Mac mini, orkestratie in de praktijk.",
+      "note_nl": "Grok Bot-teambots in Slack, plus de desktop-app op een Mac mini.",
       "tool": "Grok Bot",
       "kind": "workflow",
       "from_followed": false,
-      "seed": true
+      "seed": true,
+      "author_name": "Evan Bacon",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2102652233762709504/LOuSkpLB_400x400.jpg",
+      "text": "@manny4c Grok Bot team bots in slack + grok bot desktop running on a Mac mini",
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 0,
+        "views": 201
+      },
+      "lang": "en"
     },
     {
       "id": "ex-paul-marketing",
@@ -243,40 +365,86 @@
       "tool": "Grok Bot",
       "kind": "workflow",
       "from_followed": false,
-      "seed": true
+      "seed": true,
+      "author_name": "Paul",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2099303448642809856/ikbYDSMB_400x400.jpg",
+      "text": "9 Grok bots run my marketing. One of them landed a $99/month sponsor in one day.\n\nSponsor Shark pitched 20 companies by email. One now pays $99 a month. I spend 10 minutes a week on it.\n\nThe others: Backlink Beaver screened 3,094 directories and got me 27 live dofollow backlinks. Mention Meerkat turns replies into leads. Hook Hawk broke down 16 viral posts. Chief Cheetah runs the team.\n\nCopy their prompts free: http://paulvibe.com/lab?utm_source=x&utm_medium=ad&utm_campaign=lab-a",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HWT09V8W4AAV4wX.jpg"
+        }
+      ],
+      "metrics": {
+        "likes": 10,
+        "reposts": 0,
+        "replies": 2,
+        "views": 81514
+      },
+      "lang": "en"
     },
     {
       "id": "ex-mili-shop",
       "date": "2026-11-03T21:52:00.589Z",
       "author_handle": "milichab",
       "post_url": "https://x.com/milichab/status/2117736578395295970",
-      "note_nl": "Shoppen via Grok Bot is verbeterd, met een nieuwe commerce-flow.",
+      "note_nl": "Shoppen via Grok Bot is verbeterd, volgens deze post.",
       "tool": "Grok Bot",
       "kind": "demo",
       "from_followed": false,
-      "seed": true
+      "seed": true,
+      "author_name": "Andrew Milich",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1466472908977487881/-dym5k04_400x400.jpg",
+      "text": "Buying things with @bot just got better https://twitter.com/i/status/2117736249444507834",
+      "metrics": {
+        "likes": 256,
+        "reposts": 19,
+        "replies": 12,
+        "views": 1333826
+      },
+      "lang": "en"
     },
     {
       "id": "ex-bcherny-workflows",
       "date": "2026-09-03T19:11:27.804Z",
       "author_handle": "bcherny",
       "post_url": "https://x.com/bcherny/status/2095590515765060076",
-      "note_nl": "De maker van Claude Code laat workflows, mods en extensibility in productie zien.",
+      "note_nl": "Eerste blik op hoe Claude Code uitbreidbaarder wordt; het team vraagt of je dit zou gebruiken.",
       "tool": "Claude Code",
       "kind": "workflow",
       "from_followed": false,
-      "seed": true
+      "seed": true,
+      "author_name": "Boris Cherny",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_400x400.jpg",
+      "text": "Your input needed: would you use this?\n\nThis is an early look at how we're thinking about making Claude Code way more extensible. It's a little crazy, and very exciting.\n\nMore details here: https://github.com/anthropics/claude-code/issues/91870 https://twitter.com/ClaudeDevs/status/2095572891941351550",
+      "metrics": {
+        "likes": 1224,
+        "reposts": 71,
+        "replies": 245,
+        "views": 471361
+      },
+      "lang": "en"
     },
     {
       "id": "ex-trq-agents",
       "date": "2026-09-18T18:04:08.989Z",
       "author_handle": "trq212",
       "post_url": "https://x.com/trq212/status/2101009393731223817",
-      "note_nl": "Claude Code: AGENTS.md, mods en gebruik dat geen code is.",
+      "note_nl": "AGENTS.md-ondersteuning in Claude Code is gebouwd op mods, en je kunt straks eigen projectinstructies maken.",
       "tool": "Claude Code",
       "kind": "tutorial",
       "from_followed": false,
-      "seed": true
+      "seed": true,
+      "author_name": "Thariq",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1976939058741039104/r3GgzqRh_400x400.jpg",
+      "text": "AGENTS.md support is built off of Claude Code mods, our upcoming way to customize the Claude Code harness.\n\nThis is a built-in mod, but you’ll be able to build custom versions of project instructions yourself as you’d like too.",
+      "metrics": {
+        "likes": 1146,
+        "reposts": 28,
+        "replies": 49,
+        "views": 348223
+      },
+      "lang": "en"
     },
     {
       "id": "ex-svpino-linear",
@@ -287,7 +455,17 @@
       "tool": "Claude Code",
       "kind": "workflow",
       "from_followed": false,
-      "seed": true
+      "seed": true,
+      "author_name": "Santiago",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1581385027757264898/j5GjtUiq_400x400.jpg",
+      "text": "This runs Claude Code and Codex in the cloud with the plan you already pay for.\n\nYou only need to pay for the machine.\n\nHere is what's cool about this:\n\nYou start from a Linear ticket, and the agent does the rest. If the ticket is too big, you'll get parallel agents working on it and returning a single PR.",
+      "metrics": {
+        "likes": 23,
+        "reposts": 1,
+        "replies": 8,
+        "views": 6171
+      },
+      "lang": "en"
     }
   ],
   "startups": [
@@ -300,7 +478,9 @@
       "why_new_nl": "Het voegt een team van coding agents toe dat zowel op je Mac als in de cloud draait.",
       "date_found": "2026-11-04T18:19:50.473Z",
       "proof_url": "https://x.com/conductor_build/status/2118045572284526788",
-      "seed": true
+      "seed": true,
+      "logo_url": "https://pbs.twimg.com/profile_images/1978565082876665857/z09F5qO3_400x400.jpg",
+      "website_url": "https://conductor.build"
     },
     {
       "id": "startup-amp",
@@ -311,7 +491,9 @@
       "why_new_nl": "Een frontier coding agent die meerdere modellen gebruikt.",
       "date_found": "2026-11-04T15:00:01.732Z",
       "proof_url": "https://x.com/AmpCode/status/2117995287859929166",
-      "seed": true
+      "seed": true,
+      "logo_url": "https://pbs.twimg.com/profile_images/1995950801706254336/0MorviXJ_400x400.jpg",
+      "website_url": "https://ampcode.com/"
     },
     {
       "id": "startup-nitpick",
@@ -322,7 +504,9 @@
       "why_new_nl": "Feedback zit in de app zelf en is gericht op AI coding agents.",
       "date_found": "2026-10-20T15:30:47.436Z",
       "proof_url": "https://x.com/brimskeau/status/2112567211319533659",
-      "seed": true
+      "seed": true,
+      "logo_url": "https://pbs.twimg.com/profile_images/2107767917777473536/7c5TfJFi_400x400.jpg",
+      "website_url": "https://nitpickhq.com"
     },
     {
       "id": "startup-cline",
@@ -333,7 +517,9 @@
       "why_new_nl": "Eén open-source agent die in de editor, de terminal en de browser werkt.",
       "date_found": "2026-10-29T19:13:55.123Z",
       "proof_url": "https://x.com/cline/status/2115884854139380134",
-      "seed": true
+      "seed": true,
+      "logo_url": "https://pbs.twimg.com/profile_images/2100371495658946560/pKjt1-8w_400x400.png",
+      "website_url": "https://github.com/cline/cline"
     },
     {
       "id": "startup-kilo",
@@ -344,7 +530,9 @@
       "why_new_nl": "Agentic engineering met een keuze uit meer dan 500 modellen.",
       "date_found": "2026-11-02T20:22:21.783Z",
       "proof_url": "https://x.com/kilocode/status/2117351630182232537",
-      "seed": true
+      "seed": true,
+      "logo_url": "https://pbs.twimg.com/profile_images/2052371168490135552/FnNkJoy0_400x400.jpg",
+      "website_url": "https://kilo.ai"
     },
     {
       "id": "startup-opencode",
@@ -355,7 +543,9 @@
       "why_new_nl": "Een open-source coding agent die features snel uitbrengt.",
       "date_found": "2026-11-05T00:15:34.022Z",
       "proof_url": "https://x.com/opencode/status/2118135093617393774",
-      "seed": true
+      "seed": true,
+      "logo_url": "https://pbs.twimg.com/profile_images/1973794620233433088/nBn75BTm_400x400.png",
+      "website_url": "https://opencode.ai"
     },
     {
       "id": "startup-warp",
@@ -366,7 +556,9 @@
       "why_new_nl": "De terminal wordt een agent, als infra voor een software-fabriek.",
       "date_found": "2026-11-04T18:19:44.203Z",
       "proof_url": "https://x.com/warpdotdev/status/2118045545986240919",
-      "seed": true
+      "seed": true,
+      "logo_url": "https://pbs.twimg.com/profile_images/2089744783694606336/p0K5KSLo_400x400.jpg",
+      "website_url": "https://warp.dev/factories"
     },
     {
       "id": "startup-firecrawl",
@@ -377,7 +569,9 @@
       "why_new_nl": "Agents kunnen het web als databron gebruiken, inclusief enrichment.",
       "date_found": "2026-11-02T16:47:34.293Z",
       "proof_url": "https://x.com/firecrawl/status/2117297576131060140",
-      "seed": true
+      "seed": true,
+      "logo_url": "https://pbs.twimg.com/profile_images/2034360486867951616/pa7H6cYB_400x400.png",
+      "website_url": "https://firecrawl.dev"
     },
     {
       "id": "startup-browserbase",
@@ -388,7 +582,9 @@
       "why_new_nl": "Browser-infra zodat agents het web kunnen bedienen, via Stagehand.",
       "date_found": "2026-11-02T20:20:29.034Z",
       "proof_url": "https://x.com/browserbase/status/2117351157278625827",
-      "seed": true
+      "seed": true,
+      "logo_url": "https://pbs.twimg.com/profile_images/2041293299433226240/q9rWpgHp_400x400.jpg",
+      "website_url": "https://www.browserbase.com"
     },
     {
       "id": "startup-thinking-machines",
@@ -399,7 +595,9 @@
       "why_new_nl": "Klanten kunnen er hun eigen cutting-edge modellen maken.",
       "date_found": "2026-10-15T21:53:50.492Z",
       "proof_url": "https://x.com/thinkymachines/status/2110851669915570685",
-      "seed": true
+      "seed": true,
+      "logo_url": "https://pbs.twimg.com/profile_images/2075275500420001792/Q9J4M1DL_400x400.jpg",
+      "website_url": "https://thinkingmachines.ai/"
     }
   ]
 }
