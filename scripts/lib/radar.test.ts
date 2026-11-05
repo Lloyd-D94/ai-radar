@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { describe, it } from "node:test";
 
 import { applyRadarUpdate } from "../apply-radar-update.ts";
-import { LIMITS, mergeAccounts, mergeRadar, parseAccount, sentenceCount, validateIncoming, type RadarAccount, type RadarExample, type RadarFile, type RadarStartup } from "./radar.ts";
+import { LIMITS, mergeAccounts, mergeRadar, parseAccount, sentenceCount, validateIncoming, type RadarAccount, type RadarCreation, type RadarExample, type RadarFile, type RadarStartup } from "./radar.ts";
 
 const example = (patch: Partial<RadarExample> = {}): RadarExample => ({
   id: "ex-demo",
@@ -52,6 +52,21 @@ const update = (exampleId = "ex-demo") => ({
   example_ids: [exampleId],
   source_urls: ["https://x.com/someone/status/2118054007579296069"],
   importance: 4,
+});
+
+const creation = (patch: Partial<RadarCreation> = {}): RadarCreation => ({
+  id: "cr-demo",
+  date: "2026-11-05T09:00:00.000Z",
+  platform: "x",
+  url: "https://x.com/someone/status/2118054007579296069",
+  author_handle: "someone",
+  author_name: "Iemand",
+  author_avatar_url: "https://cdn.example.com/avatar.jpg",
+  title_nl: "Een voorbeeldspel",
+  what_nl: "Iemand bouwde een klein spel met Claude Code.",
+  tools: ["Claude Code"],
+  category: "apps_games_websites",
+  ...patch,
 });
 
 describe("radar-validatie", () => {
@@ -218,6 +233,37 @@ describe("radar-validatie", () => {
     assert.ok(issues.some((issue) => issue.includes("avatar_url")));
   });
 
+  it("accepteert een creatie en weigert een kapotte YouTube-url", () => {
+    const ok = validateIncoming({
+      updates: [update("ex-demo")],
+      examples: [example()],
+      startups: [],
+      creations: [creation({ update_id: "upd-demo" }), creation({ id: "cr-yt", platform: "youtube", url: "https://www.youtube.com/watch?v=M7lc1UVf-VE", author_handle: "Voorbeeldkanaal", youtube_id: "M7lc1UVf-VE", duration_s: 42 })],
+    });
+    assert.deepEqual(ok.issues, []);
+    assert.equal(ok.creations[1]?.youtube_id, "M7lc1UVf-VE");
+    const bad = validateIncoming({
+      updates: [],
+      examples: [],
+      startups: [],
+      creations: [
+        {
+          ...creation({
+            platform: "youtube",
+            url: "https://youtu.be/abcdefghijk",
+            youtube_id: "abcdefghijk",
+            author_handle: "kanaal",
+            update_id: "bestaat-niet",
+          }),
+          category: "onzin",
+        },
+      ],
+    }).issues;
+    assert.ok(bad.some((issue) => issue.includes("youtube.com/watch")));
+    assert.ok(bad.some((issue) => issue.includes("category")));
+    assert.ok(bad.some((issue) => issue.includes("onbekende update")));
+  });
+
   it("weigert dubbele ids in hetzelfde bestand", () => {
     const issues = validateIncoming({
       updates: [],
@@ -244,6 +290,11 @@ describe("radar-merge", () => {
     assert.equal(next.updates[0]?.title_nl, "Nieuw");
     assert.equal(next.examples.length, 1);
     assert.equal(next.examples[0]?.id, "ex-ander");
+    const kept = mergeRadar({ updates: [], examples: [], startups: [], creations: [creation()] }, { updates: [], examples: [], startups: [] });
+    assert.equal(kept.creations?.[0]?.id, "cr-demo");
+    const replaced = mergeRadar(kept, { updates: [], examples: [], startups: [], creations: [creation({ title_nl: "Nieuw spel" })] });
+    assert.equal(replaced.creations?.length, 1);
+    assert.equal(replaced.creations?.[0]?.title_nl, "Nieuw spel");
     assert.equal(mergeAccounts([{ handle: "Bot", name: "Oud", category: "xai_grok", note_nl: "a", already_followed: true, followers: 1, example_url: "https://x.com/bot" }], [{ handle: "bot", name: "Nieuw", category: "xai_grok", note_nl: "b", already_followed: false, followers: 2, example_url: "https://x.com/bot" }])[0]?.name, "Nieuw");
   });
 

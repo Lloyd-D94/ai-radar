@@ -58,7 +58,7 @@ Items met `"seed": true` zijn de startset uit het rapport van 5 nov 2026. Latere
 
 | Bestand | Inhoud |
 | --- | --- |
-| `data/radar.json` | `updates`, `examples`, `startups` |
+| `data/radar.json` | `updates`, `examples`, `startups`, optioneel `creations` |
 | `data/accounts.json` | 129 X-accounts; `already_followed` zegt of je het account al volgt |
 | `data/items.json` | Automatische release-items (tab Bronnen) |
 | `data/sources.json` | Gezondheid van die feeds |
@@ -74,6 +74,7 @@ Een externe routine levert `radar-update.json` in de root, met dezelfde vorm:
   "updates": [],
   "examples": [],
   "startups": [],
+  "creations": [],
   "accounts": []
 }
 ```
@@ -85,7 +86,7 @@ npm run radar:apply
 npm run radar:apply -- pad/naar/radar-update.json
 ```
 
-Het script valideert en stopt met een foutmelding als iets niet klopt. Het schrijft dan niets weg. Geldige items worden samengevoegd op id of URL. Er blijven maximaal 400 updates en 1500 voorbeelden; de oudste vallen weg.
+Het script valideert en stopt met een foutmelding als iets niet klopt. Het schrijft dan niets weg. Geldige items worden samengevoegd op id of URL. Er blijven maximaal 400 updates, 1500 voorbeelden en 600 creaties; de oudste vallen weg. Ontbreekt `creations` in het bestand, dan blijven de bestaande creaties staan.
 
 Regels, kort:
 
@@ -156,7 +157,30 @@ Voorbeeld van een post met de nieuwe velden:
 }
 ```
 
-Avatars en media mogen hotlinken (bijvoorbeeld `pbs.twimg.com`). De site laadt ze lui, in een vast kader, met `referrerpolicy="no-referrer"`, en valt terug op een initiaal of een leeg kader als het beeld faalt. Geen betaalde API, geen X-widget.
+Avatars en media mogen hotlinken (bijvoorbeeld `pbs.twimg.com`). De site laadt ze lui, in een vast kader, met `referrerpolicy="no-referrer"`, en valt terug op een initiaal of een leeg kader als het beeld faalt. Geen betaalde API, geen X-widget. Een sitebrede `no-referrer` zorgt dat een mp4 van `video.twimg.com` niet wordt geweigerd omdat de browser een andere herkomst meestuurt.
+
+### Creaties (`creations`)
+
+Concrete resultaten die iemand met AI maakte: een app, een film, een agent, een robot. Ongeveer vijf per dag. De feed toont ze visueel, bovenaan als rij en als kaart. Een YouTube-filmpje opent in de viewer via `youtube-nocookie.com`, pas na een tik op afspelen.
+
+| Veld | Vorm |
+| --- | --- |
+| `id`, `date` | Zelfde regels als een update |
+| `platform` | `x` of `youtube` |
+| `url` | Bij `x`: precies `https://x.com/<handle>/status/<id>`, en die handle is `author_handle`. Bij `youtube`: precies `https://www.youtube.com/watch?v=<id>` |
+| `author_handle`, `author_name`, `author_avatar_url` | Naam en https-avatar. Een YouTube-handle is 1–30 tekens |
+| `title_nl` | Korte titel |
+| `what_nl` | Eén of twee Nederlandse zinnen: wat er gemaakt is en waarmee |
+| `tools` | 1 tot 6 namen, bijvoorbeeld `Claude Code` |
+| `category` | `apps_games_websites`, `design_3d`, `film_video`, `agents_automation` of `hardware_robots` |
+| `update_id` | Optioneel. Moet een bestaand update-id zijn. De feed zet het resultaat dan ook onder die update als “Hiermee gemaakt” |
+| `text` | Optioneel, platte posttekst, maximaal 500 tekens |
+| `media` | Zelfde vorm als bij een voorbeeld, inclusief optionele `video_url` |
+| `youtube_id` | Verplicht bij YouTube, dezelfde 11 tekens als in de URL |
+| `duration_s` | Seconden, geheel getal van 0 of hoger. Verplicht bij YouTube |
+| `metrics`, `lang` | Optioneel, zelfde vorm als bij een voorbeeld |
+
+Clickbait en geldclaims horen niet in dit bestand; die filtert de routine vóór het schrijven. Verzin ook hier geen feiten.
 
 Staat `radar-update.json` op `main`, dan draait `.github/workflows/radar-apply.yml`: valideren, mergen, committen en de site publiceren. Elke andere push die `data/` wijzigt, publiceert ook via **Site publiceren**.
 

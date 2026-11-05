@@ -10,11 +10,15 @@ export const ACCOUNT_CATEGORIES = [
 export const EXAMPLE_KINDS = ["demo", "workflow", "release", "tutorial"] as const;
 export const MEDIA_TYPES = ["photo", "video", "gif"] as const;
 export const METRIC_KEYS = ["likes", "reposts", "replies", "views"] as const;
+export const CREATION_CATEGORIES = ["apps_games_websites", "design_3d", "film_video", "agents_automation", "hardware_robots"] as const;
+export const CREATION_PLATFORMS = ["x", "youtube"] as const;
 
 export type AccountCategory = (typeof ACCOUNT_CATEGORIES)[number];
 export type ExampleKind = (typeof EXAMPLE_KINDS)[number];
 export type MediaType = (typeof MEDIA_TYPES)[number];
 export type MetricKey = (typeof METRIC_KEYS)[number];
+export type CreationCategory = (typeof CREATION_CATEGORIES)[number];
+export type CreationPlatform = (typeof CREATION_PLATFORMS)[number];
 
 export interface RadarUpdate {
   id: string;
@@ -90,11 +94,33 @@ export interface RadarAccount {
   avatar_url?: string;
 }
 
+export interface RadarCreation {
+  id: string;
+  date: string;
+  platform: CreationPlatform;
+  url: string;
+  author_handle: string;
+  author_name: string;
+  author_avatar_url: string;
+  title_nl: string;
+  what_nl: string;
+  tools: string[];
+  category: CreationCategory;
+  update_id?: string;
+  text?: string;
+  media?: RadarMedia[];
+  youtube_id?: string;
+  duration_s?: number;
+  metrics?: RadarMetrics;
+  lang?: string;
+}
+
 export interface RadarFile {
   generatedAt?: string;
   updates: RadarUpdate[];
   examples: RadarExample[];
   startups: RadarStartup[];
+  creations?: RadarCreation[];
 }
 
 export interface RadarUpdateFile {
@@ -102,11 +128,13 @@ export interface RadarUpdateFile {
   examples?: unknown;
   startups?: unknown;
   accounts?: unknown;
+  creations?: unknown;
 }
 
 export const LIMITS = {
   updates: 400,
   examples: 1500,
+  creations: 600,
   title: 140,
   summary: 400,
   note: 220,
@@ -124,6 +152,8 @@ export const LIMITS = {
 };
 
 const POST_URL = /^https:\/\/x\.com\/([A-Za-z0-9_]{1,15})\/status\/(\d+)$/;
+const YOUTUBE_URL = /^https:\/\/www\.youtube\.com\/watch\?v=([A-Za-z0-9_-]{11})$/;
+const YT_HANDLE = /^[A-Za-z0-9_.-]{1,30}$/;
 const HANDLE = /^[A-Za-z0-9_]{1,15}$/;
 const ID = /^[a-z0-9][a-z0-9-]{0,79}$/;
 const LANG = /^[a-z]{2,3}(?:-[a-z0-9]{2,8})*$/i;
@@ -479,6 +509,97 @@ function parseStartup(value: unknown, path: string, issues: string[]): RadarStar
   return id ? startup : null;
 }
 
+function parseCreation(value: unknown, path: string, issues: string[]): RadarCreation | null {
+  const record = asRecord(value, path, issues);
+  if (!record) return null;
+  const id = reqString(record, "id", path, issues, LIMITS.id);
+  if (id && !ID.test(id)) issues.push(`${path}.id: kleine letters, cijfers en streepjes`);
+  const platform = reqString(record, "platform", path, issues, 12);
+  if (platform && !CREATION_PLATFORMS.includes(platform as CreationPlatform)) {
+    issues.push(`${path}.platform: verwacht x of youtube`);
+  }
+  const url = reqString(record, "url", path, issues, 200);
+  const author = reqString(record, "author_handle", path, issues, 30);
+  let youtubeId = "";
+  if (platform === "x") {
+    if (author && !HANDLE.test(author)) issues.push(`${path}.author_handle: ongeldige X-handle`);
+    const postMatch = POST_URL.exec(url);
+    if (url && !postMatch) issues.push(`${path}.url: verwacht https://x.com/<handle>/status/<id>`);
+    else if (postMatch && author && postMatch[1]?.toLowerCase() !== author.toLowerCase()) {
+      issues.push(`${path}.url: handle in de URL (${postMatch[1]}) wijkt af van author_handle (${author})`);
+    }
+  } else if (platform === "youtube") {
+    if (author && !YT_HANDLE.test(author)) issues.push(`${path}.author_handle: ongeldige kanaalnaam`);
+    const match = YOUTUBE_URL.exec(url);
+    if (url && !match) issues.push(`${path}.url: verwacht https://www.youtube.com/watch?v=<id>`);
+    youtubeId = typeof record.youtube_id === "string" ? record.youtube_id.trim() : "";
+    if (!youtubeId) issues.push(`${path}.youtube_id: verplicht bij YouTube`);
+    else if (!/^[A-Za-z0-9_-]{11}$/.test(youtubeId)) issues.push(`${path}.youtube_id: 11 tekens`);
+    else if (match && match[1] !== youtubeId) issues.push(`${path}.youtube_id: wijkt af van de URL`);
+  }
+  const what = reqString(record, "what_nl", path, issues, LIMITS.summary);
+  if (what && (sentenceCount(what) < 1 || sentenceCount(what) > 2)) {
+    issues.push(`${path}.what_nl: één of twee zinnen`);
+  }
+  const category = reqString(record, "category", path, issues, 40);
+  if (category && !CREATION_CATEGORIES.includes(category as CreationCategory)) {
+    issues.push(`${path}.category: onbekende categorie`);
+  }
+  const tools: string[] = [];
+  if (!Array.isArray(record.tools)) issues.push(`${path}.tools: verwacht een lijst`);
+  else {
+    if (record.tools.length < 1 || record.tools.length > 6) {
+      issues.push(`${path}.tools: 1 tot 6 tools (nu ${record.tools.length})`);
+    }
+    record.tools.forEach((entry, index) => {
+      if (typeof entry !== "string" || entry.trim().length === 0) {
+        issues.push(`${path}.tools[${index}]: lege tekst`);
+        return;
+      }
+      const tool = entry.trim();
+      if (tool.length > LIMITS.tool) issues.push(`${path}.tools[${index}]: maximaal ${LIMITS.tool} tekens`);
+      tools.push(tool);
+    });
+  }
+  const avatar = reqString(record, "author_avatar_url", path, issues, LIMITS.mediaUrl);
+  if (avatar && !isHttpsUrl(avatar)) issues.push(`${path}.author_avatar_url: moet een https-URL zijn`);
+  let updateId = "";
+  if (record.update_id !== undefined) {
+    updateId = reqString(record, "update_id", path, issues, LIMITS.id);
+    if (updateId && !ID.test(updateId)) issues.push(`${path}.update_id: ongeldig id`);
+  }
+  const duration = optInt(record, "duration_s", path, issues, 0);
+  if (platform === "youtube" && record.duration_s === undefined) issues.push(`${path}.duration_s: verplicht bij YouTube`);
+  const creation: RadarCreation = {
+    id,
+    date: reqIso(record, "date", path, issues),
+    platform: (CREATION_PLATFORMS.includes(platform as CreationPlatform) ? platform : "x") as CreationPlatform,
+    url,
+    author_handle: author,
+    author_name: reqString(record, "author_name", path, issues, LIMITS.name),
+    author_avatar_url: avatar,
+    title_nl: reqString(record, "title_nl", path, issues, LIMITS.title),
+    what_nl: what,
+    tools,
+    category: (CREATION_CATEGORIES.includes(category as CreationCategory) ? category : "apps_games_websites") as CreationCategory,
+  };
+  if (updateId) creation.update_id = updateId;
+  if (youtubeId) creation.youtube_id = youtubeId;
+  if (duration !== undefined) creation.duration_s = duration;
+  const text = optString(record, "text", path, issues, LIMITS.text);
+  if (text) {
+    if (HTML_TAG.test(text)) issues.push(`${path}.text: platte tekst, geen HTML`);
+    creation.text = text;
+  }
+  const media = parseMedia(record.media, path, issues);
+  if (media) creation.media = media;
+  const metrics = parseMetrics(record.metrics, path, issues);
+  if (metrics) creation.metrics = metrics;
+  const lang = parseLang(record, path, issues);
+  if (lang) creation.lang = lang;
+  return id ? creation : null;
+}
+
 export function parseAccount(value: unknown, path: string, issues: string[]): RadarAccount | null {
   const record = asRecord(value, path, issues);
   if (!record) return null;
@@ -519,21 +640,23 @@ function duplicates(ids: string[]): string[] {
   return [...dupes];
 }
 
-export function validateIncoming(payload: unknown, currentExamples: RadarExample[] = []): {
+export function validateIncoming(payload: unknown, currentExamples: RadarExample[] = [], currentUpdates: RadarUpdate[] = []): {
   issues: string[];
   updates: RadarUpdate[];
   examples: RadarExample[];
   startups: RadarStartup[];
   accounts: RadarAccount[];
+  creations: RadarCreation[];
 } {
   const issues: string[] = [];
   const record = asRecord(payload, "bestand", issues);
-  if (!record) return { issues, updates: [], examples: [], startups: [], accounts: [] };
+  if (!record) return { issues, updates: [], examples: [], startups: [], accounts: [], creations: [] };
 
   const updates = readList(record.updates ?? [], "updates", issues, parseUpdate);
   const examples = readList(record.examples ?? [], "examples", issues, parseExample);
   const startups = readList(record.startups ?? [], "startups", issues, parseStartup);
   const accounts = record.accounts === undefined ? [] : readList(record.accounts, "accounts", issues, parseAccount);
+  const creations = record.creations === undefined ? [] : readList(record.creations, "creations", issues, parseCreation);
 
   for (const id of duplicates(updates.map((item) => item.id))) issues.push(`updates: dubbel id ${id}`);
   for (const id of duplicates(examples.map((item) => item.id))) issues.push(`examples: dubbel id ${id}`);
@@ -541,6 +664,8 @@ export function validateIncoming(payload: unknown, currentExamples: RadarExample
   for (const id of duplicates(startups.map((item) => item.id))) issues.push(`startups: dubbel id ${id}`);
   for (const url of duplicates(startups.map((item) => item.proof_url))) issues.push(`startups: dubbele proof_url ${url}`);
   for (const handle of duplicates(accounts.map((item) => item.handle))) issues.push(`accounts: dubbele handle ${handle}`);
+  for (const id of duplicates(creations.map((item) => item.id))) issues.push(`creations: dubbel id ${id}`);
+  for (const url of duplicates(creations.map((item) => item.url))) issues.push(`creations: dubbele url ${url}`);
 
   const known = new Set([...currentExamples.map((item) => item.id), ...examples.map((item) => item.id)]);
   updates.forEach((update, index) => {
@@ -549,7 +674,14 @@ export function validateIncoming(payload: unknown, currentExamples: RadarExample
     });
   });
 
-  return { issues, updates, examples, startups, accounts };
+  const knownUpdates = new Set([...currentUpdates.map((item) => item.id), ...updates.map((item) => item.id)]);
+  creations.forEach((creation, index) => {
+    if (creation.update_id && !knownUpdates.has(creation.update_id)) {
+      issues.push(`creations[${index}].update_id: onbekende update ${creation.update_id}`);
+    }
+  });
+
+  return { issues, updates, examples, startups, accounts, creations };
 }
 
 function readList<T>(value: unknown, key: string, issues: string[], parse: (entry: unknown, path: string, issues: string[]) => T | null): T[] {
@@ -579,6 +711,7 @@ export function mergeRadar(
     updates: RadarUpdate[];
     examples: RadarExample[];
     startups: RadarStartup[];
+    creations?: RadarCreation[];
   },
   now = new Date().toISOString(),
 ): RadarFile {
@@ -628,11 +761,22 @@ export function mergeRadar(
     }
   }
 
+  const creations = [...(current.creations ?? [])];
+  const creationAt = indexBy(creations);
+  for (const creation of incoming.creations ?? []) {
+    const index = creationAt.get(creation.id);
+    if (index === undefined) {
+      creationAt.set(creation.id, creations.length);
+      creations.push(creation);
+    } else creations[index] = creation;
+  }
+
   return {
     generatedAt: now,
     updates: byDateDesc(updates, LIMITS.updates),
     examples: byDateDesc(examples, LIMITS.examples),
     startups: [...startups].sort((a, b) => Date.parse(b.date_found) - Date.parse(a.date_found) || a.id.localeCompare(b.id)),
+    creations: byDateDesc(creations, LIMITS.creations),
   };
 }
 
@@ -643,9 +787,9 @@ export function mergeAccounts(current: RadarAccount[], incoming: RadarAccount[])
 }
 
 export function issuesOf(payload: unknown, current: RadarFile = emptyRadar()): string[] {
-  return validateIncoming(payload, current.examples).issues;
+  return validateIncoming(payload, current.examples, current.updates).issues;
 }
 
 export function emptyRadar(): RadarFile {
-  return { updates: [], examples: [], startups: [] };
+  return { updates: [], examples: [], startups: [], creations: [] };
 }

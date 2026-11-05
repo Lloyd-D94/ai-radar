@@ -1,13 +1,21 @@
 const NAV = [
   ["vandaag", "Vandaag", "home"],
-  ["voorbeelden", "Voorbeelden", "posts"],
+  ["gemaakt", "Gemaakt", "grid"],
   ["startups", "Startups", "spark"],
   ["ontdek", "Ontdek", "compass"],
   ["meer", "Meer", "more"],
 ];
 
-const VIEWS = ["vandaag", "voorbeelden", "startups", "ontdek", "meer", "zoeken", "bronnen", "bewaard"];
-const MORE = new Set(["meer", "zoeken", "bronnen", "bewaard"]);
+const VIEWS = ["vandaag", "gemaakt", "voorbeelden", "startups", "ontdek", "meer", "zoeken", "bronnen", "bewaard"];
+const MORE = new Set(["meer", "voorbeelden", "zoeken", "bronnen", "bewaard"]);
+
+const CREATION_CATS = {
+  apps_games_websites: "Apps en games",
+  design_3d: "3D en design",
+  film_video: "Film en video",
+  agents_automation: "Agents",
+  hardware_robots: "Hardware",
+};
 
 const ACCOUNT_CATS = {
   official_product: "Officieel product",
@@ -86,6 +94,7 @@ const state = {
   error: "",
   examples: { tool: "", kind: "", onlyNew: true },
   ontdek: { q: "", category: "" },
+  gemaakt: { category: "" },
   zoek: params.get("q") || "",
   bronnenMore: 8,
   expanded: new Set(),
@@ -320,6 +329,7 @@ function navIcon(name) {
     posts: '<rect x="4" y="4" width="16" height="11" rx="2"/><path d="M8 19.5h8M7 8.2h10M7 11.4h7"/>',
     spark: '<path d="M12 3.2c2.6 2.4 4 5.4 4 8.2 0 1.3-.7 3.2-1.5 4.4L12 19.6l-2.5-3.8C8.7 14.6 8 12.7 8 11.4c0-2.8 1.4-5.8 4-8.2z"/><path d="M12 10.2v.2M7.2 16.6 5.2 19.4M16.8 16.6 18.8 19.4"/>',
     compass: '<circle cx="12" cy="12" r="8"/><path d="m15.2 8.8-1.4 4.6-4.6 1.4 1.4-4.6z"/>',
+    grid: '<rect x="4" y="4" width="7" height="7" rx="1.4"/><rect x="13" y="4" width="7" height="7" rx="1.4"/><rect x="4" y="13" width="7" height="7" rx="1.4"/><rect x="13" y="13" width="7" height="7" rx="1.4"/>',
     more: '<circle cx="6" cy="12" r="1.15" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.15" fill="currentColor" stroke="none"/><circle cx="18" cy="12" r="1.15" fill="currentColor" stroke="none"/>',
   };
   return `<svg viewBox="0 0 24 24" aria-hidden="true">${paths[name] || ""}</svg>`;
@@ -400,10 +410,19 @@ function feedDiscoveries() {
   return found;
 }
 
+function allCreations() {
+  return [...(state.radar.creations || [])].sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+}
+
+function feedCreations() {
+  return allCreations().filter((item) => !item.update_id && inLastDays(item.date, 7));
+}
+
 function buildFeed() {
   const items = [
     ...weekUpdates().map((update) => ({ type: "update", date: update.date, update })),
     ...feedStartups().map((startup) => ({ type: "startup", date: startup.date_found, startup })),
+    ...feedCreations().map((creation) => ({ type: "creation", date: creation.date, creation })),
   ].sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
   const accounts = feedDiscoveries();
   if (accounts.length) items.splice(Math.min(1, items.length), 0, { type: "discover", accounts, skipDay: true });
@@ -561,7 +580,7 @@ function slidesFor(examples, limit = 4) {
 
 function openViewer(items, index) {
   if (!items?.length) return;
-  state.viewer = { items, index: Math.max(0, Math.min(index, items.length - 1)) };
+  state.viewer = { items, index: Math.max(0, Math.min(index, items.length - 1)), playing: false };
   state.focusViewer = true;
   render();
 }
@@ -570,6 +589,7 @@ function stepViewer(delta) {
   if (!state.viewer) return;
   const count = state.viewer.items.length;
   state.viewer.index = (state.viewer.index + delta + count) % count;
+  state.viewer.playing = false;
   state.focusViewer = false;
   render();
 }
@@ -638,12 +658,16 @@ function viewerHtml() {
   const slide = items[index];
   if (!slide) return "";
   const many = items.length > 1;
-  const frame = slide.video
+  const frame = slide.youtubeId
+    ? state.viewer.playing
+      ? `<iframe class="yt-frame" title="${esc(slide.alt || slide.name)}" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(slide.youtubeId)}?playsinline=1&autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`
+      : `<button type="button" class="yt-play" data-yt-play aria-label="Afspelen op YouTube"><img src="${esc(slide.src)}" alt="" referrerpolicy="strict-origin-when-cross-origin" onerror="this.closest('.yt-play')?.classList.add('is-missing');this.remove()" /><span class="play">${PLAY}<span>Afspelen</span></span><span class="missing">Beeld niet geladen</span></button>`
+    : slide.video
     ? `<video src="${esc(slide.video)}" poster="${esc(slide.src)}" muted controls playsinline preload="metadata" ${slide.width ? `width="${slide.width}"` : ""} ${slide.height ? `height="${slide.height}"` : ""} referrerpolicy="no-referrer" onerror="this.classList.add('is-broken')"></video>${slide.src ? `<img class="viewer-fallback" src="${esc(slide.src)}" alt="${esc(slide.alt || "")}" referrerpolicy="no-referrer" />` : ""}`
     : slide.src
       ? `<img src="${esc(slide.src)}" alt="${esc(slide.alt || "")}" referrerpolicy="no-referrer" />`
       : `<div class="viewer-text"><p>${linkify(slide.text)}</p>${slide.note && normalize(slide.note) !== normalize(slide.text) ? `<p class="takeaway"><span>Wat is hier gaaf aan</span>${esc(slide.note)}</p>` : ""}</div>`;
-  const xLabel = slide.type === "video" && !slide.video ? "Bekijk op X" : "Open op X";
+  const xLabel = slide.youtubeId ? "Bekijk op YouTube" : slide.type === "video" && !slide.video ? "Bekijk op X" : "Open op X";
   return `<div class="viewer" role="dialog" aria-modal="true" aria-label="Beeld">
     <div class="viewer-bar">
       <p>${many ? `${index + 1} van ${items.length}` : "Beeld"}</p>
@@ -709,6 +733,135 @@ function postInner(example, { save }) {
     </div>`;
 }
 
+function creationSlides(creation) {
+  const name = readableName(creation.author_name, creation.author_handle);
+  const post = safeHttps(creation.url);
+  const slides = [];
+  if (creation.platform === "youtube" && /^[A-Za-z0-9_-]{11}$/.test(creation.youtube_id || "")) {
+    slides.push({
+      src: `https://i.ytimg.com/vi/${creation.youtube_id}/hqdefault.jpg`,
+      type: "youtube",
+      youtubeId: creation.youtube_id,
+      video: "",
+      width: 0,
+      height: 0,
+      duration: clock((creation.duration_s || 0) * 1000),
+      alt: creation.title_nl,
+      name,
+      handle: creation.author_handle,
+      post,
+      exampleId: creation.id,
+      text: creation.what_nl,
+      note: creation.what_nl,
+    });
+  }
+  for (const media of creation.media || []) {
+    const src = safeUrl(media.preview_url || media.url);
+    if (!src) continue;
+    slides.push({
+      src,
+      type: media.type || "photo",
+      youtubeId: "",
+      video: safeMp4(media.video_url),
+      width: Number.isInteger(media.width) ? media.width : 0,
+      height: Number.isInteger(media.height) ? media.height : 0,
+      duration: clock(media.duration_ms),
+      alt: media.alt || creation.title_nl,
+      name,
+      handle: creation.author_handle,
+      post,
+      exampleId: creation.id,
+      text: creation.text || creation.what_nl,
+      note: creation.what_nl,
+    });
+    if (slides.length >= 4) break;
+  }
+  return slides;
+}
+
+function creationVisual(creation) {
+  const slides = creationSlides(creation);
+  if (!slides.length) {
+    return `<div class="collage" data-count="1">${avatarHtml(creation.author_name, creation.author_handle, creation.author_avatar_url)}</div>`;
+  }
+  const id = bindGallery(slides);
+  if (slides.length === 1) {
+    return `<button type="button" class="tile creation-hero" data-gallery="${id}" data-gallery-index="0" aria-label="${esc(slides[0].alt)}">
+      <img src="${esc(slides[0].src)}" alt="" width="640" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('.tile')?.classList.add('is-missing');this.remove()" />
+      ${playBadge(slides[0].youtubeId ? { ...slides[0], type: "video" } : slides[0])}
+      <span class="missing">Beeld niet geladen</span>
+    </button>`;
+  }
+  return `<div class="hero" data-count="${slides.length}">${slides
+    .map(
+      (slide, index) => `<button type="button" class="tile" data-gallery="${id}" data-gallery-index="${index}" aria-label="${esc(slide.alt)}">
+        <img src="${esc(slide.src)}" alt="" width="640" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('.tile')?.classList.add('is-missing');this.remove()" />
+        ${playBadge(slide.youtubeId ? { ...slide, type: "video" } : slide)}
+        <span class="missing">Beeld niet geladen</span>
+      </button>`,
+    )
+    .join("")}</div>`;
+}
+
+function creationCard(creation) {
+  const key = `creation:${creation.id}`;
+  const unread = !memory.read.has(key);
+  return `<article class="card creation ${unread ? "is-unread" : "is-read"}">
+    <div class="hero-wrap has-media">${creationVisual(creation)}</div>
+    <div class="card-body">
+      <p class="kicker">Gemaakt met AI</p>
+      <div class="meta"><span class="pill">${esc(CREATION_CATS[creation.category] || creation.category)}</span><time datetime="${esc(creation.date)}">${esc(formatDate(creation.date))}</time></div>
+      <h3>${esc(creation.title_nl)}</h3>
+      <p class="summary">${esc(creation.what_nl)}</p>
+      <div class="tool-row">${(creation.tools || []).map((tool) => toolChip(tool)).join("")}</div>
+      <div class="post-compact static">
+        ${avatarHtml(creation.author_name, creation.author_handle, creation.author_avatar_url)}
+        <span><strong>${esc(readableName(creation.author_name, creation.author_handle))}</strong><span class="who">${creation.platform === "youtube" ? "YouTube" : "X"} · @${esc(creation.author_handle)}</span></span>
+      </div>
+      ${actionRow(key)}
+    </div>
+  </article>`;
+}
+
+function creationStrip() {
+  const items = allCreations().slice(0, 5);
+  if (!items.length) return "";
+  return `<section class="made-strip">
+    <div class="made-head"><h2>Gemaakt met AI</h2><a href="#gemaakt" data-tab="gemaakt">Alles</a></div>
+    <div class="scroller made-scroll">${items
+      .map((creation) => {
+        const slides = creationSlides(creation);
+        const id = slides.length ? bindGallery(slides) : "";
+        const src = slides[0]?.src || "";
+        const visual = src
+          ? `<img src="${esc(src)}" alt="" width="320" height="180" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()" />`
+          : avatarHtml(creation.author_name, creation.author_handle, creation.author_avatar_url);
+        return `<button type="button" class="made-tile" data-gallery="${slides.length ? id : ""}" data-gallery-index="0">
+          <span class="made-thumb">${visual}${slides[0] && (slides[0].youtubeId || slides[0].type === "video") ? `<span class="play">${PLAY}</span>` : ""}</span>
+          <span class="made-title">${esc(creation.title_nl)}</span>
+          <span class="who">${esc(CREATION_CATS[creation.category] || "")}</span>
+        </button>`;
+      })
+      .join("")}</div>
+  </section>`;
+}
+
+function gemaaktFor(updateId) {
+  const items = allCreations().filter((item) => item.update_id === updateId);
+  if (!items.length) return "";
+  return `<div class="made-under"><p>Hiermee gemaakt</p><div class="made-under-row">${items
+    .map((creation) => {
+      const slides = creationSlides(creation);
+      const id = slides.length ? bindGallery(slides) : "";
+      const src = slides[0]?.src;
+      return `<button type="button" class="made-mini" ${id ? `data-gallery="${id}" data-gallery-index="0"` : ""}>
+        ${src ? `<img src="${esc(src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()" />` : avatarHtml(creation.author_name, creation.author_handle, creation.author_avatar_url)}
+        <span>${esc(creation.title_nl)}</span>
+      </button>`;
+    })
+    .join("")}</div></div>`;
+}
+
 function updateCard(update) {
   const key = `update:${update.id}`;
   const unread = !memory.read.has(key);
@@ -731,6 +884,7 @@ function updateCard(update) {
       <h3>${esc(update.title_nl)}</h3>
       <p class="summary">${esc(update.summary_nl)}</p>
       ${uses.length ? `<div class="uses"><p>Dit kun je ermee</p><ul>${uses.map((point) => `<li>${esc(point)}</li>`).join("")}</ul></div>` : ""}
+      ${gemaaktFor(update.id)}
       ${examples.length ? `<div class="post-list">${compactPosts(examples)}</div>` : ""}
       ${actionRow(key)}
     </div>
@@ -836,11 +990,13 @@ function viewToday() {
       }
       if (item.type === "startup") return heading + startupCard(item.startup);
       if (item.type === "discover") return heading + discoverCard(item.accounts);
+      if (item.type === "creation") return heading + creationCard(item.creation);
       return heading + updateCard(item.update);
     })
     .join("");
   const unread = feedUnread();
   return `<section>
+    ${creationStrip()}
     <div class="feed-tools">
       <p>${items.length} in de feed</p>
       <button type="button" class="textbtn" data-mark-all ${unread ? "" : "disabled"}>Alles gelezen</button>
@@ -896,6 +1052,32 @@ function viewExamples() {
     </button>
     <p class="count">${filtered.length} posts</p>
     ${list}
+  </section>`;
+}
+
+function viewMade() {
+  const category = state.gemaakt.category;
+  const items = allCreations().filter((item) => (category ? item.category === category : true));
+  const tiles = items
+    .map((creation) => {
+      const slides = creationSlides(creation);
+      const id = slides.length ? bindGallery(slides) : "";
+      const src = slides[0]?.src;
+      return `<button type="button" class="mosaic-tile made-grid" ${id ? `data-gallery="${id}" data-gallery-index="0"` : ""} aria-label="${esc(creation.title_nl)}">
+        ${src ? `<img src="${esc(src)}" alt="" width="400" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()" />` : avatarHtml(creation.author_name, creation.author_handle, creation.author_avatar_url)}
+        ${slides[0] && (slides[0].youtubeId || slides[0].type === "video") ? `<span class="play">${PLAY}</span>` : ""}
+        <span class="mosaic-name">${esc(creation.title_nl)}</span>
+      </button>`;
+    })
+    .join("");
+  return `<section>
+    <h2>Gemaakt met AI</h2>
+    <div class="scroller" role="group" aria-label="Filter op soort resultaat">
+      ${choice("Alles", "data-filter-made", "", category === "")}
+      ${Object.entries(CREATION_CATS).map(([id, label]) => choice(label, "data-filter-made", id, category === id)).join("")}
+    </div>
+    <p class="count">${items.length} resultaten</p>
+    ${tiles ? `<div class="mosaic">${tiles}</div>` : `<div class="empty"><p>Nog geen creaties.</p></div>`}
   </section>`;
 }
 
@@ -1013,11 +1195,15 @@ function viewSearch() {
   const startups = state.radar.startups.filter((item) =>
     `${item.name} ${item.handle} ${item.one_liner_nl} ${item.why_new_nl}`.toLowerCase().includes(query),
   );
+  const creations = allCreations().filter((item) =>
+    `${item.title_nl} ${item.what_nl} ${(item.tools || []).join(" ")} ${item.author_name}`.toLowerCase().includes(query),
+  );
   const accounts = state.accounts.filter((item) => `${item.name} ${item.handle} ${item.note_nl}`.toLowerCase().includes(query));
   const releases = state.items.filter((item) => `${item.title} ${item.excerpt || ""} ${toolLabel(item.tool)}`.toLowerCase().includes(query));
-  const total = updates.length + examples.length + startups.length + accounts.length + releases.length;
+  const total = updates.length + examples.length + startups.length + creations.length + accounts.length + releases.length;
   const blocks = [
     capped(updates, (item) => hit("Update", item.title_nl, item.tool, item.summary_nl), "Updates"),
+    capped(creations, (item) => hit("Gemaakt", item.title_nl, (item.tools || []).join(", "), item.what_nl, item.url), "Gemaakt"),
     capped(examples, (item) => hit("Post", item.author_name || `@${item.author_handle}`, item.tool, item.text || item.note_nl, item.post_url), "Posts"),
     capped(startups, (item) => hit("Startup", item.name, `@${item.handle}`, item.one_liner_nl, item.proof_url), "Startups"),
     capped(accounts, (item) => hit("Account", item.name, `@${item.handle}`, item.note_nl, item.example_url), "Accounts"),
@@ -1078,6 +1264,7 @@ function viewSaved() {
   const updates = state.radar.updates.filter((item) => memory.saved.has(`update:${item.id}`));
   const examples = state.radar.examples.filter((item) => memory.saved.has(`example:${item.id}`));
   const startups = state.radar.startups.filter((item) => memory.saved.has(`startup:${item.id}`));
+  const creations = allCreations().filter((item) => memory.saved.has(`creation:${item.id}`));
   if (!updates.length && !examples.length && !startups.length) {
     return `<section><p class="back"><a href="#meer" data-tab="meer">Meer</a></p><h2>Bewaard</h2><div class="empty"><p>Nog niets bewaard. Gebruik Bewaren bij een update, een post of een startup. Dat blijft in deze browser.</p><a class="textbtn" href="#vandaag" data-tab="vandaag">Naar de feed</a></div></section>`;
   }
@@ -1086,6 +1273,7 @@ function viewSaved() {
     <h2>Bewaard</h2>
     ${updates.length ? `<h3>Updates</h3><div class="stack">${updates.map(updateCard).join("")}</div>` : ""}
     ${examples.length ? `<h3>Posts</h3><div class="stack">${examples.map(exampleCard).join("")}</div>` : ""}
+    ${creations.length ? `<h3>Gemaakt</h3><div class="stack">${creations.map(creationCard).join("")}</div>` : ""}
     ${startups.length ? `<h3>Startups</h3><div class="stack">${startups.map(startupCard).join("")}</div>` : ""}
   </section>`;
 }
@@ -1095,6 +1283,7 @@ function viewMore() {
   return `<section>
     <h2>Meer</h2>
     <nav class="more-list" aria-label="Extra onderdelen">
+      <a href="#voorbeelden" data-tab="voorbeelden">Voorbeelden<span>Posts als raster</span></a>
       <a href="#zoeken" data-tab="zoeken">Zoeken<span>Tools, posts, accounts en bronnen</span></a>
       <a href="#bronnen" data-tab="bronnen">Bronnen<span>Changelogs, secundair</span></a>
       <a href="#bewaard" data-tab="bewaard">Bewaard<span>${saved} ${saved === 1 ? "item" : "items"} in deze browser</span></a>
@@ -1104,6 +1293,7 @@ function viewMore() {
 }
 
 function panel() {
+  if (state.tab === "gemaakt") return viewMade();
   if (state.tab === "voorbeelden") return viewExamples();
   if (state.tab === "startups") return viewStartups();
   if (state.tab === "ontdek") return viewDiscover();
@@ -1197,6 +1387,7 @@ async function load() {
       updates: Array.isArray(radar.updates) ? radar.updates : [],
       examples: Array.isArray(radar.examples) ? radar.examples : [],
       startups: Array.isArray(radar.startups) ? radar.startups : [],
+      creations: Array.isArray(radar.creations) ? radar.creations : [],
     };
     state.accounts = Array.isArray(accounts) ? accounts : [];
     state.items = Array.isArray(items.items) ? items.items : [];
@@ -1234,6 +1425,22 @@ app.addEventListener("click", (event) => {
   }
   if (target.closest("[data-viewer-next]")) {
     stepViewer(1);
+    return;
+  }
+  if (target.closest("[data-yt-play]")) {
+    const slide = state.viewer?.items[state.viewer.index];
+    const button = target.closest("[data-yt-play]");
+    if (state.viewer && slide?.youtubeId && button) {
+      const frame = document.createElement("iframe");
+      frame.className = "yt-frame";
+      frame.title = slide.alt || slide.name || "YouTube";
+      frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      frame.allowFullscreen = true;
+      frame.referrerPolicy = "strict-origin-when-cross-origin";
+      frame.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(slide.youtubeId)}?playsinline=1&autoplay=1`;
+      button.replaceWith(frame);
+      state.viewer.playing = true;
+    }
     return;
   }
   const gallery = target.closest("[data-gallery]");
@@ -1293,6 +1500,12 @@ app.addEventListener("click", (event) => {
   const kind = target.closest("[data-filter-kind]");
   if (kind instanceof HTMLElement && kind.hasAttribute("data-filter-kind")) {
     state.examples.kind = kind.dataset.filterKind || "";
+    render();
+    return;
+  }
+  const made = target.closest("[data-filter-made]");
+  if (made instanceof HTMLElement && made.hasAttribute("data-filter-made")) {
+    state.gemaakt.category = made.dataset.filterMade || "";
     render();
     return;
   }

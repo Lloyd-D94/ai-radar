@@ -24,6 +24,7 @@ export function loadRadar(path: string): RadarFile {
     updates: Array.isArray(parsed.updates) ? parsed.updates : [],
     examples: Array.isArray(parsed.examples) ? parsed.examples : [],
     startups: Array.isArray(parsed.startups) ? parsed.startups : [],
+    creations: Array.isArray(parsed.creations) ? parsed.creations : [],
   };
 }
 
@@ -33,7 +34,7 @@ export function loadAccounts(path: string): RadarAccount[] {
   return Array.isArray(parsed) ? (parsed as RadarAccount[]) : [];
 }
 
-export function applyRadarUpdate(root: string, updatePath: string): { updates: number; examples: number; startups: number; accounts: number } {
+export function applyRadarUpdate(root: string, updatePath: string): { updates: number; examples: number; startups: number; accounts: number; creations: number } {
   if (!existsSync(updatePath)) {
     throw new RadarValidationError([`Bestand ontbreekt: ${updatePath}`]);
   }
@@ -46,7 +47,7 @@ export function applyRadarUpdate(root: string, updatePath: string): { updates: n
   const radarPath = join(root, "data", "radar.json");
   const accountsPath = join(root, "data", "accounts.json");
   const current = loadRadar(radarPath);
-  const checked = validateIncoming(payload, current.examples);
+  const checked = validateIncoming(payload, current.examples, current.updates);
   if (checked.issues.length > 0) throw new RadarValidationError(checked.issues);
   const next = mergeRadar(current, checked);
   const accounts = mergeAccounts(loadAccounts(accountsPath), checked.accounts);
@@ -57,6 +58,7 @@ export function applyRadarUpdate(root: string, updatePath: string): { updates: n
     examples: next.examples.length,
     startups: next.startups.length,
     accounts: accounts.length,
+    creations: next.creations?.length ?? 0,
   };
 }
 
@@ -66,7 +68,7 @@ if (entry && import.meta.url === pathToFileURL(entry).href) {
   try {
     const result = applyRadarUpdate(process.cwd(), file);
     console.log(
-      `Radar bijgewerkt: ${result.updates} updates, ${result.examples} voorbeelden, ${result.startups} startups, ${result.accounts} accounts.`,
+      `Radar bijgewerkt: ${result.updates} updates, ${result.examples} voorbeelden, ${result.startups} startups, ${result.creations} creaties, ${result.accounts} accounts.`,
     );
   } catch (error) {
     if (error instanceof RadarValidationError) {

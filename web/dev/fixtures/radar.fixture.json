@@ -450,5 +450,149 @@
       "date_found": "2026-11-01T09:00:00.000Z",
       "proof_url": "https://x.com/demoforge/status/900000000000000103"
     }
+  ],
+  "creations": [
+    {
+      "id": "cr-vb-spel",
+      "date": "2026-11-05T09:40:00.000Z",
+      "platform": "x",
+      "url": "https://x.com/voorbeeldspel/status/900000000000000201",
+      "author_handle": "voorbeeldspel",
+      "author_name": "Voorbeeld Spel",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23d7e4f5%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%23163e72%22%3EVS%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "title_nl": "Voorbeeld: een klein spel",
+      "what_nl": "Dit is voorbeelddata. Iemand bouwde een fictief spel met Claude Code.",
+      "tools": [
+        "Claude Code"
+      ],
+      "category": "apps_games_websites",
+      "text": "Voorbeeldpost, geen echte post.",
+      "media": [
+        {
+          "type": "photo",
+          "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23d7e4f5%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22196%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2240%22%20font-weight%3D%22700%22%20fill%3D%22%23163e72%22%3ESpel%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "preview_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23d7e4f5%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22196%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2240%22%20font-weight%3D%22700%22%20fill%3D%22%23163e72%22%3ESpel%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "alt": "Voorbeeldbeeld: Spel"
+        }
+      ],
+      "lang": "nl"
+    },
+    {
+      "id": "cr-vb-film",
+      "date": "2026-11-05T09:30:00.000Z",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=M7lc1UVf-VE",
+      "author_handle": "voorbeeldkanaal",
+      "author_name": "Voorbeeldkanaal",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23f8e0d4%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%237a3418%22%3EVK%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "title_nl": "Voorbeeld: een YouTube-filmpje",
+      "what_nl": "Dit is voorbeelddata. Het filmpje opent in de viewer via YouTube.",
+      "tools": [
+        "YouTube"
+      ],
+      "category": "film_video",
+      "youtube_id": "M7lc1UVf-VE",
+      "duration_s": 60,
+      "lang": "nl"
+    },
+    {
+      "id": "cr-vb-vorm",
+      "date": "2026-11-05T09:20:00.000Z",
+      "platform": "x",
+      "url": "https://x.com/voorbeeldvorm/status/900000000000000202",
+      "author_handle": "voorbeeldvorm",
+      "author_name": "Voorbeeld Vorm",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23e7f0df%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%23245c2a%22%3EVV%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "title_nl": "Voorbeeld: een 3D-vorm",
+      "what_nl": "Dit is voorbeelddata. Een fictieve stoel is met Tripo gemaakt.",
+      "tools": [
+        "Tripo"
+      ],
+      "category": "design_3d",
+      "update_id": "upd-vb-bellen",
+      "media": [
+        {
+          "type": "photo",
+          "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23e7f0df%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22196%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2240%22%20font-weight%3D%22700%22%20fill%3D%22%23245c2a%22%3E3D%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "preview_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23e7f0df%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22196%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2240%22%20font-weight%3D%22700%22%20fill%3D%22%23245c2a%22%3E3D%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "alt": "Voorbeeldbeeld: 3D"
+        }
+      ],
+      "lang": "nl"
+    },
+    {
+      "id": "cr-vb-agent",
+      "date": "2026-11-05T09:10:00.000Z",
+      "platform": "x",
+      "url": "https://x.com/voorbeeldagent/status/900000000000000203",
+      "author_handle": "voorbeeldagent",
+      "author_name": "Voorbeeld Agent",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23efe6f6%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%234c1d6b%22%3EVA%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "title_nl": "Voorbeeld: een agent",
+      "what_nl": "Dit is voorbeelddata. Een fictieve agent ruimt een inbox op.",
+      "tools": [
+        "Claude Code",
+        "Grok"
+      ],
+      "category": "agents_automation",
+      "media": [
+        {
+          "type": "photo",
+          "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23efe6f6%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22196%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2240%22%20font-weight%3D%22700%22%20fill%3D%22%234c1d6b%22%3EAgent%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "preview_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23efe6f6%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22196%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2240%22%20font-weight%3D%22700%22%20fill%3D%22%234c1d6b%22%3EAgent%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "alt": "Voorbeeldbeeld: Agent"
+        }
+      ],
+      "lang": "nl"
+    },
+    {
+      "id": "cr-vb-robot",
+      "date": "2026-11-05T09:00:00.000Z",
+      "platform": "x",
+      "url": "https://x.com/voorbeeldrobot/status/900000000000000204",
+      "author_handle": "voorbeeldrobot",
+      "author_name": "Voorbeeld Robot",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23f6efd8%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%236b4e12%22%3EVR%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "title_nl": "Voorbeeld: een robotarm",
+      "what_nl": "Dit is voorbeelddata. Een fictieve arm volgt een script.",
+      "tools": [
+        "Grok"
+      ],
+      "category": "hardware_robots",
+      "update_id": "upd-vb-claude",
+      "media": [
+        {
+          "type": "photo",
+          "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23f6efd8%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22196%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2240%22%20font-weight%3D%22700%22%20fill%3D%22%236b4e12%22%3ERobot%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "preview_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23f6efd8%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22196%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2240%22%20font-weight%3D%22700%22%20fill%3D%22%236b4e12%22%3ERobot%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "alt": "Voorbeeldbeeld: Robot"
+        }
+      ],
+      "lang": "nl"
+    },
+    {
+      "id": "cr-vb-site",
+      "date": "2026-11-05T08:50:00.000Z",
+      "platform": "x",
+      "url": "https://x.com/voorbeeldsite/status/900000000000000205",
+      "author_handle": "voorbeeldsite",
+      "author_name": "Voorbeeld Site",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23d9ecec%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%230f4c4c%22%3EWS%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "title_nl": "Voorbeeld: een website",
+      "what_nl": "Dit is voorbeelddata. Een fictieve site is in één prompt gezet.",
+      "tools": [
+        "Cursor"
+      ],
+      "category": "apps_games_websites",
+      "media": [
+        {
+          "type": "photo",
+          "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23d9ecec%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22196%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2240%22%20font-weight%3D%22700%22%20fill%3D%22%230f4c4c%22%3ESite%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "preview_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23d9ecec%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22196%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2240%22%20font-weight%3D%22700%22%20fill%3D%22%230f4c4c%22%3ESite%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "alt": "Voorbeeldbeeld: Site"
+        }
+      ],
+      "lang": "nl"
+    }
   ]
 }
