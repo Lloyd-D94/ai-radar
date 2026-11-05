@@ -165,20 +165,23 @@ Concrete resultaten die iemand met AI maakte: een app, een film, een agent, een 
 
 | Veld | Vorm |
 | --- | --- |
-| `id`, `date` | Zelfde regels als een update |
+| `id`, `date` | `id` mag letters, cijfers, streepjes en underscores, ook een YouTube-id erin. `date` is ISO |
 | `platform` | `x` of `youtube` |
 | `url` | Bij `x`: precies `https://x.com/<handle>/status/<id>`, en die handle is `author_handle`. Bij `youtube`: precies `https://www.youtube.com/watch?v=<id>` |
 | `author_handle`, `author_name`, `author_avatar_url` | Naam en https-avatar. Een YouTube-handle is 1–30 tekens |
 | `title_nl` | Korte titel |
-| `what_nl` | Eén of twee Nederlandse zinnen: wat er gemaakt is en waarmee |
+| `what_nl` | Eén tot drie Nederlandse zinnen: wat er gemaakt is en waarmee |
 | `tools` | 1 tot 6 namen, bijvoorbeeld `Claude Code` |
 | `category` | `apps_games_websites`, `design_3d`, `film_video`, `agents_automation` of `hardware_robots` |
 | `update_id` | Optioneel. Moet een bestaand update-id zijn. De feed zet het resultaat dan ook onder die update als “Hiermee gemaakt” |
-| `text` | Optioneel, platte posttekst, maximaal 500 tekens |
+| `text` | Optioneel, de oorspronkelijke tekst, maximaal 800 tekens. Een prompt mag hoekige haken bevatten; de site toont ze als tekst |
 | `media` | Zelfde vorm als bij een voorbeeld, inclusief optionele `video_url` |
 | `youtube_id` | Verplicht bij YouTube, dezelfde 11 tekens als in de URL |
 | `duration_s` | Seconden, geheel getal van 0 of hoger. Verplicht bij YouTube |
 | `metrics`, `lang` | Optioneel, zelfde vorm als bij een voorbeeld |
+| `lloyd_pick` | Optioneel, `true` of `false`. `true` is een favoriet van de eigenaar; de feed zet er “Jouw favoriet” bij |
+| `channel_id` | Optioneel, alleen bij YouTube. Vorm `UC` plus 22 tekens |
+| `title_original` | Optioneel, alleen bij YouTube. De titel op YouTube, maximaal 140 tekens |
 
 Clickbait en geldclaims horen niet in dit bestand; die filtert de routine vóór het schrijven. Verzin ook hier geen feiten.
 

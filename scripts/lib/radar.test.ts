@@ -242,6 +242,30 @@ describe("radar-validatie", () => {
     });
     assert.deepEqual(ok.issues, []);
     assert.equal(ok.creations[1]?.youtube_id, "M7lc1UVf-VE");
+    const rich = validateIncoming({
+      updates: [],
+      examples: [],
+      startups: [],
+      creations: [
+        creation({
+          id: "cr-yt-AbC_def-12",
+          platform: "youtube",
+          url: "https://www.youtube.com/watch?v=AbC_def-123",
+          author_handle: "kanaal_1",
+          youtube_id: "AbC_def-123",
+          duration_s: 90,
+          what_nl: "Eerste zin. Tweede zin. Derde zin.",
+          text: `Prompt <inputs> en nog wat. ${"a".repeat(460)}`,
+          lloyd_pick: true,
+          channel_id: "UC_ILSBQyvg-TlqVt9DJGWPQ",
+          title_original: "Original title",
+        }),
+      ],
+    });
+    assert.deepEqual(rich.issues, []);
+    assert.equal(rich.creations[0]?.lloyd_pick, true);
+    assert.equal(rich.creations[0]?.channel_id, "UC_ILSBQyvg-TlqVt9DJGWPQ");
+    assert.ok(validateIncoming({ creations: [creation({ platform: "x", channel_id: "UCh13OyDSm-Kb8ij3yZArtFg" })] }).issues.some((issue) => issue.includes("YouTube")));
     const bad = validateIncoming({
       updates: [],
       examples: [],
@@ -350,6 +374,8 @@ describe("radar-merge", () => {
       }),
     ];
     assert.deepEqual(issues, []);
+    assert.equal(radar.creations?.length, 35);
+    assert.equal(radar.creations?.filter((item) => item.lloyd_pick).length, 3);
     assert.equal(radar.examples.length, 12);
     assert.equal(radar.updates.length, 9);
     assert.equal(radar.startups.length, 10);

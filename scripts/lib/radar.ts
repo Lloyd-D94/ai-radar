@@ -113,6 +113,9 @@ export interface RadarCreation {
   duration_s?: number;
   metrics?: RadarMetrics;
   lang?: string;
+  lloyd_pick?: boolean;
+  channel_id?: string;
+  title_original?: string;
 }
 
 export interface RadarFile {
@@ -146,6 +149,7 @@ export const LIMITS = {
   id: 80,
   accountNote: 280,
   text: 500,
+  creationText: 800,
   alt: 180,
   mediaUrl: 500,
   lang: 16,
@@ -156,6 +160,8 @@ const YOUTUBE_URL = /^https:\/\/www\.youtube\.com\/watch\?v=([A-Za-z0-9_-]{11})$
 const YT_HANDLE = /^[A-Za-z0-9_.-]{1,30}$/;
 const HANDLE = /^[A-Za-z0-9_]{1,15}$/;
 const ID = /^[a-z0-9][a-z0-9-]{0,79}$/;
+const CREATION_ID = /^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$/;
+const CHANNEL_ID = /^UC[A-Za-z0-9_-]{22}$/;
 const LANG = /^[a-z]{2,3}(?:-[a-z0-9]{2,8})*$/i;
 const HTML_TAG = /<\/?[a-z][^>\n]*>/i;
 const MEDIA_KEYS = ["type", "url", "preview_url", "alt", "video_url", "width", "height", "duration_ms"];
@@ -513,7 +519,7 @@ function parseCreation(value: unknown, path: string, issues: string[]): RadarCre
   const record = asRecord(value, path, issues);
   if (!record) return null;
   const id = reqString(record, "id", path, issues, LIMITS.id);
-  if (id && !ID.test(id)) issues.push(`${path}.id: kleine letters, cijfers en streepjes`);
+  if (id && !CREATION_ID.test(id)) issues.push(`${path}.id: letters, cijfers, streepjes en underscores`);
   const platform = reqString(record, "platform", path, issues, 12);
   if (platform && !CREATION_PLATFORMS.includes(platform as CreationPlatform)) {
     issues.push(`${path}.platform: verwacht x of youtube`);
@@ -538,8 +544,8 @@ function parseCreation(value: unknown, path: string, issues: string[]): RadarCre
     else if (match && match[1] !== youtubeId) issues.push(`${path}.youtube_id: wijkt af van de URL`);
   }
   const what = reqString(record, "what_nl", path, issues, LIMITS.summary);
-  if (what && (sentenceCount(what) < 1 || sentenceCount(what) > 2)) {
-    issues.push(`${path}.what_nl: één of twee zinnen`);
+  if (what && (sentenceCount(what) < 1 || sentenceCount(what) > 3)) {
+    issues.push(`${path}.what_nl: één tot drie zinnen`);
   }
   const category = reqString(record, "category", path, issues, 40);
   if (category && !CREATION_CATEGORIES.includes(category as CreationCategory)) {
@@ -586,11 +592,22 @@ function parseCreation(value: unknown, path: string, issues: string[]): RadarCre
   if (updateId) creation.update_id = updateId;
   if (youtubeId) creation.youtube_id = youtubeId;
   if (duration !== undefined) creation.duration_s = duration;
-  const text = optString(record, "text", path, issues, LIMITS.text);
-  if (text) {
-    if (HTML_TAG.test(text)) issues.push(`${path}.text: platte tekst, geen HTML`);
-    creation.text = text;
+  const text = optString(record, "text", path, issues, LIMITS.creationText);
+  if (text) creation.text = text;
+  if (record.lloyd_pick !== undefined) {
+    if (typeof record.lloyd_pick !== "boolean") issues.push(`${path}.lloyd_pick: verwacht true of false`);
+    else creation.lloyd_pick = record.lloyd_pick;
   }
+  if (record.channel_id !== undefined || record.title_original !== undefined) {
+    if (platform !== "youtube") issues.push(`${path}: channel_id en title_original horen alleen bij YouTube`);
+  }
+  const channel = optString(record, "channel_id", path, issues, 32);
+  if (channel) {
+    if (!CHANNEL_ID.test(channel)) issues.push(`${path}.channel_id: verwacht een YouTube-kanaal-id`);
+    else creation.channel_id = channel;
+  }
+  const original = optString(record, "title_original", path, issues, LIMITS.title);
+  if (original) creation.title_original = original;
   const media = parseMedia(record.media, path, issues);
   if (media) creation.media = media;
   const metrics = parseMetrics(record.metrics, path, issues);

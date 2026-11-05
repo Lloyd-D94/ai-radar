@@ -612,4 +612,1303 @@
       "website_url": "https://thinkingmachines.ai/"
     }
   ]
+,
+  "creations": [
+    {
+      "id": "cr-k2sbhai-718222",
+      "date": "2026-11-05T08:46:02.000Z",
+      "platform": "x",
+      "url": "https://x.com/k2sbhai/status/2118263558647718222",
+      "author_handle": "k2sbhai",
+      "author_name": "K2S",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1970889208421093379/3aRQZYaf_400x400.jpg",
+      "title_nl": "BMW M5-racegame met Tripo en Codex",
+      "what_nl": "Een browsergame rond een met Tripo gegenereerde BMW M5, gebouwd met GPT-6 via Codex, de Tripo-API en Three.js.",
+      "tools": [
+        "Codex",
+        "GPT-6",
+        "Tripo",
+        "Three.js"
+      ],
+      "category": "apps_games_websites",
+      "text": "built a GPT-style BMW M5 game using @tripoai + Codex 😳\n\nGPT-6 + Tripo API + Three.js",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118262235000942592/img/tUYEIdpe-fThx7WK.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118262235000942592/img/tUYEIdpe-fThx7WK.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118262235000942592/vid/avc1/640x360/34Ye8bjNgFktpf-x.mp4",
+          "width": 2940,
+          "height": 1652,
+          "duration_ms": 48200
+        }
+      ],
+      "metrics": {
+        "likes": 27,
+        "reposts": 0,
+        "replies": 12,
+        "views": 1213
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-lotusesk-586411",
+      "date": "2026-11-05T07:58:33.000Z",
+      "platform": "x",
+      "url": "https://x.com/LotusesK/status/2118251608085586411",
+      "author_handle": "LotusesK",
+      "author_name": "Lotuses and Kontomire 🥬🍵",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1967371365385703424/piQ2oQdH_400x400.jpg",
+      "title_nl": "Eigen notch-app voor de Mac",
+      "what_nl": "Een fork van boringNotch met muziekspeler, live scores, agenda, systeemmonitor en de live status van Claude- en Codex-sessies.",
+      "tools": [
+        "Claude",
+        "Codex"
+      ],
+      "category": "apps_games_websites",
+      "text": "Never thought I’d need a notch island until I tried n0tch by @AlvinYeboah1.\n\nSeeing how useful it was, I forked boringNotch and built my own version around how I use my Mac:\n\n- Spotify, Apple Music and Apple TV in one player I can switch between and control from the island\n\n- Live scores whenever my teams are playing\n\n- My calendar\n\n- Live status of my coding agent sessions (integrated with Claude and Codex)\n\n- A system monitor that tracks CPU, memory and temperature, and shows which apps are…",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118251535113048064/img/_zUdSnON1KTP5cJ8.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118251535113048064/img/_zUdSnON1KTP5cJ8.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118251535113048064/vid/avc1/680x360/5Upc_Z-ZfO5psOfE.mp4",
+          "width": 1436,
+          "height": 760,
+          "duration_ms": 27485
+        }
+      ],
+      "metrics": {
+        "likes": 5,
+        "reposts": 3,
+        "replies": 1,
+        "views": 198
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-mrdejie-216112",
+      "date": "2026-11-05T07:25:12.000Z",
+      "platform": "x",
+      "url": "https://x.com/mrdejie/status/2118243214587216112",
+      "author_handle": "mrdejie",
+      "author_name": "MrDejie",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2047587292928524288/ocf-T57x_400x400.jpg",
+      "title_nl": "Kort filmpje in snoep-speeltuin met Seedance 2.5",
+      "what_nl": "Een cinematisch filmpje van 15 seconden over een peuter in een opblaasbare snoepwereld, gemaakt met Seedance 2.5 op Renoise. De volledige prompt staat erbij.",
+      "tools": [
+        "Seedance 2.5",
+        "Renoise"
+      ],
+      "category": "film_video",
+      "text": "If joy had a playground, this is it.\nSeedance 2.5 on @renoiseai \n\nPrompt:\nA 15-second live-action cinematic short film, 16:9, 24 fps, realistic 4K film quality. Bright, soft daylight inside a giant inflatable candy world playground. Everything is soft, bouncy, and candy-themed: giant inflatable lollipops, gummy bears, candy canes, marshmallow platforms, chocolate bar ramps, and colorful bounce surfaces. No hard concrete, no sharp edges, no high drops. All surfaces are soft vinyl and air-fille…",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118242972924047361/img/ogUkKohA0P8y45ie.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118242972924047361/img/ogUkKohA0P8y45ie.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118242972924047361/vid/avc1/640x360/DbdoGxbpvnBjEPql.mp4",
+          "width": 1920,
+          "height": 1080,
+          "duration_ms": 15066
+        }
+      ],
+      "metrics": {
+        "likes": 72,
+        "reposts": 8,
+        "replies": 5,
+        "views": 5695
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-miaaaa981028-671750",
+      "date": "2026-11-05T07:21:35.000Z",
+      "platform": "x",
+      "url": "https://x.com/MIAaaa981028/status/2118242307065671750",
+      "author_handle": "MIAaaa981028",
+      "author_name": "Happypepper",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1543246274681397248/TmStKLeG_400x400.jpg",
+      "title_nl": "Metro-animatie zonder After Effects",
+      "what_nl": "Een animatie van de metro in Guangzhou. De beelden komen uit Nano Banana 2, zijn gereduceerd tot 4 tonen, en Claude schreef de beweging met 3 cuts per seconde.",
+      "tools": [
+        "Nano Banana 2",
+        "Claude"
+      ],
+      "category": "film_video",
+      "text": "How I made that Guangzhou Metro animation without After Effects 🚇\n1. Nano Banana 2 for the base images (add \"no text\"!)\n2. Posterize to 4 tones, keep only orange + green\n3. Claude writes the motion — 3 cuts per second\nInspired by @seiiiiiiiiiiru 🙏\n#AIアニメ #Claude #NanoBanana",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118242047278923776/img/cTG9B0Gxvbcow4a6.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118242047278923776/img/cTG9B0Gxvbcow4a6.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118242047278923776/vid/avc1/480x852/TsBpZvkatOj2UJsP.mp4?tag=14",
+          "width": 1080,
+          "height": 1920,
+          "duration_ms": 20881
+        }
+      ],
+      "metrics": {
+        "likes": 3,
+        "reposts": 0,
+        "replies": 1,
+        "views": 68
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-beamsters1-183332",
+      "date": "2026-11-05T06:41:26.000Z",
+      "platform": "x",
+      "url": "https://x.com/Beamsters1/status/2118232201666183332",
+      "author_handle": "Beamsters1",
+      "author_name": "Beamsters",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1556665100945072128/sRFkRrzm_400x400.jpg",
+      "title_nl": "Retro FPS-level in één keer door DeepSeek",
+      "what_nl": "Een speelbaar level van een old-school FPS-kloon, in één poging gebouwd door een gekwantiseerd DeepSeek 4.1-model met deepseek-harness. Opus 5.5 beoordeelde het resultaat.",
+      "tools": [
+        "DeepSeek 4.1",
+        "deepseek-harness",
+        "Claude Opus 5.5"
+      ],
+      "category": "apps_games_websites",
+      "text": "Having fun challenging the model here and there with Sushi 🍣 DeepSeek4.1-STQ-1.75bpw. Opus 5.5 as a grader, one shot, no prompt steering.\n\nHere's a fully playable level of old school FPS shooter clone, built with deepseek-harness, full prompt from @ddalcu in reply.",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118230428771663872/img/pkPtU2i1Kv6HLJIu.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118230428771663872/img/pkPtU2i1Kv6HLJIu.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118230428771663872/vid/avc1/542x360/7nrCRrRVbYaS96c7.mp4",
+          "width": 2422,
+          "height": 1604,
+          "duration_ms": 30459
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HWV3s4YagAAKA7G.jpg",
+          "preview_url": "https://pbs.twimg.com/media/HWV3s4YagAAKA7G.jpg",
+          "alt": "",
+          "width": 1380,
+          "height": 832
+        }
+      ],
+      "metrics": {
+        "likes": 8,
+        "reposts": 0,
+        "replies": 3,
+        "views": 558
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-roundtablespace-841001",
+      "date": "2026-11-05T06:15:00.000Z",
+      "platform": "x",
+      "url": "https://x.com/RoundtableSpace/status/2118225548962841001",
+      "author_handle": "RoundtableSpace",
+      "author_name": "0xMarioNawfal",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2012162102283407360/U-fPj6wg_400x400.jpg",
+      "title_nl": "Vijf glas-in-lood 3D-scènes met Opus 5.5",
+      "what_nl": "Vijf 3D-scènes van glas-in-lood, gevibecodet met Opus 5.5, waarin het licht door het glas meeverandert met het tijdstip. De 3D-modellen komen uit Meshy.",
+      "tools": [
+        "Claude Opus 5.5",
+        "Meshy"
+      ],
+      "category": "design_3d",
+      "text": "Five stained-glass 3D scenes, fully vibe-coded with Opus 5.5, with light through the glass changing by time of day. Meshy made the 3D models.\n\nLive demo:",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118176022617108480/img/VcRixZJxPF_1Ii0D.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118176022617108480/img/VcRixZJxPF_1Ii0D.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118176022617108480/vid/avc1/696x360/FnWhBYonkYBk97wQ.mp4",
+          "width": 1920,
+          "height": 992,
+          "duration_ms": 63722
+        }
+      ],
+      "metrics": {
+        "likes": 25,
+        "reposts": 1,
+        "replies": 3,
+        "views": 51009
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-evals_ag-103761",
+      "date": "2026-11-05T06:10:02.000Z",
+      "platform": "x",
+      "url": "https://x.com/evals_ag/status/2118224298188103761",
+      "author_handle": "evals_ag",
+      "author_name": "Evals",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2110665381782388737/2a-o1a54_400x400.jpg",
+      "title_nl": "Vier modellen bouwen de Melkweg in Blender",
+      "what_nl": "Vier AI-modellen kregen dezelfde prompt om de Melkweg in Blender te bouwen, zonder beelden of videomodellen. Opus 5.5 kwam op 362K sterren.",
+      "tools": [
+        "Claude Opus 5.5",
+        "GPT-6.1 Terra",
+        "Blender"
+      ],
+      "category": "design_3d",
+      "text": "4 AIs built the milky way in blender 🌌 same prompt: 200K+ stars, a barred spiral, dive through an arm, end on the sun. zero images, zero video models\n\nopus 5.5 went 362K stars and the most nasa look. terra took 13 min and turned it purple 💀\n\nwhich one looks real?",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118224173944406016/img/oXigsd3ygpZiLr4j.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118224173944406016/img/oXigsd3ygpZiLr4j.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118224173944406016/vid/avc1/540x540/CR1z18KP9XWX1SXL.mp4",
+          "width": 1080,
+          "height": 1080,
+          "duration_ms": 13533
+        }
+      ],
+      "metrics": {
+        "likes": 1,
+        "reposts": 1,
+        "replies": 1,
+        "views": 67
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-hasibdreamer35-467044",
+      "date": "2026-11-05T06:07:53.000Z",
+      "platform": "x",
+      "url": "https://x.com/hasibdreamer35/status/2118223758343467044",
+      "author_handle": "hasibdreamer35",
+      "author_name": "Hasibul Hasan",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2103933369809788928/3wace2Dh_400x400.jpg",
+      "title_nl": "Mossback Strider: 3D-wezen met Opus 5.5 en Blender",
+      "what_nl": "Een paardgroot 3D-wezen met een tuin op zijn rug, gemaakt met Claude Opus 5.5 en Blender: 389 onderdelen, 73 botten en 8 animaties.",
+      "tools": [
+        "Claude Opus 5.5",
+        "Blender"
+      ],
+      "category": "design_3d",
+      "text": "A living garden on four legs. This creature is incredible!\n\nMeet the Mossback Strider, a horse-sized creature created using Claude Opus 5.5 and Blender.\n\nHere's what makes this project impressive:\n\n- 389 individual parts.\n- 73 bones in its skeletal rig.\n- 8 unique animations.\n- Baked 4K textures.\n- A living garden growing across its back.\n- Water flowing over its stone body like miniature waterfalls.\n- Realistic movement with independently animated ferns and moss.\n\nFrom walking and grazing to…",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118223075686891520/img/ZDpvpeVihwU8hV5f.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118223075686891520/img/ZDpvpeVihwU8hV5f.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118223075686891520/vid/avc1/640x360/Y0m7tK1zfevyRIv3.mp4",
+          "width": 1280,
+          "height": 720,
+          "duration_ms": 90112
+        }
+      ],
+      "metrics": {
+        "likes": 5,
+        "reposts": 1,
+        "replies": 1,
+        "views": 339
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-javierbch-758434",
+      "date": "2026-11-05T03:52:38.000Z",
+      "platform": "x",
+      "url": "https://x.com/javierbch/status/2118189723541758434",
+      "author_handle": "javierbch",
+      "author_name": "Javier Ballesteros Chassaigne",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1636324369524727809/Ik8tlzD0_400x400.jpg",
+      "title_nl": "Animatiekortfilm \"Special Delivery\" met 3D en AI",
+      "what_nl": "Een korte actiekomedie van Bacol Animation Studio die 3D combineert met AI: Blender, Maya, Higgsfield en Claude.",
+      "tools": [
+        "Blender",
+        "Maya",
+        "Higgsfield",
+        "Claude"
+      ],
+      "category": "film_video",
+      "text": "Not every delivery is what it seems. 📦 Special Delivery, an animated short by Bacol Animation Studio. An action comedy created with a hybrid 3D and AI technique, using Blender, Maya, @higgsfield @higgsfield_ai  and @claudeai . #SpecialDelivery #AIFilmmaking",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118189528611487744/img/uXDdMvKZfVtDc-Da.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118189528611487744/img/uXDdMvKZfVtDc-Da.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118189528611487744/vid/avc1/640x360/B7kkJ39ikMSKD-1_.mp4?tag=14",
+          "width": 1920,
+          "height": 1080,
+          "duration_ms": 286583
+        }
+      ],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "views": 61
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-redmuffingaming-143960",
+      "date": "2026-11-05T03:39:41.000Z",
+      "platform": "x",
+      "url": "https://x.com/RedMuffinGaming/status/2118186463544143960",
+      "author_handle": "RedMuffinGaming",
+      "author_name": "Red Muffin Gaming",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1998953920039616512/G2C5BEJx_400x400.jpg",
+      "title_nl": "Voertuigen voor eigen game in Blender met Claude",
+      "what_nl": "Een set voertuigen voor een game, gemaakt in Blender met Claude Opus. Door Claude een leerlog te laten bijhouden ging een auto van dagen naar een paar uur werk.",
+      "tools": [
+        "Claude Opus",
+        "Blender"
+      ],
+      "category": "design_3d",
+      "text": "Set of vehicles from my upcoming game.  Made in #blender with #Opus \n\nWhat’s really awesome is by working with Claude over the past couple of days I was able to essentially make it smarter and we went from it taking days to put together a shitty car like the red one to a couple hours now for better cars like the trucks or the cross over.  \n\nIf you were using Claude and having to do any kind of design work in blender, make sure that you have it keep a running log of everything that it learns t…",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118186347676524544/img/FkVk_ygLFKag6r86.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118186347676524544/img/FkVk_ygLFKag6r86.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118186347676524544/vid/avc1/640x360/Emosorf2cC6R7VHy.mp4",
+          "width": 1920,
+          "height": 1080,
+          "duration_ms": 68242
+        }
+      ],
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 0,
+        "views": 110
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-attachaicnx-921722",
+      "date": "2026-11-05T03:09:16.000Z",
+      "platform": "x",
+      "url": "https://x.com/AttachaiCNX/status/2118178810155921722",
+      "author_handle": "AttachaiCNX",
+      "author_name": "Attachai",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2112063598021459968/9vaSSu50_400x400.jpg",
+      "title_nl": "Speelbaar oorlogslevel in Unreal met Claude Code",
+      "what_nl": "Een speelbaar level in Siam anno 1765, in 10 dagen gemaakt met Claude Code (Opus 5.5 en Sonnet 5.5), Unreal Engine 5.8 met Unreal MCP, Fab-assets en Mixamo. Zonder zelf C++ te schrijven.",
+      "tools": [
+        "Claude Code",
+        "Claude Opus 5.5",
+        "Claude Sonnet 5.5",
+        "Unreal Engine",
+        "Unreal MCP"
+      ],
+      "category": "apps_games_websites",
+      "text": "I made a playable war game level set in 1765 Siam in 10 days using AI\n\nStack: Claude Code (Opus 5.5 + Sonnet 5.5) + Unreal Engine 5.8 + Unreal MCP + free Fab assets + Mixamo\n\n0 lines of C++. Anyone can make games now",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118178646959788032/img/dcWTYayWPEx2lAjr.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118178646959788032/img/dcWTYayWPEx2lAjr.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118178646959788032/vid/avc1/640x360/nA4pnd9-Xed0fCqL.mp4",
+          "width": 1920,
+          "height": 1080,
+          "duration_ms": 82066
+        }
+      ],
+      "metrics": {
+        "likes": 2,
+        "reposts": 1,
+        "replies": 0,
+        "views": 13
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-avgvstvs96-902244",
+      "date": "2026-11-05T02:37:34.000Z",
+      "platform": "x",
+      "url": "https://x.com/avgvstvs96/status/2118170829204902244",
+      "author_handle": "avgvstvs96",
+      "author_name": "bassim",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1893112157920780288/qH_CXDO-_400x400.jpg",
+      "title_nl": "iOS-camera-app nagebouwd met Codex",
+      "what_nl": "Een namaak van de iOS-camera-app, in zo'n 4 uur nagebouwd met Codex. Dat kostte volgens de maker 5% van zijn wekelijkse Codex-limiet.",
+      "tools": [
+        "Codex"
+      ],
+      "category": "apps_games_websites",
+      "text": "believe it or not, this isnt the native ios camera app!\n\ni reverse engineered it in about 4 hours and 5% of Codex weekly limits\n\n@theo you really dont need to burn unlimited tokens to do unreal shit!",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118170802197856256/img/BxDcMyIhOXSs0UTU.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118170802197856256/img/BxDcMyIhOXSs0UTU.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118170802197856256/vid/avc1/480x698/CP6B-ZFm1S-STSf1.mp4",
+          "width": 1398,
+          "height": 2034,
+          "duration_ms": 7020
+        }
+      ],
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 1,
+        "views": 157
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-finnardley-133334",
+      "date": "2026-11-05T01:11:08.000Z",
+      "platform": "x",
+      "url": "https://x.com/finnardley/status/2118149077842133334",
+      "author_handle": "finnardley",
+      "author_name": "Finn",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2112026983429271552/H29UtM5d_400x400.jpg",
+      "title_nl": "Dierenfeiten-short volledig in code",
+      "what_nl": "Een verticale tekenfilm-short met dierenfeiten, volgens de maker volledig in code gemaakt met Claude Opus 5.5 en zonder AI-videogeneratie. De prompt is gedeeld.",
+      "tools": [
+        "Claude Opus 5.5"
+      ],
+      "category": "film_video",
+      "text": "Your daily reminder that you can make videos like this on automation\n\ni made this in full code with claude opus 5.5 n paid $0 in ai video gens\n\nenjoy my free prompt ↓\n\n<inputs>\nAsk me for my animal or topic (\"Why is the X the most disturbing animal in the ocean?\", \"Why is X terrifying?\"), or pitch 3, each with 5 true facts that get worse as they go. Ask which image model I have (GPT Image 2 or any model that takes a reference image at 4K, about $0.03 an image) and which voice I have (ElevenLa…",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118147772641669120/img/vIaeKByQAsi7_Fgy.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118147772641669120/img/vIaeKByQAsi7_Fgy.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118147772641669120/vid/avc1/480x852/IpFAAYeK1F3LyPLD.mp4",
+          "width": 1080,
+          "height": 1920,
+          "duration_ms": 33533
+        }
+      ],
+      "metrics": {
+        "likes": 92,
+        "reposts": 10,
+        "replies": 12,
+        "views": 4259
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-texas_twins_dad-028495",
+      "date": "2026-11-05T00:37:10.000Z",
+      "platform": "x",
+      "url": "https://x.com/Texas_Twins_Dad/status/2118140532715028495",
+      "author_handle": "Texas_Twins_Dad",
+      "author_name": "Texas Twins Dad",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2001129830213967874/zFqUgDus_400x400.jpg",
+      "title_nl": "Grok Bot krijgt een eigen robotlichaam",
+      "what_nl": "Een fysieke behuizing voor Grok Bot die je overal in huis met \"Hey Grok\" aanspreekt. Volgens de maker ontwierp Grok Bot dat lichaam grotendeels zelf.",
+      "tools": [
+        "Grok Bot"
+      ],
+      "category": "hardware_robots",
+      "text": "I just say \"Hey Grok\" from anywhere in my house. Grok Bot is now live in its own body. Designing this myself would have taken forever, but Grok Bot basically built its own body.  \n\nSee Grok Bot in action 👇",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118140308160442368/img/j9PbGBlc-ZnAVv7A.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118140308160442368/img/j9PbGBlc-ZnAVv7A.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118140308160442368/vid/avc1/480x580/pGDJjeX4e6-w57ZT.mp4",
+          "width": 1440,
+          "height": 1742,
+          "duration_ms": 41233
+        }
+      ],
+      "metrics": {
+        "likes": 791,
+        "reposts": 38,
+        "replies": 147,
+        "views": 40297
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-seeksteve-566951",
+      "date": "2026-11-05T00:26:38.000Z",
+      "platform": "x",
+      "url": "https://x.com/seeksteve/status/2118137878689566951",
+      "author_handle": "seeksteve",
+      "author_name": "seeksteve",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1995686191903936512/G6b49wqW_400x400.jpg",
+      "title_nl": "Fanfare-video met Midjourney, Suno en Grok Imagine",
+      "what_nl": "Een korte video met een beginbeeld uit Midjourney, muziek uit Suno v6 en beeld uit Grok Imagine 1.5 (een generatie van 15 s plus twee verlengingen). De montage gebeurde in CapCut.",
+      "tools": [
+        "Midjourney",
+        "Suno v6",
+        "Grok Imagine",
+        "CapCut"
+      ],
+      "category": "film_video",
+      "text": "i can't tell if this is patriotic AF or the complete opposite\n\nheck of a way to finally reveal america's new national food though\n\nHere's how this was made:\n> Image (First Frame): @midjourney \n> Audio: @suno v6 (prompt below)\n> Video: Grok @imagine 1.5 720p. Started with one 15s gen, then one 10s extention from the original video output, then another 6s extention.\n> Editing: Capcut to speed up a few seconds of the video, select which part of the song to use, then align the climax of the song…",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118111415026282496/img/XZzCAWcUXGxWRYsg.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118111415026282496/img/XZzCAWcUXGxWRYsg.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118111415026282496/vid/avc1/480x872/MJsATQkIwfQD18hs.mp4",
+          "width": 720,
+          "height": 1310,
+          "duration_ms": 28666
+        }
+      ],
+      "metrics": {
+        "likes": 4,
+        "reposts": 0,
+        "replies": 3,
+        "views": 298
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-alexbiemann-261647",
+      "date": "2026-11-04T23:09:48.000Z",
+      "platform": "x",
+      "url": "https://x.com/alexbiemann/status/2118118546291261647",
+      "author_handle": "alexbiemann",
+      "author_name": "Alexander Biemann",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2102193348048244736/jLVP9nQj_400x400.jpg",
+      "title_nl": "Duck Hunt op tafel met projector en webcam",
+      "what_nl": "Een tafel-arcade van wit karton, een projector en een webcam: de camera volgt je laser en de microfoon hoort je klik. Gebouwd met Codex.",
+      "tools": [
+        "Codex"
+      ],
+      "category": "hardware_robots",
+      "text": "White cardboard + projector + webcam = tabletop arcade! 🦆\n\nDuck Hunt in Project Tabletop 1.4.1: a saloon shooting gallery, flying ducks and clay pigeons. The camera tracks your laser; the mic hears your click.\n\nBuilt with #Codex ❤️ #GameDev @OpenAIDevs",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118117927505600513/img/wTh_5-ZG3IvCByN2.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118117927505600513/img/wTh_5-ZG3IvCByN2.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118117927505600513/vid/avc1/640x360/MSaD_KOVp0iELmJy.mp4",
+          "width": 1920,
+          "height": 1080,
+          "duration_ms": 17866
+        }
+      ],
+      "metrics": {
+        "likes": 6,
+        "reposts": 0,
+        "replies": 4,
+        "views": 140
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-de1lymoon-900964",
+      "date": "2026-11-04T19:04:06.000Z",
+      "platform": "x",
+      "url": "https://x.com/de1lymoon/status/2118056714561900964",
+      "author_handle": "de1lymoon",
+      "author_name": "Alex",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2067534774424436736/SYC1c-TG_400x400.jpg",
+      "title_nl": "Een agent-team opzetten in Grok Build",
+      "what_nl": "Een stappenplan voor Grok Build (beta): AGENTS.md, MCP-tools, plan mode, subagents in eigen git worktrees en een headless modus voor CI.",
+      "tools": [
+        "Grok Build"
+      ],
+      "category": "agents_automation",
+      "update_id": "upd-grok-build-multi-agent",
+      "text": "grok build can run a whole engineering team from one terminal… and this is a f*c*ing goldmine\n\nxai's coding cli is in beta right now. it has plan mode, subagents, git worktrees and a headless mode for ci.\n\nwire them together and you get a small team that works while you review\n\nhere's how i'd set it up:\n\nitem 1 → write AGENTS.md first. your stack, the test command and the folders bots must never touch. every agent reads it before it starts\n\nitem 2 → connect your tools over MCP. linear, sentry…",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118056618042478592/img/An05T9lStSFGOC93.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118056618042478592/img/An05T9lStSFGOC93.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118056618042478592/vid/avc1/480x600/SdkZ8UDgSZyuLZc3.mp4",
+          "width": 1080,
+          "height": 1350,
+          "duration_ms": 30000
+        }
+      ],
+      "metrics": {
+        "likes": 44,
+        "reposts": 5,
+        "replies": 13,
+        "views": 2360
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-linusekenstam-134351",
+      "date": "2026-11-04T17:40:32.000Z",
+      "platform": "x",
+      "url": "https://x.com/LinusEkenstam/status/2118035682946134351",
+      "author_handle": "LinusEkenstam",
+      "author_name": "Linus ✦ Ekenstam",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2000865949298176002/0GW70YnP_400x400.jpg",
+      "title_nl": "Stacks Project volledig omgezet naar Lean",
+      "what_nl": "Axiom zette het Stacks Project (algebraïsche meetkunde) om naar Lean, met agents die als softwareteam samenwerkten. Elke regel wordt door een computer gecontroleerd.",
+      "tools": [
+        "Axiom agents",
+        "Lean"
+      ],
+      "category": "agents_automation",
+      "text": "Everyone assumes AI-written code at scale means a giant pile of slop. Me too at times.\n\nAxiom just put out the best counterexample I've seen.\n\nThey took the Stacks Project, the reference every algebraic geometer works from, built up by the math community over two decades, and turned the whole thing into Lean.\n\nMillions of lines, and every single one is checked by a computer. It either holds up or it doesn't compile.\n\nWhat gets me isn't even the size, it's the structure. Stacks is this massive…",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2118035528776060928/img/3tOTjMsd0WhavbrW.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2118035528776060928/img/3tOTjMsd0WhavbrW.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2118035528776060928/vid/avc1/626x360/VVnd6wgaarZobdkk.mp4?tag=16",
+          "width": 3440,
+          "height": 1976,
+          "duration_ms": 34251
+        }
+      ],
+      "metrics": {
+        "likes": 186,
+        "reposts": 20,
+        "replies": 14,
+        "views": 13121
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-cabbitar-091420",
+      "date": "2026-11-04T14:52:33.000Z",
+      "platform": "x",
+      "url": "https://x.com/cabbitar/status/2117993406597091420",
+      "author_handle": "cabbitar",
+      "author_name": "cabbit",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2108130833446096896/H2vFcZIj_400x400.jpg",
+      "title_nl": "REA: Claude Code ontleedt apps en bouwt features na",
+      "what_nl": "Met REA laat je Claude Code of Codex een app tot op binair niveau analyseren en de werking van een feature vastleggen in een spec. Daarna bouw je die in een schone sessie opnieuw en test je hem.",
+      "tools": [
+        "REA",
+        "Claude Code",
+        "Codex"
+      ],
+      "category": "agents_automation",
+      "text": "REA is most dangerous thing on the internet right now...\n\nIt lets Claude Code or Codex take apart any app, all the way down to the binary, and explain exactly how a feature works.\n\n- Native apps, Electron apps, websites, APKs, firmware, even smart contract bytecode\n- Shows the evidence for every claim\n- Then builds its own version of the feature\n\nHere's how to do it:\n\n1. run npx rea-agents setup to connect REA to Claude Code\n\n2. pick a feature and let REA figure out how it works. save the beh…",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2117993297176096768/img/fOTgM943hJ1Umy91.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2117993297176096768/img/fOTgM943hJ1Umy91.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2117993297176096768/vid/avc1/480x600/9fPQGen6_gnoLWhK.mp4",
+          "width": 1080,
+          "height": 1350,
+          "duration_ms": 10000
+        }
+      ],
+      "metrics": {
+        "likes": 354,
+        "reposts": 51,
+        "replies": 10,
+        "views": 14666
+      },
+      "lang": "en",
+      "lloyd_pick": true
+    },
+    {
+      "id": "cr-ryansael-453792",
+      "date": "2026-11-04T13:26:28.000Z",
+      "platform": "x",
+      "url": "https://x.com/RyanSael/status/2117971745915453792",
+      "author_handle": "RyanSael",
+      "author_name": "Ryan Sael",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2070153731409350656/Q2dbbhA3_400x400.jpg",
+      "title_nl": "3D-huis in code door Opus 5.5, details met Tripo",
+      "what_nl": "Ryan liet Claude Opus 5.5 een volledig 3D-huis in code bouwen. Omdat auto en eethoek van dichtbij te weinig detail hadden, maakte hij 12 losse 3D-objecten met Tripo.",
+      "tools": [
+        "Claude Opus 5.5",
+        "Tripo"
+      ],
+      "category": "design_3d",
+      "text": "Opus 5.5 built this entire house in code.\nthen I zoomed in.\n\nUp close, the car and dining set lacked detail. \nSo I kept the house and used Tripo to create 12 detailed 3D objects for it.\n\nI’ll share the full breakdown, including all the prompts and how I built it, in an article. Link in the replies below.",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2117971530193985536/img/scMuhUuF7HjTQveB.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2117971530193985536/img/scMuhUuF7HjTQveB.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2117971530193985536/vid/avc1/640x360/7BzrWVeeHtgbg1uV.mp4",
+          "width": 1920,
+          "height": 1080,
+          "duration_ms": 113045
+        }
+      ],
+      "metrics": {
+        "likes": 73,
+        "reposts": 4,
+        "replies": 10,
+        "views": 3901
+      },
+      "lang": "en",
+      "lloyd_pick": true
+    },
+    {
+      "id": "cr-yt-tHx-LyhjyQI",
+      "date": "2026-11-04T13:00:09Z",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=tHx-LyhjyQI",
+      "author_handle": "HiggsfieldAI",
+      "author_name": "Higgsfield AI",
+      "author_avatar_url": "https://yt3.googleusercontent.com/DwOz1PXnpU28q68bR0NRuZj8QbzJn8BiN7fWhFET6u1LPmPZlNGTkfbNJYbNY_VdTvrvfxnTBMs=s400-c-k-c0x00ffffff-no-rj",
+      "title_nl": "Snowboardreclame volledig gemaakt met AI",
+      "what_nl": "Een cinematische sportkledingfilm met helikoptervlucht en afdaling bij zonsopgang, gemaakt met AI op Higgsfield. Dit is een video van Higgsfield zelf.",
+      "tools": [
+        "Higgsfield"
+      ],
+      "category": "film_video",
+      "text": "This Entire Snowboard Commercial Was Made With AI\n\nA cinematic sportswear film made with AI on Higgsfield: a pre-dawn helicopter ride, a drop onto the ridge and first tracks down untouched powder at sunrise.",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://i.ytimg.com/vi/tHx-LyhjyQI/hqdefault.jpg",
+          "preview_url": "https://i.ytimg.com/vi/tHx-LyhjyQI/hqdefault.jpg",
+          "alt": "This Entire Snowboard Commercial Was Made With AI"
+        }
+      ],
+      "youtube_id": "tHx-LyhjyQI",
+      "duration_s": 47,
+      "metrics": {
+        "likes": 64,
+        "reposts": 0,
+        "replies": 0,
+        "views": 2016
+      },
+      "lang": "en",
+      "channel_id": "UCh13OyDSm-Kb8ij3yZArtFg",
+      "title_original": "This Entire Snowboard Commercial Was Made With AI"
+    },
+    {
+      "id": "cr-viktoroddy-092218",
+      "date": "2026-11-04T12:39:35.000Z",
+      "platform": "x",
+      "url": "https://x.com/viktoroddy/status/2117959947204092218",
+      "author_handle": "viktoroddy",
+      "author_name": "Viktor Oddy",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2095368366693466112/1vPxOkT8_400x400.jpg",
+      "title_nl": "Workflow achter AI-gegenereerde 3D-websites",
+      "what_nl": "Een video van 12 minuten met de volledige workflow en alle prompts voor het maken van 3D-websites met AI. Welke tool gebruikt wordt, staat niet in de posttekst.",
+      "tools": [
+        "AI (niet genoemd)"
+      ],
+      "category": "apps_games_websites",
+      "text": "nobody is showing you the actual workflow behind these AI 3D websites.. so here it is\n\nfull breakdown, every prompt included 👇",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2117940564800970752/img/ukIvXBPAP5rfO0WH.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2117940564800970752/img/ukIvXBPAP5rfO0WH.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2117940564800970752/vid/avc1/554x360/OU7Ku9larEcup85W.mp4",
+          "width": 3324,
+          "height": 2160,
+          "duration_ms": 717666
+        }
+      ],
+      "metrics": {
+        "likes": 1672,
+        "reposts": 164,
+        "replies": 22,
+        "views": 64781
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-figelwump-240444",
+      "date": "2026-11-04T01:39:03.000Z",
+      "platform": "x",
+      "url": "https://x.com/figelwump/status/2117793716568240444",
+      "author_handle": "figelwump",
+      "author_name": "Vishal Kapur",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1409938156246364163/wQ5wLT8i_400x400.jpg",
+      "title_nl": "Voedingsdashboard gevoed door Grok Bot",
+      "what_nl": "Grok Bot logt maaltijden in een voedingsdatabase op EmptyOS. Een met Claude Code gebouwd dashboard leest uit diezelfde database.",
+      "tools": [
+        "Grok Bot",
+        "Claude Code",
+        "EmptyOS"
+      ],
+      "category": "agents_automation",
+      "text": "Sharing more about how I use EmptyOS\n\nGrok Bot + EmptyOS is a great combination. I log meals with on @bot, grok interprets the nutrient content and logs it to my nutrition database on emptyos\n\nI built a nutrition dashboard with claude code (turned out pretty nicely I think!) and told it to put it up on my emptyos; it reads from the same nutrition database that Grok Bot writes to\n\nWorks really seamlessly between the different AI agents",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HWPahyvbAAAc5ep.jpg",
+          "preview_url": "https://pbs.twimg.com/media/HWPahyvbAAAc5ep.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2117776563521626112/img/MdVal6jzt8U8SndH.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2117776563521626112/img/MdVal6jzt8U8SndH.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2117776563521626112/vid/avc1/480x600/kwt_xORa4Yu6s9iC.mp4",
+          "width": 1080,
+          "height": 1350,
+          "duration_ms": 23000
+        }
+      ],
+      "metrics": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 4,
+        "views": 235
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-rajkoshik-220441",
+      "date": "2026-11-02T14:49:42.000Z",
+      "platform": "x",
+      "url": "https://x.com/rajkoshik/status/2117267913900220441",
+      "author_handle": "rajkoshik",
+      "author_name": "Koshik",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2020892188062969856/BwB7MLyo_400x400.jpg",
+      "title_nl": "Agent-bus tussen Grok Bot en Claude Code",
+      "what_nl": "Een lokale dienst waarmee Grok Bot en Claude Code-sessies met elkaar praten, via MCP, ACP, Claude channels en Grok Bot-webhooks.",
+      "tools": [
+        "Grok Bot",
+        "Claude Code",
+        "MCP"
+      ],
+      "category": "agents_automation",
+      "text": "My Grok Bot and Claude Code active session talk to each other all the time.\nI'm obsessed with this little agent bus I built. One local service, all agents talking. Powered by MCP, ACP, Claude channels and Grok Bot webhooks.",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2117266101864476672/img/ZvWKIHyql4pFQkqT.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2117266101864476672/img/ZvWKIHyql4pFQkqT.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2117266101864476672/vid/avc1/616x360/XLqLLNA1JJ3XGAN-.mp4",
+          "width": 1852,
+          "height": 1080,
+          "duration_ms": 33150
+        }
+      ],
+      "metrics": {
+        "likes": 12,
+        "reposts": 0,
+        "replies": 11,
+        "views": 948
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-yt-XTee5dUdd2w",
+      "date": "2026-11-02T14:28:04Z",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=XTee5dUdd2w",
+      "author_handle": "stefan_3d_ai",
+      "author_name": "Stefan 3D AI",
+      "author_avatar_url": "https://yt3.googleusercontent.com/54lui0TsgO7vyRqJPKvvnJQG6wtmslDej7iL5oBo-EdzE_kH9su6I98DmDoBuvffzVi_b58NLw=s400-c-k-c0x00ffffff-no-rj",
+      "title_nl": "3D-geprinte D&D-stad met AI",
+      "what_nl": "Een speelbare D&D-stad van ongeveer 148 × 242 cm, geprint op vier printers. De modellen komen uit Hi3D en Tripo, en GPT-6 splitste ze in printbare delen.",
+      "tools": [
+        "Tripo",
+        "Hi3D",
+        "GPT-6",
+        "3D-printen"
+      ],
+      "category": "hardware_robots",
+      "text": "I Used AI to 3D Print an Entire Playable D&D City\n\nI used AI to 3D print an entire playable D&D city. Four printers, three weeks of work, and a table roughly 148 × 242 cm. Many buildings open up, so the game can continue inside.\n\nFor 3D model generation, my two main options were Hi3D and TripoAI. GPT-6 helped me split the models into printable parts and create assembly instructions. It’s crazy how useful AI becomes when you’re putting a whole physical city together.\n\n🔹 Try 3DAIStudio — Hi3D,…",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://i.ytimg.com/vi/XTee5dUdd2w/hqdefault.jpg",
+          "preview_url": "https://i.ytimg.com/vi/XTee5dUdd2w/hqdefault.jpg",
+          "alt": "I Used AI to 3D Print an Entire Playable D&D City"
+        }
+      ],
+      "youtube_id": "XTee5dUdd2w",
+      "duration_s": 31,
+      "metrics": {
+        "likes": 105,
+        "reposts": 0,
+        "replies": 0,
+        "views": 4755
+      },
+      "lang": "en",
+      "channel_id": "UCRW08KcTVjXEmBzBsVl7XjA",
+      "title_original": "I Used AI to 3D Print an Entire Playable D&D City"
+    },
+    {
+      "id": "cr-fussss4-662064",
+      "date": "2026-11-02T12:59:59.000Z",
+      "platform": "x",
+      "url": "https://x.com/fussss4/status/2117240305141662064",
+      "author_handle": "fussss4",
+      "author_name": "小火龙会喷火（薄肌版）",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2108581537864409088/sVC3xT_R_400x400.jpg",
+      "title_nl": "Draagbare pixel-visgame op een ESP32",
+      "what_nl": "Een draagbare pixel-visgame op een ESP32, met pixelart gegenereerd door Claude Opus 5.5.",
+      "tools": [
+        "Claude Opus 5.5",
+        "ESP32"
+      ],
+      "category": "hardware_robots",
+      "text": "Inspired by @AmirMushich's 3D pixel style, I built a portable pixel fishing game on ESP32.\nIt's a great way to pass the time while waiting for Claude Opus 5.5 to reply. Gotta say, the pixel art generated by Opus 5.5 is really impressive.\nOriginal post below:",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2117238891023605760/img/Z4MZ1cs3vj13kl27.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2117238891023605760/img/Z4MZ1cs3vj13kl27.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2117238891023605760/vid/avc1/480x852/eIRdcosbX2KTmy3S.mp4?tag=14",
+          "width": 1080,
+          "height": 1920,
+          "duration_ms": 29756
+        }
+      ],
+      "metrics": {
+        "likes": 5,
+        "reposts": 0,
+        "replies": 2,
+        "views": 240
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-yt-LNfvjmtY0Qk",
+      "date": "2026-11-01T13:13:53Z",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=LNfvjmtY0Qk",
+      "author_handle": "stefan_3d_ai",
+      "author_name": "Stefan 3D AI",
+      "author_avatar_url": "https://yt3.googleusercontent.com/54lui0TsgO7vyRqJPKvvnJQG6wtmslDej7iL5oBo-EdzE_kH9su6I98DmDoBuvffzVi_b58NLw=s400-c-k-c0x00ffffff-no-rj",
+      "title_nl": "Droomgame na 25 dagen met AI speelbaar",
+      "what_nl": "Stefan maakte in een maand een speelbare game met AI-agents die één gedeelde wiki gebruiken. Hij laat ook animatie, geluid en de eerste baas zien.",
+      "tools": [
+        "AI-agents",
+        "Unity",
+        "Tripo"
+      ],
+      "category": "apps_games_websites",
+      "text": "My Dream Game is Finally Ready to Play After 25 Days With AI\n\nI've dreamed of making this game for 15 years, and after one month of work it's finally playable.\n\n🔹 Try TripoAI P2.0 and get 500 free credits: https://studio.tripo3d.ai/home?via=stefan&invite_code=GY5YYQ \n\nI show how I started from absolute zero: moving from Unreal to Unity, giving all my AI agents one shared wiki, and testing the fight with simple shapes before making any characters. Then come the parts that scared me the most, a…",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://i.ytimg.com/vi/LNfvjmtY0Qk/hqdefault.jpg",
+          "preview_url": "https://i.ytimg.com/vi/LNfvjmtY0Qk/hqdefault.jpg",
+          "alt": "My Dream Game is Finally Ready to Play After 25 Days With AI"
+        }
+      ],
+      "youtube_id": "LNfvjmtY0Qk",
+      "duration_s": 2314,
+      "metrics": {
+        "likes": 1977,
+        "reposts": 0,
+        "replies": 0,
+        "views": 116380
+      },
+      "lang": "en",
+      "channel_id": "UCRW08KcTVjXEmBzBsVl7XjA",
+      "title_original": "My Dream Game is Finally Ready to Play After 25 Days With AI"
+    },
+    {
+      "id": "cr-wildernut-596117",
+      "date": "2026-10-31T23:39:43.000Z",
+      "platform": "x",
+      "url": "https://x.com/Wildernut/status/2116676520907596117",
+      "author_handle": "Wildernut",
+      "author_name": "Wildernut",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/2114201963432742912/aJdHiw8o_400x400.jpg",
+      "title_nl": "Raspberry Pi-dashboard ingericht via Grok-voice",
+      "what_nl": "Een dashboard op een Raspberry Pi dat de maker op afstand liet bouwen en configureren via Grok-voice. Alleen een paar sleutels voegde hij zelf toe.",
+      "tools": [
+        "Grok Bot",
+        "Raspberry Pi"
+      ],
+      "category": "hardware_robots",
+      "text": "I built this dashboard, displayed via a Raspberry Pi, remotely, via grok voice.  \n\nIt can have its way with the Pi, updating it, installing apps, configuring those apps, etc, all by saying what you want the end state to be.  \n\n(I did have to manually add a couple keys)\n\n#Grok #GrokBot #Rpi #tailscale #XSI \n\nAmazing !!",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2116675217124896768/img/ZqyjvutQRDwqM3Oh.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2116675217124896768/img/ZqyjvutQRDwqM3Oh.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2116675217124896768/vid/avc1/480x852/f9hM0SjOhcF5vXgZ.mp4",
+          "width": 1080,
+          "height": 1920,
+          "duration_ms": 14113
+        }
+      ],
+      "metrics": {
+        "likes": 3,
+        "reposts": 0,
+        "replies": 2,
+        "views": 67
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-yt-j513t0AyW48",
+      "date": "2026-10-30T14:00:06Z",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=j513t0AyW48",
+      "author_handle": "AIOriented",
+      "author_name": "Chong-U — AI Oriented Dev",
+      "author_avatar_url": "https://yt3.googleusercontent.com/uNjM2ZryBCZ_5YtW95-9fJc-XZNV_n6gRxmLvjup9-JJ0O9DlkmPlEUdrjTt-QTWaGW0vanx5A=s400-c-k-c0x00ffffff-no-rj",
+      "title_nl": "Online multiplayergame met GPT 6.1 Terra",
+      "what_nl": "Bramblekeep, een online multiplayergame gebouwd met GPT 6.1 Terra, met drie klassen, bots en mobiele ondersteuning. Het spel is online speelbaar.",
+      "tools": [
+        "GPT-6.1 Terra"
+      ],
+      "category": "apps_games_websites",
+      "text": "I Built (And Launched) An Online Multiplayer Game With GPT 6.1 Terra\n\n🕹️ Make Games With Me\n►https://aigamedev.school/?utm_campaign=vgd-25-gpt61-terra\n\n🧠 Get This Project's FREE Resources & More\n► https://insiders.aioriented.dev/?utm_campaign=vgd-25-gpt61-terra\n\n🎮 Grab My EXACT AI Game Dev Skills & Workflows\n► https://www.vibegamedev.com/?utm_campaign=vgd-25-gpt61-terra\n\n🏰 Play The BrambleKeep Game For Yourself !\n► https://bramblekeep.vercel.app/?utm_campaign=vgd-25-gpt61-terra\n\n0:00 Bramblek…",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://i.ytimg.com/vi/j513t0AyW48/hqdefault.jpg",
+          "preview_url": "https://i.ytimg.com/vi/j513t0AyW48/hqdefault.jpg",
+          "alt": "I Built (And Launched) An Online Multiplayer Game With GPT 6.1 Terra"
+        }
+      ],
+      "youtube_id": "j513t0AyW48",
+      "duration_s": 819,
+      "metrics": {
+        "likes": 88,
+        "reposts": 0,
+        "replies": 0,
+        "views": 14559
+      },
+      "lang": "en",
+      "channel_id": "UCE4PyAWiZ5gdPVFxDe4lLPQ",
+      "title_original": "I Built (And Launched) An Online Multiplayer Game With GPT 6.1 Terra"
+    },
+    {
+      "id": "cr-yt-qr0G298FQwQ",
+      "date": "2026-10-30T13:19:26Z",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=qr0G298FQwQ",
+      "author_handle": "GritAIStudio",
+      "author_name": "GritAI Studio",
+      "author_avatar_url": "https://yt3.googleusercontent.com/ZKtnXRtzguoMlwS-9KrVJsSB-oWt3uk8RXeon9fy2oR62DOTQslfi_aim3uUAsRljYVPHaAjEg=s400-c-k-c0x00ffffff-no-rj",
+      "title_nl": "Claude Code bouwt een 3D-game vanaf het strand",
+      "what_nl": "Een 3D-avonturengame in 5 dagen gebouwd door Claude Code met subagents. De modellen komen uit Blender-scripts en het geluid uit ElevenLabs. Ook wat misging komt aan bod.",
+      "tools": [
+        "Claude Code",
+        "Claude Opus 5.5",
+        "Blender",
+        "ElevenLabs"
+      ],
+      "category": "apps_games_websites",
+      "text": "I Let Claude Code Build a Full 3D Game While I Was at the Beach\n\nI built a full 3D adventure game in 5 days with Claude Code, mostly from the beach. Claude Code ran as the lead developer with teams of subagents underneath it. Every 3D model comes from Python scripts running Blender. Every note of music, every sound effect and every voice comes from ElevenLabs. I didn't write the code, model anything or compose anything. I made the decisions, mostly from my phone through Remote Control.\n\n79 3D…",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://i.ytimg.com/vi/qr0G298FQwQ/hqdefault.jpg",
+          "preview_url": "https://i.ytimg.com/vi/qr0G298FQwQ/hqdefault.jpg",
+          "alt": "I Let Claude Code Build a Full 3D Game While I Was at the Beach"
+        }
+      ],
+      "youtube_id": "qr0G298FQwQ",
+      "duration_s": 1634,
+      "metrics": {
+        "likes": 18,
+        "reposts": 0,
+        "replies": 0,
+        "views": 3598
+      },
+      "lang": "en",
+      "channel_id": "UC5Ls4Ms_OFhUXIAm3iScyYQ",
+      "title_original": "I Let Claude Code Build a Full 3D Game While I Was at the Beach"
+    },
+    {
+      "id": "cr-yt-UTCPqJZFg04",
+      "date": "2026-10-28T22:45:17Z",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=UTCPqJZFg04",
+      "author_handle": "samnang_aing",
+      "author_name": "Samnang Aing | Build with AI",
+      "author_avatar_url": "https://yt3.googleusercontent.com/GS6623jC1zwAtzN4rqjtRacWB82SngWD111PRqRX1h1Nda9nr52zKaAb0ftJuosmkz1_AOr2ww=s400-c-k-c0x00ffffff-no-rj",
+      "title_nl": "Opus 5.5 maakt 7 platte tekeningen tot 3D-huizen",
+      "what_nl": "Zeven technieken waarbij een platte bouwtekening tijdens het scrollen een 3D-huis wordt, allemaal gebouwd met Opus 5.5 in code. Demo's, starterprompts en code zijn gratis.",
+      "tools": [
+        "Claude Opus 5.5",
+        "Three.js",
+        "Gemini 4 Argon"
+      ],
+      "category": "design_3d",
+      "text": "Opus 5.5 Turned 7 Flat Drawings Into Walkable 3D Houses\n\nSeven ways to turn a flat drawing into 3D as you scroll, all built with Opus 5.5. An exploded axo, two sections, a construction sheet, a builder's schedule, a card model and an elevation. Each one starts flat and turns into the real house when you scroll. Everything is free: the live demos, the starter prompts and the code.\n\nSponsored by Design+Code: https://designcode.io?via=sam\n\n➡ The 7 techniques\n– All 7 live (best on a laptop): http…",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://i.ytimg.com/vi/UTCPqJZFg04/hqdefault.jpg",
+          "preview_url": "https://i.ytimg.com/vi/UTCPqJZFg04/hqdefault.jpg",
+          "alt": "Opus 5.5 Turned 7 Flat Drawings Into Walkable 3D Houses"
+        }
+      ],
+      "youtube_id": "UTCPqJZFg04",
+      "duration_s": 1108,
+      "metrics": {
+        "likes": 455,
+        "reposts": 0,
+        "replies": 0,
+        "views": 34942
+      },
+      "lang": "en",
+      "channel_id": "UCsKYafvITnbkdEdqwSzlW9Q",
+      "title_original": "Opus 5.5 Turned 7 Flat Drawings Into Walkable 3D Houses",
+      "lloyd_pick": true
+    },
+    {
+      "id": "cr-icegamingdev-383419",
+      "date": "2026-10-28T16:10:18.000Z",
+      "platform": "x",
+      "url": "https://x.com/icegamingdev/status/2115476261145383419",
+      "author_handle": "icegamingdev",
+      "author_name": "iCe",
+      "author_avatar_url": "https://pbs.twimg.com/profile_images/1969708940142301184/Xo5gieUa_400x400.jpg",
+      "title_nl": "Bureaulampje dat de status van je agents toont",
+      "what_nl": "Een klein lampje op een ESP32-S3 (LilyGO T-Display) dat via Claude Code-hooks kleurt naar de status van je coding agents. Ook Cursor- en Codex-sessies verschijnen. Open source.",
+      "tools": [
+        "Claude Code",
+        "ESP32",
+        "Cursor",
+        "Codex"
+      ],
+      "category": "hardware_robots",
+      "update_id": "upd-claude-workflows",
+      "text": "I kept missing permission prompts from my coding agents. Claude would sit there for 20 minutes waiting on a \"yes\" in a background window while I thought it was working.\n\nSo I built a tiny desk light that tells me what my agents are doing, at a glance.\n\nLilac: asleep, no sessions running\nBlue: working, leave it alone\nAmber: needs you, a permission prompt is waiting\nGreen: your turn, it finished its reply\n\nIt runs on a LilyGO T-Display S3 AMOLED (ESP32-S3) and gets its state from Claude Code ho…",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2115476156765929472/img/4gRfUZ7ScDmswP9j.jpg",
+          "preview_url": "https://pbs.twimg.com/amplify_video_thumb/2115476156765929472/img/4gRfUZ7ScDmswP9j.jpg",
+          "alt": "",
+          "video_url": "https://video.twimg.com/amplify_video/2115476156765929472/vid/avc1/540x540/mGGww0hEoCY2k3pk.mp4",
+          "width": 1080,
+          "height": 1080,
+          "duration_ms": 14500
+        }
+      ],
+      "metrics": {
+        "likes": 18,
+        "reposts": 1,
+        "replies": 18,
+        "views": 114902
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cr-yt-rKv4PrtBkb8",
+      "date": "2026-10-13T06:13:46Z",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=rKv4PrtBkb8",
+      "author_handle": "samnang_aing",
+      "author_name": "Samnang Aing | Build with AI",
+      "author_avatar_url": "https://yt3.googleusercontent.com/GS6623jC1zwAtzN4rqjtRacWB82SngWD111PRqRX1h1Nda9nr52zKaAb0ftJuosmkz1_AOr2ww=s400-c-k-c0x00ffffff-no-rj",
+      "title_nl": "Platte plattegrond wordt beloopbaar 3D-huis",
+      "what_nl": "Opus 5.5 maakte van een 2D-plattegrond een huis waar je doorheen loopt: bij het scrollen rijzen de muren op. Alles in code in de browser, met demo en prompt.",
+      "tools": [
+        "Claude Opus 5.5",
+        "Three.js"
+      ],
+      "category": "design_3d",
+      "text": "Opus 5.5 Turned a Flat Floor Plan Into a Walkable 3D House\n\nOpus 5.5 turned a flat floor plan into a house you can walk through. At first it looks like a regular 2D plan. Then you scroll, the walls rise out of the drawing, and the camera walks through every room. Everything is built in code and drawn live in your browser. It's still a work in progress.\n\n➡ Try it and build your own\n– Live demo (best on a laptop): https://sam1983aing.github.io/casa-serra/\n– Starter prompt: https://sam1983aing.g…",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://i.ytimg.com/vi/rKv4PrtBkb8/hqdefault.jpg",
+          "preview_url": "https://i.ytimg.com/vi/rKv4PrtBkb8/hqdefault.jpg",
+          "alt": "Opus 5.5 Turned a Flat Floor Plan Into a Walkable 3D House"
+        }
+      ],
+      "youtube_id": "rKv4PrtBkb8",
+      "duration_s": 485,
+      "metrics": {
+        "likes": 1805,
+        "reposts": 0,
+        "replies": 0,
+        "views": 157003
+      },
+      "lang": "en",
+      "channel_id": "UCsKYafvITnbkdEdqwSzlW9Q",
+      "title_original": "Opus 5.5 Turned a Flat Floor Plan Into a Walkable 3D House"
+    },
+    {
+      "id": "cr-yt-mNESr8Hjq0s",
+      "date": "2026-09-26T15:14:17Z",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=mNESr8Hjq0s",
+      "author_handle": "JackVsAI",
+      "author_name": "Jack Vs. AI",
+      "author_avatar_url": "https://yt3.googleusercontent.com/nYgc4NZKwB7CIs0dMV7DErSy1oeFgwXHl4o_CVyrueJ8R-w7lbn69c5QhP5i2RCeZvQJKMSr=s400-c-k-c0x00ffffff-no-rj",
+      "title_nl": "Neuriën wordt een geanimeerde muziekvideo",
+      "what_nl": "Jack maakt van een ingesproken neuriemelodie een Suno-track en een geanimeerde muziekvideo met lipsync, en laat de hele pijplijn zien.",
+      "tools": [
+        "Seedance 2.5",
+        "Suno",
+        "OpenArt"
+      ],
+      "category": "film_video",
+      "text": "How to Make AI Music Videos with Seedance 2.5 (Best Method)\n\nTry this workflow on OpenArt 👉 https://tolt.link/jvsai\n\nI can't sing, but that doesn’t matter anymore. In this video I take a rough voice memo of me humming a hook and turn it into a fully animated music video, with a polished Suno track, and lip sync that holds up across every scene.\n\nThis isn't about typing \"make me a song\" and accepting whatever comes back. This is about keeping the human idea at the centre and using AI to push i…",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://i.ytimg.com/vi/mNESr8Hjq0s/hqdefault.jpg",
+          "preview_url": "https://i.ytimg.com/vi/mNESr8Hjq0s/hqdefault.jpg",
+          "alt": "How to Make AI Music Videos with Seedance 2.5 (Best Method)"
+        }
+      ],
+      "youtube_id": "mNESr8Hjq0s",
+      "duration_s": 1389,
+      "metrics": {
+        "likes": 328,
+        "reposts": 0,
+        "replies": 0,
+        "views": 33611
+      },
+      "lang": "en",
+      "channel_id": "UCKBj5HPTd64zoQmkGNseKUw",
+      "title_original": "How to Make AI Music Videos with Seedance 2.5 (Best Method)"
+    },
+    {
+      "id": "cr-yt-QKdR_wo9KZY",
+      "date": "2026-08-27T09:48:58Z",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=QKdR_wo9KZY",
+      "author_handle": "danny_why",
+      "author_name": "Danny Why",
+      "author_avatar_url": "https://yt3.googleusercontent.com/eaJ9Rf-a7Mukm-3GlgY8rnavC98QJwBCSROJUNO2nDUBYaruePIL64RtCCPMjoHv_MbBwK-PalA=s400-c-k-c0x00ffffff-no-rj",
+      "title_nl": "3D-animaties in CapCut met Claude Code",
+      "what_nl": "Danny Why laat zien hoe hij met Claude Code 3D-animaties en motion graphics maakt in CapCut, zonder After Effects.",
+      "tools": [
+        "Claude Code",
+        "CapCut"
+      ],
+      "category": "film_video",
+      "text": "Claude Code + CapCut Just Changed YouTube Forever\n\n🟢 Try Higgsfield: https://higgsfield.ai/s/danny_why-VtJhtU\n\n👉 Get more views: https://dannywhy.com/\n\nIn this video I'm going to show you how to create 3D Animations and motion graphics using CapCut and Claude Code. Many people believe you need After Effects or DaVinci Resolve to create motion graphics but in this video I will prove them wrong. If you want to learn how to grow your YouTube channel as a small creator, in this video I'm going to…",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://i.ytimg.com/vi/QKdR_wo9KZY/hqdefault.jpg",
+          "preview_url": "https://i.ytimg.com/vi/QKdR_wo9KZY/hqdefault.jpg",
+          "alt": "Claude Code + CapCut Just Changed YouTube Forever"
+        }
+      ],
+      "youtube_id": "QKdR_wo9KZY",
+      "duration_s": 1627,
+      "metrics": {
+        "likes": 682,
+        "reposts": 0,
+        "replies": 0,
+        "views": 40918
+      },
+      "lang": "en",
+      "channel_id": "UC_ILSBQyvg-TlqVt9DJGWPQ",
+      "title_original": "Claude Code + CapCut Just Changed YouTube Forever"
+    }
+  ]
 }

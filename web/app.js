@@ -806,11 +806,11 @@ function creationVisual(creation) {
 function creationCard(creation) {
   const key = `creation:${creation.id}`;
   const unread = !memory.read.has(key);
-  return `<article class="card creation ${unread ? "is-unread" : "is-read"}">
+  return `<article class="card creation ${unread ? "is-unread" : "is-read"}${creation.lloyd_pick ? " is-pick" : ""}">
     <div class="hero-wrap has-media">${creationVisual(creation)}</div>
     <div class="card-body">
       <p class="kicker">Gemaakt met AI</p>
-      <div class="meta"><span class="pill">${esc(CREATION_CATS[creation.category] || creation.category)}</span><time datetime="${esc(creation.date)}">${esc(formatDate(creation.date))}</time></div>
+      <div class="meta"><span class="pill">${esc(CREATION_CATS[creation.category] || creation.category)}</span>${creation.lloyd_pick ? `<span class="pick">Jouw favoriet</span>` : ""}<time datetime="${esc(creation.date)}">${esc(formatDate(creation.date))}</time></div>
       <h3>${esc(creation.title_nl)}</h3>
       <p class="summary">${esc(creation.what_nl)}</p>
       <div class="tool-row">${(creation.tools || []).map((tool) => toolChip(tool)).join("")}</div>
@@ -837,7 +837,7 @@ function creationStrip() {
           ? `<img src="${esc(src)}" alt="" width="320" height="180" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()" />`
           : avatarHtml(creation.author_name, creation.author_handle, creation.author_avatar_url);
         return `<button type="button" class="made-tile" data-gallery="${slides.length ? id : ""}" data-gallery-index="0">
-          <span class="made-thumb">${visual}${slides[0] && (slides[0].youtubeId || slides[0].type === "video") ? `<span class="play">${PLAY}</span>` : ""}</span>
+          <span class="made-thumb${creation.lloyd_pick ? " is-pick" : ""}">${visual}${creation.lloyd_pick ? `<span class="pick pick-on-media">Jouw favoriet</span>` : ""}${slides[0] && (slides[0].youtubeId || slides[0].type === "video") ? `<span class="play">${PLAY}</span>` : ""}</span>
           <span class="made-title">${esc(creation.title_nl)}</span>
           <span class="who">${esc(CREATION_CATS[creation.category] || "")}</span>
         </button>`;
@@ -854,7 +854,7 @@ function gemaaktFor(updateId) {
       const slides = creationSlides(creation);
       const id = slides.length ? bindGallery(slides) : "";
       const src = slides[0]?.src;
-      return `<button type="button" class="made-mini" ${id ? `data-gallery="${id}" data-gallery-index="0"` : ""}>
+      return `<button type="button" class="made-mini${creation.lloyd_pick ? " is-pick" : ""}" ${id ? `data-gallery="${id}" data-gallery-index="0"` : ""}>
         ${src ? `<img src="${esc(src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()" />` : avatarHtml(creation.author_name, creation.author_handle, creation.author_avatar_url)}
         <span>${esc(creation.title_nl)}</span>
       </button>`;
@@ -1063,8 +1063,9 @@ function viewMade() {
       const slides = creationSlides(creation);
       const id = slides.length ? bindGallery(slides) : "";
       const src = slides[0]?.src;
-      return `<button type="button" class="mosaic-tile made-grid" ${id ? `data-gallery="${id}" data-gallery-index="0"` : ""} aria-label="${esc(creation.title_nl)}">
+      return `<button type="button" class="mosaic-tile made-grid${creation.lloyd_pick ? " is-pick" : ""}" ${id ? `data-gallery="${id}" data-gallery-index="0"` : ""} aria-label="${esc(creation.title_nl)}">
         ${src ? `<img src="${esc(src)}" alt="" width="400" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()" />` : avatarHtml(creation.author_name, creation.author_handle, creation.author_avatar_url)}
+        ${creation.lloyd_pick ? `<span class="pick pick-on-media">Jouw favoriet</span>` : ""}
         ${slides[0] && (slides[0].youtubeId || slides[0].type === "video") ? `<span class="play">${PLAY}</span>` : ""}
         <span class="mosaic-name">${esc(creation.title_nl)}</span>
       </button>`;

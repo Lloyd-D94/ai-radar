@@ -740,6 +740,29 @@ h2.day:first-child { margin-top: 8px; }
   background: #1c1915;
 }
 
+.pick {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: var(--news-bg);
+  color: var(--news);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pick-on-media {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  left: 8px;
+}
+
+.made-thumb.is-pick, .made-grid.is-pick, .made-mini.is-pick img {
+  box-shadow: inset 0 0 0 2px #c9842a;
+}
+
 .made-thumb img, .made-mini img {
   width: 100%;
   height: 100%;
@@ -801,7 +824,7 @@ h2.day:first-child { margin-top: 8px; }
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   background: #000;
 }
 

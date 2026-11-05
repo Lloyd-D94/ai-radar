@@ -1,4 +1,4 @@
-const CACHE = "ai-radar-v5";
+const CACHE = "ai-radar-v6";
 const SHELL = [
   "./",
   "./index.html",
