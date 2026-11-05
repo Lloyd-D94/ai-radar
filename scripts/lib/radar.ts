@@ -34,6 +34,10 @@ export interface RadarMedia {
   url?: string;
   preview_url?: string;
   alt?: string;
+  video_url?: string;
+  width?: number;
+  height?: number;
+  duration_ms?: number;
 }
 
 export interface RadarMetrics {
@@ -124,7 +128,7 @@ const HANDLE = /^[A-Za-z0-9_]{1,15}$/;
 const ID = /^[a-z0-9][a-z0-9-]{0,79}$/;
 const LANG = /^[a-z]{2,3}(?:-[a-z0-9]{2,8})*$/i;
 const HTML_TAG = /<\/?[a-z][^>\n]*>/i;
-const MEDIA_KEYS = ["type", "url", "preview_url", "alt"];
+const MEDIA_KEYS = ["type", "url", "preview_url", "alt", "video_url", "width", "height", "duration_ms"];
 
 export class RadarValidationError extends Error {
   readonly issues: string[];
@@ -210,6 +214,24 @@ function optString(record: Record<string, unknown>, key: string, path: string, i
   return trimmed;
 }
 
+function optInt(record: Record<string, unknown>, key: string, path: string, issues: string[], min: number): number | undefined {
+  if (record[key] === undefined) return undefined;
+  const value = record[key];
+  if (typeof value !== "number" || !Number.isInteger(value) || value < min) {
+    issues.push(`${path}.${key}: geheel getal van ${min} of hoger`);
+    return undefined;
+  }
+  return value;
+}
+
+function isMp4(url: string): boolean {
+  try {
+    return new URL(url).pathname.toLowerCase().endsWith(".mp4");
+  } catch {
+    return false;
+  }
+}
+
 function optHttps(record: Record<string, unknown>, key: string, path: string, issues: string[], max: number): string | undefined {
   const value = optString(record, key, path, issues, max);
   if (!value || !isHttpsUrl(value)) {
@@ -256,6 +278,17 @@ function parseMedia(value: unknown, path: string, issues: string[]): RadarMedia[
       if (url) item.url = url;
       if (preview) item.preview_url = preview;
       if (alt) item.alt = alt;
+      if (record.video_url !== undefined) {
+        const video = optHttps(record, "video_url", itemPath, issues, LIMITS.mediaUrl);
+        if (video && !isMp4(video)) issues.push(`${itemPath}.video_url: verwacht een https-mp4`);
+        else if (video) item.video_url = video;
+      }
+      const width = optInt(record, "width", itemPath, issues, 1);
+      const height = optInt(record, "height", itemPath, issues, 1);
+      const duration = optInt(record, "duration_ms", itemPath, issues, 0);
+      if (width) item.width = width;
+      if (height) item.height = height;
+      if (duration !== undefined) item.duration_ms = duration;
       media.push(item);
     }
   }

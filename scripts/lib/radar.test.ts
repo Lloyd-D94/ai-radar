@@ -143,6 +143,41 @@ describe("radar-validatie", () => {
     });
     assert.deepEqual(videoOnly.issues, []);
     assert.equal(videoOnly.examples[0]?.media?.[0]?.preview_url, "https://cdn.example.com/thumb.jpg");
+    const playable = validateIncoming({
+      updates: [],
+      examples: [
+        example({
+          id: "ex-mp4",
+          post_url: "https://x.com/someone/status/2118054007579296071",
+          media: [
+            {
+              type: "video",
+              preview_url: "https://cdn.example.com/thumb.jpg",
+              video_url: "https://video.example.com/clip.mp4?tag=14",
+              width: 1920,
+              height: 1080,
+              duration_ms: 42033,
+            },
+          ],
+        }),
+      ],
+      startups: [],
+    });
+    assert.deepEqual(playable.issues, []);
+    assert.equal(playable.examples[0]?.media?.[0]?.video_url, "https://video.example.com/clip.mp4?tag=14");
+    assert.equal(playable.examples[0]?.media?.[0]?.duration_ms, 42033);
+    const badVideo = validateIncoming({
+      updates: [],
+      examples: [
+        example({
+          id: "ex-bad-mp4",
+          post_url: "https://x.com/someone/status/2118054007579296072",
+          media: [{ type: "video", preview_url: "https://cdn.example.com/thumb.jpg", video_url: "https://video.example.com/clip.m3u8" }],
+        }),
+      ],
+      startups: [],
+    }).issues;
+    assert.ok(badVideo.some((issue) => issue.includes("video_url")));
     assert.equal(merged.startups[0]?.website_url, "https://example.com/lab");
     assert.equal(mergeAccounts([], checked.accounts)[0]?.avatar_url, "https://cdn.example.com/avatar.jpg");
   });

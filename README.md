@@ -109,7 +109,7 @@ Voorbeelden, zodat de feed een echte postkaart kan tekenen (avatar, naam, tekst,
 | `author_name` | Weergavenaam, tekst |
 | `author_avatar_url` | `https`-URL van de avatar |
 | `text` | Platte tekst van de post, maximaal 500 tekens, geen HTML. Meerdere zinnen mag. Dit is niet `note_nl`. |
-| `media` | Lijst van hooguit 4 objecten. `type` is `photo`, `video` of `gif`. Minstens één van `url` en `preview_url` is een `https`-URL. Een foto mag alleen `url` hebben. Een video mag alleen `preview_url` hebben: dat is het stilstaande beeld in de feed. `alt` is optionele tekst, maximaal 180 tekens. |
+| `media` | Lijst van hooguit 4 objecten. `type` is `photo`, `video` of `gif`. Minstens één van `url` en `preview_url` is een `https`-URL. Een foto mag alleen `url` hebben. Een video mag alleen `preview_url` hebben: dat is het stilstaande beeld in het raster. `alt` is optionele tekst, maximaal 180 tekens. `video_url` is een optionele `https`-mp4; alleen dan speelt de viewer de video inline (gedempt, met bediening). `width` en `height` zijn optioneel de originele afmetingen in pixels, `duration_ms` de lengte in milliseconden. |
 | `metrics` | Object met `likes`, `reposts`, `replies` en/of `views`: gehele getallen van 0 of hoger. Elk getal mag ontbreken. |
 | `lang` | Korte taalcode, bijvoorbeeld `nl` of `en`. |
 

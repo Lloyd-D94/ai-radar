@@ -91,6 +91,9 @@ const state = {
   expanded: new Set(),
   bronOpen: new Set(),
   postOpen: new Set(),
+  galleries: new Map(),
+  viewer: null,
+  focusViewer: false,
 };
 
 const memory = {
@@ -501,6 +504,163 @@ function safeLink(url) {
   }
 }
 
+function safeMp4(url) {
+  const https = safeHttps(url);
+  if (!https) return "";
+  try {
+    return new URL(https).pathname.toLowerCase().endsWith(".mp4") ? https : "";
+  } catch {
+    return "";
+  }
+}
+
+function clock(ms) {
+  if (typeof ms !== "number" || !Number.isFinite(ms) || ms <= 0) return "";
+  const total = Math.round(ms / 1000);
+  return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, "0")}`;
+}
+
+function bindGallery(items) {
+  const id = `g${state.galleries.size + 1}`;
+  state.galleries.set(id, items);
+  return id;
+}
+
+function slideFrom(example, media) {
+  const name = readableName(example.author_name, example.author_handle);
+  return {
+    src: media ? safeUrl(media.preview_url || media.url) : "",
+    type: media?.type || "text",
+    video: media ? safeMp4(media.video_url) : "",
+    width: Number.isInteger(media?.width) ? media.width : 0,
+    height: Number.isInteger(media?.height) ? media.height : 0,
+    duration: clock(media?.duration_ms),
+    alt: media?.alt || (media?.type === "video" ? `Video van ${name}` : `Afbeelding van ${name}`),
+    name,
+    handle: example.author_handle,
+    post: safeHttps(example.post_url),
+    exampleId: example.id,
+    text: displayPostText(example.text || "") || example.note_nl || "",
+    note: example.note_nl || "",
+  };
+}
+
+function slidesFor(examples, limit = 4) {
+  const slides = [];
+  for (const example of examples) {
+    const media = Array.isArray(example.media) ? example.media : [];
+    for (const item of media) {
+      const slide = slideFrom(example, item);
+      if (!slide.src) continue;
+      slides.push(slide);
+      if (slides.length >= limit) return slides;
+    }
+  }
+  return slides;
+}
+
+function openViewer(items, index) {
+  if (!items?.length) return;
+  state.viewer = { items, index: Math.max(0, Math.min(index, items.length - 1)) };
+  state.focusViewer = true;
+  render();
+}
+
+function stepViewer(delta) {
+  if (!state.viewer) return;
+  const count = state.viewer.items.length;
+  state.viewer.index = (state.viewer.index + delta + count) % count;
+  state.focusViewer = false;
+  render();
+}
+
+function closeViewer() {
+  state.viewer = null;
+  render();
+}
+
+const PLAY = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7.2v9.6l8.2-4.8z" fill="currentColor"/></svg>`;
+
+function playBadge(slide) {
+  if (slide.type !== "video" && slide.type !== "gif") return "";
+  const label = slide.type === "gif" ? "GIF" : slide.duration || "Video";
+  return `<span class="play">${PLAY}<span>${esc(label)}</span></span>`;
+}
+
+function heroHtml(examples) {
+  const slides = slidesFor(examples, 4);
+  if (!slides.length) {
+    const seen = new Set();
+    const people = [];
+    for (const example of examples) {
+      const key = String(example.author_handle || "").toLowerCase();
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      people.push(example);
+      if (people.length === 3) break;
+    }
+    if (!people.length) return "";
+    return `<div class="collage" data-count="${people.length}">${people
+      .map((example) => avatarHtml(readableName(example.author_name, example.author_handle), example.author_handle, example.author_avatar_url))
+      .join("")}</div>`;
+  }
+  const id = bindGallery(slides);
+  const tiles = slides
+    .map(
+      (slide, index) => `<button type="button" class="tile" data-gallery="${id}" data-gallery-index="${index}" aria-label="${esc(slide.alt)}">
+        <img src="${esc(slide.src)}" alt="" width="640" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('.tile')?.classList.add('is-missing');this.remove()" />
+        ${playBadge(slide)}
+        <span class="missing">Beeld niet geladen</span>
+      </button>`,
+    )
+    .join("");
+  return `<div class="hero" data-count="${slides.length}">${tiles}</div>`;
+}
+
+function compactPosts(examples) {
+  return examples
+    .map((example) => {
+      const name = readableName(example.author_name, example.author_handle);
+      const media = Array.isArray(example.media) ? example.media.filter((item) => safeUrl(item.preview_url || item.url)) : [];
+      const gallery = media.length ? bindGallery(media.map((item) => slideFrom(example, item))) : bindGallery([slideFrom(example, null)]);
+      const line = example.note_nl || displayPostText(example.text || "");
+      return `<button type="button" class="post-compact" data-gallery="${gallery}" data-gallery-index="0">
+        ${avatarHtml(name, example.author_handle, example.author_avatar_url)}
+        <span><strong>${esc(name)}</strong><span class="who">@${esc(example.author_handle)}</span><span class="line">${esc(line)}</span></span>
+      </button>`;
+    })
+    .join("");
+}
+
+function viewerHtml() {
+  if (!state.viewer) return "";
+  const { items, index } = state.viewer;
+  const slide = items[index];
+  if (!slide) return "";
+  const many = items.length > 1;
+  const frame = slide.video
+    ? `<video src="${esc(slide.video)}" poster="${esc(slide.src)}" muted controls playsinline preload="metadata" ${slide.width ? `width="${slide.width}"` : ""} ${slide.height ? `height="${slide.height}"` : ""} referrerpolicy="no-referrer" onerror="this.classList.add('is-broken')"></video>${slide.src ? `<img class="viewer-fallback" src="${esc(slide.src)}" alt="${esc(slide.alt || "")}" referrerpolicy="no-referrer" />` : ""}`
+    : slide.src
+      ? `<img src="${esc(slide.src)}" alt="${esc(slide.alt || "")}" referrerpolicy="no-referrer" />`
+      : `<div class="viewer-text"><p>${linkify(slide.text)}</p>${slide.note && normalize(slide.note) !== normalize(slide.text) ? `<p class="takeaway"><span>Wat is hier gaaf aan</span>${esc(slide.note)}</p>` : ""}</div>`;
+  const xLabel = slide.type === "video" && !slide.video ? "Bekijk op X" : "Open op X";
+  return `<div class="viewer" role="dialog" aria-modal="true" aria-label="Beeld">
+    <div class="viewer-bar">
+      <p>${many ? `${index + 1} van ${items.length}` : "Beeld"}</p>
+      <button type="button" class="viewer-close" data-viewer-close>Sluiten</button>
+    </div>
+    <div class="viewer-stage">
+      ${many ? `<button type="button" class="viewer-arrow prev" data-viewer-prev aria-label="Vorig beeld">‹</button>` : ""}
+      ${frame}
+      ${many ? `<button type="button" class="viewer-arrow next" data-viewer-next aria-label="Volgend beeld">›</button>` : ""}
+    </div>
+    <div class="viewer-foot">
+      <p><strong>${esc(slide.name)}</strong><span>@${esc(slide.handle)}</span></p>
+      ${slide.post ? `<a class="xlink" href="${esc(slide.post)}" target="_blank" rel="noopener noreferrer">${xLabel}</a>` : ""}
+    </div>
+  </div>`;
+}
+
 function mediaHtml(media) {
   const ready = (Array.isArray(media) ? media : [])
     .slice(0, 4)
@@ -553,22 +713,27 @@ function updateCard(update) {
   const key = `update:${update.id}`;
   const unread = !memory.read.has(key);
   const examples = (update.example_ids || []).map(exampleById).filter(Boolean);
-  const open = state.expanded.has(update.id);
-  const shown = open ? examples : examples.slice(0, 2);
-  const extra = examples.length - shown.length;
   const uses = useCases(update);
+  const visual = heroHtml(examples);
+  const isHero = visual.includes('class="hero"');
+  const overlay = `<div class="hero-overlay">
+        ${toolChip(update.tool)}
+        ${Number(update.importance) >= 5 ? '<span class="flag">Groot nieuws</span>' : ""}
+        <time datetime="${esc(update.date)}">${esc(formatDate(update.date))}</time>
+      </div>`;
   return `<article class="card update ${unread ? "is-unread" : "is-read"}">
-    <div class="card-kicker">
-      ${toolChip(update.tool)}
-      ${Number(update.importance) >= 5 ? '<span class="flag">Groot nieuws</span>' : ""}
-      <time datetime="${esc(update.date)}">${esc(formatDate(update.date))}</time>
+    <div class="hero-wrap ${isHero ? "has-media" : "has-collage"}">
+      ${isHero ? "" : overlay}
+      ${visual}
+      ${isHero ? overlay : ""}
     </div>
-    <h3>${esc(update.title_nl)}</h3>
-    <p class="summary">${esc(update.summary_nl)}</p>
-    ${uses.length ? `<div class="uses"><p>Dit kun je ermee</p><ul>${uses.map((point) => `<li>${esc(point)}</li>`).join("")}</ul></div>` : ""}
-    ${shown.length ? `<div class="posts">${shown.map((example) => `<div class="post">${postInner(example, { save: true })}</div>`).join("")}</div>` : ""}
-    ${extra > 0 ? `<button type="button" class="textbtn wide" data-expand="${esc(update.id)}">Toon nog ${extra} ${extra === 1 ? "voorbeeld" : "voorbeelden"}</button>` : ""}
-    ${actionRow(key)}
+    <div class="card-body">
+      <h3>${esc(update.title_nl)}</h3>
+      <p class="summary">${esc(update.summary_nl)}</p>
+      ${uses.length ? `<div class="uses"><p>Dit kun je ermee</p><ul>${uses.map((point) => `<li>${esc(point)}</li>`).join("")}</ul></div>` : ""}
+      ${examples.length ? `<div class="post-list">${compactPosts(examples)}</div>` : ""}
+      ${actionRow(key)}
+    </div>
   </article>`;
 }
 
@@ -578,7 +743,17 @@ function startupCard(startup) {
   const website = safeHttps(startup.website_url);
   const proof = safeHttps(startup.proof_url);
   const account = safeHttps(startup.url);
+  const proofExample = state.radar.examples.find((item) => String(item.post_url || "").toLowerCase() === String(startup.proof_url || "").toLowerCase());
+  const proofSlides = proofExample ? slidesFor([proofExample], 1) : [];
+  const proofId = proofSlides.length ? bindGallery(proofSlides) : "";
+  const proofTile = proofId
+    ? `<button type="button" class="proof-tile" data-gallery="${proofId}" data-gallery-index="0" aria-label="${esc(proofSlides[0].alt)}">
+        <img src="${esc(proofSlides[0].src)}" alt="" width="640" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('.proof-tile')?.classList.add('is-missing');this.remove()" />
+        ${playBadge(proofSlides[0])}
+      </button>`
+    : "";
   return `<article class="card startup ${unread ? "is-unread" : "is-read"}">
+    ${proofTile}
     <div class="startup-head">
       ${avatarHtml(startup.name, startup.handle, startup.logo_url, true)}
       <div>
@@ -682,8 +857,29 @@ function viewExamples() {
     .filter((item) => (state.examples.tool ? item.tool === state.examples.tool : true))
     .filter((item) => (state.examples.kind ? item.kind === state.examples.kind : true))
     .sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
-  const list = filtered.length
-    ? `<div class="stack">${filtered.map(exampleCard).join("")}</div>`
+  const tiles = filtered.map((example) => {
+    const slides = slidesFor([example], 4);
+    const name = readableName(example.author_name, example.author_handle);
+    if (!slides.length) {
+      const id = bindGallery([slideFrom(example, null)]);
+      const line = displayPostText(example.text || "") || example.note_nl || "";
+      return `<button type="button" class="mosaic-text" data-gallery="${id}" data-gallery-index="0">
+        ${avatarHtml(name, example.author_handle, example.author_avatar_url)}
+        <strong>${esc(name)}</strong>
+        <p>${esc(line)}</p>
+      </button>`;
+    }
+    const id = bindGallery(slides);
+    const slide = slides[0];
+    return `<button type="button" class="mosaic-tile" data-gallery="${id}" data-gallery-index="0" aria-label="${esc(slide.alt)}">
+      <img src="${esc(slide.src)}" alt="" width="400" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('.mosaic-tile')?.classList.add('is-missing');this.remove()" />
+      ${playBadge(slide)}
+      <span class="mosaic-name">${esc(name)}</span>
+      <span class="missing">Beeld niet geladen</span>
+    </button>`;
+  });
+  const list = tiles.length
+    ? `<div class="mosaic">${tiles.join("")}</div>`
     : `<div class="empty"><p>Geen posts voor deze filters.</p>${state.examples.onlyNew ? "<p>Zet “Nog niet gevolgd” uit om ook accounts te zien die je al volgt.</p>" : ""}</div>`;
   return `<section>
     <h2>Voorbeelden</h2>
@@ -919,6 +1115,7 @@ function panel() {
 }
 
 function render() {
+  state.galleries = new Map();
   const active = document.activeElement;
   const activeId = active?.id;
   const selectionStart = active instanceof HTMLInputElement ? active.selectionStart : null;
@@ -945,9 +1142,21 @@ function render() {
     </header>
     <main id="inhoud" tabindex="-1">${banner}${main}</main>
   </div>
-  <nav class="tabbar" aria-label="Onderdelen">${nav}</nav>`;
+  <nav class="tabbar" aria-label="Onderdelen">${nav}</nav>${viewerHtml()}`;
   app.removeAttribute("aria-busy");
-  if (scrollMode === "top") document.getElementById("inhoud")?.focus();
+  document.documentElement.classList.toggle("is-viewer", Boolean(state.viewer));
+  document.querySelectorAll(".viewer video").forEach((video) => {
+    video.addEventListener("error", () => {
+      video.classList.add("is-broken");
+      const link = video.closest(".viewer")?.querySelector(".xlink");
+      if (link) link.textContent = "Bekijk op X";
+    });
+    video.load();
+  });
+  if (state.focusViewer) {
+    document.querySelector("[data-viewer-close]")?.focus();
+    state.focusViewer = false;
+  } else if (scrollMode === "top") document.getElementById("inhoud")?.focus();
   else if (activeId) {
     const next = document.getElementById(activeId);
     if (next) {
@@ -1006,6 +1215,7 @@ async function load() {
 function go(tab) {
   if (!VIEWS.includes(tab)) return;
   state.tab = tab;
+  state.viewer = null;
   scrollMode = "top";
   history.replaceState(null, "", `#${state.tab}`);
   render();
@@ -1014,6 +1224,24 @@ function go(tab) {
 app.addEventListener("click", (event) => {
   const target = event.target instanceof Element ? event.target : null;
   if (!target) return;
+  if (target.closest("[data-viewer-close]") || target.classList.contains("viewer")) {
+    closeViewer();
+    return;
+  }
+  if (target.closest("[data-viewer-prev]")) {
+    stepViewer(-1);
+    return;
+  }
+  if (target.closest("[data-viewer-next]")) {
+    stepViewer(1);
+    return;
+  }
+  const gallery = target.closest("[data-gallery]");
+  if (gallery instanceof HTMLElement && gallery.dataset.gallery) {
+    const items = state.galleries.get(gallery.dataset.gallery);
+    openViewer(items, Number(gallery.dataset.galleryIndex || 0));
+    return;
+  }
   const tab = target.closest("[data-tab]");
   if (tab instanceof HTMLElement && tab.dataset.tab) {
     event.preventDefault();
@@ -1104,6 +1332,33 @@ app.addEventListener("click", (event) => {
     return;
   }
   if (target.closest("[data-retry]")) load();
+});
+
+let touchStartX = null;
+app.addEventListener(
+  "touchstart",
+  (event) => {
+    if (!event.target.closest?.(".viewer-stage")) return;
+    touchStartX = event.changedTouches[0]?.clientX ?? null;
+  },
+  { passive: true },
+);
+app.addEventListener(
+  "touchend",
+  (event) => {
+    if (touchStartX == null || !state.viewer) return;
+    const dx = (event.changedTouches[0]?.clientX ?? touchStartX) - touchStartX;
+    touchStartX = null;
+    if (Math.abs(dx) < 48) return;
+    stepViewer(dx < 0 ? 1 : -1);
+  },
+  { passive: true },
+);
+window.addEventListener("keydown", (event) => {
+  if (!state.viewer) return;
+  if (event.key === "Escape") closeViewer();
+  if (event.key === "ArrowRight") stepViewer(1);
+  if (event.key === "ArrowLeft") stepViewer(-1);
 });
 
 app.addEventListener("input", (event) => {

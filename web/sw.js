@@ -1,4 +1,4 @@
-const CACHE = "ai-radar-v3";
+const CACHE = "ai-radar-v4";
 const SHELL = [
   "./",
   "./index.html",
@@ -29,7 +29,9 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
-  const path = new URL(event.request.url).pathname;
+  const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin) return;
+  const path = url.pathname;
   if (path.includes("/data/") && path.endsWith(".json")) {
     event.respondWith(
       fetch(event.request)
