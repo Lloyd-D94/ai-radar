@@ -1,0 +1,454 @@
+{
+  "fixture": true,
+  "notice": "Voorbeelddata. Verzonnen posts om de feed te bekijken. Dit is niet de echte radar.",
+  "generatedAt": "2026-11-05T08:00:00.000Z",
+  "updates": [
+    {
+      "id": "upd-vb-bellen",
+      "date": "2026-11-05T07:30:00.000Z",
+      "tool": "Grok Bot",
+      "title_nl": "Voorbeeld: een gesprek in de feed",
+      "summary_nl": "Dit is voorbeelddata. De kaart toont een titel, twee zinnen uitleg en twee postkaarten onder elkaar.",
+      "can_do_nl": [
+        "Een fictieve tafelreservering als script nalopen",
+        "Zien waar het telefoonbeeld in de kaart valt"
+      ],
+      "example_ids": [
+        "ex-vb-tafel",
+        "ex-vb-menu"
+      ],
+      "source_urls": [
+        "https://example.com/fixture/bellen"
+      ],
+      "importance": 5
+    },
+    {
+      "id": "upd-vb-build",
+      "date": "2026-11-05T05:40:00.000Z",
+      "tool": "Grok Build",
+      "title_nl": "Voorbeeld: twee agents en een dashboard",
+      "summary_nl": "Nog steeds voorbeelddata. Eén post heeft een video-miniatuur, de andere alleen tekst.",
+      "can_do_nl": [
+        "Een verzonnen taak over twee agents verdelen",
+        "Een achtergrondtaak op een nep-dashboard terugvinden"
+      ],
+      "example_ids": [
+        "ex-vb-agents",
+        "ex-vb-dashboard"
+      ],
+      "source_urls": [
+        "https://example.com/fixture/build"
+      ],
+      "importance": 5
+    },
+    {
+      "id": "upd-vb-claude",
+      "date": "2026-11-04T16:45:00.000Z",
+      "tool": "Claude Code",
+      "title_nl": "Voorbeeld: starten vanaf een ticket",
+      "summary_nl": "Voorbeelddata over een workflow. De acties hieronder herhalen de titel niet.",
+      "can_do_nl": [
+        "Een fictief ticket naar twee agents sturen",
+        "De aannames naast de uitkomst zetten"
+      ],
+      "example_ids": [
+        "ex-vb-ticket",
+        "ex-vb-agentsmd"
+      ],
+      "source_urls": [
+        "https://example.com/fixture/claude"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "upd-vb-cursor",
+      "date": "2026-11-04T11:20:00.000Z",
+      "tool": "Cursor",
+      "title_nl": "Voorbeeld: een diff zonder repository",
+      "summary_nl": "Voorbeelddata. Het beeld is een tekening van een editor, geen schermafdruk.",
+      "can_do_nl": [
+        "De paarse Cursor-chip in de feed herkennen",
+        "Een kleurvoorbeeld van een diff bekijken"
+      ],
+      "example_ids": [
+        "ex-vb-diff"
+      ],
+      "source_urls": [
+        "https://example.com/fixture/cursor"
+      ],
+      "importance": 3
+    },
+    {
+      "id": "upd-vb-codex",
+      "date": "2026-11-03T18:10:00.000Z",
+      "tool": "Codex",
+      "title_nl": "Voorbeeld: een terminal die stopt",
+      "summary_nl": "Voorbeelddata met een GIF-miniatuur. Er draait geen echte Codex-taak.",
+      "can_do_nl": [
+        "Een korte opdracht in een nep-terminal lezen",
+        "Zien dat een GIF als stilstaand beeld verschijnt"
+      ],
+      "example_ids": [
+        "ex-vb-terminal",
+        "ex-vb-plan"
+      ],
+      "source_urls": [
+        "https://example.com/fixture/codex"
+      ],
+      "importance": 3
+    },
+    {
+      "id": "upd-vb-winkel",
+      "date": "2026-11-03T09:50:00.000Z",
+      "tool": "OpenAI",
+      "title_nl": "Voorbeeld: kleurvlakken in plaats van een product",
+      "summary_nl": "Voorbeelddata. Avatars zijn initialen in een SVG, geen foto’s van mensen.",
+      "can_do_nl": [
+        "Een abstract beeld als productfoto gebruiken",
+        "De takeaway onder de posttekst lezen"
+      ],
+      "example_ids": [
+        "ex-vb-winkel",
+        "ex-vb-selfie"
+      ],
+      "source_urls": [
+        "https://example.com/fixture/winkel"
+      ],
+      "importance": 2
+    }
+  ],
+  "examples": [
+    {
+      "id": "ex-vb-tafel",
+      "date": "2026-11-05T07:10:00.000Z",
+      "author_handle": "voorbeeld_a",
+      "author_name": "Voorbeeld Auteur A",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23d7e4f5%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%23163e72%22%3EVA%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "post_url": "https://x.com/voorbeeld_a/status/900000000000000001",
+      "text": "Voorbeeldpost. Een fictieve bot reserveert een tafel voor twee, wacht het keuzemenu af en herhaalt de tijd. Er is geen echt gesprek opgenomen.",
+      "note_nl": "De tekening laat zien hoe een telefoonvoorbeeld in de kaart staat.",
+      "tool": "Grok Bot",
+      "kind": "demo",
+      "from_followed": false,
+      "lang": "nl",
+      "metrics": {
+        "likes": 128,
+        "reposts": 14,
+        "replies": 9,
+        "views": 6400
+      },
+      "media": [
+        {
+          "type": "photo",
+          "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23f3f1ec%22%2F%3E%3Crect%20x%3D%22250%22%20y%3D%2236%22%20width%3D%22140%22%20height%3D%22288%22%20rx%3D%2224%22%20fill%3D%22%231c1915%22%2F%3E%3Crect%20x%3D%22262%22%20y%3D%2256%22%20width%3D%22116%22%20height%3D%22230%22%20rx%3D%228%22%20fill%3D%22%23f6f3ed%22%2F%3E%3Crect%20x%3D%22278%22%20y%3D%2280%22%20width%3D%2284%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22%23d5e4f6%22%2F%3E%3Crect%20x%3D%22278%22%20y%3D%22104%22%20width%3D%2270%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22%23e4dfd6%22%2F%3E%3Ccircle%20cx%3D%22320%22%20cy%3D%22300%22%20r%3D%228%22%20fill%3D%22%23c9842a%22%2F%3E%3C%2Fsvg%3E",
+          "preview_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23f3f1ec%22%2F%3E%3Crect%20x%3D%22250%22%20y%3D%2236%22%20width%3D%22140%22%20height%3D%22288%22%20rx%3D%2224%22%20fill%3D%22%231c1915%22%2F%3E%3Crect%20x%3D%22262%22%20y%3D%2256%22%20width%3D%22116%22%20height%3D%22230%22%20rx%3D%228%22%20fill%3D%22%23f6f3ed%22%2F%3E%3Crect%20x%3D%22278%22%20y%3D%2280%22%20width%3D%2284%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22%23d5e4f6%22%2F%3E%3Crect%20x%3D%22278%22%20y%3D%22104%22%20width%3D%2270%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22%23e4dfd6%22%2F%3E%3Ccircle%20cx%3D%22320%22%20cy%3D%22300%22%20r%3D%228%22%20fill%3D%22%23c9842a%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "Voorbeeldtekening van een telefoon, geen echte foto."
+        }
+      ]
+    },
+    {
+      "id": "ex-vb-menu",
+      "date": "2026-11-05T06:40:00.000Z",
+      "author_handle": "voorbeeld_b",
+      "author_name": "Voorbeeld Auteur B",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23f4e4c4%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%235c3d0c%22%3EVB%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "post_url": "https://x.com/voorbeeld_b/status/900000000000000002",
+      "text": "Voorbeeldpost. In dit verzonnen draaiboek loopt de bot een keuzemenu af en noteert daarna alleen de afgesproken tijd. Geen echte klant, geen echte lijn.",
+      "note_nl": "Handig als sjabloon voor een belscript dat je zelf nog moet schrijven.",
+      "tool": "Grok Bot",
+      "kind": "workflow",
+      "from_followed": false,
+      "lang": "nl",
+      "metrics": {
+        "likes": 42,
+        "reposts": 3,
+        "replies": 6,
+        "views": 2100
+      }
+    },
+    {
+      "id": "ex-vb-agents",
+      "date": "2026-11-05T05:20:00.000Z",
+      "author_handle": "voorbeeld_c",
+      "author_name": "Voorbeeld Auteur C",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23d9efe6%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%230d4f3c%22%3EVC%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "post_url": "https://x.com/voorbeeld_c/status/900000000000000003",
+      "text": "Voorbeeldpost. Twee fictieve agents verdelen een taak: de ene schrijft, de andere controleert. Het videobeeld is een getekende grafiek, geen opname.",
+      "note_nl": "Zo zie je een video als stilstaand beeld, met een label Video.",
+      "tool": "Grok Build",
+      "kind": "workflow",
+      "from_followed": false,
+      "lang": "nl",
+      "metrics": {
+        "likes": 310,
+        "reposts": 40,
+        "replies": 18,
+        "views": 15200
+      },
+      "media": [
+        {
+          "type": "video",
+          "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23f4efe6%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%2240%22%20width%3D%22544%22%20height%3D%22280%22%20rx%3D%2218%22%20fill%3D%22%23fffdf9%22%20stroke%3D%22%23e4dfd6%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%22180%22%20width%3D%2254%22%20height%3D%2290%22%20rx%3D%228%22%20fill%3D%22%23e7c48a%22%2F%3E%3Crect%20x%3D%22168%22%20y%3D%22130%22%20width%3D%2254%22%20height%3D%22140%22%20rx%3D%228%22%20fill%3D%22%23d7e4f5%22%2F%3E%3Crect%20x%3D%22244%22%20y%3D%2296%22%20width%3D%2254%22%20height%3D%22174%22%20rx%3D%228%22%20fill%3D%22%23b7d7c8%22%2F%3E%3Crect%20x%3D%22320%22%20y%3D%22150%22%20width%3D%2254%22%20height%3D%22120%22%20rx%3D%228%22%20fill%3D%22%23f0c7b0%22%2F%3E%3Ctext%20x%3D%2280%22%20y%3D%2278%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2222%22%20fill%3D%22%235c564c%22%3EVoorbeeldgrafiek%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "preview_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23f4efe6%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%2240%22%20width%3D%22544%22%20height%3D%22280%22%20rx%3D%2218%22%20fill%3D%22%23fffdf9%22%20stroke%3D%22%23e4dfd6%22%2F%3E%3Crect%20x%3D%2292%22%20y%3D%22180%22%20width%3D%2254%22%20height%3D%2290%22%20rx%3D%228%22%20fill%3D%22%23e7c48a%22%2F%3E%3Crect%20x%3D%22168%22%20y%3D%22130%22%20width%3D%2254%22%20height%3D%22140%22%20rx%3D%228%22%20fill%3D%22%23d7e4f5%22%2F%3E%3Crect%20x%3D%22244%22%20y%3D%2296%22%20width%3D%2254%22%20height%3D%22174%22%20rx%3D%228%22%20fill%3D%22%23b7d7c8%22%2F%3E%3Crect%20x%3D%22320%22%20y%3D%22150%22%20width%3D%2254%22%20height%3D%22120%22%20rx%3D%228%22%20fill%3D%22%23f0c7b0%22%2F%3E%3Ctext%20x%3D%2280%22%20y%3D%2278%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2222%22%20fill%3D%22%235c564c%22%3EVoorbeeldgrafiek%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "alt": "Voorbeeldgrafiek, gebruikt als stilstaand videobeeld."
+        }
+      ]
+    },
+    {
+      "id": "ex-vb-dashboard",
+      "date": "2026-11-05T04:05:00.000Z",
+      "author_handle": "voorbeeld_d",
+      "author_name": "Voorbeeld Auteur D",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23f8e0d4%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%237a3418%22%3EVD%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "post_url": "https://x.com/voorbeeld_d/status/900000000000000004",
+      "text": "Voorbeeldpost. Release-notities van een verzonnen versie: een achtergrondtaak blijft zichtbaar op een dashboard dat niet bestaat.",
+      "note_nl": "Deze post hoort bij een account dat je in de fixture al volgt.",
+      "tool": "Grok Build",
+      "kind": "release",
+      "from_followed": true,
+      "lang": "nl",
+      "metrics": {
+        "likes": 76,
+        "reposts": 5,
+        "replies": 2,
+        "views": 3400
+      }
+    },
+    {
+      "id": "ex-vb-ticket",
+      "date": "2026-11-04T16:30:00.000Z",
+      "author_handle": "voorbeeld_e",
+      "author_name": "Voorbeeld Auteur E",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23e4e0f7%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%233c3270%22%3EVE%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "post_url": "https://x.com/voorbeeld_e/status/900000000000000005",
+      "text": "Voorbeeldpost. Een verzonnen ticket wordt het startpunt voor twee agents. De afbeelding is een getekend codevenster, geen schermafdruk van een project.",
+      "note_nl": "Het beeld toont hoe een diff-voorbeeld de kaart vult zonder layoutverschuiving.",
+      "tool": "Claude Code",
+      "kind": "workflow",
+      "from_followed": false,
+      "lang": "nl",
+      "metrics": {
+        "likes": 205,
+        "reposts": 22,
+        "replies": 11,
+        "views": 9800
+      },
+      "media": [
+        {
+          "type": "photo",
+          "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23e7eef6%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%2236%22%20width%3D%22544%22%20height%3D%22288%22%20rx%3D%2218%22%20fill%3D%22%231c2430%22%2F%3E%3Ccircle%20cx%3D%2278%22%20cy%3D%2264%22%20r%3D%226%22%20fill%3D%22%23e7c48a%22%2F%3E%3Ccircle%20cx%3D%2298%22%20cy%3D%2264%22%20r%3D%226%22%20fill%3D%22%23b7d7c8%22%2F%3E%3Ccircle%20cx%3D%22118%22%20cy%3D%2264%22%20r%3D%226%22%20fill%3D%22%23f0c7b0%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%22100%22%20width%3D%22220%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%239ec4f0%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%22128%22%20width%3D%22360%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23d5e6fa%22%2F%3E%3Crect%20x%3D%22108%22%20y%3D%22156%22%20width%3D%22280%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23f3d7a4%22%2F%3E%3Crect%20x%3D%22108%22%20y%3D%22184%22%20width%3D%22180%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23b7ead8%22%2F%3E%3Ctext%20x%3D%2280%22%20y%3D%22250%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2218%22%20fill%3D%22%23d4cfc6%22%3Evoorbeeld.diff%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "preview_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23e7eef6%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%2236%22%20width%3D%22544%22%20height%3D%22288%22%20rx%3D%2218%22%20fill%3D%22%231c2430%22%2F%3E%3Ccircle%20cx%3D%2278%22%20cy%3D%2264%22%20r%3D%226%22%20fill%3D%22%23e7c48a%22%2F%3E%3Ccircle%20cx%3D%2298%22%20cy%3D%2264%22%20r%3D%226%22%20fill%3D%22%23b7d7c8%22%2F%3E%3Ccircle%20cx%3D%22118%22%20cy%3D%2264%22%20r%3D%226%22%20fill%3D%22%23f0c7b0%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%22100%22%20width%3D%22220%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%239ec4f0%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%22128%22%20width%3D%22360%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23d5e6fa%22%2F%3E%3Crect%20x%3D%22108%22%20y%3D%22156%22%20width%3D%22280%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23f3d7a4%22%2F%3E%3Crect%20x%3D%22108%22%20y%3D%22184%22%20width%3D%22180%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23b7ead8%22%2F%3E%3Ctext%20x%3D%2280%22%20y%3D%22250%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2218%22%20fill%3D%22%23d4cfc6%22%3Evoorbeeld.diff%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "alt": "Voorbeeld van een donker codevenster, geen echte diff."
+        }
+      ]
+    },
+    {
+      "id": "ex-vb-agentsmd",
+      "date": "2026-11-04T15:10:00.000Z",
+      "author_handle": "voorbeeld_f",
+      "author_name": "Voorbeeld Auteur F",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23f8dce8%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%237a2450%22%3EVF%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "post_url": "https://x.com/voorbeeld_f/status/900000000000000006",
+      "text": "Voorbeeldpost. Een fictieve AGENTS.md zegt alleen: houd de uitleg kort en verzin geen feiten. Dat bestand bestaat hier niet echt.",
+      "note_nl": "Een tutorialvoorbeeld zonder beeld, zodat de tekst de kaart draagt.",
+      "tool": "Claude Code",
+      "kind": "tutorial",
+      "from_followed": false,
+      "lang": "nl",
+      "metrics": {
+        "likes": 88,
+        "reposts": 7,
+        "replies": 4,
+        "views": 4100
+      }
+    },
+    {
+      "id": "ex-vb-diff",
+      "date": "2026-11-04T11:15:00.000Z",
+      "author_handle": "voorbeeld_g",
+      "author_name": "Voorbeeld Auteur G",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23e7eee4%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%23145c38%22%3EVG%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "post_url": "https://x.com/voorbeeld_g/status/900000000000000007",
+      "text": "Voorbeeldpost. In een denkbeeldige editor kleurt een diff groen en rood. Er is geen repository aan gekoppeld.",
+      "note_nl": "Cursor herken je aan de paarse chip, los van de tekst.",
+      "tool": "Cursor",
+      "kind": "demo",
+      "from_followed": false,
+      "lang": "nl",
+      "metrics": {
+        "likes": 64,
+        "reposts": 4,
+        "replies": 3,
+        "views": 2700
+      },
+      "media": [
+        {
+          "type": "photo",
+          "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23e7eef6%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%2236%22%20width%3D%22544%22%20height%3D%22288%22%20rx%3D%2218%22%20fill%3D%22%231c2430%22%2F%3E%3Ccircle%20cx%3D%2278%22%20cy%3D%2264%22%20r%3D%226%22%20fill%3D%22%23e7c48a%22%2F%3E%3Ccircle%20cx%3D%2298%22%20cy%3D%2264%22%20r%3D%226%22%20fill%3D%22%23b7d7c8%22%2F%3E%3Ccircle%20cx%3D%22118%22%20cy%3D%2264%22%20r%3D%226%22%20fill%3D%22%23f0c7b0%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%22100%22%20width%3D%22220%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%239ec4f0%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%22128%22%20width%3D%22360%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23d5e6fa%22%2F%3E%3Crect%20x%3D%22108%22%20y%3D%22156%22%20width%3D%22280%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23f3d7a4%22%2F%3E%3Crect%20x%3D%22108%22%20y%3D%22184%22%20width%3D%22180%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23b7ead8%22%2F%3E%3Ctext%20x%3D%2280%22%20y%3D%22250%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2218%22%20fill%3D%22%23d4cfc6%22%3Evoorbeeld.diff%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "preview_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23e7eef6%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%2236%22%20width%3D%22544%22%20height%3D%22288%22%20rx%3D%2218%22%20fill%3D%22%231c2430%22%2F%3E%3Ccircle%20cx%3D%2278%22%20cy%3D%2264%22%20r%3D%226%22%20fill%3D%22%23e7c48a%22%2F%3E%3Ccircle%20cx%3D%2298%22%20cy%3D%2264%22%20r%3D%226%22%20fill%3D%22%23b7d7c8%22%2F%3E%3Ccircle%20cx%3D%22118%22%20cy%3D%2264%22%20r%3D%226%22%20fill%3D%22%23f0c7b0%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%22100%22%20width%3D%22220%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%239ec4f0%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%22128%22%20width%3D%22360%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23d5e6fa%22%2F%3E%3Crect%20x%3D%22108%22%20y%3D%22156%22%20width%3D%22280%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23f3d7a4%22%2F%3E%3Crect%20x%3D%22108%22%20y%3D%22184%22%20width%3D%22180%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23b7ead8%22%2F%3E%3Ctext%20x%3D%2280%22%20y%3D%22250%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2218%22%20fill%3D%22%23d4cfc6%22%3Evoorbeeld.diff%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "alt": "Nog een voorbeeld van een codevenster."
+        }
+      ]
+    },
+    {
+      "id": "ex-vb-terminal",
+      "date": "2026-11-03T18:00:00.000Z",
+      "author_handle": "voorbeeld_h",
+      "author_name": "Voorbeeld Auteur H",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23efe6da%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%237a3e0c%22%3EVH%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "post_url": "https://x.com/voorbeeld_h/status/900000000000000008",
+      "text": "Voorbeeldpost. Een fictieve terminal vraagt om een plan en stopt daarna. De GIF is een stilstaande tekening.",
+      "note_nl": "GIF’s krijgen hetzelfde stilstaande voorbeeldbeeld als video.",
+      "tool": "Codex",
+      "kind": "demo",
+      "from_followed": false,
+      "lang": "nl",
+      "metrics": {
+        "likes": 141,
+        "reposts": 16,
+        "replies": 8,
+        "views": 7300
+      },
+      "media": [
+        {
+          "type": "gif",
+          "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23e8f3ee%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%2240%22%20width%3D%22544%22%20height%3D%22280%22%20rx%3D%2218%22%20fill%3D%22%23143028%22%2F%3E%3Ctext%20x%3D%2278%22%20y%3D%22110%22%20font-family%3D%22ui-monospace%2Cmonospace%22%20font-size%3D%2222%22%20fill%3D%22%23d7efe6%22%3E%26gt%3B%20voorbeeld%20--plan%3C%2Ftext%3E%3Ctext%20x%3D%2278%22%20y%3D%22150%22%20font-family%3D%22ui-monospace%2Cmonospace%22%20font-size%3D%2222%22%20fill%3D%22%23f3d7a4%22%3Ewacht%20op%20een%20fictieve%20taak%3C%2Ftext%3E%3Ctext%20x%3D%2278%22%20y%3D%22190%22%20font-family%3D%22ui-monospace%2Cmonospace%22%20font-size%3D%2222%22%20fill%3D%22%23d5e6fa%22%3Eklaar%20in%200%20seconden%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "preview_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23e8f3ee%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%2240%22%20width%3D%22544%22%20height%3D%22280%22%20rx%3D%2218%22%20fill%3D%22%23143028%22%2F%3E%3Ctext%20x%3D%2278%22%20y%3D%22110%22%20font-family%3D%22ui-monospace%2Cmonospace%22%20font-size%3D%2222%22%20fill%3D%22%23d7efe6%22%3E%26gt%3B%20voorbeeld%20--plan%3C%2Ftext%3E%3Ctext%20x%3D%2278%22%20y%3D%22150%22%20font-family%3D%22ui-monospace%2Cmonospace%22%20font-size%3D%2222%22%20fill%3D%22%23f3d7a4%22%3Ewacht%20op%20een%20fictieve%20taak%3C%2Ftext%3E%3Ctext%20x%3D%2278%22%20y%3D%22190%22%20font-family%3D%22ui-monospace%2Cmonospace%22%20font-size%3D%2222%22%20fill%3D%22%23d5e6fa%22%3Eklaar%20in%200%20seconden%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "alt": "Voorbeeld van een terminalscherm, geen echte opname."
+        }
+      ]
+    },
+    {
+      "id": "ex-vb-plan",
+      "date": "2026-11-03T12:20:00.000Z",
+      "author_handle": "voorbeeld_i",
+      "author_name": "Voorbeeld Auteur I",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23d5ebe4%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%230f4f45%22%3EVI%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "post_url": "https://x.com/voorbeeld_i/status/900000000000000009",
+      "text": "Voorbeeldpost. Het plan past op één scherm: lees de opdracht, noem de aannames, schrijf niets naar een echte map.",
+      "note_nl": "Ook dit account staat in de fixture als al gevolgd.",
+      "tool": "Codex",
+      "kind": "workflow",
+      "from_followed": true,
+      "lang": "nl",
+      "metrics": {
+        "likes": 19,
+        "reposts": 1,
+        "replies": 0,
+        "views": 900
+      }
+    },
+    {
+      "id": "ex-vb-winkel",
+      "date": "2026-11-03T09:40:00.000Z",
+      "author_handle": "voorbeeld_j",
+      "author_name": "Voorbeeld Auteur J",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23d5e4f6%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%231d4e89%22%3EVJ%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "post_url": "https://x.com/voorbeeld_j/status/900000000000000010",
+      "text": "Voorbeeldpost. Een verzonnen winkel toont twee kleurvlakken in plaats van een product. Er is niets te koop.",
+      "note_nl": "De blokken staan voor een productfoto die in echte data een preview_url zou zijn.",
+      "tool": "OpenAI",
+      "kind": "demo",
+      "from_followed": false,
+      "lang": "nl",
+      "metrics": {
+        "likes": 53,
+        "reposts": 2,
+        "replies": 5,
+        "views": 2600
+      },
+      "media": [
+        {
+          "type": "photo",
+          "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23f8eef2%22%2F%3E%3Crect%20x%3D%2256%22%20y%3D%2248%22%20width%3D%22250%22%20height%3D%22264%22%20rx%3D%2220%22%20fill%3D%22%23fffdf9%22%20stroke%3D%22%23f0c6d6%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%2276%22%20width%3D%22120%22%20height%3D%2218%22%20rx%3D%229%22%20fill%3D%22%237a2450%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%22114%22%20width%3D%22190%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22%23f8dce8%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%22138%22%20width%3D%22160%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22%23f8dce8%22%2F%3E%3Crect%20x%3D%22330%22%20y%3D%2248%22%20width%3D%22250%22%20height%3D%22120%22%20rx%3D%2220%22%20fill%3D%22%23e7eef6%22%2F%3E%3Crect%20x%3D%22330%22%20y%3D%22188%22%20width%3D%22250%22%20height%3D%22124%22%20rx%3D%2220%22%20fill%3D%22%23f4e4c4%22%2F%3E%3C%2Fsvg%3E",
+          "preview_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23f8eef2%22%2F%3E%3Crect%20x%3D%2256%22%20y%3D%2248%22%20width%3D%22250%22%20height%3D%22264%22%20rx%3D%2220%22%20fill%3D%22%23fffdf9%22%20stroke%3D%22%23f0c6d6%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%2276%22%20width%3D%22120%22%20height%3D%2218%22%20rx%3D%229%22%20fill%3D%22%237a2450%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%22114%22%20width%3D%22190%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22%23f8dce8%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%22138%22%20width%3D%22160%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22%23f8dce8%22%2F%3E%3Crect%20x%3D%22330%22%20y%3D%2248%22%20width%3D%22250%22%20height%3D%22120%22%20rx%3D%2220%22%20fill%3D%22%23e7eef6%22%2F%3E%3Crect%20x%3D%22330%22%20y%3D%22188%22%20width%3D%22250%22%20height%3D%22124%22%20rx%3D%2220%22%20fill%3D%22%23f4e4c4%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "Voorbeeld van gekleurde blokken, geen productfoto."
+        }
+      ]
+    },
+    {
+      "id": "ex-vb-selfie",
+      "date": "2026-11-03T08:15:00.000Z",
+      "author_handle": "voorbeeld_k",
+      "author_name": "Voorbeeld Auteur K",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23f3e6cf%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%236a4b16%22%3EVK%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "post_url": "https://x.com/voorbeeld_k/status/900000000000000011",
+      "text": "Voorbeeldpost. Geen selfie, alleen vlekken. Zo blijft duidelijk dat deze fixture geen foto’s van mensen gebruikt.",
+      "note_nl": "Zonder echte mensen blijft de kaart toch een beeld hebben.",
+      "tool": "OpenAI",
+      "kind": "demo",
+      "from_followed": false,
+      "lang": "nl",
+      "metrics": {
+        "likes": 37,
+        "reposts": 0,
+        "replies": 1,
+        "views": 1500
+      },
+      "media": [
+        {
+          "type": "photo",
+          "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23f7f1ea%22%2F%3E%3Ccircle%20cx%3D%22180%22%20cy%3D%22170%22%20r%3D%2290%22%20fill%3D%22%23f0c7b0%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22150%22%20r%3D%2270%22%20fill%3D%22%23d7e4f5%22%2F%3E%3Ccircle%20cx%3D%22390%22%20cy%3D%22200%22%20r%3D%22100%22%20fill%3D%22%23d9efe6%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%22320%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2220%22%20fill%3D%22%235c564c%22%3EVoorbeeldbeeld%2C%20geen%20foto%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "preview_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22360%22%20viewBox%3D%220%200%20640%20360%22%3E%3Crect%20width%3D%22640%22%20height%3D%22360%22%20fill%3D%22%23f7f1ea%22%2F%3E%3Ccircle%20cx%3D%22180%22%20cy%3D%22170%22%20r%3D%2290%22%20fill%3D%22%23f0c7b0%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22150%22%20r%3D%2270%22%20fill%3D%22%23d7e4f5%22%2F%3E%3Ccircle%20cx%3D%22390%22%20cy%3D%22200%22%20r%3D%22100%22%20fill%3D%22%23d9efe6%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%22320%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2220%22%20fill%3D%22%235c564c%22%3EVoorbeeldbeeld%2C%20geen%20foto%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "alt": "Abstracte kleurvlakken, uitdrukkelijk geen portret."
+        }
+      ]
+    },
+    {
+      "id": "ex-vb-gemini",
+      "date": "2026-11-02T19:30:00.000Z",
+      "author_handle": "voorbeeld_l",
+      "author_name": "Voorbeeld Auteur L",
+      "author_avatar_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20fill%3D%22%23e4e7ec%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%23243040%22%3EVL%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "post_url": "https://x.com/voorbeeld_l/status/900000000000000012",
+      "text": "Voorbeeldpost. Een verzonnen CLI-release noemt één vlag, --voorbeeld, die niets doet. Handig om de toolfilter te testen.",
+      "note_nl": "Deze post staat los in Voorbeelden en hoort niet bij een update.",
+      "tool": "Gemini CLI",
+      "kind": "release",
+      "from_followed": false,
+      "lang": "nl",
+      "metrics": {
+        "likes": 24,
+        "reposts": 2,
+        "replies": 1,
+        "views": 1100
+      }
+    }
+  ],
+  "startups": [
+    {
+      "id": "startup-vb-lab",
+      "name": "Voorbeeld Lab",
+      "handle": "voorbeeldlab",
+      "url": "https://x.com/voorbeeldlab",
+      "website_url": "https://example.com/voorbeeld-lab",
+      "logo_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20rx%3D%2222%22%20fill%3D%22%23d7e4f5%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%23163e72%22%3EVL%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "one_liner_nl": "Fictief lab dat alleen in deze voorbeeldfeed bestaat.",
+      "why_new_nl": "Het heeft een logo, een website en een bewijs-post, zodat die drie links zichtbaar zijn.",
+      "date_found": "2026-11-04T18:00:00.000Z",
+      "proof_url": "https://x.com/voorbeeldlab/status/900000000000000101"
+    },
+    {
+      "id": "startup-vb-studio",
+      "name": "Nepstudio",
+      "handle": "nepstudio",
+      "url": "https://x.com/nepstudio",
+      "website_url": "https://example.com/nepstudio",
+      "logo_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2296%22%20viewBox%3D%220%200%2096%2096%22%3E%3Crect%20width%3D%2296%22%20height%3D%2296%22%20rx%3D%2222%22%20fill%3D%22%23f8e0d4%22%2F%3E%3Ctext%20x%3D%2248%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2Csans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22700%22%20fill%3D%22%237a3418%22%3ENS%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "one_liner_nl": "Verzonnen studio voor het testen van de startupkaart.",
+      "why_new_nl": "De kaart moet een éénregelige reden tonen, niet een alinea.",
+      "date_found": "2026-11-02T12:00:00.000Z",
+      "proof_url": "https://x.com/nepstudio/status/900000000000000102"
+    },
+    {
+      "id": "startup-vb-forge",
+      "name": "Demo Forge",
+      "handle": "demoforge",
+      "url": "https://x.com/demoforge",
+      "one_liner_nl": "Voorbeeld zonder logo en zonder website, alleen een initiaal.",
+      "why_new_nl": "Zo zie je de terugval als logo_url en website_url ontbreken.",
+      "date_found": "2026-11-01T09:00:00.000Z",
+      "proof_url": "https://x.com/demoforge/status/900000000000000103"
+    }
+  ]
+}

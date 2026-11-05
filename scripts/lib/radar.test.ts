@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { describe, it } from "node:test";
 
 import { applyRadarUpdate } from "../apply-radar-update.ts";
-import { LIMITS, mergeAccounts, mergeRadar, parseAccount, sentenceCount, validateIncoming, type RadarExample, type RadarFile } from "./radar.ts";
+import { LIMITS, mergeAccounts, mergeRadar, parseAccount, sentenceCount, validateIncoming, type RadarAccount, type RadarExample, type RadarFile, type RadarStartup } from "./radar.ts";
 
 const example = (patch: Partial<RadarExample> = {}): RadarExample => ({
   id: "ex-demo",
@@ -16,6 +16,29 @@ const example = (patch: Partial<RadarExample> = {}): RadarExample => ({
   tool: "Grok Bot",
   kind: "demo",
   from_followed: false,
+  ...patch,
+});
+
+const startup = (patch: Partial<RadarStartup> = {}): RadarStartup => ({
+  id: "startup-demo",
+  name: "Demo Lab",
+  handle: "demolab",
+  url: "https://x.com/demolab",
+  one_liner_nl: "Een fictief lab voor de test.",
+  why_new_nl: "Het lab staat er omdat de test een startup nodig heeft.",
+  date_found: "2026-11-04T18:00:00.000Z",
+  proof_url: "https://x.com/demolab/status/2118054007579296069",
+  ...patch,
+});
+
+const account = (patch: Partial<RadarAccount> = {}): RadarAccount => ({
+  handle: "demolab",
+  name: "Demo Lab",
+  category: "builder_demo",
+  note_nl: "Een account voor de test.",
+  already_followed: false,
+  followers: 12,
+  example_url: "https://x.com/demolab",
   ...patch,
 });
 
@@ -65,6 +88,79 @@ describe("radar-validatie", () => {
     const current: RadarFile = { updates: [], examples: [example()], startups: [] };
     const issues = validateIncoming({ updates: [update()], examples: [], startups: [] }, current.examples).issues;
     assert.deepEqual(issues, []);
+  });
+
+  it("bewaart optionele post-, startup- en accountvelden", () => {
+    const rich = example({
+      author_name: "Voorbeeld Auteur",
+      author_avatar_url: "https://cdn.example.com/avatar.jpg",
+      text: "Eerste zin van de post. Tweede zin mag hier wel.",
+      media: [
+        {
+          type: "photo",
+          url: "https://cdn.example.com/full.jpg",
+          preview_url: "https://cdn.example.com/preview.jpg",
+          alt: "Een schets",
+        },
+      ],
+      metrics: { likes: 0, reposts: 2, replies: 1, views: 40 },
+      lang: "nl",
+    });
+    const checked = validateIncoming({
+      updates: [],
+      examples: [rich],
+      startups: [startup({ website_url: "https://example.com/lab", logo_url: "https://cdn.example.com/logo.png" })],
+      accounts: [account({ avatar_url: "https://cdn.example.com/avatar.jpg" })],
+    });
+    assert.deepEqual(checked.issues, []);
+    assert.equal(checked.examples[0]?.author_name, "Voorbeeld Auteur");
+    assert.equal(checked.examples[0]?.text?.includes("Tweede zin"), true);
+    assert.equal(checked.examples[0]?.media?.[0]?.preview_url, "https://cdn.example.com/preview.jpg");
+    assert.equal(checked.examples[0]?.metrics?.likes, 0);
+    assert.equal(checked.examples[0]?.lang, "nl");
+    assert.equal(checked.startups[0]?.website_url, "https://example.com/lab");
+    assert.equal(checked.startups[0]?.logo_url, "https://cdn.example.com/logo.png");
+    assert.equal(checked.accounts[0]?.avatar_url, "https://cdn.example.com/avatar.jpg");
+    const merged = mergeRadar({ updates: [], examples: [], startups: [] }, checked);
+    assert.equal(merged.examples[0]?.media?.[0]?.type, "photo");
+    assert.equal(merged.startups[0]?.website_url, "https://example.com/lab");
+    assert.equal(mergeAccounts([], checked.accounts)[0]?.avatar_url, "https://cdn.example.com/avatar.jpg");
+  });
+
+  it("weigert kapotte avatars, media, metrics en HTML in de posttekst", () => {
+    const issues = validateIncoming({
+      updates: [],
+      examples: [
+        {
+          ...example(),
+          author_avatar_url: "http://cdn.example.com/a.jpg",
+          text: `<p>${"x".repeat(500)}</p>`,
+          lang: "nederlands",
+          media: [
+            { type: "audio", url: "notaurl", preview_url: "https://cdn.example.com/p.jpg" },
+            { type: "photo", url: "https://cdn.example.com/a.jpg", preview_url: "https://cdn.example.com/b.jpg" },
+            { type: "photo", url: "https://cdn.example.com/c.jpg", preview_url: "https://cdn.example.com/d.jpg" },
+            { type: "gif", url: "https://cdn.example.com/e.jpg", preview_url: "https://cdn.example.com/f.jpg" },
+            { type: "video", url: "https://cdn.example.com/g.jpg", preview_url: "https://cdn.example.com/h.jpg" },
+          ],
+          metrics: { likes: -1, views: 1.5, saves: 3 },
+        },
+      ],
+      startups: [startup({ website_url: "http://example.com", logo_url: "data:image/svg+xml,abc" })],
+      accounts: [account({ avatar_url: "data:image/svg+xml,abc" })],
+    }).issues;
+    assert.ok(issues.some((issue) => issue.includes("author_avatar_url")));
+    assert.ok(issues.some((issue) => issue.includes("platte tekst")));
+    assert.ok(issues.some((issue) => issue.includes("text") && issue.includes("500")));
+    assert.ok(issues.some((issue) => issue.includes("lang")));
+    assert.ok(issues.some((issue) => issue.includes("media")));
+    assert.ok(issues.some((issue) => issue.includes("type")));
+    assert.ok(issues.some((issue) => issue.includes("likes")));
+    assert.ok(issues.some((issue) => issue.includes("views")));
+    assert.ok(issues.some((issue) => issue.includes("saves")));
+    assert.ok(issues.some((issue) => issue.includes("website_url")));
+    assert.ok(issues.some((issue) => issue.includes("logo_url")));
+    assert.ok(issues.some((issue) => issue.includes("avatar_url")));
   });
 
   it("weigert dubbele ids in hetzelfde bestand", () => {
@@ -120,6 +216,20 @@ describe("radar-merge", () => {
     const before = readFileSync(join(radarPath, "radar.json"), "utf8");
     assert.throws(() => applyRadarUpdate(root, join(root, "radar-update.json")));
     assert.equal(readFileSync(join(radarPath, "radar.json"), "utf8"), before);
+  });
+
+  it("de fixture is voorbeelddata en blijft buiten data/", () => {
+    const fixture = JSON.parse(readFileSync("web/dev/fixtures/radar.fixture.json", "utf8")) as {
+      fixture?: boolean;
+      notice?: string;
+      examples?: Array<{ text?: string; author_name?: string; author_avatar_url?: string }>;
+    };
+    assert.equal(fixture.fixture, true);
+    assert.match(fixture.notice ?? "", /voorbeeld/i);
+    assert.ok((fixture.examples?.length ?? 0) >= 8 && (fixture.examples?.length ?? 0) <= 12);
+    assert.ok(fixture.examples?.every((item) => /voorbeeld/i.test(item.text ?? "") && String(item.author_avatar_url).startsWith("data:image/")));
+    const production = readFileSync("data/radar.json", "utf8");
+    assert.equal(production.includes("voorbeeld_a"), false);
   });
 
   it("de startset in data/ is geldig en komt uit het rapport", () => {

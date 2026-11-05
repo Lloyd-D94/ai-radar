@@ -8,9 +8,13 @@ export const ACCOUNT_CATEGORIES = [
 ] as const;
 
 export const EXAMPLE_KINDS = ["demo", "workflow", "release", "tutorial"] as const;
+export const MEDIA_TYPES = ["photo", "video", "gif"] as const;
+export const METRIC_KEYS = ["likes", "reposts", "replies", "views"] as const;
 
 export type AccountCategory = (typeof ACCOUNT_CATEGORIES)[number];
 export type ExampleKind = (typeof EXAMPLE_KINDS)[number];
+export type MediaType = (typeof MEDIA_TYPES)[number];
+export type MetricKey = (typeof METRIC_KEYS)[number];
 
 export interface RadarUpdate {
   id: string;
@@ -25,6 +29,20 @@ export interface RadarUpdate {
   seed?: boolean;
 }
 
+export interface RadarMedia {
+  type: MediaType;
+  url: string;
+  preview_url: string;
+  alt?: string;
+}
+
+export interface RadarMetrics {
+  likes?: number;
+  reposts?: number;
+  replies?: number;
+  views?: number;
+}
+
 export interface RadarExample {
   id: string;
   date: string;
@@ -35,6 +53,12 @@ export interface RadarExample {
   kind: ExampleKind;
   from_followed: boolean;
   seed?: boolean;
+  author_name?: string;
+  author_avatar_url?: string;
+  text?: string;
+  media?: RadarMedia[];
+  metrics?: RadarMetrics;
+  lang?: string;
 }
 
 export interface RadarStartup {
@@ -47,6 +71,8 @@ export interface RadarStartup {
   date_found: string;
   proof_url: string;
   seed?: boolean;
+  website_url?: string;
+  logo_url?: string;
 }
 
 export interface RadarAccount {
@@ -57,6 +83,7 @@ export interface RadarAccount {
   already_followed: boolean;
   followers: number;
   example_url: string;
+  avatar_url?: string;
 }
 
 export interface RadarFile {
@@ -86,11 +113,18 @@ export const LIMITS = {
   tool: 40,
   id: 80,
   accountNote: 280,
+  text: 500,
+  alt: 180,
+  mediaUrl: 500,
+  lang: 16,
 };
 
 const POST_URL = /^https:\/\/x\.com\/([A-Za-z0-9_]{1,15})\/status\/(\d+)$/;
 const HANDLE = /^[A-Za-z0-9_]{1,15}$/;
 const ID = /^[a-z0-9][a-z0-9-]{0,79}$/;
+const LANG = /^[a-z]{2,3}(?:-[a-z0-9]{2,8})*$/i;
+const HTML_TAG = /<\/?[a-z][^>\n]*>/i;
+const MEDIA_KEYS = ["type", "url", "preview_url", "alt"];
 
 export class RadarValidationError extends Error {
   readonly issues: string[];
@@ -164,6 +198,97 @@ function optionalSeed(record: Record<string, unknown>, path: string, issues: str
   return record.seed;
 }
 
+function optString(record: Record<string, unknown>, key: string, path: string, issues: string[], max: number): string | undefined {
+  if (record[key] === undefined) return undefined;
+  const value = record[key];
+  if (typeof value !== "string" || value.trim().length === 0) {
+    issues.push(`${path}.${key}: verwacht tekst`);
+    return undefined;
+  }
+  const trimmed = value.trim();
+  if (trimmed.length > max) issues.push(`${path}.${key}: maximaal ${max} tekens (nu ${trimmed.length})`);
+  return trimmed;
+}
+
+function optHttps(record: Record<string, unknown>, key: string, path: string, issues: string[], max: number): string | undefined {
+  const value = optString(record, key, path, issues, max);
+  if (!value || !isHttpsUrl(value)) {
+    if (value) issues.push(`${path}.${key}: moet een https-URL zijn`);
+    return undefined;
+  }
+  return value;
+}
+
+function parseMedia(value: unknown, path: string, issues: string[]): RadarMedia[] | undefined {
+  if (value === undefined) return undefined;
+  if (!Array.isArray(value)) {
+    issues.push(`${path}.media: verwacht een lijst`);
+    return undefined;
+  }
+  if (value.length > 4) issues.push(`${path}.media: hooguit 4 beelden (nu ${value.length})`);
+  const media: RadarMedia[] = [];
+  for (const [index, entry] of value.slice(0, 4).entries()) {
+    const itemPath = `${path}.media[${index}]`;
+    const record = asRecord(entry, itemPath, issues);
+    if (!record) continue;
+    for (const key of Object.keys(record)) {
+      if (!MEDIA_KEYS.includes(key)) issues.push(`${itemPath}.${key}: onbekend veld`);
+    }
+    const type = typeof record.type === "string" ? record.type.trim() : "";
+    if (!type) issues.push(`${itemPath}.type: verplicht`);
+    else if (!MEDIA_TYPES.includes(type as MediaType)) issues.push(`${itemPath}.type: verwacht photo, video of gif`);
+    if (record.url === undefined) issues.push(`${itemPath}.url: verplicht`);
+    if (record.preview_url === undefined) issues.push(`${itemPath}.preview_url: verplicht`);
+    const url = record.url === undefined ? undefined : optHttps(record, "url", itemPath, issues, LIMITS.mediaUrl);
+    const preview = record.preview_url === undefined ? undefined : optHttps(record, "preview_url", itemPath, issues, LIMITS.mediaUrl);
+    let alt: string | undefined;
+    if (record.alt !== undefined && record.alt !== "") {
+      if (typeof record.alt !== "string") issues.push(`${itemPath}.alt: verwacht tekst`);
+      else {
+        const trimmed = record.alt.trim();
+        if (trimmed.length > LIMITS.alt) issues.push(`${itemPath}.alt: maximaal ${LIMITS.alt} tekens (nu ${trimmed.length})`);
+        else if (trimmed) alt = trimmed;
+      }
+    }
+    if (url && preview && MEDIA_TYPES.includes(type as MediaType)) {
+      const item: RadarMedia = { type: type as MediaType, url, preview_url: preview };
+      if (alt) item.alt = alt;
+      media.push(item);
+    }
+  }
+  return media.length > 0 ? media : undefined;
+}
+
+function parseMetrics(value: unknown, path: string, issues: string[]): RadarMetrics | undefined {
+  if (value === undefined) return undefined;
+  const record = asRecord(value, `${path}.metrics`, issues);
+  if (!record) return undefined;
+  const metrics: RadarMetrics = {};
+  for (const key of Object.keys(record)) {
+    if (!METRIC_KEYS.includes(key as MetricKey)) {
+      issues.push(`${path}.metrics.${key}: onbekend veld`);
+      continue;
+    }
+    const raw = record[key];
+    if (typeof raw !== "number" || !Number.isInteger(raw) || raw < 0) {
+      issues.push(`${path}.metrics.${key}: geheel getal van 0 of hoger`);
+      continue;
+    }
+    metrics[key as MetricKey] = raw;
+  }
+  return Object.keys(metrics).length > 0 ? metrics : undefined;
+}
+
+function parseLang(record: Record<string, unknown>, path: string, issues: string[]): string | undefined {
+  const value = optString(record, "lang", path, issues, LIMITS.lang);
+  if (!value) return undefined;
+  if (!LANG.test(value)) {
+    issues.push(`${path}.lang: korte taalcode, bijvoorbeeld nl of en`);
+    return undefined;
+  }
+  return value;
+}
+
 function httpsList(value: unknown, path: string, issues: string[], min: number, max: number): string[] {
   if (!Array.isArray(value)) {
     issues.push(`${path}: verwacht een lijst URL’s`);
@@ -215,6 +340,21 @@ function parseExample(value: unknown, path: string, issues: string[]): RadarExam
   };
   const seed = optionalSeed(record, path, issues);
   if (seed !== undefined) example.seed = seed;
+  const authorName = optString(record, "author_name", path, issues, LIMITS.name);
+  if (authorName) example.author_name = authorName;
+  const avatar = optHttps(record, "author_avatar_url", path, issues, LIMITS.mediaUrl);
+  if (avatar) example.author_avatar_url = avatar;
+  const text = optString(record, "text", path, issues, LIMITS.text);
+  if (text) {
+    if (HTML_TAG.test(text)) issues.push(`${path}.text: platte tekst, geen HTML`);
+    example.text = text;
+  }
+  const media = parseMedia(record.media, path, issues);
+  if (media) example.media = media;
+  const metrics = parseMetrics(record.metrics, path, issues);
+  if (metrics) example.metrics = metrics;
+  const lang = parseLang(record, path, issues);
+  if (lang) example.lang = lang;
   return id ? example : null;
 }
 
@@ -296,6 +436,10 @@ function parseStartup(value: unknown, path: string, issues: string[]): RadarStar
   };
   const seed = optionalSeed(record, path, issues);
   if (seed !== undefined) startup.seed = seed;
+  const website = optHttps(record, "website_url", path, issues, LIMITS.mediaUrl);
+  if (website) startup.website_url = website;
+  const logo = optHttps(record, "logo_url", path, issues, LIMITS.mediaUrl);
+  if (logo) startup.logo_url = logo;
   return id ? startup : null;
 }
 
@@ -314,7 +458,7 @@ export function parseAccount(value: unknown, path: string, issues: string[]): Ra
   }
   const example = reqString(record, "example_url", path, issues, 200);
   if (example && !isHttpsUrl(example)) issues.push(`${path}.example_url: moet een https-URL zijn`);
-  return {
+  const account: RadarAccount = {
     handle,
     name: reqString(record, "name", path, issues, LIMITS.name),
     category: (ACCOUNT_CATEGORIES.includes(category as AccountCategory) ? category : "official_product") as AccountCategory,
@@ -323,6 +467,9 @@ export function parseAccount(value: unknown, path: string, issues: string[]): Ra
     followers: typeof followers === "number" ? followers : 0,
     example_url: example,
   };
+  const avatar = optHttps(record, "avatar_url", path, issues, LIMITS.mediaUrl);
+  if (avatar) account.avatar_url = avatar;
+  return account;
 }
 
 function duplicates(ids: string[]): string[] {
