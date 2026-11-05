@@ -44,7 +44,7 @@ Blijft een run om een andere reden 30 dagen zonder commit, dan schrijft dezelfde
 
 Onderaan het scherm, vijf knoppen:
 
-- **Vandaag** — één feed voor de laatste 7 dagen. Per update een titel, hooguit twee zinnen uitleg, maximaal drie concrete “dit kun je ermee”-regels (de titel wordt niet herhaald) en twee postkaarten. Startups en een paar accounts die je nog niet volgt staan ertussen. Alleen belang 5 krijgt het label “Groot nieuws”. Gelezen en bewaren blijven in deze browser (`localStorage`), zonder account.
+- **Vandaag** — één feed voor de laatste 7 dagen. Bovenaan “Top 3 van vandaag” (tool, titel, één regel waarom of samenvatting, belang), daarna de rij “Gemaakt met AI”, daarna de kaarten. Elke update staat in dezelfde volgorde: titel, statuschip (Officieel, Getoond of Gerucht; zonder status geen label) plus tool en datum, “Wat is er nieuw”, “Waarom het ertoe doet” als dat veld er is, “Dit kun je nu doen” (meer dan drie punten achter Meer), “Zo ziet het eruit” en “Bronnen”. Startups en een paar accounts die je nog niet volgt staan ertussen. Gelezen en bewaren blijven in deze browser (`localStorage`), zonder account.
 - **Voorbeelden** — dezelfde postkaarten. Filter met chips op tool en soort. “Nog niet gevolgd” staat standaard aan; dat is een filter, geen badge op elke post.
 - **Startups** — logo of initiaal, naam, één zin, één regel “waarom nieuw”, de website als die bekend is, en de bewijs-post.
 - **Ontdek** — accounts per categorie, met avatar of initialen, een korte notitie en een knop om op X te volgen.
@@ -75,11 +75,12 @@ Een externe routine levert `radar-update.json` in de root, met dezelfde vorm:
   "examples": [],
   "startups": [],
   "creations": [],
-  "accounts": []
+  "accounts": [],
+  "daily_top": { "date": "2026-11-05", "ids": ["upd-voorbeeld"], "headline_nl": "Optioneel, maximaal 90 tekens" }
 }
 ```
 
-`accounts` mag weg. Elk onderdeel mag een lege lijst zijn.
+`accounts`, `creations` en `daily_top` mogen weg. Elk onderdeel mag een lege lijst zijn. `daily_top` is een object, geen lijst.
 
 ```bash
 npm run radar:apply
@@ -90,9 +91,13 @@ Het script valideert en stopt met een foutmelding als iets niet klopt. Het schri
 
 Regels, kort:
 
-- Datums zijn ISO. Belang is een geheel getal van 1 tot 5. De feed zet alleen bij 5 het label “Groot nieuws”.
+- Datums zijn ISO. Belang is een geheel getal van 1 tot 5. In de top 3 staat dat getal naast vijf stippen. Bij Bronnen krijgt score 5 nog het label “Groot nieuws”.
 - `summary_nl` is maximaal twee zinnen. `note_nl` is één zin. `can_do_nl` heeft 1 tot 5 punten.
-- Schrijf `can_do_nl` als concrete acties. Herhaal de titel niet: de feed toont hooguit drie punten en laat punten weg die bijna hetzelfde zijn als de titel of als elkaar.
+- Schrijf `can_do_nl` als concrete acties en herhaal de titel niet. De feed toont de eerste drie punten en zet de rest achter Meer.
+- `why_nl` is optioneel, Nederlands, maximaal 220 tekens: waarom dit ertoe doet.
+- `status` is optioneel: `officieel` (bevestigd op het eigen kanaal van het bedrijf), `getoond` (een builder of gebruiker liet het werken) of `gerucht` (onbevestigd). Zonder veld toont de feed geen statuslabel.
+- `sources` is optioneel, hooguit 6 objecten: `label` (maximaal 40 tekens), `url` (`https`) en `kind` (`officieel`, `x_post`, `video` of `artikel`). `source_urls` blijft verplicht. Zonder `sources` maakt de feed bron-chips uit `source_urls`.
+- `daily_top` is optioneel, op het hoofdniveau. `date` is `YYYY-MM-DD`. `ids` bevat 1 tot 3 update-ids die bestaan (in dit bestand of al in `data/radar.json`). `headline_nl` mag ontbreken en is maximaal 90 tekens. Staat `daily_top` in de update, dan vervangt die de vorige. Ontbreekt het veld, dan blijft de bestaande top staan. De feed gebruikt hem als de datum vandaag is of hooguit 2 dagen ouder. Is hij er niet, of is de datum ouder, dan kiest de site zelf de top 3: hoogste belang, daarna de nieuwste, uit updates van de laatste 3 dagen. Zijn die er niet, dan komt er geen blok. Minder dan drie kaarten is genoeg.
 - Elke URL is `https`. Een voorbeeldpost is precies `https://x.com/<handle>/status/<id>`, en die handle is `author_handle`.
 - `example_ids` moeten bestaan, in dit bestand of al in `data/radar.json`. In de feed staan de eerste twee gekoppelde posts direct onder de update.
 - `kind` is `demo`, `workflow`, `release` of `tutorial`.
@@ -187,7 +192,7 @@ Clickbait en geldclaims horen niet in dit bestand; die filtert de routine vóór
 
 Staat `radar-update.json` op `main`, dan draait `.github/workflows/radar-apply.yml`: valideren, mergen, committen en de site publiceren. Elke andere push die `data/` wijzigt, publiceert ook via **Site publiceren**.
 
-Verzin geen feiten in die JSON. Alleen wat een bron echt laat zien. Voor de vormgeving ligt er losse voorbeelddata in `web/dev/fixtures/radar.fixture.json`. Die hoort niet in `data/` en gaat niet mee naar de live site. Lokaal open je de site met `?fixture=1`.
+Verzin geen feiten in die JSON. Alleen wat een bron echt laat zien. Voor de vormgeving ligt er losse voorbeelddata in `web/dev/fixtures/radar.fixture.json`. Die hoort niet in `data/` en gaat niet mee naar de live site. Lokaal open je de site met `?fixture=1`. `?fixture=1&quiet=1` zet de klok op de stille voorbeeld-dag (één update), zodat de top één kaart toont.
 
 ## Een bron toevoegen
 

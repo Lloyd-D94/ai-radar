@@ -25,7 +25,36 @@
         "https://x.com/TheRundownAI/status/2118057565607367147"
       ],
       "importance": 5,
-      "seed": true
+      "seed": true,
+      "why_nl": "Grok Bot kan nu namens jou bellen (VS): wachten, menu’s doorlopen en met mensen praten. Handig om terugbelwerk uit chat te halen, met live transcript.",
+      "status": "officieel",
+      "sources": [
+        {
+          "label": "Grok Bot op X",
+          "url": "https://x.com/bot/status/2118043939592942052",
+          "kind": "officieel"
+        },
+        {
+          "label": "mntruell over bellen",
+          "url": "https://x.com/mntruell/status/2118054007579296069",
+          "kind": "x_post"
+        },
+        {
+          "label": "eric: airline herboeken",
+          "url": "https://x.com/ericzakariasson/status/2118097345829052427",
+          "kind": "x_post"
+        },
+        {
+          "label": "TheRundownAI samenvatting",
+          "url": "https://x.com/TheRundownAI/status/2118057565607367147",
+          "kind": "x_post"
+        },
+        {
+          "label": "Grok Bot Terms §2.7",
+          "url": "https://x.ai/legal/grok-bot-terms",
+          "kind": "officieel"
+        }
+      ]
     },
     {
       "id": "upd-grok-build-multi-agent",
@@ -44,7 +73,21 @@
         "https://x.com/XFreeze/status/2118176199746965741"
       ],
       "importance": 5,
-      "seed": true
+      "seed": true,
+      "why_nl": "v1.0.75 (via community release notes) maakt multi-agent workflows stabieler: background agents zichtbaar op het dashboard, betere stop-controls en status.",
+      "status": "getoond",
+      "sources": [
+        {
+          "label": "XFreeze release notes",
+          "url": "https://x.com/XFreeze/status/2118176199746965741",
+          "kind": "x_post"
+        },
+        {
+          "label": "Grok Build changelog",
+          "url": "https://x.ai/changelog/build",
+          "kind": "officieel"
+        }
+      ]
     },
     {
       "id": "upd-grok-build-1077",
@@ -53,8 +96,8 @@
       "title_nl": "Grok Build 1.0.77",
       "summary_nl": "Grok Build 1.0.77 voegt Shift+Enter voor een nieuwe regel toe. MCP-servers herstarten ook niet meer onnodig.",
       "can_do_nl": [
-        "Met Shift+Enter een nieuwe regel invoegen",
-        "MCP-servers laten verbonden blijven bij herladen en updates"
+        "Met Shift+Enter een nieuwe regel invoegen (na [ui] kitty_keyboard = \"query\" in onbekende terminals)",
+        "MCP-servers laten verbonden blijven bij herladen en updates (geen onnodige herstart)"
       ],
       "example_ids": [
         "ex-blank-1077"
@@ -63,7 +106,21 @@
         "https://x.com/blankspeaker/status/2118203546357391509"
       ],
       "importance": 4,
-      "seed": true
+      "seed": true,
+      "why_nl": "v1.0.77 (community notes) voegt Shift+Enter voor nieuwe regels toe (via kitty_keyboard) en voorkomt onnodige MCP-herstarts bij reload.",
+      "status": "getoond",
+      "sources": [
+        {
+          "label": "blankspeaker v1.0.77",
+          "url": "https://x.com/blankspeaker/status/2118203546357391509",
+          "kind": "x_post"
+        },
+        {
+          "label": "Grok Build changelog",
+          "url": "https://x.ai/changelog/build",
+          "kind": "officieel"
+        }
+      ]
     },
     {
       "id": "upd-grok-bot-slack",
@@ -82,17 +139,36 @@
         "https://x.com/Baconbrix/status/2118179270623453255"
       ],
       "importance": 4,
-      "seed": true
+      "seed": true,
+      "why_nl": "Team Bots werken in Slack (officieel); frontend lead toont ook desktop op een Mac mini. Relevant voor teamhandoffs buiten de app.",
+      "status": "getoond",
+      "sources": [
+        {
+          "label": "Baconbrix Slack+desktop",
+          "url": "https://x.com/Baconbrix/status/2118179270623453255",
+          "kind": "x_post"
+        },
+        {
+          "label": "Grok Bot changelog",
+          "url": "https://x.ai/changelog/bot",
+          "kind": "officieel"
+        },
+        {
+          "label": "Grok Bot FAQ (Slack)",
+          "url": "https://docs.x.ai/grok-bot/faq",
+          "kind": "officieel"
+        }
+      ]
     },
     {
       "id": "upd-grok-bot-tryon",
       "date": "2026-11-04T21:16:07.034Z",
       "tool": "Grok Bot",
       "title_nl": "Virtual try-on op je selfie",
-      "summary_nl": "Een test laat zien dat Grok Bot een product virtueel op je selfie past.",
+      "summary_nl": "Een test (SpaceXSI) laat virtual try-on in Grok Bot zien: bij een productvoorstel kun je Try On tikken om het op je selfie te zien. Expliciet: in test, nog niet publiek beschikbaar.",
       "can_do_nl": [
-        "Een product virtueel op je selfie laten passen",
-        "Op een selfie zien hoe een product eruitziet"
+        "In de test: een product virtueel op een selfie laten passen (niet publiek)",
+        "In de test: op de selfie een wijziging beschrijven (bijv. zonnebril) zonder de productview te verlaten"
       ],
       "example_ids": [
         "ex-blank-tryon"
@@ -101,7 +177,16 @@
         "https://x.com/blankspeaker/status/2118089933596610865"
       ],
       "importance": 4,
-      "seed": true
+      "seed": true,
+      "why_nl": "Test toont virtual try-on in Grok Bot: product op je selfie, daarna aanpassen (bijv. zonnebril). Nog niet publiek, kan wijzigen of niet shippen.",
+      "status": "getoond",
+      "sources": [
+        {
+          "label": "blankspeaker try-on test",
+          "url": "https://x.com/blankspeaker/status/2118089933596610865",
+          "kind": "x_post"
+        }
+      ]
     },
     {
       "id": "upd-grok-bot-shoppen",
@@ -110,7 +195,8 @@
       "title_nl": "Shoppen via Grok Bot",
       "summary_nl": "Shoppen via Grok Bot is verbeterd, volgens een post over de nieuwe mogelijkheden.",
       "can_do_nl": [
-        "Dingen laten kopen via Grok Bot"
+        "Producten laten zoeken en vergelijken via Grok Bot",
+        "Een order laten plaatsen (met jouw goedkeuring) en laten volgen"
       ],
       "example_ids": [
         "ex-mili-shop"
@@ -119,7 +205,26 @@
         "https://x.com/milichab/status/2117736578395295970"
       ],
       "importance": 3,
-      "seed": true
+      "seed": true,
+      "why_nl": "Officiële shopping-ervaring: deals zoeken, items vergelijken en orders laten volgen. Bouwers kunnen koopflows in de Bot laten landen.",
+      "status": "officieel",
+      "sources": [
+        {
+          "label": "Grok Bot shopping op X",
+          "url": "https://x.com/bot/status/2117736249444507834",
+          "kind": "officieel"
+        },
+        {
+          "label": "milichab quote",
+          "url": "https://x.com/milichab/status/2117736578395295970",
+          "kind": "x_post"
+        },
+        {
+          "label": "Grok Bot changelog",
+          "url": "https://x.ai/changelog/bot",
+          "kind": "officieel"
+        }
+      ]
     },
     {
       "id": "upd-grok-bot-marketing",
@@ -139,18 +244,27 @@
         "https://x.com/0xPaulvibe/status/2118087067481629045"
       ],
       "importance": 3,
-      "seed": true
+      "seed": true,
+      "why_nl": "Builder toont 9 marketing-bots: o.a. sponsorpitch en backlink-screening. Voorbeeld van multi-bot specialisatie, claims zijn self-reported.",
+      "status": "getoond",
+      "sources": [
+        {
+          "label": "0xPaulvibe marketing bots",
+          "url": "https://x.com/0xPaulvibe/status/2118087067481629045",
+          "kind": "x_post"
+        }
+      ]
     },
     {
       "id": "upd-claude-linear",
       "date": "2026-11-04T18:42:00.377Z",
       "tool": "Claude Code",
       "title_nl": "Claude Code en Codex vanaf een Linear-ticket",
-      "summary_nl": "Claude Code en Codex draaien in de cloud vanaf een Linear-ticket. Bij grote tickets gaan parallelle agents aan het werk.",
+      "summary_nl": "Via Aether (derde partij) draaien Claude Code en Codex in de cloud op je bestaande abonnement. Je start vanuit o.a. een Linear-ticket; bij een te groot ticket kunnen parallelle agents één PR opleveren.",
       "can_do_nl": [
-        "Een Linear-ticket als startpunt nemen voor Claude Code in de cloud",
-        "Codex in de cloud vanaf hetzelfde ticket laten meedraaien",
-        "Bij een groot ticket parallelle agents inzetten"
+        "Via Aether een Linear-ticket als startpunt nemen voor Claude Code in de cloud",
+        "Codex via Aether vanaf hetzelfde ticket laten meedraaien",
+        "Bij een groot ticket parallelle agents laten inzetten (Aether)"
       ],
       "example_ids": [
         "ex-svpino-linear"
@@ -159,7 +273,26 @@
         "https://x.com/svpino/status/2118051150306173116"
       ],
       "importance": 4,
-      "seed": true
+      "seed": true,
+      "why_nl": "Derde partij Aether start Claude Code/Codex in de cloud vanaf o.a. Linear; grote tickets kunnen parallel. Niet een native Claude/Linear-feature.",
+      "status": "getoond",
+      "sources": [
+        {
+          "label": "svpino over Linear-flow",
+          "url": "https://x.com/svpino/status/2118051150306173116",
+          "kind": "x_post"
+        },
+        {
+          "label": "Aether aankondiging",
+          "url": "https://x.com/pranavctl/status/2118044065229132252",
+          "kind": "x_post"
+        },
+        {
+          "label": "Aether site",
+          "url": "https://runaether.dev",
+          "kind": "artikel"
+        }
+      ]
     },
     {
       "id": "upd-claude-workflows",
@@ -168,9 +301,9 @@
       "title_nl": "Claude Code wordt uitbreidbaar met mods en AGENTS.md",
       "summary_nl": "Het Claude Code-team geeft een eerste blik op mods, een manier om de agent aan te passen. AGENTS.md-ondersteuning is erop gebouwd.",
       "can_do_nl": [
-        "Straks eigen projectinstructies voor Claude Code maken",
-        "AGENTS.md gebruiken om de agent te sturen",
-        "Zien wat het team aan uitbreidbaarheid plant"
+        "AGENTS.md gebruiken om Claude Code te sturen (sinds 2.1.277, als er geen CLAUDE.md is)",
+        "Zien wat het team plant voor Claude Mods / function hooks",
+        "Later (mods): eigen projectinstructies/plugins voor de harness bouwen"
       ],
       "example_ids": [
         "ex-bcherny-workflows",
@@ -181,7 +314,31 @@
         "https://x.com/trq212/status/2101009393731223817"
       ],
       "importance": 4,
-      "seed": true
+      "seed": true,
+      "why_nl": "Anthropic toont Claude Mods (function hooks) voor diepe uitbreiding; AGENTS.md is al live als ingebouwde mod. Belangrijk voor harness-customisatie.",
+      "status": "officieel",
+      "sources": [
+        {
+          "label": "bcherny over mods",
+          "url": "https://x.com/bcherny/status/2095590515765060076",
+          "kind": "x_post"
+        },
+        {
+          "label": "trq212 AGENTS.md",
+          "url": "https://x.com/trq212/status/2101009393731223817",
+          "kind": "x_post"
+        },
+        {
+          "label": "ClaudeDevs Function Hooks",
+          "url": "https://x.com/ClaudeDevs/status/2095572891941351550",
+          "kind": "officieel"
+        },
+        {
+          "label": "GitHub Mods issue",
+          "url": "https://github.com/anthropics/claude-code/issues/91870",
+          "kind": "officieel"
+        }
+      ]
     }
   ],
   "examples": [
@@ -611,8 +768,7 @@
       "logo_url": "https://pbs.twimg.com/profile_images/2075275500420001792/Q9J4M1DL_400x400.jpg",
       "website_url": "https://thinkingmachines.ai/"
     }
-  ]
-,
+  ],
   "creations": [
     {
       "id": "cr-k2sbhai-718222",

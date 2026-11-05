@@ -75,6 +75,57 @@ describe("radar-validatie", () => {
     assert.equal(sentenceCount("Eerste zin. Tweede zin."), 2);
     assert.equal(sentenceCount("Een. Twee. Drie."), 3);
     assert.equal(sentenceCount("Gebruik AGENTS.md om de agent te sturen."), 1);
+    assert.equal(sentenceCount("Je start vanuit o.a. een ticket. Klaar."), 2);
+  });
+
+  it("bewaart optionele waarom, status en bronnen, en een dagtop", () => {
+    const rich = {
+      ...update(),
+      why_nl: "Dit doet ertoe omdat je het meteen kunt proberen.",
+      status: "officieel" as const,
+      sources: [
+        { label: "Eigen kanaal", url: "https://example.com/officieel", kind: "officieel" as const },
+        { label: "Post", url: "https://x.com/someone/status/2118054007579296069", kind: "x_post" as const },
+        { label: "Film", url: "https://www.youtube.com/watch?v=M7lc1UVf-VE", kind: "video" as const },
+      ],
+    };
+    const plain = validateIncoming({ updates: [update()], examples: [example()], startups: [] });
+    assert.deepEqual(plain.issues, []);
+    assert.equal(plain.updates[0]?.why_nl, undefined);
+    assert.equal(plain.updates[0]?.status, undefined);
+    assert.equal(plain.updates[0]?.sources, undefined);
+    const checked = validateIncoming({
+      updates: [rich],
+      examples: [example()],
+      startups: [],
+      daily_top: { date: "2026-11-05", ids: ["upd-demo"], headline_nl: "Drie dingen om vandaag te proberen." },
+    });
+    assert.deepEqual(checked.issues, []);
+    assert.equal(checked.updates[0]?.status, "officieel");
+    assert.equal(checked.updates[0]?.sources?.length, 3);
+    assert.equal(checked.hasDailyTop, true);
+    assert.deepEqual(checked.daily_top?.ids, ["upd-demo"]);
+    const kept = mergeRadar({ updates: [update()], examples: [], startups: [], daily_top: checked.daily_top }, { updates: [], examples: [], startups: [] });
+    assert.equal(kept.daily_top?.date, "2026-11-05");
+    const replaced = mergeRadar(kept, { updates: [], examples: [], startups: [], hasDailyTop: true, daily_top: { date: "2026-11-04", ids: ["upd-demo"] } });
+    assert.equal(replaced.daily_top?.date, "2026-11-04");
+    assert.equal(replaced.daily_top?.headline_nl, undefined);
+    const bad = validateIncoming({
+      updates: [{ ...update(), why_nl: "x".repeat(221), status: "misschien", sources: [{ label: "x".repeat(41), url: "http://example.com", kind: "blog" }] }],
+      examples: [example()],
+      startups: [],
+      daily_top: { date: "5-11-2026", ids: ["bestaat-niet", "upd-demo", "upd-demo", "upd-extra"], headline_nl: "y".repeat(91) },
+    }).issues;
+    assert.ok(bad.some((issue) => issue.includes("why_nl")));
+    assert.ok(bad.some((issue) => issue.includes("status")));
+    assert.ok(bad.some((issue) => issue.includes("label")));
+    assert.ok(bad.some((issue) => issue.includes("https")));
+    assert.ok(bad.some((issue) => issue.includes("kind")));
+    assert.ok(bad.some((issue) => issue.includes("YYYY-MM-DD")));
+    assert.ok(bad.some((issue) => issue.includes("onbekende update")));
+    assert.ok(bad.some((issue) => issue.includes("dubbel id")));
+    assert.ok(bad.some((issue) => issue.includes("1 tot 3")));
+    assert.ok(bad.some((issue) => issue.includes("headline_nl")));
   });
 
   it("weigert een kapotte post-URL, te veel zinnen en te weinig punten", () => {
@@ -336,6 +387,37 @@ describe("radar-merge", () => {
     assert.equal(next.examples.at(-1)?.id, "ex-5");
   });
 
+  it("vervangt daily_top en laat hem staan als een latere update hem weglaat", () => {
+    const root = mkdtempSync(join(tmpdir(), "radar-"));
+    mkdirSync(join(root, "data"));
+    writeFileSync(join(root, "data", "radar.json"), `${JSON.stringify({ updates: [], examples: [], startups: [] })}\n`);
+    writeFileSync(join(root, "data", "accounts.json"), "[]\n");
+    writeFileSync(
+      join(root, "radar-update.json"),
+      JSON.stringify({
+        updates: [update()],
+        examples: [example()],
+        startups: [],
+        daily_top: { date: "2026-11-05", ids: ["upd-demo"], headline_nl: "Vandaag bellen." },
+      }),
+    );
+    applyRadarUpdate(root, join(root, "radar-update.json"));
+    writeFileSync(join(root, "radar-update.json"), JSON.stringify({ updates: [], examples: [], startups: [] }));
+    applyRadarUpdate(root, join(root, "radar-update.json"));
+    const saved = JSON.parse(readFileSync(join(root, "data", "radar.json"), "utf8")) as { daily_top?: { date?: string; headline_nl?: string }; updates: unknown[] };
+    assert.equal(saved.daily_top?.date, "2026-11-05");
+    assert.equal(saved.daily_top?.headline_nl, "Vandaag bellen.");
+    assert.equal(saved.updates.length, 1);
+    writeFileSync(
+      join(root, "radar-update.json"),
+      JSON.stringify({ updates: [], examples: [], startups: [], daily_top: { date: "2026-11-04", ids: ["upd-demo"] } }),
+    );
+    applyRadarUpdate(root, join(root, "radar-update.json"));
+    const replaced = JSON.parse(readFileSync(join(root, "data", "radar.json"), "utf8")) as { daily_top?: { date?: string; headline_nl?: string } };
+    assert.equal(replaced.daily_top?.date, "2026-11-04");
+    assert.equal(replaced.daily_top?.headline_nl, undefined);
+  });
+
   it("schrijft niets weg als de update ongeldig is", () => {
     const root = mkdtempSync(join(tmpdir(), "radar-"));
     const radarPath = join(root, "data");
@@ -357,6 +439,21 @@ describe("radar-merge", () => {
     assert.equal(fixture.fixture, true);
     assert.match(fixture.notice ?? "", /voorbeeld/i);
     assert.ok((fixture.examples?.length ?? 0) >= 8 && (fixture.examples?.length ?? 0) <= 12);
+    const updates = (fixture as { updates?: Array<{ id?: string; date?: string; status?: string; why_nl?: string; sources?: unknown[]; can_do_nl?: string[] }> }).updates ?? [];
+    assert.ok(updates.some((item) => item.status === "officieel"));
+    assert.ok(updates.some((item) => item.status === "getoond"));
+    assert.ok(updates.some((item) => item.status === "gerucht"));
+    assert.ok(updates.some((item) => item.why_nl === undefined));
+    assert.ok(updates.some((item) => Array.isArray(item.sources) && item.sources.length === 3));
+    assert.ok(updates.some((item) => (item.can_do_nl?.length ?? 0) > 3));
+    const byDay = new Map<string, number>();
+    for (const item of updates) {
+      const day = String(item.date ?? "").slice(0, 10);
+      byDay.set(day, (byDay.get(day) ?? 0) + 1);
+    }
+    assert.ok([...byDay.values()].includes(1));
+    const top = (fixture as { daily_top?: { ids?: string[] } }).daily_top;
+    assert.equal(top?.ids?.length, 3);
     assert.ok(fixture.examples?.every((item) => /voorbeeld/i.test(item.text ?? "") && String(item.author_avatar_url).startsWith("data:image/")));
     const production = readFileSync("data/radar.json", "utf8");
     assert.equal(production.includes("voorbeeld_a"), false);
@@ -382,6 +479,16 @@ describe("radar-merge", () => {
     assert.equal(accounts.length, 129);
     assert.ok(radar.examples.every((item) => item.seed === true));
     assert.ok(radar.updates.every((item) => item.seed === true));
+    assert.ok(radar.updates.every((item) => typeof item.why_nl === "string" && item.why_nl.length <= 220));
+    assert.ok(radar.updates.every((item) => item.status === "officieel" || item.status === "getoond" || item.status === "gerucht"));
+    assert.ok(radar.updates.every((item) => Array.isArray(item.sources) && item.sources.length >= 1 && item.sources.length <= 6));
+    assert.ok(radar.updates.every((item) => !("notes" in item)));
+    const byId = new Map(radar.updates.map((item) => [item.id, item]));
+    assert.match(byId.get("upd-grok-bot-tryon")?.summary_nl ?? "", /niet publiek/);
+    assert.match(byId.get("upd-claude-linear")?.summary_nl ?? "", /Aether/);
+    assert.equal(byId.get("upd-grok-bot-shoppen")?.can_do_nl.length, 2);
+    assert.match(byId.get("upd-grok-build-1077")?.can_do_nl[0] ?? "", /kitty_keyboard/);
+    assert.match(byId.get("upd-claude-workflows")?.can_do_nl[0] ?? "", /AGENTS\.md/);
     assert.ok(radar.startups.every((item) => item.seed === true));
   });
 });
