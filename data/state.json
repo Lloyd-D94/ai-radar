@@ -373,7 +373,7 @@
   },
   "pages": {
     "https://docs.x.ai/docs/release-notes": {
-      "hash": "e2885b277296e61cab9fec915dd0c54eccd2f5f3ce71f17c20fb616202fe2c7b",
+      "hash": "e7eee3185088d2107ef0dd5a9d6fe7aeedafc3b642e57e9f4d9c04751d5b1820",
       "etag": null
     }
   },
@@ -521,6 +521,54 @@
     "https://x.ai/news/grok-automations": {
       "lastmod": "2026-07-16T00:00:00.000Z",
       "fetchedAt": "2026-11-05T17:27:22.484Z"
+    },
+    "https://x.ai/news/grok-build-open-source": {
+      "lastmod": "2026-07-15T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T23:41:18.083Z"
+    },
+    "https://x.ai/news/new-flagship-voices": {
+      "lastmod": "2026-07-06T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T23:41:18.147Z"
+    },
+    "https://x.ai/news/grok-voice-agent-builder": {
+      "lastmod": "2026-07-01T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T23:41:18.217Z"
+    },
+    "https://x.ai/news/introducing-goal": {
+      "lastmod": "2026-06-22T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T23:41:18.284Z"
+    },
+    "https://x.ai/news/grok-databricks": {
+      "lastmod": "2026-06-18T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T23:41:18.465Z"
+    },
+    "https://x.ai/news/introducing-word-addin": {
+      "lastmod": "2026-06-18T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T23:41:18.530Z"
+    },
+    "https://x.ai/news/grok-amazon-bedrock": {
+      "lastmod": "2026-06-17T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T23:41:18.598Z"
+    },
+    "https://x.ai/news/grok-imagine-video-1-5": {
+      "lastmod": "2026-06-16T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T23:41:18.666Z"
+    },
+    "https://x.ai/news/introducing-powerpoint-addin": {
+      "lastmod": "2026-06-16T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T23:41:18.780Z"
+    },
+    "https://x.ai/news/agent-dashboard": {
+      "lastmod": "2026-06-15T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T23:41:18.848Z"
+    },
+    "https://x.ai/news/grok-warp": {
+      "lastmod": "2026-06-15T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T23:41:18.905Z"
+    },
+    "https://x.ai/news/grok-plugin-marketplace": {
+      "lastmod": "2026-06-11T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T23:41:18.962Z"
     }
   }
 }
