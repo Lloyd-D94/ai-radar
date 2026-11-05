@@ -25,7 +25,19 @@ export function loadRadar(path: string): RadarFile {
     examples: Array.isArray(parsed.examples) ? parsed.examples : [],
     startups: Array.isArray(parsed.startups) ? parsed.startups : [],
     creations: Array.isArray(parsed.creations) ? parsed.creations : [],
+    daily_top: storedDailyTop(parsed.daily_top),
   };
+}
+
+function storedDailyTop(value: unknown): RadarFile["daily_top"] {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return undefined;
+  const record = value as Record<string, unknown>;
+  if (typeof record.date !== "string" || !Array.isArray(record.ids)) return undefined;
+  const ids = record.ids.filter((id): id is string => typeof id === "string");
+  if (!ids.length) return undefined;
+  const top: NonNullable<RadarFile["daily_top"]> = { date: record.date, ids };
+  if (typeof record.headline_nl === "string" && record.headline_nl.trim()) top.headline_nl = record.headline_nl.trim();
+  return top;
 }
 
 export function loadAccounts(path: string): RadarAccount[] {

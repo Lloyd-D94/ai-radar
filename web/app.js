@@ -33,6 +33,19 @@ const KINDS = {
   tutorial: "Tutorial",
 };
 
+const STATUSES = {
+  officieel: "Officieel",
+  getoond: "Getoond",
+  gerucht: "Gerucht",
+};
+
+const SOURCE_KINDS = {
+  officieel: "Officieel",
+  x_post: "X",
+  video: "Video",
+  artikel: "Artikel",
+};
+
 const RELEASE_CATS = {
   "nieuwe-functie": "Nieuwe functie",
   prijswijziging: "Prijswijziging",
@@ -81,6 +94,8 @@ const NAMED_ENTITIES = {
 const app = document.querySelector("#app");
 const params = new URLSearchParams(location.search);
 const useFixture = params.get("fixture") === "1";
+const quietPreview = useFixture && params.get("quiet") === "1";
+let clockMs = null;
 
 const state = {
   tab: "vandaag",
@@ -192,19 +207,32 @@ function formatDate(iso) {
   return dateFmt.format(date);
 }
 
+function nowMs() {
+  return clockMs ?? Date.now();
+}
+
 function dayLabel(iso) {
   const key = dayKey(iso);
   if (!key) return "Datum onbekend";
-  if (key === dayKey(new Date())) return "Vandaag";
-  if (key === dayKey(new Date(Date.now() - 86_400_000))) return "Gisteren";
+  if (key === dayKey(new Date(nowMs()))) return "Vandaag";
+  if (key === dayKey(new Date(nowMs() - 86_400_000))) return "Gisteren";
   return dayHeadingFmt.format(new Date(iso));
 }
 
 function inLastDays(iso, days) {
   const time = Date.parse(iso);
   if (Number.isNaN(time)) return false;
-  const delta = Date.now() - time;
+  const delta = nowMs() - time;
   return delta <= days * 86_400_000 && delta >= -3_600_000;
+}
+
+function calendarAge(isoDate) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(isoDate || ""))) return Infinity;
+  const today = dayKey(new Date(nowMs()));
+  const start = Date.parse(`${isoDate}T00:00:00Z`);
+  const end = Date.parse(`${today}T00:00:00Z`);
+  if (Number.isNaN(start) || Number.isNaN(end)) return Infinity;
+  return Math.round((end - start) / 86_400_000);
 }
 
 function compact(value) {
@@ -224,36 +252,6 @@ function normalize(value) {
     .replace(/[^\p{L}\p{N}\s]/gu, " ")
     .replace(/\s+/g, " ")
     .trim();
-}
-
-function similar(a, b) {
-  if (!a || !b) return false;
-  if (a === b) return true;
-  if (a.includes(b) || b.includes(a)) {
-    const shorter = Math.min(a.length, b.length);
-    const longer = Math.max(a.length, b.length);
-    if (longer > 0 && shorter / longer > 0.62) return true;
-  }
-  const left = [...new Set(a.split(" ").filter((word) => word.length > 3))];
-  const right = [...new Set(b.split(" ").filter((word) => word.length > 3))];
-  if (left.length < 2 || right.length < 2) return false;
-  const rightSet = new Set(right);
-  const overlap = left.filter((word) => rightSet.has(word)).length;
-  return overlap / Math.min(left.length, right.length) >= 0.72;
-}
-
-function useCases(update) {
-  const title = normalize(update.title_nl);
-  const summary = normalize(update.summary_nl);
-  const kept = [];
-  for (const point of update.can_do_nl || []) {
-    const text = normalize(point);
-    if (similar(text, title) || similar(text, summary)) continue;
-    if (kept.some((item) => similar(normalize(item), text))) continue;
-    kept.push(point);
-    if (kept.length === 3) break;
-  }
-  return kept;
 }
 
 function decodeEntities(value) {
@@ -637,21 +635,6 @@ function heroHtml(examples) {
   return `<div class="hero" data-count="${slides.length}">${tiles}</div>`;
 }
 
-function compactPosts(examples) {
-  return examples
-    .map((example) => {
-      const name = readableName(example.author_name, example.author_handle);
-      const media = Array.isArray(example.media) ? example.media.filter((item) => safeUrl(item.preview_url || item.url)) : [];
-      const gallery = media.length ? bindGallery(media.map((item) => slideFrom(example, item))) : bindGallery([slideFrom(example, null)]);
-      const line = example.note_nl || displayPostText(example.text || "");
-      return `<button type="button" class="post-compact" data-gallery="${gallery}" data-gallery-index="0">
-        ${avatarHtml(name, example.author_handle, example.author_avatar_url)}
-        <span><strong>${esc(name)}</strong><span class="who">@${esc(example.author_handle)}</span><span class="line">${esc(line)}</span></span>
-      </button>`;
-    })
-    .join("");
-}
-
 function viewerHtml() {
   if (!state.viewer) return "";
   const { items, index } = state.viewer;
@@ -846,49 +829,162 @@ function creationStrip() {
   </section>`;
 }
 
-function gemaaktFor(updateId) {
-  const items = allCreations().filter((item) => item.update_id === updateId);
-  if (!items.length) return "";
-  return `<div class="made-under"><p>Hiermee gemaakt</p><div class="made-under-row">${items
-    .map((creation) => {
-      const slides = creationSlides(creation);
-      const id = slides.length ? bindGallery(slides) : "";
-      const src = slides[0]?.src;
-      return `<button type="button" class="made-mini${creation.lloyd_pick ? " is-pick" : ""}" ${id ? `data-gallery="${id}" data-gallery-index="0"` : ""}>
-        ${src ? `<img src="${esc(src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()" />` : avatarHtml(creation.author_name, creation.author_handle, creation.author_avatar_url)}
-        <span>${esc(creation.title_nl)}</span>
-      </button>`;
-    })
-    .join("")}</div></div>`;
+function statusChip(status) {
+  const label = STATUSES[status];
+  if (!label) return "";
+  return `<span class="status" data-status="${esc(status)}">${esc(label)}</span>`;
+}
+
+function hostLabel(url) {
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, "");
+    return host.length > 40 ? `${host.slice(0, 39)}…` : host;
+  } catch {
+    return "Bron";
+  }
+}
+
+function kindFromUrl(url) {
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, "");
+    if (host === "x.com" || host === "twitter.com" || host.endsWith(".x.com")) return "x_post";
+    if (host === "youtu.be" || host === "youtube.com" || host.endsWith(".youtube.com")) return "video";
+    return "artikel";
+  } catch {
+    return "artikel";
+  }
+}
+
+function sourceList(update) {
+  if (Array.isArray(update.sources) && update.sources.length) {
+    return update.sources
+      .slice(0, 6)
+      .map((item) => ({
+        label: String(item.label || hostLabel(item.url)).trim().slice(0, 40),
+        url: safeHttps(item.url),
+        kind: SOURCE_KINDS[item.kind] ? item.kind : "artikel",
+      }))
+      .filter((item) => item.url && item.label);
+  }
+  return (Array.isArray(update.source_urls) ? update.source_urls : [])
+    .slice(0, 6)
+    .map((url) => ({ label: hostLabel(url), url: safeHttps(url), kind: kindFromUrl(url) }))
+    .filter((item) => item.url);
+}
+
+function sourceChip(source) {
+  const kind = SOURCE_KINDS[source.kind] || "Artikel";
+  return `<a class="sourcechip" href="${esc(source.url)}" target="_blank" rel="noopener noreferrer"><span class="source-kind">${esc(kind)}</span>${esc(source.label)}</a>`;
+}
+
+function importanceMark(score) {
+  const n = Math.max(0, Math.min(5, Number(score) || 0));
+  const dots = [1, 2, 3, 4, 5].map((step) => `<i class="${step <= n ? "on" : ""}"></i>`).join("");
+  return `<span class="importance" aria-label="Belang ${n} van 5"><span class="dots" aria-hidden="true">${dots}</span><span>${n}</span></span>`;
+}
+
+function lookHtml(update) {
+  const examples = (update.example_ids || []).map(exampleById).filter(Boolean);
+  const linked = allCreations().filter((item) => item.update_id === update.id);
+  const slides = slidesFor(examples, 4);
+  if (slides.length < 4) {
+    for (const creation of linked) {
+      for (const slide of creationSlides(creation)) {
+        if (!slide.src) continue;
+        slides.push(slide);
+        if (slides.length >= 4) break;
+      }
+      if (slides.length >= 4) break;
+    }
+  }
+  let visual = "";
+  if (slides.length) {
+    const id = bindGallery(slides);
+    visual = `<div class="hero" data-count="${slides.length}">${slides
+      .map(
+        (slide, index) => `<button type="button" class="tile" data-gallery="${id}" data-gallery-index="${index}" aria-label="${esc(slide.alt)}">
+        <img src="${esc(slide.src)}" alt="" width="640" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('.tile')?.classList.add('is-missing');this.remove()" />
+        ${playBadge(slide)}
+        <span class="missing">Beeld niet geladen</span>
+      </button>`,
+      )
+      .join("")}</div>`;
+  } else if (examples.length) visual = heroHtml(examples);
+  else if (linked.length) {
+    const creation = linked[0];
+    visual = `<div class="collage" data-count="1">${avatarHtml(creation.author_name, creation.author_handle, creation.author_avatar_url)}</div>`;
+  }
+  if (!visual) return "";
+  return `<div class="look"><p>Zo ziet het eruit</p>${visual}</div>`;
 }
 
 function updateCard(update) {
   const key = `update:${update.id}`;
   const unread = !memory.read.has(key);
-  const examples = (update.example_ids || []).map(exampleById).filter(Boolean);
-  const uses = useCases(update);
-  const visual = heroHtml(examples);
-  const isHero = visual.includes('class="hero"');
-  const overlay = `<div class="hero-overlay">
-        ${toolChip(update.tool)}
-        ${Number(update.importance) >= 5 ? '<span class="flag">Groot nieuws</span>' : ""}
-        <time datetime="${esc(update.date)}">${esc(formatDate(update.date))}</time>
-      </div>`;
-  return `<article class="card update ${unread ? "is-unread" : "is-read"}">
-    <div class="hero-wrap ${isHero ? "has-media" : "has-collage"}">
-      ${isHero ? "" : overlay}
-      ${visual}
-      ${isHero ? overlay : ""}
+  const points = (Array.isArray(update.can_do_nl) ? update.can_do_nl : []).map((point) => String(point || "").trim()).filter(Boolean);
+  const open = state.expanded.has(`cando:${update.id}`);
+  const shown = open ? points : points.slice(0, 3);
+  const more =
+    points.length > 3
+      ? `<button type="button" class="textbtn" data-cando="${esc(update.id)}" aria-expanded="${open}">${open ? "Minder" : `Meer (${points.length - 3})`}</button>`
+      : "";
+  const why = String(update.why_nl || "").trim();
+  const sources = sourceList(update);
+  return `<article class="card update ${unread ? "is-unread" : "is-read"}" id="update-${esc(update.id)}" tabindex="-1">
+    <h3>${esc(update.title_nl)}</h3>
+    <div class="meta">
+      ${statusChip(update.status)}
+      ${toolChip(update.tool)}
+      <time datetime="${esc(update.date)}">${esc(formatDate(update.date))}</time>
     </div>
-    <div class="card-body">
-      <h3>${esc(update.title_nl)}</h3>
+    <div class="block">
+      <p class="label">Wat is er nieuw</p>
       <p class="summary">${esc(update.summary_nl)}</p>
-      ${uses.length ? `<div class="uses"><p>Dit kun je ermee</p><ul>${uses.map((point) => `<li>${esc(point)}</li>`).join("")}</ul></div>` : ""}
-      ${gemaaktFor(update.id)}
-      ${examples.length ? `<div class="post-list">${compactPosts(examples)}</div>` : ""}
-      ${actionRow(key)}
     </div>
+    ${why ? `<div class="block"><p class="label">Waarom het ertoe doet</p><p class="summary">${esc(why)}</p></div>` : ""}
+    ${points.length ? `<div class="uses"><p>Dit kun je nu doen</p><ul>${shown.map((point) => `<li>${esc(point)}</li>`).join("")}</ul>${more}</div>` : ""}
+    ${lookHtml(update)}
+    ${sources.length ? `<div class="sources"><p>Bronnen</p><div class="source-row">${sources.map(sourceChip).join("")}</div></div>` : ""}
+    ${actionRow(key)}
   </article>`;
+}
+
+function topUpdates() {
+  const updates = state.radar.updates || [];
+  const byId = new Map(updates.map((item) => [item.id, item]));
+  const top = state.radar.daily_top;
+  if (!quietPreview && top && typeof top.date === "string" && Array.isArray(top.ids)) {
+    const age = calendarAge(top.date);
+    if (age >= 0 && age <= 2) {
+      const picked = top.ids.map((id) => byId.get(id)).filter(Boolean).slice(0, 3);
+      if (picked.length) return { items: picked, headline: String(top.headline_nl || "").trim() };
+    }
+  }
+  const recent = updates
+    .filter((item) => inLastDays(item.date, 3))
+    .sort((a, b) => b.importance - a.importance || Date.parse(b.date) - Date.parse(a.date));
+  return { items: recent.slice(0, 3), headline: "" };
+}
+
+function topBlock() {
+  const { items, headline } = topUpdates();
+  if (!items.length) return "";
+  const cards = items
+    .map((update) => {
+      const line = String(update.why_nl || update.summary_nl || "").replace(/\s+/g, " ").trim();
+      const unread = !memory.read.has(`update:${update.id}`);
+      return `<li><button type="button" class="top3-card${unread ? " is-unread" : ""}" data-jump="${esc(update.id)}">
+        <span class="top3-kicker">${toolChip(update.tool)}${importanceMark(update.importance)}</span>
+        <span class="top3-title">${esc(update.title_nl)}</span>
+        ${line ? `<span class="top3-why">${esc(line)}</span>` : ""}
+      </button></li>`;
+    })
+    .join("");
+  return `<section class="top3" aria-labelledby="top3-title">
+    <h2 id="top3-title">Top 3 van vandaag</h2>
+    ${headline ? `<p class="top3-line">${esc(headline)}</p>` : ""}
+    <ol class="top3-list" data-count="${items.length}">${cards}</ol>
+  </section>`;
 }
 
 function startupCard(startup) {
@@ -971,8 +1067,10 @@ function choice(label, attr, value, pressed) {
 
 function viewToday() {
   const items = buildFeed();
+  const spotlight = topBlock();
   if (!items.length) {
     return `<section>
+      ${spotlight}
       <h2>Vandaag</h2>
       <div class="empty"><p>Geen updates in de laatste 7 dagen.</p><p><a href="#voorbeelden" data-tab="voorbeelden">Bekijk voorbeelden</a> of <a href="#startups" data-tab="startups">startups</a>.</p></div>
     </section>`;
@@ -996,6 +1094,7 @@ function viewToday() {
     .join("");
   const unread = feedUnread();
   return `<section>
+    ${spotlight}
     ${creationStrip()}
     <div class="feed-tools">
       <p>${items.length} in de feed</p>
@@ -1132,7 +1231,7 @@ function suggestionButtons(values) {
 function searchSuggestions() {
   const counts = new Map();
   const blob = [
-    ...state.radar.updates.flatMap((item) => [item.title_nl, item.summary_nl, ...(item.can_do_nl || [])]),
+    ...state.radar.updates.flatMap((item) => [item.title_nl, item.summary_nl, item.why_nl, ...(item.can_do_nl || [])]),
     ...state.radar.examples.flatMap((item) => [item.note_nl, item.text, item.tool]),
     ...state.radar.startups.flatMap((item) => [item.name, item.one_liner_nl, item.why_new_nl]),
   ].join(" ");
@@ -1188,7 +1287,7 @@ function viewSearch() {
     return `<section><p class="back"><a href="#meer" data-tab="meer">Meer</a></p><h2>Zoeken</h2>${field}${searchSuggestions()}</section>`;
   }
   const updates = state.radar.updates.filter((item) =>
-    `${item.title_nl} ${item.summary_nl} ${item.tool} ${(item.can_do_nl || []).join(" ")}`.toLowerCase().includes(query),
+    `${item.title_nl} ${item.summary_nl} ${item.why_nl || ""} ${item.tool} ${(item.can_do_nl || []).join(" ")}`.toLowerCase().includes(query),
   );
   const examples = state.radar.examples.filter((item) =>
     `${item.note_nl} ${item.text || ""} ${item.author_handle} ${item.author_name || ""} ${item.tool}`.toLowerCase().includes(query),
@@ -1389,13 +1488,23 @@ async function load() {
       examples: Array.isArray(radar.examples) ? radar.examples : [],
       startups: Array.isArray(radar.startups) ? radar.startups : [],
       creations: Array.isArray(radar.creations) ? radar.creations : [],
+      daily_top: radar.daily_top && typeof radar.daily_top === "object" ? radar.daily_top : null,
     };
+    clockMs = null;
+    if (quietPreview) {
+      const stil = state.radar.updates.find((item) => item.id === "upd-vb-stil");
+      if (stil) clockMs = Date.parse(stil.date);
+    }
     state.accounts = Array.isArray(accounts) ? accounts : [];
     state.items = Array.isArray(items.items) ? items.items : [];
     state.sources = Array.isArray(sources.sources) ? sources.sources : [];
     state.tools = Array.isArray(tools.tools) ? tools.tools : [];
     state.generatedAt = radar.generatedAt ?? null;
-    state.notice = useFixture ? radar.notice || "Voorbeelddata. Dit is niet de echte radar." : "";
+    state.notice = useFixture
+      ? quietPreview
+        ? "Voorbeelddata, stille dag. Eén update, dus de top toont één kaart."
+        : radar.notice || "Voorbeelddata. Dit is niet de echte radar."
+      : "";
   } catch {
     state.error = useFixture
       ? "De voorbeelddata kon niet geladen worden."
@@ -1444,6 +1553,16 @@ app.addEventListener("click", (event) => {
     }
     return;
   }
+  const jump = target.closest("[data-jump]");
+  if (jump instanceof HTMLElement && jump.dataset.jump) {
+    const article = document.getElementById(`update-${jump.dataset.jump}`);
+    if (article) {
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      article.focus({ preventScroll: true });
+      article.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    }
+    return;
+  }
   const gallery = target.closest("[data-gallery]");
   if (gallery instanceof HTMLElement && gallery.dataset.gallery) {
     const items = state.galleries.get(gallery.dataset.gallery);
@@ -1473,6 +1592,14 @@ app.addEventListener("click", (event) => {
     const id = postMore.dataset.postMore;
     if (state.postOpen.has(id)) state.postOpen.delete(id);
     else state.postOpen.add(id);
+    render();
+    return;
+  }
+  const cando = target.closest("[data-cando]");
+  if (cando instanceof HTMLElement && cando.dataset.cando) {
+    const id = `cando:${cando.dataset.cando}`;
+    if (state.expanded.has(id)) state.expanded.delete(id);
+    else state.expanded.add(id);
     render();
     return;
   }

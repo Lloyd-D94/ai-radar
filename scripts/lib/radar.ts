@@ -8,6 +8,8 @@ export const ACCOUNT_CATEGORIES = [
 ] as const;
 
 export const EXAMPLE_KINDS = ["demo", "workflow", "release", "tutorial"] as const;
+export const UPDATE_STATUSES = ["officieel", "getoond", "gerucht"] as const;
+export const SOURCE_KINDS = ["officieel", "x_post", "video", "artikel"] as const;
 export const MEDIA_TYPES = ["photo", "video", "gif"] as const;
 export const METRIC_KEYS = ["likes", "reposts", "replies", "views"] as const;
 export const CREATION_CATEGORIES = ["apps_games_websites", "design_3d", "film_video", "agents_automation", "hardware_robots"] as const;
@@ -15,6 +17,8 @@ export const CREATION_PLATFORMS = ["x", "youtube"] as const;
 
 export type AccountCategory = (typeof ACCOUNT_CATEGORIES)[number];
 export type ExampleKind = (typeof EXAMPLE_KINDS)[number];
+export type UpdateStatus = (typeof UPDATE_STATUSES)[number];
+export type SourceKind = (typeof SOURCE_KINDS)[number];
 export type MediaType = (typeof MEDIA_TYPES)[number];
 export type MetricKey = (typeof METRIC_KEYS)[number];
 export type CreationCategory = (typeof CREATION_CATEGORIES)[number];
@@ -31,6 +35,21 @@ export interface RadarUpdate {
   source_urls: string[];
   importance: number;
   seed?: boolean;
+  why_nl?: string;
+  status?: UpdateStatus;
+  sources?: RadarSource[];
+}
+
+export interface RadarSource {
+  label: string;
+  url: string;
+  kind: SourceKind;
+}
+
+export interface DailyTop {
+  date: string;
+  ids: string[];
+  headline_nl?: string;
 }
 
 export interface RadarMedia {
@@ -124,6 +143,7 @@ export interface RadarFile {
   examples: RadarExample[];
   startups: RadarStartup[];
   creations?: RadarCreation[];
+  daily_top?: DailyTop;
 }
 
 export interface RadarUpdateFile {
@@ -132,6 +152,7 @@ export interface RadarUpdateFile {
   startups?: unknown;
   accounts?: unknown;
   creations?: unknown;
+  daily_top?: unknown;
 }
 
 export const LIMITS = {
@@ -141,6 +162,10 @@ export const LIMITS = {
   title: 140,
   summary: 400,
   note: 220,
+  why: 220,
+  headline: 90,
+  sourceLabel: 40,
+  sources: 6,
   canDo: 180,
   oneLiner: 220,
   whyNew: 320,
@@ -165,6 +190,9 @@ const CHANNEL_ID = /^UC[A-Za-z0-9_-]{22}$/;
 const LANG = /^[a-z]{2,3}(?:-[a-z0-9]{2,8})*$/i;
 const HTML_TAG = /<\/?[a-z][^>\n]*>/i;
 const MEDIA_KEYS = ["type", "url", "preview_url", "alt", "video_url", "width", "height", "duration_ms"];
+const SOURCE_KEYS = ["label", "url", "kind"];
+const DAILY_TOP_KEYS = ["date", "ids", "headline_nl"];
+const ISO_DATE = /^(\d{4})-(\d{2})-(\d{2})$/;
 
 export class RadarValidationError extends Error {
   readonly issues: string[];
@@ -179,10 +207,21 @@ export class RadarValidationError extends Error {
 export function sentenceCount(text: string): number {
   const masked = text
     .replace(/\d+\.\d+(?:\.\d+)?/g, (match) => match.replaceAll(".", ""))
-    .replace(/\.md\b/gi, " md");
+    .replace(/\.md\b/gi, " md")
+    .replace(/\b(?:[A-Za-z]\.){2,}/g, (match) => match.replaceAll(".", ""));
   const marks = masked.match(/[.!?]+/g);
   if (!marks) return text.trim() ? 1 : 0;
   return marks.length;
+}
+
+export function isIsoDate(value: string): boolean {
+  const match = ISO_DATE.exec(value);
+  if (!match) return false;
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
 }
 
 export function isHttpsUrl(value: string): boolean {
@@ -482,7 +521,83 @@ function parseUpdate(value: unknown, path: string, issues: string[]): RadarUpdat
   };
   const seed = optionalSeed(record, path, issues);
   if (seed !== undefined) update.seed = seed;
+  const why = optString(record, "why_nl", path, issues, LIMITS.why);
+  if (why) update.why_nl = why;
+  if (record.status !== undefined) {
+    const status = reqString(record, "status", path, issues, 20);
+    if (status && !UPDATE_STATUSES.includes(status as UpdateStatus)) {
+      issues.push(`${path}.status: verwacht officieel, getoond of gerucht`);
+    } else if (UPDATE_STATUSES.includes(status as UpdateStatus)) update.status = status as UpdateStatus;
+  }
+  const sources = parseSources(record.sources, path, issues);
+  if (sources?.length) update.sources = sources;
   return id ? update : null;
+}
+
+function parseSources(value: unknown, path: string, issues: string[]): RadarSource[] | undefined {
+  if (value === undefined) return undefined;
+  if (!Array.isArray(value)) {
+    issues.push(`${path}.sources: verwacht een lijst`);
+    return undefined;
+  }
+  if (value.length < 1 || value.length > LIMITS.sources) {
+    issues.push(`${path}.sources: 1 tot ${LIMITS.sources} bronnen (nu ${value.length})`);
+  }
+  const sources: RadarSource[] = [];
+  value.forEach((entry, index) => {
+    const itemPath = `${path}.sources[${index}]`;
+    const record = asRecord(entry, itemPath, issues);
+    if (!record) return;
+    for (const key of Object.keys(record)) {
+      if (!SOURCE_KEYS.includes(key)) issues.push(`${itemPath}.${key}: onbekend veld`);
+    }
+    const label = reqString(record, "label", itemPath, issues, LIMITS.sourceLabel);
+    const url = reqString(record, "url", itemPath, issues, LIMITS.mediaUrl);
+    if (url && !isHttpsUrl(url)) issues.push(`${itemPath}.url: moet een https-URL zijn`);
+    const kind = reqString(record, "kind", itemPath, issues, 20);
+    if (kind && !SOURCE_KINDS.includes(kind as SourceKind)) {
+      issues.push(`${itemPath}.kind: verwacht officieel, x_post, video of artikel`);
+    }
+    if (label && url && isHttpsUrl(url) && SOURCE_KINDS.includes(kind as SourceKind)) {
+      sources.push({ label, url, kind: kind as SourceKind });
+    }
+  });
+  return sources;
+}
+
+function parseDailyTop(value: unknown, issues: string[], knownUpdates: Set<string>): DailyTop | undefined {
+  if (value === undefined) return undefined;
+  const record = asRecord(value, "daily_top", issues);
+  if (!record) return undefined;
+  for (const key of Object.keys(record)) {
+    if (!DAILY_TOP_KEYS.includes(key)) issues.push(`daily_top.${key}: onbekend veld`);
+  }
+  const date = reqString(record, "date", "daily_top", issues, 10);
+  if (date && !isIsoDate(date)) issues.push(`daily_top.date: verwacht YYYY-MM-DD (${date})`);
+  const ids: string[] = [];
+  if (!Array.isArray(record.ids)) issues.push("daily_top.ids: verwacht een lijst");
+  else {
+    if (record.ids.length < 1 || record.ids.length > 3) {
+      issues.push(`daily_top.ids: 1 tot 3 update-ids (nu ${record.ids.length})`);
+    }
+    const seen = new Set<string>();
+    record.ids.forEach((entry, index) => {
+      if (typeof entry !== "string" || !ID.test(entry)) {
+        issues.push(`daily_top.ids[${index}]: ongeldig id`);
+        return;
+      }
+      if (seen.has(entry)) issues.push(`daily_top.ids: dubbel id ${entry}`);
+      seen.add(entry);
+      if (!knownUpdates.has(entry)) issues.push(`daily_top.ids: onbekende update ${entry}`);
+      ids.push(entry);
+    });
+  }
+  const top: DailyTop = { date, ids };
+  if (record.headline_nl !== undefined) {
+    const headline = reqString(record, "headline_nl", "daily_top", issues, LIMITS.headline);
+    if (headline) top.headline_nl = headline;
+  }
+  return top;
 }
 
 function parseStartup(value: unknown, path: string, issues: string[]): RadarStartup | null {
@@ -664,10 +779,12 @@ export function validateIncoming(payload: unknown, currentExamples: RadarExample
   startups: RadarStartup[];
   accounts: RadarAccount[];
   creations: RadarCreation[];
+  daily_top?: DailyTop;
+  hasDailyTop: boolean;
 } {
   const issues: string[] = [];
   const record = asRecord(payload, "bestand", issues);
-  if (!record) return { issues, updates: [], examples: [], startups: [], accounts: [], creations: [] };
+  if (!record) return { issues, updates: [], examples: [], startups: [], accounts: [], creations: [], hasDailyTop: false };
 
   const updates = readList(record.updates ?? [], "updates", issues, parseUpdate);
   const examples = readList(record.examples ?? [], "examples", issues, parseExample);
@@ -698,7 +815,10 @@ export function validateIncoming(payload: unknown, currentExamples: RadarExample
     }
   });
 
-  return { issues, updates, examples, startups, accounts, creations };
+  const hasDailyTop = record.daily_top !== undefined;
+  const daily_top = hasDailyTop ? parseDailyTop(record.daily_top, issues, knownUpdates) : undefined;
+
+  return { issues, updates, examples, startups, accounts, creations, daily_top, hasDailyTop };
 }
 
 function readList<T>(value: unknown, key: string, issues: string[], parse: (entry: unknown, path: string, issues: string[]) => T | null): T[] {
@@ -729,6 +849,8 @@ export function mergeRadar(
     examples: RadarExample[];
     startups: RadarStartup[];
     creations?: RadarCreation[];
+    daily_top?: DailyTop;
+    hasDailyTop?: boolean;
   },
   now = new Date().toISOString(),
 ): RadarFile {
@@ -788,13 +910,23 @@ export function mergeRadar(
     } else creations[index] = creation;
   }
 
-  return {
+  const keptUpdates = byDateDesc(updates, LIMITS.updates);
+  const keptIds = new Set(keptUpdates.map((item) => item.id));
+  let dailyTop = incoming.hasDailyTop ? incoming.daily_top : current.daily_top;
+  if (dailyTop) {
+    const ids = dailyTop.ids.filter((id) => keptIds.has(id));
+    dailyTop = ids.length ? { ...dailyTop, ids } : undefined;
+  }
+
+  const next: RadarFile = {
     generatedAt: now,
-    updates: byDateDesc(updates, LIMITS.updates),
+    updates: keptUpdates,
     examples: byDateDesc(examples, LIMITS.examples),
     startups: [...startups].sort((a, b) => Date.parse(b.date_found) - Date.parse(a.date_found) || a.id.localeCompare(b.id)),
     creations: byDateDesc(creations, LIMITS.creations),
   };
+  if (dailyTop) next.daily_top = dailyTop;
+  return next;
 }
 
 export function mergeAccounts(current: RadarAccount[], incoming: RadarAccount[]): RadarAccount[] {

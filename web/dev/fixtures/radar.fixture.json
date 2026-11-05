@@ -11,7 +11,10 @@
       "summary_nl": "Dit is voorbeelddata. De kaart toont een titel, twee zinnen uitleg en twee postkaarten onder elkaar.",
       "can_do_nl": [
         "Een fictieve tafelreservering als script nalopen",
-        "Zien waar het telefoonbeeld in de kaart valt"
+        "Zien waar het telefoonbeeld in de kaart valt",
+        "Een derde punt nog in de lijst laten staan",
+        "Een vierde punt pas na Meer tonen",
+        "Een vijfde punt achter diezelfde knop houden"
       ],
       "example_ids": [
         "ex-vb-tafel",
@@ -20,7 +23,26 @@
       "source_urls": [
         "https://example.com/fixture/bellen"
       ],
-      "importance": 5
+      "importance": 5,
+      "why_nl": "Voorbeeld waarom deze kaart ertoe doet: je ziet meteen wat je ermee kunt.",
+      "status": "officieel",
+      "sources": [
+        {
+          "label": "Voorbeeldblog",
+          "url": "https://example.com/fixture/bellen",
+          "kind": "officieel"
+        },
+        {
+          "label": "Post op X",
+          "url": "https://x.com/voorbeeld_a/status/900000000000000001",
+          "kind": "x_post"
+        },
+        {
+          "label": "Filmpje",
+          "url": "https://www.youtube.com/watch?v=M7lc1UVf-VE",
+          "kind": "video"
+        }
+      ]
     },
     {
       "id": "upd-vb-build",
@@ -39,7 +61,9 @@
       "source_urls": [
         "https://example.com/fixture/build"
       ],
-      "importance": 5
+      "importance": 5,
+      "why_nl": "Voorbeeld: twee agents naast elkaar laten zien waarom de update de moeite is.",
+      "status": "getoond"
     },
     {
       "id": "upd-vb-claude",
@@ -58,7 +82,9 @@
       "source_urls": [
         "https://example.com/fixture/claude"
       ],
-      "importance": 4
+      "importance": 4,
+      "why_nl": "Voorbeeld van een gerucht: het staat er, maar niemand heeft het bevestigd.",
+      "status": "gerucht"
     },
     {
       "id": "upd-vb-cursor",
@@ -113,6 +139,26 @@
       ],
       "source_urls": [
         "https://example.com/fixture/winkel"
+      ],
+      "importance": 2
+    },
+    {
+      "id": "upd-vb-stil",
+      "date": "2026-10-28T11:00:00.000Z",
+      "tool": "Cursor",
+      "title_nl": "Voorbeeld: een stille dag",
+      "summary_nl": "Voorbeelddata. Op deze dag staat er maar één update, zodat de top één kaart toont.",
+      "why_nl": "Voorbeeld van een rustige dag: de top laat zien wat er is, ook als dat er één is.",
+      "status": "getoond",
+      "can_do_nl": [
+        "De top met één kaart bekijken",
+        "Zien dat een lege tweede plek weg blijft"
+      ],
+      "example_ids": [
+        "ex-vb-diff"
+      ],
+      "source_urls": [
+        "https://example.com/fixture/stil"
       ],
       "importance": 2
     }
@@ -594,5 +640,14 @@
       ],
       "lang": "nl"
     }
-  ]
+  ],
+  "daily_top": {
+    "date": "2026-11-05",
+    "ids": [
+      "upd-vb-bellen",
+      "upd-vb-build",
+      "upd-vb-claude"
+    ],
+    "headline_nl": "Drie voorbeelden bovenaan de feed."
+  }
 }
