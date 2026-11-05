@@ -468,6 +468,16 @@ h2.day:first-child { margin-top: 8px; }
   overflow-wrap: anywhere;
 }
 
+.post-text.clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+}
+
+.post-text a { overflow-wrap: anywhere; }
+
 .takeaway {
   margin: 10px 0 0;
   padding: 8px 10px;
@@ -491,7 +501,7 @@ h2.day:first-child { margin-top: 8px; }
   margin: 0;
   border-radius: 12px;
   overflow: hidden;
-  background: var(--line);
+  background: var(--card-2);
   aspect-ratio: 1;
 }
 

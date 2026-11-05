@@ -90,6 +90,7 @@ const state = {
   bronnenMore: 8,
   expanded: new Set(),
   bronOpen: new Set(),
+  postOpen: new Set(),
 };
 
 const memory = {
@@ -231,10 +232,11 @@ function similar(a, b) {
 
 function useCases(update) {
   const title = normalize(update.title_nl);
+  const summary = normalize(update.summary_nl);
   const kept = [];
   for (const point of update.can_do_nl || []) {
     const text = normalize(point);
-    if (similar(text, title)) continue;
+    if (similar(text, title) || similar(text, summary)) continue;
     if (kept.some((item) => similar(normalize(item), text))) continue;
     kept.push(point);
     if (kept.length === 3) break;
@@ -452,6 +454,53 @@ function metricsLine(metrics) {
   return bits.length ? `<p class="metrics">${esc(bits.join(" · "))}</p>` : "";
 }
 
+function readableName(name, handle) {
+  const text = String(name || "").trim();
+  return /[\p{L}\p{N}]/u.test(text) ? text : handle;
+}
+
+function displayPostText(raw) {
+  let text = String(raw || "");
+  text = text.replace(/https?:\/\/t\.co\/\w+/gi, "");
+  text = text.replace(/https?:\/\/(?:www\.)?(?:twitter\.com|x\.com)\/\S+/gi, "");
+  text = text.replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n").replace(/[ \t]{2,}/g, " ").trim();
+  if (text.length >= 450 && !/[.!?…)"']$/.test(text)) {
+    const cut = text.replace(/\s+\S*$/, "").trim();
+    text = `${cut || text}…`;
+  }
+  return text;
+}
+
+function linkify(text) {
+  const pattern = /https?:\/\/[^\s<>)]+/gi;
+  let html = "";
+  let last = 0;
+  for (const match of text.matchAll(pattern)) {
+    const start = match.index ?? 0;
+    html += esc(text.slice(last, start));
+    const raw = match[0].replace(/[.,]+$/, "");
+    const href = safeLink(raw);
+    const label = raw.replace(/^https?:\/\//, "").replace(/^www\./, "");
+    const short = label.length > 42 ? `${label.slice(0, 40)}…` : label;
+    html += href
+      ? `<a href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(short)}</a>`
+      : esc(match[0]);
+    html += esc(match[0].slice(raw.length));
+    last = start + match[0].length;
+  }
+  return html + esc(text.slice(last));
+}
+
+function safeLink(url) {
+  try {
+    const parsed = new URL(url);
+    if (parsed.protocol !== "https:" && parsed.protocol !== "http:") return "";
+    return parsed.href;
+  } catch {
+    return "";
+  }
+}
+
 function mediaHtml(media) {
   const ready = (Array.isArray(media) ? media : [])
     .slice(0, 4)
@@ -462,7 +511,7 @@ function mediaHtml(media) {
     .map((item) => {
       const alt = item.alt || (item.type === "video" ? "Videobeeld bij de post" : item.type === "gif" ? "GIF bij de post" : "Afbeelding bij de post");
       const badge = item.type === "video" ? '<span class="badge">Video</span>' : item.type === "gif" ? '<span class="badge">GIF</span>' : "";
-      return `<figure class="media" data-media>
+      return `<figure class="media" data-media data-kind="${esc(item.type || "photo")}">
         <img src="${esc(item.src)}" alt="${esc(alt)}" width="640" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('[data-media]')?.classList.add('is-missing');this.remove()" />
         ${badge}
         <span class="missing">Beeld niet geladen</span>
@@ -473,10 +522,12 @@ function mediaHtml(media) {
 }
 
 function postInner(example, { save }) {
-  const name = example.author_name || example.author_handle;
-  const text = String(example.text || "").trim();
+  const name = readableName(example.author_name, example.author_handle);
+  const text = displayPostText(example.text || "");
   const body = text || example.note_nl || "";
   const showTakeaway = Boolean(text) && example.note_nl && normalize(text) !== normalize(example.note_nl);
+  const open = state.postOpen.has(example.id);
+  const long = body.length > 180 || (body.match(/\n/g) || []).length >= 3;
   const href = safeHttps(example.post_url);
   const saved = memory.saved.has(`example:${example.id}`);
   const followed = example.from_followed ? " · volg je" : "";
@@ -487,8 +538,9 @@ function postInner(example, { save }) {
         <p class="who">@${esc(example.author_handle)} · ${esc(formatDate(example.date))}${esc(followed)}</p>
       </div>
     </div>
-    ${body ? `<p class="post-text">${esc(body)}</p>` : ""}
+    ${body ? `<p class="post-text${long && !open ? " clamp" : ""}">${text ? linkify(body) : esc(body)}</p>` : ""}
     ${mediaHtml(example.media)}
+    ${long ? `<button type="button" class="textbtn" data-post-more="${esc(example.id)}">${open ? "Minder" : "Meer lezen"}</button>` : ""}
     ${showTakeaway ? `<p class="takeaway"><span>Wat is hier gaaf aan</span>${esc(example.note_nl)}</p>` : ""}
     ${metricsLine(example.metrics)}
     <div class="post-actions">
@@ -977,6 +1029,14 @@ app.addEventListener("click", (event) => {
   const read = target.closest("[data-read]");
   if (read instanceof HTMLElement && read.dataset.read) {
     toggleSet(memory.read, read.dataset.read, persistRead);
+    render();
+    return;
+  }
+  const postMore = target.closest("[data-post-more]");
+  if (postMore instanceof HTMLElement && postMore.dataset.postMore) {
+    const id = postMore.dataset.postMore;
+    if (state.postOpen.has(id)) state.postOpen.delete(id);
+    else state.postOpen.add(id);
     render();
     return;
   }

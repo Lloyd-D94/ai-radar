@@ -31,8 +31,8 @@ export interface RadarUpdate {
 
 export interface RadarMedia {
   type: MediaType;
-  url: string;
-  preview_url: string;
+  url?: string;
+  preview_url?: string;
   alt?: string;
 }
 
@@ -237,10 +237,11 @@ function parseMedia(value: unknown, path: string, issues: string[]): RadarMedia[
     const type = typeof record.type === "string" ? record.type.trim() : "";
     if (!type) issues.push(`${itemPath}.type: verplicht`);
     else if (!MEDIA_TYPES.includes(type as MediaType)) issues.push(`${itemPath}.type: verwacht photo, video of gif`);
-    if (record.url === undefined) issues.push(`${itemPath}.url: verplicht`);
-    if (record.preview_url === undefined) issues.push(`${itemPath}.preview_url: verplicht`);
     const url = record.url === undefined ? undefined : optHttps(record, "url", itemPath, issues, LIMITS.mediaUrl);
     const preview = record.preview_url === undefined ? undefined : optHttps(record, "preview_url", itemPath, issues, LIMITS.mediaUrl);
+    if (!url && !preview && record.url === undefined && record.preview_url === undefined) {
+      issues.push(`${itemPath}: url of preview_url is verplicht`);
+    }
     let alt: string | undefined;
     if (record.alt !== undefined && record.alt !== "") {
       if (typeof record.alt !== "string") issues.push(`${itemPath}.alt: verwacht tekst`);
@@ -250,8 +251,10 @@ function parseMedia(value: unknown, path: string, issues: string[]): RadarMedia[
         else if (trimmed) alt = trimmed;
       }
     }
-    if (url && preview && MEDIA_TYPES.includes(type as MediaType)) {
-      const item: RadarMedia = { type: type as MediaType, url, preview_url: preview };
+    if ((url || preview) && MEDIA_TYPES.includes(type as MediaType)) {
+      const item: RadarMedia = { type: type as MediaType };
+      if (url) item.url = url;
+      if (preview) item.preview_url = preview;
       if (alt) item.alt = alt;
       media.push(item);
     }
@@ -371,8 +374,8 @@ function parseUpdate(value: unknown, path: string, issues: string[]): RadarUpdat
   const canDo: string[] = [];
   if (!Array.isArray(rawCan)) issues.push(`${path}.can_do_nl: verwacht een lijst`);
   else {
-    if (rawCan.length < 2 || rawCan.length > 5) {
-      issues.push(`${path}.can_do_nl: 2 tot 5 punten (nu ${rawCan.length})`);
+    if (rawCan.length < 1 || rawCan.length > 5) {
+      issues.push(`${path}.can_do_nl: 1 tot 5 punten (nu ${rawCan.length})`);
     }
     rawCan.forEach((entry, index) => {
       if (typeof entry !== "string" || entry.trim().length === 0) {

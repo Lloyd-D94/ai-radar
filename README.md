@@ -90,7 +90,7 @@ Het script valideert en stopt met een foutmelding als iets niet klopt. Het schri
 Regels, kort:
 
 - Datums zijn ISO. Belang is een geheel getal van 1 tot 5. De feed zet alleen bij 5 het label “Groot nieuws”.
-- `summary_nl` is maximaal twee zinnen. `note_nl` is één zin. `can_do_nl` heeft 2 tot 5 punten.
+- `summary_nl` is maximaal twee zinnen. `note_nl` is één zin. `can_do_nl` heeft 1 tot 5 punten.
 - Schrijf `can_do_nl` als concrete acties. Herhaal de titel niet: de feed toont hooguit drie punten en laat punten weg die bijna hetzelfde zijn als de titel of als elkaar.
 - Elke URL is `https`. Een voorbeeldpost is precies `https://x.com/<handle>/status/<id>`, en die handle is `author_handle`.
 - `example_ids` moeten bestaan, in dit bestand of al in `data/radar.json`. In de feed staan de eerste twee gekoppelde posts direct onder de update.
@@ -109,7 +109,7 @@ Voorbeelden, zodat de feed een echte postkaart kan tekenen (avatar, naam, tekst,
 | `author_name` | Weergavenaam, tekst |
 | `author_avatar_url` | `https`-URL van de avatar |
 | `text` | Platte tekst van de post, maximaal 500 tekens, geen HTML. Meerdere zinnen mag. Dit is niet `note_nl`. |
-| `media` | Lijst van hooguit 4 objecten. `type` is `photo`, `video` of `gif`. `url` en `preview_url` zijn `https`. `preview_url` is het stilstaande beeld in de feed (ook bij video en gif). `alt` is optionele tekst, maximaal 180 tekens. |
+| `media` | Lijst van hooguit 4 objecten. `type` is `photo`, `video` of `gif`. Minstens één van `url` en `preview_url` is een `https`-URL. Een foto mag alleen `url` hebben. Een video mag alleen `preview_url` hebben: dat is het stilstaande beeld in de feed. `alt` is optionele tekst, maximaal 180 tekens. |
 | `metrics` | Object met `likes`, `reposts`, `replies` en/of `views`: gehele getallen van 0 of hoger. Elk getal mag ontbreken. |
 | `lang` | Korte taalcode, bijvoorbeeld `nl` of `en`. |
 

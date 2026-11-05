@@ -68,7 +68,7 @@ describe("radar-validatie", () => {
         {
           ...update(),
           summary_nl: "Eén. Twee. Drie.",
-          can_do_nl: ["alleen dit"],
+          can_do_nl: [],
           source_urls: ["http://x.com/someone/status/1"],
           example_ids: ["bestaat-niet"],
         },
@@ -123,6 +123,26 @@ describe("radar-validatie", () => {
     assert.equal(checked.accounts[0]?.avatar_url, "https://cdn.example.com/avatar.jpg");
     const merged = mergeRadar({ updates: [], examples: [], startups: [] }, checked);
     assert.equal(merged.examples[0]?.media?.[0]?.type, "photo");
+    const photoOnly = validateIncoming({
+      updates: [],
+      examples: [example({ media: [{ type: "photo", url: "https://cdn.example.com/only.jpg" }] })],
+      startups: [],
+    });
+    assert.deepEqual(photoOnly.issues, []);
+    assert.equal(photoOnly.examples[0]?.media?.[0]?.url, "https://cdn.example.com/only.jpg");
+    const videoOnly = validateIncoming({
+      updates: [],
+      examples: [
+        example({
+          id: "ex-video",
+          post_url: "https://x.com/someone/status/2118054007579296070",
+          media: [{ type: "video", preview_url: "https://cdn.example.com/thumb.jpg" }],
+        }),
+      ],
+      startups: [],
+    });
+    assert.deepEqual(videoOnly.issues, []);
+    assert.equal(videoOnly.examples[0]?.media?.[0]?.preview_url, "https://cdn.example.com/thumb.jpg");
     assert.equal(merged.startups[0]?.website_url, "https://example.com/lab");
     assert.equal(mergeAccounts([], checked.accounts)[0]?.avatar_url, "https://cdn.example.com/avatar.jpg");
   });
