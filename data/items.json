@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T20:53:57.425Z",
+  "generatedAt": "2026-11-05T17:27:20.927Z",
   "items": [
     {
       "id": "8d603faf83b5cd35",
@@ -180,7 +180,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 559,
+      "points": 692,
       "alsoSeenAt": []
     },
     {
@@ -248,6 +248,29 @@
       "isPatch": true,
       "belangrijk": false,
       "bundleKey": "claude-code:2026-11-04",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "295354ff422b0d4d",
+      "title": "Introducing Images 2.6",
+      "url": "https://openai.com/index/introducing-images-2-6",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-04T00:00:00.000Z",
+      "excerpt": "Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
       "points": null,
       "alsoSeenAt": []
     },
@@ -366,7 +389,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 514,
+      "points": 521,
       "alsoSeenAt": []
     },
     {
@@ -860,7 +883,7 @@
       "sourceId": "codex",
       "tool": "codex",
       "publishedAt": "2026-10-29T19:47:53.000Z",
-      "excerpt": "• Added keyboard-driven transcript selection with word, line, and page motions, integrated search, and configurable shortcuts. ( #57221 , #57222 , #57223 , #57224 ) • Rendered Markdown consistently in async questions, choices, answers, and transcript replies. ( #57259 , #57292 ) • Added GPT-6.1 Terra to the bundled, Vertex AI, and Amazon Bedrock model catalogs. ( #57293 ) • Added codex queue --resume to resume unloaded threads after queueing a message. (…",
+      "excerpt": "- Added keyboard-driven transcript selection with word, line, and page motions, integrated search, and configurable shortcuts. (#57221, #57222, #57223, #57224) - Rendered Markdown consistently in async questions, choices, answers, and transcript replies. (#57259, #57292) - Added GPT-6.1 Terra to the bundled, Vertex AI, and Amazon Bedrock model catalogs. (#57293) - Added `codex queue --resume` to resume unloaded threads after queueing a message. (#57232)…",
       "version": "0.166.0",
       "category": "overig",
       "score": 4,
@@ -965,7 +988,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 589,
+      "points": 590,
       "alsoSeenAt": []
     },
     {
@@ -4055,6 +4078,28 @@
       "alsoSeenAt": []
     },
     {
+      "id": "ccbfd7bc75a8593e",
+      "title": "Imagine Image 2.0",
+      "url": "https://x.ai/news/grok-imagine-image-2",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-08-07T00:00:00.000Z",
+      "excerpt": "Precise image generation and editing, built for real creative work.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "dab077c842958e63",
       "title": "Grok Build 1.0.0",
       "url": "https://x.ai/changelog/build#v1.0.0-2026-08-07",
@@ -4085,6 +4130,28 @@
       "tool": "cursor",
       "publishedAt": "2026-08-03T00:00:00.000Z",
       "excerpt": "Cursor can now read, write, and act across your Google Workspace. New plugins give coding agents direct access to Gmail, Google Drive, and Calendar, so you can pull context, draft and update files, and manage your inbox and calendar without leaving Cursor. • ** Google Drive :** search files and folders, open and download content, create and organize files • ** Gmail :** search and read mail, draft and send messages, apply labels and manage threads • **…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "3c59c1683b41ea57",
+      "title": "Imagine Video 1.5 with References",
+      "url": "https://x.ai/news/grok-imagine-video-1-5-references",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-07-31T00:00:00.000Z",
+      "excerpt": "Our best video model, now with text, image, and voice references — generating up to 1080p.",
       "version": null,
       "category": "overig",
       "score": 3,
@@ -4168,6 +4235,29 @@
       "alsoSeenAt": []
     },
     {
+      "id": "a4ea106eb8577dfb",
+      "title": "Introducing Grok Voice 2.0",
+      "url": "https://x.ai/news/grok-voice-think-fast-2",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-07-29T00:00:00.000Z",
+      "excerpt": "Introducing our most capable speech-to-speech voice model.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "b6ed181d2838b244",
       "title": "Cursor Start",
       "url": "https://cursor.com/changelog/cursor-start",
@@ -4184,6 +4274,96 @@
       ],
       "actionLine": null,
       "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "17328a0f00ee174e",
+      "title": "Grok 4.5 in GitHub Copilot",
+      "url": "https://x.ai/news/grok-github-copilot",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-07-28T00:00:00.000Z",
+      "excerpt": "Grok 4.5, our smartest coding model, is now available in GitHub Copilot.",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": "De bron meldt dat dit nu beschikbaar is.",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "bdb7d10d11340ac2",
+      "title": "Introducing Build Mode",
+      "url": "https://x.ai/news/grok-build-mode",
+      "sourceId": "xai-news",
+      "tool": "grok-build",
+      "publishedAt": "2026-07-28T00:00:00.000Z",
+      "excerpt": "Create and share websites, apps, games, and interactive dashboards. Now in Early Beta for SuperGrok Heavy subscribers on grok.com, iOS, and Android.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 5,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "ff9a5c1479e9780e",
+      "title": "Grok in Google Workspace",
+      "url": "https://x.ai/news/introducing-google-workspace-addon",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-07-24T00:00:00.000Z",
+      "excerpt": "Use the Grok add-on for Google Workspace to work directly in Sheets, Slides, and Docs.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "6415582bccdc3afe",
+      "title": "Workflows in Grok Build",
+      "url": "https://x.ai/news/workflows",
+      "sourceId": "xai-news",
+      "tool": "grok-build",
+      "publishedAt": "2026-07-23T00:00:00.000Z",
+      "excerpt": "Grok Build can now write and run workflows: orchestration scripts that fan a task out across hundreds of parallel agents, verify the results, and report back in one background run.",
+      "version": null,
+      "category": "overig",
+      "score": 4,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
@@ -4225,6 +4405,75 @@
       "score": 3,
       "scoreReasons": [
         "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "68223e75ebd40eaa",
+      "title": "Bringing Grok 4.5 to iOS, Android, Web, and X",
+      "url": "https://x.ai/news/grok-4-5-everywhere",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-07-22T00:00:00.000Z",
+      "excerpt": "Grok 4.5, our most intelligent model yet, is now on grok.com, X, iOS, and Android.",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "f8f038096d193f1b",
+      "title": "Introducing Grok for Outlook",
+      "url": "https://x.ai/news/introducing-outlook-addin",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-07-21T00:00:00.000Z",
+      "excerpt": "Use the Grok add-in for Microsoft Outlook to summarize long email threads, draft replies in your voice, and keep your inbox organized.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "c56614b1f012b2d0",
+      "title": "Introducing Grok for Excel",
+      "url": "https://x.ai/news/introducing-excel-addin",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-07-20T00:00:00.000Z",
+      "excerpt": "Use the Grok add-in for Microsoft Excel to ask questions in plain English, write formulas, and run scenarios without leaving the workbook.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
       ],
       "actionLine": null,
       "priority": "secundair",
@@ -4292,6 +4541,51 @@
       "score": 3,
       "scoreReasons": [
         "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "be250a2523098377",
+      "title": "Automations in Grok",
+      "url": "https://x.ai/news/grok-automations",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-07-16T00:00:00.000Z",
+      "excerpt": "Describe a job once and Grok runs it on a schedule or when an email arrives, then reports back.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "c5fe4e158440bf6a",
+      "title": "Introducing Grok 4.5",
+      "url": "https://x.ai/news/grok-4-5",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-07-16T00:00:00.000Z",
+      "excerpt": "Grok 4.5 is SpaceXSI's smartest model built for coding, agentic tasks, and knowledge work.",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
       ],
       "actionLine": null,
       "priority": "secundair",

@@ -373,7 +373,7 @@
   },
   "pages": {
     "https://docs.x.ai/docs/release-notes": {
-      "hash": "3edad7ce560bc2f12239c2edd5f8fb7d761997fb49762b04aad8c7cef08c0a61",
+      "hash": "e2885b277296e61cab9fec915dd0c54eccd2f5f3ce71f17c20fb616202fe2c7b",
       "etag": null
     }
   },
@@ -473,6 +473,54 @@
     "https://x.ai/news/introducing-grok-bot": {
       "lastmod": "2026-08-11T00:00:00.000Z",
       "fetchedAt": "2026-11-04T20:53:58.860Z"
+    },
+    "https://x.ai/news/grok-imagine-image-2": {
+      "lastmod": "2026-08-07T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T17:27:21.956Z"
+    },
+    "https://x.ai/news/grok-imagine-video-1-5-references": {
+      "lastmod": "2026-07-31T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T17:27:22.004Z"
+    },
+    "https://x.ai/news/grok-voice-think-fast-2": {
+      "lastmod": "2026-07-29T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T17:27:22.049Z"
+    },
+    "https://x.ai/news/grok-build-mode": {
+      "lastmod": "2026-07-28T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T17:27:22.095Z"
+    },
+    "https://x.ai/news/grok-github-copilot": {
+      "lastmod": "2026-07-28T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T17:27:22.141Z"
+    },
+    "https://x.ai/news/introducing-google-workspace-addon": {
+      "lastmod": "2026-07-24T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T17:27:22.195Z"
+    },
+    "https://x.ai/news/workflows": {
+      "lastmod": "2026-07-23T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T17:27:22.242Z"
+    },
+    "https://x.ai/news/grok-4-5-everywhere": {
+      "lastmod": "2026-07-22T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T17:27:22.290Z"
+    },
+    "https://x.ai/news/introducing-outlook-addin": {
+      "lastmod": "2026-07-21T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T17:27:22.336Z"
+    },
+    "https://x.ai/news/introducing-excel-addin": {
+      "lastmod": "2026-07-20T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T17:27:22.383Z"
+    },
+    "https://x.ai/news/grok-4-5": {
+      "lastmod": "2026-07-16T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T17:27:22.438Z"
+    },
+    "https://x.ai/news/grok-automations": {
+      "lastmod": "2026-07-16T00:00:00.000Z",
+      "fetchedAt": "2026-11-05T17:27:22.484Z"
     }
   }
 }
