@@ -1,6 +1,96 @@
 {
-  "generatedAt": "2026-11-06T16:48:43.992Z",
+  "generatedAt": "2026-11-06T23:14:16.191Z",
   "items": [
+    {
+      "id": "74d830db7d745087",
+      "title": "GPT Image 2.6 Flare and Sunburst for your app's AI features",
+      "url": "https://docs.lovable.dev/changelog#nov-6-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-06T22:21:10.000Z",
+      "excerpt": "GPT Image 2.6 Flare and Sunburst for your app's AI features Your app's AI features can now generate and edit images with two new OpenAI models. GPT Image 2.6 Flare ( openai/gpt-image-2.6-flare ) is the faster model, for previews and in-app image editors. GPT Image 2.6 Sunburst ( openai/gpt-image-2.6-sunburst ) is for detailed visuals and precise edits. Both models can produce a short animated GIF, and both can guide an edit with a drawing on the image.…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "a5fcc1255202f357",
+      "title": "Copilot impact dashboard adds chat and VS Code agent usage",
+      "url": "https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-06T22:17:28.000Z",
+      "excerpt": "The Agent adoption chart in the Copilot impact dashboard now includes Copilot Chat and the VS Code Agents window, so you can see engagement across nine Copilot experiences. The adoption cohort called &ldquo;Passive users&rdquo; is now &ldquo;Chat-first users&rdquo;, which better describes who is in it. The enterprise and organization 28-day usage metrics reports include the same two features. This builds on feature engagement in the Copilot impact…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "b7aa5d4fa5c79c45",
+      "title": "Quoting Nilay Patel",
+      "url": "https://simonwillison.net/2026/Nov/6/nilay-patel",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-06T17:13:12.000Z",
+      "excerpt": "The products aren't good enough to sell people on the costs. You cannot tell people that you have to listen to the whine of a data center in their backyard for AI overviews and some of the most hilarious deep fake slop in history. It's not worth it. It just isn't worth it to anyone. And agents aren't real and they might not be being used the way that anyone wants them to yet. All these companies are spending more than they're making on these products.…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "7cf21137c37e547b",
+      "title": "v2.1.319",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+      "sourceId": "claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-06T17:04:01.000Z",
+      "excerpt": "• Changed auto mode with telemetry or feature flags off, including behind LLM gateways: calls the server can't check are asked about or denied, with no fallback to the built-in classifier; set CLAUDE_CODE_AUTO_MODE_SERVER=0 to keep using it (Bedrock, Vertex and Foundry are unchanged) • Changed auto mode behind an LLM gateway: CLAUDE_CODE_AUTO_MODE_SERVER=1 turns on the server-side check even with CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS set; if managed…",
+      "version": "2.1.319",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "claude-code:2026-11-06",
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "b8ddb6db7e02a2ca",
       "title": "0.167.0",
@@ -69,6 +159,51 @@
       "alsoSeenAt": []
     },
     {
+      "id": "5f721228af3682c2",
+      "title": "Measuring how AI agents handle everyday wet-lab science",
+      "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-06T00:00:00.000Z",
+      "excerpt": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "c9e260814e66b368",
+      "title": "Voice Chat with Agents",
+      "url": "https://cursor.com/changelog/voice-chat",
+      "sourceId": "cursor",
+      "tool": "cursor",
+      "publishedAt": "2026-11-06T00:00:00.000Z",
+      "excerpt": "You can now talk with your agents in a realtime voice call. Describe a change out loud, ask what an agent is working on, and hear updates as the work moves forward. Voice chat works in the Agents Window, the IDE, on web, and in Cursor for iOS. When the agent is idle and the chat input is empty, click the waveform button labeled **Start voice chat**. It sits where Send usually is, next to the microphone button for dictation. On iOS, you can also say \"Hey…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now talk with your agents in a realtime voice call.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "199af8aea5b61129",
       "title": "Claude Code sends your email address to websites",
       "url": "https://github.com/anthropics/claude-code/issues/107757",
@@ -89,7 +224,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1457,
+      "points": 1544,
       "alsoSeenAt": []
     },
     {
@@ -383,7 +518,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 722,
+      "points": 724,
       "alsoSeenAt": []
     },
     {
@@ -1191,7 +1326,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 590,
+      "points": 591,
       "alsoSeenAt": []
     },
     {
@@ -2153,7 +2288,7 @@
       "sourceId": "claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-10-21T22:17:02.000Z",
-      "excerpt": "• Added /claude-api api-version to move Claude API code to API version 2026-10-21 • Added the claude_code.safety_event OpenTelemetry event for each tool call a permission rule, auto mode, a safety check, a hook or the sandbox stopped, prompted or sent back • Fixed requests failing with a model-not-found error when CLAUDE_CODE_DISABLE_1M_CONTEXT is set and the model is an alias with the [1m] suffix, such as opus[1m] • Fixed the prompt-caching-scope beta…",
+      "excerpt": "- Added `/claude-api api-version` to move Claude API code to API version `2026-10-21` - Added the `claude_code.safety_event` OpenTelemetry event for each tool call a permission rule, auto mode, a safety check, a hook or the sandbox stopped, prompted or sent back - Fixed requests failing with a model-not-found error when `CLAUDE_CODE_DISABLE_1M_CONTEXT` is set and the model is an alias with the `[1m]` suffix, such as `opus[1m]` - Fixed the…",
       "version": "2.1.307",
       "category": "overig",
       "score": 2,
@@ -5886,13 +6021,7 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "xai-news",
-          "url": "https://x.ai/news/grok-custom-voices",
-          "title": "Custom Voices"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "21a49094700cd6be",
@@ -6082,6 +6211,98 @@
       "tool": "xai",
       "publishedAt": "2025-11-19T00:00:00.000Z",
       "excerpt": "Bringing the next generation of tool-calling agents to the xAI API",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "3ba15a3903f44c86",
+      "title": "Grok 4.1",
+      "url": "https://x.ai/news/grok-4-1",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2025-11-17T00:00:00.000Z",
+      "excerpt": "Grok 4.1 is now available to all users on grok.com, 𝕏, and the iOS and Android apps. It is rolling out immediately in Auto mode and can be selected explicitly as “Grok 4.1” in the model picker.",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": "De bron meldt dat dit nu beschikbaar is.",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "0c4dec44a25e0aad",
+      "title": "Grok 4 Fast",
+      "url": "https://x.ai/news/grok-4-fast",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2025-09-19T00:00:00.000Z",
+      "excerpt": "Pushing the Frontier of Cost-Efficient Intelligence",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "c6d3e7bfa462aef2",
+      "title": "Grok 4",
+      "url": "https://x.ai/news/grok-4",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2025-07-09T00:00:00.000Z",
+      "excerpt": "Grok 4 is the most intelligent model in the world. It includes native tool use and real-time search integration, and is available now to SuperGrok and Premium+ subscribers, as well as through the xAI API. We are also introducing a new SuperGrok Heavy tier with access to Grok 4 Heavy - the most powerful version of Grok 4.",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "9e8c6430d83420da",
+      "title": "Grok 3 Beta — The Age of Reasoning Agents",
+      "url": "https://x.ai/news/grok-3",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2025-02-19T00:00:00.000Z",
+      "excerpt": "We are thrilled to unveil an early preview of Grok 3, our most advanced model yet, blending superior reasoning with extensive pretraining knowledge.",
       "version": null,
       "category": "model",
       "score": 4,

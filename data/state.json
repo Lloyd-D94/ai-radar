@@ -373,7 +373,7 @@
   },
   "pages": {
     "https://docs.x.ai/docs/release-notes": {
-      "hash": "9bf7143d178a860b85b3266854eed97dea892608a17e8b8bc7b4e21bfca05a23",
+      "hash": "16ef57b9e3abf5a4df7329b28e17cb3d99eb7d6c7915653d0b4963f2846bb2f6",
       "etag": null
     }
   },
@@ -665,6 +665,54 @@
     "https://x.ai/news/grok-4-1-fast": {
       "lastmod": "2025-11-19T00:00:00.000Z",
       "fetchedAt": "2026-11-06T16:48:45.997Z"
+    },
+    "https://x.ai/news/grok-goes-global": {
+      "lastmod": "2025-11-19T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T23:14:17.353Z"
+    },
+    "https://x.ai/news/grok-4-1": {
+      "lastmod": "2025-11-17T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T23:14:17.428Z"
+    },
+    "https://x.ai/news/onegov": {
+      "lastmod": "2025-09-25T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T23:14:17.489Z"
+    },
+    "https://x.ai/news/grok-4-fast": {
+      "lastmod": "2025-09-19T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T23:14:17.555Z"
+    },
+    "https://x.ai/news/grok-code-fast-1": {
+      "lastmod": "2025-08-28T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T23:14:17.632Z"
+    },
+    "https://x.ai/news/government": {
+      "lastmod": "2025-07-14T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T23:14:17.703Z"
+    },
+    "https://x.ai/news/grok-4": {
+      "lastmod": "2025-07-09T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T23:14:17.795Z"
+    },
+    "https://x.ai/news/grok-3": {
+      "lastmod": "2025-02-19T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T23:14:17.984Z"
+    },
+    "https://x.ai/news/series-c": {
+      "lastmod": "2024-12-23T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T23:14:18.043Z"
+    },
+    "https://x.ai/news/grok-1212": {
+      "lastmod": "2024-12-12T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T23:14:18.107Z"
+    },
+    "https://x.ai/news/grok-image-generation-release": {
+      "lastmod": "2024-12-09T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T23:14:18.187Z"
+    },
+    "https://x.ai/news/api": {
+      "lastmod": "2024-11-04T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T23:14:18.251Z"
     }
   }
 }
