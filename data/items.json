@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T06:55:04.627Z",
+  "generatedAt": "2026-11-06T16:48:43.992Z",
   "items": [
     {
       "id": "b8ddb6db7e02a2ca",
@@ -89,7 +89,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 883,
+      "points": 1457,
       "alsoSeenAt": []
     },
     {
@@ -134,7 +134,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 90,
+      "points": 92,
       "alsoSeenAt": []
     },
     {
@@ -383,7 +383,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 715,
+      "points": 722,
       "alsoSeenAt": []
     },
     {
@@ -592,7 +592,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 525,
+      "points": 527,
       "alsoSeenAt": []
     },
     {
@@ -5886,7 +5886,13 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "xai-news",
+          "url": "https://x.ai/news/grok-custom-voices",
+          "title": "Custom Voices"
+        }
+      ]
     },
     {
       "id": "21a49094700cd6be",
@@ -5934,6 +5940,29 @@
       "alsoSeenAt": []
     },
     {
+      "id": "c6c586873e55a0ba",
+      "title": "Grok Voice 1.0",
+      "url": "https://x.ai/news/grok-voice-think-fast-1",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-04-23T00:00:00.000Z",
+      "excerpt": "Our most capable voice agent is now available via API.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron meldt dat dit nu beschikbaar is.",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "d6bba1636e560159",
       "title": "Grok Voice 1.0 is available",
       "url": "https://docs.x.ai/developers/release-notes#grok-voice-10-is-available",
@@ -5949,6 +5978,118 @@
         "Nieuwe functie volgens de brontekst (+1)"
       ],
       "actionLine": "De bron meldt dat dit nu beschikbaar is.",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "ff9a42787c4e98e8",
+      "title": "Grok Speech to Text and Text to Speech APIs",
+      "url": "https://x.ai/news/grok-stt-and-tts-apis",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-04-17T00:00:00.000Z",
+      "excerpt": "Fast and accurate. Natural, expressive voices. Simple pricing. Multilingual support.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "9551d1ecd9e658eb",
+      "title": "xAI joins SpaceX",
+      "url": "https://x.ai/news/xai-joins-spacex",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-02-02T00:00:00.000Z",
+      "excerpt": "SpaceX announced today that it has acquired xAI.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "f7239ef1fc007337",
+      "title": "Grok Imagine API",
+      "url": "https://x.ai/news/grok-imagine-api",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-01-28T00:00:00.000Z",
+      "excerpt": "State-of-the-art video generation across quality, cost, and latency.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "44d2c49ccebbcd11",
+      "title": "Introducing Grok Business and Grok Enterprise",
+      "url": "https://x.ai/news/grok-business",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2025-12-30T00:00:00.000Z",
+      "excerpt": "The best assistant in the world is now Enterprise ready.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "ea34d2b67722ab5f",
+      "title": "Grok 4.1 Fast and Agent Tools API",
+      "url": "https://x.ai/news/grok-4-1-fast",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2025-11-19T00:00:00.000Z",
+      "excerpt": "Bringing the next generation of tool-calling agents to the xAI API",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
       "priority": "secundair",
       "isPatch": false,
       "belangrijk": false,
