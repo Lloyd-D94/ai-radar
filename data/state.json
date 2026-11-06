@@ -373,7 +373,7 @@
   },
   "pages": {
     "https://docs.x.ai/docs/release-notes": {
-      "hash": "e7eee3185088d2107ef0dd5a9d6fe7aeedafc3b642e57e9f4d9c04751d5b1820",
+      "hash": "3ef33f45087191885ee797a21778a230a011a20b448e669f5ffeaa1ac9f14da7",
       "etag": null
     }
   },
@@ -569,6 +569,54 @@
     "https://x.ai/news/grok-plugin-marketplace": {
       "lastmod": "2026-06-11T00:00:00.000Z",
       "fetchedAt": "2026-11-05T23:41:18.962Z"
+    },
+    "https://x.ai/news/grok-imagine-1-5": {
+      "lastmod": "2026-06-03T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T06:55:05.809Z"
+    },
+    "https://x.ai/news/composer-2-5": {
+      "lastmod": "2026-06-01T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T06:55:05.908Z"
+    },
+    "https://x.ai/news/grok-build-0-1": {
+      "lastmod": "2026-05-29T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T06:55:06.015Z"
+    },
+    "https://x.ai/news/grok-kilocode": {
+      "lastmod": "2026-05-27T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T06:55:06.114Z"
+    },
+    "https://x.ai/news/grok-build-cli": {
+      "lastmod": "2026-05-25T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T06:55:06.216Z"
+    },
+    "https://x.ai/news/grok-opencode": {
+      "lastmod": "2026-05-21T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T06:55:06.322Z"
+    },
+    "https://x.ai/news/grok-openclaw": {
+      "lastmod": "2026-05-19T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T06:55:06.479Z"
+    },
+    "https://x.ai/news/grok-skills": {
+      "lastmod": "2026-05-18T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T06:55:06.577Z"
+    },
+    "https://x.ai/news/grok-hermes": {
+      "lastmod": "2026-05-15T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T06:55:06.676Z"
+    },
+    "https://x.ai/news/anthropic-compute-partnership": {
+      "lastmod": "2026-05-06T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T06:55:06.770Z"
+    },
+    "https://x.ai/news/grok-connectors": {
+      "lastmod": "2026-05-06T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T06:55:06.869Z"
+    },
+    "https://x.ai/news/grok-imagine-quality-mode": {
+      "lastmod": "2026-05-06T00:00:00.000Z",
+      "fetchedAt": "2026-11-06T06:55:06.969Z"
     }
   }
 }

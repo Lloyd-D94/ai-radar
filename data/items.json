@@ -1,20 +1,64 @@
 {
-  "generatedAt": "2026-11-05T23:41:16.569Z",
+  "generatedAt": "2026-11-06T06:55:04.627Z",
   "items": [
     {
       "id": "b8ddb6db7e02a2ca",
-      "title": "rust-v0.167.0",
+      "title": "0.167.0",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
       "sourceId": "codex",
       "tool": "codex",
-      "publishedAt": "2026-11-05T23:31:20.000Z",
-      "excerpt": "Release 0.167.0",
+      "publishedAt": "2026-11-06T01:40:00.000Z",
+      "excerpt": "• Open the agent command center with codex agents --no-daemon . The command center and session picker now mark unread results ( #58238 , #58239 , #58263 , #58264 ). • Switch between connected backends from the terminal session picker and keep your drafts when switching ( #58280 , #58457 ). • Preview local image attachments while composing on supported terminals, and open viewed local images from clickable transcript paths ( #58261 , #58446 ). • Find API…",
       "version": "0.167.0",
       "category": "overig",
       "score": 4,
       "scoreReasons": [
         "Secundaire bron (start op 3)",
         "Stabiele release, geen patch (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "525555dfe497cbaa",
+      "title": "Usage metrics API adds code review details and addressed rate",
+      "url": "https://github.blog/changelog/2026-11-05-usage-metrics-api-adds-code-review-details-and-addressed-rate",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-06T00:19:07.000Z",
+      "excerpt": "The enterprise and organization repository-level Copilot usage metrics reports now show what happens to Copilot code review feedback. A new copilot_code_review object on each repos-1-day row reports how many Copilot-reviewed pull requests merged without a later change request from a person and how many Copilot code review comments developers acted on. With these you can track an addressed rate per repository. • total_comments_evaluated : The number of…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "0778fb85d9153ba6",
+      "title": "Usage metrics API flags telemetry and version gaps",
+      "url": "https://github.blog/changelog/2026-11-05-usage-metrics-api-flags-telemetry-and-version-gaps",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-06T00:08:31.000Z",
+      "excerpt": "The Copilot usage metrics API now shows which users are missing client telemetry or are running IDE or extension versions below the usage metrics minimums. New per-user fields appear in enterprise and organization user reports, and daily affected-user counts appear in enterprise and organization reports. • client_telemetry_present : Whether client telemetry was received for the user that day. false means Copilot saw the user&rsquo;s activity, but no…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
       ],
       "actionLine": null,
       "priority": "secundair",
@@ -45,7 +89,29 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 206,
+      "points": 883,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "bbd492caba72ca54",
+      "title": "Cult.fit builds operational muscle with Codex",
+      "url": "https://openai.com/index/cultfit-builds-with-codex",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-05T20:00:00.000Z",
+      "excerpt": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
       "alsoSeenAt": []
     },
     {
@@ -68,7 +134,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 84,
+      "points": 90,
       "alsoSeenAt": []
     },
     {
@@ -317,7 +383,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 705,
+      "points": 715,
       "alsoSeenAt": []
     },
     {
@@ -526,7 +592,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 522,
+      "points": 525,
       "alsoSeenAt": []
     },
     {
@@ -5385,6 +5451,29 @@
       "alsoSeenAt": []
     },
     {
+      "id": "9136a0e75188b3c8",
+      "title": "Composer 2.5",
+      "url": "https://x.ai/news/composer-2-5",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-06-01T00:00:00.000Z",
+      "excerpt": "Composer 2.5 is now available in Grok Build. Try it from the /models menu.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron meldt dat dit nu beschikbaar is.",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "35d35ce35bb52bf9",
       "title": "Auto-review Run Mode",
       "url": "https://cursor.com/changelog/auto-review",
@@ -5452,6 +5541,51 @@
       "alsoSeenAt": []
     },
     {
+      "id": "c60c4a6b3a43ab9d",
+      "title": "Grok Build 0.1 on API",
+      "url": "https://x.ai/news/grok-build-0-1",
+      "sourceId": "xai-news",
+      "tool": "grok-build",
+      "publishedAt": "2026-05-29T00:00:00.000Z",
+      "excerpt": "Grok Build 0.1, our fastest coding model, is now available via the xAI API in public beta.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 5,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron meldt dat dit nu beschikbaar is.",
+      "priority": "primair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "0047d2de2fd14412",
+      "title": "Use Grok in Kilo Code",
+      "url": "https://x.ai/news/grok-kilocode",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-05-27T00:00:00.000Z",
+      "excerpt": "Use your SuperGrok or X Premium+ subscription inside Kilo Code, the open-source agentic coding platform.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "667bb5b4f26a5b52",
       "title": "Image Search in Web Search",
       "url": "https://docs.x.ai/developers/release-notes#image-search-in-web-search",
@@ -5459,6 +5593,51 @@
       "tool": "xai-api",
       "publishedAt": "2026-05-27T00:00:00.000Z",
       "excerpt": "Web Search now supports explicitly searching for images. Enable enable_image_search to let Grok search directly for relevant images; responses can include returned images as Markdown image embeds. For details, see Enable Image Search .",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "7c9e6db472dd3de9",
+      "title": "Introducing Grok Build",
+      "url": "https://x.ai/news/grok-build-cli",
+      "sourceId": "xai-news",
+      "tool": "grok-build",
+      "publishedAt": "2026-05-25T00:00:00.000Z",
+      "excerpt": "Now in early beta for all SuperGrok and X Premium Plus subscribers — Grok Build is a new coding agent that runs right from your terminal.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 5,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "c062695cbe47f61d",
+      "title": "Use Grok in OpenCode",
+      "url": "https://x.ai/news/grok-opencode",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-05-21T00:00:00.000Z",
+      "excerpt": "Use your SuperGrok or X Premium subscription inside OpenCode.",
       "version": null,
       "category": "overig",
       "score": 3,
@@ -5526,6 +5705,72 @@
       ]
     },
     {
+      "id": "6dae5daf9ee6bcab",
+      "title": "Use Grok in OpenClaw",
+      "url": "https://x.ai/news/grok-openclaw",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-05-19T00:00:00.000Z",
+      "excerpt": "Use your SuperGrok or X Premium subscription inside OpenClaw, an open-source, local-first agent and personal assistant.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "821dcf7efbea38bb",
+      "title": "Skills in web, iOS, and Android",
+      "url": "https://x.ai/news/grok-skills",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-05-18T00:00:00.000Z",
+      "excerpt": "Persistent expertise for Grok. Generate documents, decks, and spreadsheets. Automate workflows. Build and share your own skills.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "f10d936a81ac676a",
+      "title": "Connect Grok to Hermes Agent",
+      "url": "https://x.ai/news/grok-hermes",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-05-15T00:00:00.000Z",
+      "excerpt": "Use your Grok account and subscription inside Nous Research’s open-source, self-improving Hermes agent.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "49afbc6ed236e36b",
       "title": "Grok Build",
       "url": "https://docs.x.ai/developers/release-notes#grok-build",
@@ -5553,6 +5798,72 @@
           "title": "Grok Build 0.1"
         }
       ]
+    },
+    {
+      "id": "66179aed9b93d91c",
+      "title": "Grok Imagine Quality Mode API",
+      "url": "https://x.ai/news/grok-imagine-quality-mode",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-05-06T00:00:00.000Z",
+      "excerpt": "Higher realism. Stronger text rendering. Better creative control.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "b72f345c79599aed",
+      "title": "Connectors in web, iOS, and Android",
+      "url": "https://x.ai/news/grok-connectors",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-05-06T00:00:00.000Z",
+      "excerpt": "Deep integrations that bring the apps you use every day directly into Grok.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "e4ae65a9c2eb9a2e",
+      "title": "New Compute Partnership with Anthropic",
+      "url": "https://x.ai/news/anthropic-compute-partnership",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2026-05-06T00:00:00.000Z",
+      "excerpt": "SpaceXSI has signed an agreement with Anthropic to provide access to Colossus 1.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
     },
     {
       "id": "483a54f98a258f64",
