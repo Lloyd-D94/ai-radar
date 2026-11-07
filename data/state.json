@@ -373,7 +373,7 @@
   },
   "pages": {
     "https://docs.x.ai/docs/release-notes": {
-      "hash": "16ef57b9e3abf5a4df7329b28e17cb3d99eb7d6c7915653d0b4963f2846bb2f6",
+      "hash": "cf6b4c0abc58c40e3a45a64e5033b40c0a455d2aec3db960f3aa942c5cd05b71",
       "etag": null
     }
   },
@@ -713,6 +713,34 @@
     "https://x.ai/news/api": {
       "lastmod": "2024-11-04T00:00:00.000Z",
       "fetchedAt": "2026-11-06T23:14:18.251Z"
+    },
+    "https://x.ai/news/grok-2": {
+      "lastmod": "2024-08-13T00:00:00.000Z",
+      "fetchedAt": "2026-11-07T06:06:48.872Z"
+    },
+    "https://x.ai/news/series-b": {
+      "lastmod": "2024-05-26T00:00:00.000Z",
+      "fetchedAt": "2026-11-07T06:06:48.960Z"
+    },
+    "https://x.ai/news/grok-1.5v": {
+      "lastmod": "2024-04-12T00:00:00.000Z",
+      "fetchedAt": "2026-11-07T06:06:49.059Z"
+    },
+    "https://x.ai/news/grok-1.5": {
+      "lastmod": "2024-03-28T00:00:00.000Z",
+      "fetchedAt": "2026-11-07T06:06:49.247Z"
+    },
+    "https://x.ai/news/grok-os": {
+      "lastmod": "2024-03-17T00:00:00.000Z",
+      "fetchedAt": "2026-11-07T06:06:49.356Z"
+    },
+    "https://x.ai/news/prompt-ide": {
+      "lastmod": "2023-11-06T00:00:00.000Z",
+      "fetchedAt": "2026-11-07T06:06:49.452Z"
+    },
+    "https://x.ai/news/grok": {
+      "lastmod": "2023-11-03T00:00:00.000Z",
+      "fetchedAt": "2026-11-07T06:06:49.548Z"
     }
   }
 }

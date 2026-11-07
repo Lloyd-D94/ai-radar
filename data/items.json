@@ -1,6 +1,29 @@
 {
-  "generatedAt": "2026-11-06T23:14:16.191Z",
+  "generatedAt": "2026-11-07T06:06:47.452Z",
   "items": [
+    {
+      "id": "cc9249299f5d778e",
+      "title": "Copilot code review: API management and review overview updates",
+      "url": "https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-07T00:27:19.000Z",
+      "excerpt": "You can now manage GitHub Copilot code review settings through the REST and GraphQL APIs, from enterprise policy down to individual repositories. Copilot&rsquo;s review overview comment is now more compact, and this update includes fixes for billing, automatic reviews, and reliability. These updates are available to Copilot Pro, Pro+, Max, Business, and Enterprise plans. 🔌 Manage settings and identify Copilot&rsquo;s output through the API You can…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now manage GitHub Copilot code review settings through the REST and GraphQL APIs, from enterprise policy down to individual repositories.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "74d830db7d745087",
       "title": "GPT Image 2.6 Flare and Sunburst for your app's AI features",
@@ -36,6 +59,51 @@
       "score": 3,
       "scoreReasons": [
         "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "353c4d26111c8c91",
+      "title": "GitHub Copilot weekly releases — November 2",
+      "url": "https://github.blog/changelog/2026-11-06-github-copilot-weekly-releases-november-2",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-06T21:00:26.000Z",
+      "excerpt": "This week, Copilot comes to JetBrains Air and Xcode&rsquo;s coding assistant, with updates to help you manage pull requests, settings, and agent sessions. • Set up Agent Merge directly from a pull request to have Copilot merge it when it&rsquo;s ready. It now stays enabled while required checks or rules are pending. You can also check reviewer status, request additional reviews, and select comment text to quote it or discuss it with Copilot. • Keep…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "2b1caf305a698efd",
+      "title": "@GitHub in Slack and Teams is generally available and more",
+      "url": "https://github.blog/changelog/2026-11-06-github-copilot-in-slack-and-teams-is-generally-available",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-06T20:31:08.000Z",
+      "excerpt": "Turn conversations into code with @GitHub in Slack and Teams! Investigate bugs, create issues, implement changes, and open pull requests&mdash;all without leaving your conversation. Build and review together with Canvas in Teams Turn team discussions into working code. With Canvas , you can review implementation plans, code changes, and previews alongside your conversation. Continue the discussion with teammates, share feedback, and refine the…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
       ],
       "actionLine": null,
       "priority": "secundair",
@@ -224,7 +292,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1544,
+      "points": 1564,
       "alsoSeenAt": []
     },
     {
@@ -727,7 +795,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 527,
+      "points": 529,
       "alsoSeenAt": []
     },
     {
@@ -6303,6 +6371,75 @@
       "tool": "xai",
       "publishedAt": "2025-02-19T00:00:00.000Z",
       "excerpt": "We are thrilled to unveil an early preview of Grok 3, our most advanced model yet, blending superior reasoning with extensive pretraining knowledge.",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "1572648d0de93018",
+      "title": "Grok-2 Beta Release",
+      "url": "https://x.ai/news/grok-2",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2024-08-13T00:00:00.000Z",
+      "excerpt": "We announce our new Grok-2 and Grok-2 mini models.",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "70816c1ecd157fc9",
+      "title": "Announcing Grok-1.5",
+      "url": "https://x.ai/news/grok-1.5",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2024-03-28T00:00:00.000Z",
+      "excerpt": "Grok-1.5 comes with improved reasoning capabilities and a context length of 128,000 tokens. Available on 𝕏 soon.",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "1172c5dd004f8651",
+      "title": "Open Release of Grok-1",
+      "url": "https://x.ai/news/grok-os",
+      "sourceId": "xai-news",
+      "tool": "xai",
+      "publishedAt": "2024-03-17T00:00:00.000Z",
+      "excerpt": "We are releasing the weights and architecture of our 314 billion parameter Mixture-of-Experts model Grok-1.",
       "version": null,
       "category": "model",
       "score": 4,
