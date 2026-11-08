@@ -1,6 +1,75 @@
 {
-  "generatedAt": "2026-11-07T19:28:10.848Z",
+  "generatedAt": "2026-11-08T00:43:50.839Z",
   "items": [
+    {
+      "id": "5f8103aa8ad8e667",
+      "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+      "url": "https://simonwillison.net/2026/Nov/7/link-rel-next",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-07T23:57:46.000Z",
+      "excerpt": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening because Datasette pages serve an HTTP link header like this: This is bad. A tiny fraction of the visitors to one of those pages will click the \"next\" link, which means their…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "10bdc73097cfd238",
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-07T20:45:32.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 136,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "c7d54ca29ffdbfac",
+      "title": "Report problems to Lovable from your MCP client",
+      "url": "https://docs.lovable.dev/changelog#nov-5-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-07T20:18:40.000Z",
+      "excerpt": "Report problems to Lovable from your MCP client You can now report a problem to Lovable from the AI client you connect to the Lovable MCP server. Ask the client to send a report when something gets in the way, such as a misread request, a stuck project, or a failed build. Sending a report is free. App + chat connectors: Fortnox, Mailchimp, and Mailchimp Transactional Fortnox lets apps read and manage the customers, suppliers, invoices, orders, articles,…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now report a problem to Lovable from the AI client you connect to the Lovable MCP server.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "cc9249299f5d778e",
       "title": "Copilot code review: API management and review overview updates",
@@ -292,7 +361,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1586,
+      "points": 1590,
       "alsoSeenAt": []
     },
     {
@@ -337,7 +406,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 92,
+      "points": 93,
       "alsoSeenAt": []
     },
     {
@@ -499,12 +568,12 @@
     },
     {
       "id": "2ecfd394b9509d96",
-      "title": "Protect a project from abandonment cleanup",
+      "title": "Lovable saves every form submission",
       "url": "https://docs.lovable.dev/changelog#nov-3-2026",
       "sourceId": "lovable",
       "tool": "lovable",
       "publishedAt": "2026-11-04T16:36:11.000Z",
-      "excerpt": "Protect a project from abandonment cleanup On Enterprise plans, you can now protect a project from cleanup so Lovable never marks it abandoned. A protected project is never deleted for inactivity. Enable Abandonment protection in your project's settings, or select Protect it on the abandoned project banner. Workspace admins and owners can protect any project in Security insights . Lovable follows AGENTS.md files in your project's subfolders Lovable now…",
+      "excerpt": "Ask Lovable for a form that visitors use to reach you, such as a contact, booking, or quote form, and Lovable now saves each submission to a table . Lovable tells you the table's name in the project chat. To get the submissions by email as well, tell Lovable which address to send them to. Lovable sends those emails from a verified sender domain, which you set up on a paid plan. Protect a project from abandonment cleanup On Enterprise plans, you can now…",
       "version": null,
       "category": "nieuwe-functie",
       "score": 4,
@@ -512,7 +581,7 @@
         "Secundaire bron (start op 3)",
         "Nieuwe functie volgens de brontekst (+1)"
       ],
-      "actionLine": "De bron: “you can now protect a project from cleanup so Lovable never marks it abandoned.”",
+      "actionLine": null,
       "priority": "secundair",
       "isPatch": false,
       "belangrijk": false,
@@ -586,7 +655,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 728,
+      "points": 729,
       "alsoSeenAt": []
     },
     {
