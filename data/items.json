@@ -1,6 +1,30 @@
 {
-  "generatedAt": "2026-11-08T17:57:51.629Z",
+  "generatedAt": "2026-11-08T22:12:34.476Z",
   "items": [
+    {
+      "id": "79a426483352990d",
+      "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+      "url": "https://thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-08T18:16:07.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Hoge community-score, 200+ punten (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 467,
+      "alsoSeenAt": []
+    },
     {
       "id": "5f8103aa8ad8e667",
       "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
@@ -45,7 +69,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 507,
+      "points": 559,
       "alsoSeenAt": []
     },
     {
@@ -362,7 +386,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1597,
+      "points": 1600,
       "alsoSeenAt": []
     },
     {
@@ -656,7 +680,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 733,
+      "points": 734,
       "alsoSeenAt": []
     },
     {
@@ -865,7 +889,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 531,
+      "points": 533,
       "alsoSeenAt": []
     },
     {
