@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T00:43:50.839Z",
+  "generatedAt": "2026-11-08T10:29:29.952Z",
   "items": [
     {
       "id": "5f8103aa8ad8e667",
@@ -34,9 +34,10 @@
       "excerpt": "",
       "version": null,
       "category": "overig",
-      "score": 2,
+      "score": 3,
       "scoreReasons": [
         "Communitybron (start op 2)",
+        "Hoge community-score, 200+ punten (+1)",
         "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
       ],
       "actionLine": null,
@@ -44,7 +45,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 136,
+      "points": 399,
       "alsoSeenAt": []
     },
     {
@@ -361,7 +362,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1590,
+      "points": 1596,
       "alsoSeenAt": []
     },
     {
@@ -655,7 +656,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 729,
+      "points": 730,
       "alsoSeenAt": []
     },
     {
