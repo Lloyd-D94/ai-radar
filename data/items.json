@@ -1,6 +1,51 @@
 {
-  "generatedAt": "2026-11-09T06:44:43.241Z",
+  "generatedAt": "2026-11-09T19:53:04.012Z",
   "items": [
+    {
+      "id": "ace31f3b0bb1b6f0",
+      "title": "v2.1.321",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+      "sourceId": "claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-09T19:22:30.000Z",
+      "excerpt": "• Added Claude Fable 5.2 ( claude-fable-5-2 ), now the default Fable model — 1M context, $8/$40 per Mtok with $0.20/Mtok cache reads • Added --settings to claude remote-control , which applies a settings file to every session it starts; if the file changes, no new session starts until you restart claude remote-control • Fixed MCP OAuth requests sending secrets such as refresh tokens to another host when a server redirected them • Fixed a case where a…",
+      "version": "2.1.321",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "claude-code:2026-11-09",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "6fe95617291bfea7",
+      "title": "App + chat connectors: Jira and Mailjet",
+      "url": "https://docs.lovable.dev/changelog#nov-9-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-09T13:52:36.000Z",
+      "excerpt": "Jira lets apps search, create, and update issues on your Jira Cloud site and read its projects, boards, and sprints. Use it for sprint dashboards, bug and feedback intake forms, and triage views. Mailjet lets apps send transactional email from a sender or domain you validated in Mailjet, add contacts to your contact lists, and read delivery status, such as sent, opened, clicked, or bounced. Use it for order confirmations, newsletter signups, and delivery…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "45e8de741ea9e45e",
       "title": "The Web Is More Than Enough, by Paul Ford",
@@ -158,7 +203,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 701,
+      "points": 873,
       "alsoSeenAt": []
     },
     {
@@ -205,7 +250,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 599,
+      "points": 621,
       "alsoSeenAt": []
     },
     {
@@ -374,7 +419,7 @@
       "sourceId": "codex",
       "tool": "codex",
       "publishedAt": "2026-11-06T01:40:00.000Z",
-      "excerpt": "• Open the agent command center with codex agents --no-daemon . The command center and session picker now mark unread results ( #58238 , #58239 , #58263 , #58264 ). • Switch between connected backends from the terminal session picker and keep your drafts when switching ( #58280 , #58457 ). • Preview local image attachments while composing on supported terminals, and open viewed local images from clickable transcript paths ( #58261 , #58446 ). • Find API…",
+      "excerpt": "- Open the agent command center with `codex agents --no-daemon`. The command center and session picker now mark unread results (#58238, #58239, #58263, #58264). - Switch between connected backends from the terminal session picker and keep your drafts when switching (#58280, #58457). - Preview local image attachments while composing on supported terminals, and open viewed local images from clickable transcript paths (#58261, #58446). - Find API key and…",
       "version": "0.167.0",
       "category": "overig",
       "score": 4,
@@ -500,7 +545,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1605,
+      "points": 1609,
       "alsoSeenAt": []
     },
     {
@@ -612,6 +657,29 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "c639a728e2b00893",
+      "title": "Grok Build 1.0.77",
+      "url": "https://x.ai/changelog/build#v1.0.77-2026-11-05",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-05T00:00:00.000Z",
+      "excerpt": "• [ui] kitty_keyboard = \"query\" lets Shift+Enter insert newlines in unidentified terminals • Quote copy now preserves & in links, and double-clicks no longer fold thoughts when missing text • MCP server connections no longer restart unnecessarily on session reloads or updates • Ctrl+L now works on more screens, and copy hints match what actually copies to the clipboard • Context usage shown in the footer no longer drops to zero or shows stale values…",
+      "version": "1.0.77",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-05",
       "points": null,
       "alsoSeenAt": []
     },
@@ -885,6 +953,52 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "a796e7e59a60dd2d",
+      "title": "Grok Build 1.0.76",
+      "url": "https://x.ai/changelog/build#v1.0.76-2026-11-04",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-04T00:00:00.000Z",
+      "excerpt": "• Ctrl+L redraws the screen after a terminal clear without flashing • Shell commands correctly handle startup functions containing special characters",
+      "version": "1.0.76",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-04",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "d5fe14b7b77af79b",
+      "title": "Grok Build 1.0.75",
+      "url": "https://x.ai/changelog/build#v1.0.75-2026-11-04",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-04T00:00:00.000Z",
+      "excerpt": "• Permission rules that do not load, such as a rule that does not parse or a .claude/settings.json that is not valid JSON, show a warning when a session opens instead of being skipped silently • Cmd+Up / Cmd+Down and Ctrl+Home / Ctrl+End move the cursor to the start or end of the whole prompt, and with Shift they select to there • Send now shows as Enter Enter in the footer where Ctrl+Enter arrives as plain Enter , such as inside tmux with its default…",
+      "version": "1.0.75",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-04",
       "points": null,
       "alsoSeenAt": []
     },
@@ -1252,6 +1366,29 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "33fd618c9cd62d33",
+      "title": "Grok Build 1.0.74",
+      "url": "https://x.ai/changelog/build#v1.0.74-2026-11-02",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-02T00:00:00.000Z",
+      "excerpt": "• Messages between subagents appear as left-aligned rows under the bullet that name the sender and recipient, replacing the centered rows • Shift+Enter inserts a newline in VS Code and other xterm.js-based terminals that use the Kitty keyboard protocol • /mcps : when a browser cannot open an MCP server's sign-in URL, the URL shows in a panel you can copy with c or the [copy the url] button • Shell approval cards say when Auto-review blocked a command or…",
+      "version": "1.0.74",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-02",
       "points": null,
       "alsoSeenAt": []
     },
@@ -1896,6 +2033,29 @@
       "alsoSeenAt": []
     },
     {
+      "id": "fc3b92ca54b15e29",
+      "title": "Grok Build 1.0.73",
+      "url": "https://x.ai/changelog/build#v1.0.73-2026-10-28",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-10-28T00:00:00.000Z",
+      "excerpt": "• Page Up / Page Down , Home and End move the selection in /skills and other pickers • Automatic updates stop retrying a new version that fails to start on this machine until a newer version is out, and each launch says to run grok update to see why • Gruvbox dark theme ( gruvbox-dark-hard ), selectable with /theme • Start in multiline in /settings ( [ui] multiline_default ) starts new sessions and the dashboard in multiline mode, where Enter inserts a…",
+      "version": "1.0.73",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-10-28",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "451b839194f1d8cc",
       "title": "Release v0.66.0",
       "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0",
@@ -2144,6 +2304,29 @@
       "alsoSeenAt": []
     },
     {
+      "id": "eb1904f1e381a7b9",
+      "title": "Grok Build 1.0.72",
+      "url": "https://x.ai/changelog/build#v1.0.72-2026-10-27",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-10-27T00:00:00.000Z",
+      "excerpt": "• Relative file paths in the agent's output, such as src/app/main.rs , open on click when the file exists under the session's folder, as absolute paths already do • Subagent and background task ids mentioned in the transcript open that subagent's view or the task's output on click • Pull-request numbers such as #123 in the agent's replies open that pull request on the session repository's forge • Subagents named in a reply show as the subagent's label…",
+      "version": "1.0.72",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-10-27",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "670bdc25a85edb18",
       "title": "GPT-6.1 Terra",
       "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra",
@@ -2278,6 +2461,29 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "7351d769425bb326",
+      "title": "Grok Build 1.0.71",
+      "url": "https://x.ai/changelog/build#v1.0.71-2026-10-26",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-10-26T00:00:00.000Z",
+      "excerpt": "• ui.single_ctrl_c_quit = true lets a single Ctrl+C quit when no draft or unfinished work would be lost. It is also under Editor in /settings ; the default still asks for a second press • Image chips in the prompt use the same green as sent images in the transcript • Hovering an image chip in the transcript shows the image that was sent, or why it was not attached • Hooks accept \"failClosed\": true : when such a hook times out or crashes, the tool call is…",
+      "version": "1.0.71",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-10-26",
       "points": null,
       "alsoSeenAt": []
     },
@@ -2425,7 +2631,7 @@
       "sourceId": "claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-10-22T04:34:55.000Z",
-      "excerpt": "• Bug fixes and reliability improvements",
+      "excerpt": "## What's changed - Bug fixes and reliability improvements",
       "version": "2.1.308",
       "category": "overig",
       "score": 2,
@@ -3719,75 +3925,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "e46b66a911f0a055",
-      "title": "Grok Build 1.0.47",
-      "url": "https://x.ai/changelog/build#v1.0.47-2026-10-01",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-01T00:00:00.000Z",
-      "excerpt": "• A model switch from the agent updates the displayed model list and context window • Error messages on the home and login screens wrap on a narrow terminal • Clicking the Goal chip opens the goal panel even when workflow runs are present • Sessions in a repository with an .envrc file start faster",
-      "version": "1.0.47",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-01",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "b98387aa82496333",
-      "title": "Grok Build 1.0.46",
-      "url": "https://x.ai/changelog/build#v1.0.46-2026-09-30",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-09-30T00:00:00.000Z",
-      "excerpt": "• grok inspect and the MCP doctor report MCP server sources correctly • Tool search activity folds as \"Ran N tool searches\" instead of claiming MCP tool results • Client rules supplied at session start are preserved when the system prompt is rebuilt later • Permission rules with relative paths apply even when the working directory contains symlinks • The context-compacted line shows the token count from right after compaction, instead of the count at the…",
-      "version": "1.0.46",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-09-30",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "d3458418aedbe7e9",
-      "title": "Grok Build 1.0.45",
-      "url": "https://x.ai/changelog/build#v1.0.45-2026-09-29",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-09-29T00:00:00.000Z",
-      "excerpt": "• Custom agents from plugins or your config can be chosen directly with spawn_subagent • MCP servers can use a token file that is re-read on every request, so rotating credentials stay fresh • A selected model can show a colored notice banner above the prompt • Subagent wait status shows \"Waiting for N subagents…\" when the parent turn is blocked",
-      "version": "1.0.45",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-09-29",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "52b14ec01b86fb13",
       "title": "Team Bots: shared AI teammates that learn as they work",
       "url": "https://x.ai/news/team-bots",
@@ -3806,75 +3943,6 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "a5dbe7347be28ac8",
-      "title": "Grok Build 1.0.44",
-      "url": "https://x.ai/changelog/build#v1.0.44-2026-09-28",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-09-28T00:00:00.000Z",
-      "excerpt": "• Sandbox enforcement on macOS uses the system Seatbelt ( sandbox-exec ) backend • New /context-window slash command lets you pick a context window size for the current session when the model offers choices • /model selection offers context window choices (when the model supports them) before the effort level • Plan comments can be deleted by clicking the [✗] button that appears on hover • Shortcuts panel search finds entries when you type any of the…",
-      "version": "1.0.44",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-09-28",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "c4782174f8396e57",
-      "title": "Grok Build 1.0.43",
-      "url": "https://x.ai/changelog/build#v1.0.43-2026-09-27",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-09-27T00:00:00.000Z",
-      "excerpt": "• MCP tool prompts appear correctly in minimal mode and users are notified when a prompt goes unanswered",
-      "version": "1.0.43",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-09-27",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "f92f9658ebd67e82",
-      "title": "Grok Build 1.0.42",
-      "url": "https://x.ai/changelog/build#v1.0.42-2026-09-26",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-09-26T00:00:00.000Z",
-      "excerpt": "• Footer and /usage display the model actually served on smart-auto turns • New grok worktree create command creates a managed worktree without launching an interactive session • Bracketed pastes that did not come from the clipboard no longer attach leftover images (for example from IME commits) • grok -p exits cleanly when interrupted and performs session cleanup instead of being killed • Pressing Ctrl+C twice while writing a plan comment cancels the…",
-      "version": "1.0.42",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-09-26",
       "points": null,
       "alsoSeenAt": []
     },
@@ -3920,29 +3988,6 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "00c2241884e9d433",
-      "title": "Grok Build 1.0.41",
-      "url": "https://x.ai/changelog/build#v1.0.41-2026-09-22",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-09-22T00:00:00.000Z",
-      "excerpt": "• Subagent model inheritance setting added to /settings, persisted in config.toml • Subagent fullscreen view no longer shows a stray [Dashboard] button in the header • Agent frontmatter mcpServers headers and URLs override config.toml and survive reloads or agent switches • Ctrl+P opens the command palette immediately from the welcome screen • Sessions interrupted by a crash show a clear marker instead of silently dropping the turn",
-      "version": "1.0.41",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-09-22",
       "points": null,
       "alsoSeenAt": []
     },
