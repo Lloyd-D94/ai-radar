@@ -1,6 +1,142 @@
 {
-  "generatedAt": "2026-11-08T22:12:34.476Z",
+  "generatedAt": "2026-11-09T06:44:43.241Z",
   "items": [
+    {
+      "id": "45e8de741ea9e45e",
+      "title": "The Web Is More Than Enough, by Paul Ford",
+      "url": "https://simonwillison.net/2026/Nov/9/hn-50421091",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-09T04:32:33.000Z",
+      "excerpt": "My comment on The Web Is More Than Enough, by Paul Ford &mdash; Hacker News. OK, this comment convinced me to give that a shot. Here's a thing I made in Three.js this morning - a Nudibranch themed Faberge Egg: https://static.simonwillison.net/static/2026/Hidden-Reef-Egg... (77KB) I just asked Claude (Opus 5.5 Medium running in regular Claude Chat) to port that to Vanilla JS, in the same thread where it had built it, and got this:…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "7a56e2062f93f8c0",
+      "title": "Hide your slop PR descriptions behind",
+      "url": "https://simonwillison.net/2026/Nov/9/details-summary",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-09T04:25:05.000Z",
+      "excerpt": "Most of the changes I make to my projects these days come in the form of PRs opened for me by Claude Code or Codex. The PR is my unit of work - I use them to bundle commits together, iterating on them until a feature is complete, document decisions and then merge the finished result. Today's coding agents are great at writing PR descriptions. The problem is that they are too good. An agent-written PR description is accurate and comprehensive. It…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "73af65b638452baf",
+      "title": "Connect your app to PayPal",
+      "url": "https://docs.lovable.dev/changelog#nov-8-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-08T22:45:58.000Z",
+      "excerpt": "You can now connect your Lovable app to PayPal to create checkouts, take the money after the buyer approves an order, issue refunds, and read order details in a PayPal account you already have. It fits shop checkouts, donation pages, ticket sales, and booking deposits. Add it from Connectors , or ask Lovable in a project to connect it.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now connect your Lovable app to PayPal to create checkouts, take the money after the buyer approves an order, issue refunds, and read order details in a PayPal acco.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "74d830db7d745087",
+      "title": "Approve requests to use your internally published app",
+      "url": "https://docs.lovable.dev/changelog#nov-6-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-08T22:45:58.000Z",
+      "excerpt": "Approve requests to use your internally published app When someone outside the audience opens an app you published internally, they can now ask you for access , with an optional message. The request arrives in your Inbox , where you approve or decline it, and Lovable emails the person either way. When you approve, Lovable adds the person to the app's audience without publishing again. They get no access to the project. After a decline, they can ask again…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "913fd5789cce01b8",
+      "title": "Require approval to enable a backend in a project",
+      "url": "https://docs.lovable.dev/changelog#nov-7-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-08T22:45:58.000Z",
+      "excerpt": "Require approval to enable a backend in a project On Enterprise plans, a workspace policy can now require an admin or owner to approve before anyone enables Lovable backend services in a project. Lovable backend services is the built-in backend where an app's database, user accounts, and file storage live. A member who asks Lovable for something that needs a backend sends a request with an optional message, and an admin or owner approves or denies it in…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "71c843041955ebc1",
+      "title": "parse_number() as a SQLite extension: C vs Rust",
+      "url": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-08T22:26:00.000Z",
+      "excerpt": "Research: parse_number() as a SQLite extension: C vs Rust I was out walking the dog when I got curious about how easy/difficult it would be to write a SQLite C extension that adds a parse_number() function for turning strings like -$1,234.56 or '12.5%' into numeric values that could be summed and sorted. I fired up regular Claude chat (Opus 5.5) and prompted : I'm thinking about a SQLite custom function 'parse_number(value)' that strips ',', '$', '£' and…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "79a426483352990d",
       "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
@@ -22,7 +158,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 467,
+      "points": 701,
       "alsoSeenAt": []
     },
     {
@@ -32,7 +168,7 @@
       "sourceId": "simon-willison",
       "tool": "simon-willison",
       "publishedAt": "2026-11-07T23:57:46.000Z",
-      "excerpt": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening because Datasette pages serve an HTTP link header like this: This is bad. A tiny fraction of the visitors to one of those pages will click the \"next\" link, which means their…",
+      "excerpt": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening because Datasette pages serve an HTTP link header like this: This is bad. A tiny fraction of the visitors to one of those pages will click the \"next\" link, which means for…",
       "version": null,
       "category": "overig",
       "score": 2,
@@ -69,7 +205,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 559,
+      "points": 599,
       "alsoSeenAt": []
     },
     {
@@ -111,28 +247,6 @@
         "Nieuwe functie volgens de brontekst (+1)"
       ],
       "actionLine": "De bron: “you can now manage GitHub Copilot code review settings through the REST and GraphQL APIs, from enterprise policy down to individual repositories.”",
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "74d830db7d745087",
-      "title": "GPT Image 2.6 Flare and Sunburst for your app's AI features",
-      "url": "https://docs.lovable.dev/changelog#nov-6-2026",
-      "sourceId": "lovable",
-      "tool": "lovable",
-      "publishedAt": "2026-11-06T22:21:10.000Z",
-      "excerpt": "GPT Image 2.6 Flare and Sunburst for your app's AI features Your app's AI features can now generate and edit images with two new OpenAI models. GPT Image 2.6 Flare ( openai/gpt-image-2.6-flare ) is the faster model, for previews and in-app image editors. GPT Image 2.6 Sunburst ( openai/gpt-image-2.6-sunburst ) is for detailed visuals and precise edits. Both models can produce a short animated GIF, and both can guide an edit with a drawing on the image.…",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
       "priority": "secundair",
       "isPatch": false,
       "belangrijk": false,
@@ -386,7 +500,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1600,
+      "points": 1605,
       "alsoSeenAt": []
     },
     {
@@ -889,7 +1003,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 533,
+      "points": 535,
       "alsoSeenAt": []
     },
     {
@@ -2191,29 +2305,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "6e1fc50fabcdd1bd",
-      "title": "battledrones v14: Compass Rose, a four player map",
-      "url": "https://simonwillison.net/2026/Oct/24/battledrones",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-10-24T03:59:57.000Z",
-      "excerpt": "Release: battledrones v14: Compass Rose, a four player map I added four player online mode to Battledrones - previous maps were limited to two. Add a new map for a four player battle - four way rotational symmetry, up to four AI players, works with the WebSocket non-audio based multiplayer mode so up to four human players can join (any spare slots use AI) Claude Opus 5.5 added a new map called \"Compass Rose\" and modified the WebSockets multiplayer…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "97c5df49eed3f0cf",
       "title": "v2.1.310",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
@@ -2233,53 +2324,6 @@
       "isPatch": true,
       "belangrijk": false,
       "bundleKey": "claude-code:2026-10-23",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "02a20fdf8ff0273f",
-      "title": "Quick Study",
-      "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-10-23T21:35:13.000Z",
-      "excerpt": "Build an artifact where you open a photo and it rapidly (in a few seconds) paints a version of that photo using a canvas element and simulated paintbrush See also my previous experiment getting Claude Fable to simulate a watercolor illustration with P5.js. Quick Study uses Sobel edge detection , with no external libraries beyond Google Fonts.",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "b5619922e4bc7751",
-      "title": "Introducing Kimi K3.1 Pro",
-      "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-10-23T19:40:54.000Z",
-      "excerpt": "Kimi K3.1 Pro landed on the Kimi API today - it's not yet open weights, but Moonshot promise \"Full model weights will be released by Nov 4, 2026\". They're also offering a \"Highspeed\" version that's 2-3x faster, at twice the price (except for input token cache hits, which are priced the same). The US dollar pricing is $2.00/million tokens for input and $10/million for output - the same as GPT-6.1 Sol and half the price of Claude Opus 5.5. Moonshot's own…",
-      "version": null,
-      "category": "nieuwe-functie",
-      "score": 3,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Nieuwe functie volgens de brontekst (+1)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
       "points": null,
       "alsoSeenAt": []
     },
