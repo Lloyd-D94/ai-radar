@@ -1,6 +1,76 @@
 {
-  "generatedAt": "2026-11-10T03:37:54.343Z",
+  "generatedAt": "2026-11-10T14:58:33.270Z",
   "items": [
+    {
+      "id": "cba41f0395d50b9e",
+      "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+      "url": "https://simonwillison.net/2026/Nov/10/muse-ember",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-10T07:28:21.000Z",
+      "excerpt": "Introducing Our Smallest, Most Efficient Model: Muse Ember Meta AI just launched their entry in the Claude Haiku/GPT Luna category: Muse Ember, which they describe as: [...] our smallest and most efficient model designed for complex reasoning execution and the work agents repeat all day: tool calls, coding subtasks, routing, extraction, and long document parsing. For shorter prompts it's priced the same as GPT-6 Luna and Claude Haiku 5.5 - both are…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 3,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Nieuwe functie volgens de brontekst (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "19c160f4485a55c0",
+      "title": "Quoting Prompting Claude Fable 5.2",
+      "url": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-10T05:34:14.000Z",
+      "excerpt": "Claude Fable 5.2 responds closely to what the prompt says about who owns the code it works on. In Anthropic’s testing on small coding tasks, when a prompt said nothing about ownership or presented the code base as someone else’s, the model tended to add to the existing structure, even when that repeated existing code. [...] If you want the model to improve the structure as it works, say that the code is its own: This codebase is yours: what it's for and…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "7a8b85431c54289a",
+      "title": "Yonkers Rises",
+      "url": "https://simonwillison.net/2026/Nov/10/yonkers-rises",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-10T03:53:04.000Z",
+      "excerpt": "I realized I didn't know where Yonkers was, so I looked it up on Google Maps and then, to help embed its location and shape in my head (and to try out Claude Fable 5.2's 3D modeling and animation skills), I prompted Fable 5.2 Medium to: Make a three js animation where yonkers stands up as a big mech (cool stand up motion) and átomos around manhattan and queens and Brooklyn, use openstreetmap mapping data It correctly deduced that \"átomos\" was a mobile…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "dbc58eacee5d52ba",
       "title": "v2.1.322",
@@ -31,7 +101,7 @@
       "sourceId": "simon-willison",
       "tool": "simon-willison",
       "publishedAt": "2026-11-09T23:58:46.000Z",
-      "excerpt": "Anthropic released Fable 5.2 and Mythos 5.2 today. I've added them to llm-anthropic , so you can now run prompts through Fable 5.2 like this: llm -m claude-fable-5.2 \"Generate an SVG of a pelican riding a bicycle\" I ran pelicans at all five reasoning levels - low , medium , high , xhigh , and max . You can see them all here - here's the best result I got, from xhigh : max failed to return an image at all, running out of tokens after spending 128,000…",
+      "excerpt": "Anthropic released Fable 5.2 and Mythos 5.2 today. Fable 5.2 is currently ranked first on Artificial Analysis . Anthropic say it \"solved two open problems in the physics of black holes\", so clearly their internal benchmarks have become more ambitious! I've added the new models to llm-anthropic , so you can now run prompts through Fable 5.2 like this: llm -m claude-fable-5.2 \"Generate an SVG of a pelican riding a bicycle\" I ran pelicans at all five…",
       "version": null,
       "category": "nieuwe-functie",
       "score": 3,
@@ -92,7 +162,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 302,
+      "points": 358,
       "alsoSeenAt": []
     },
     {
@@ -342,7 +412,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 885,
+      "points": 891,
       "alsoSeenAt": []
     },
     {
@@ -389,7 +459,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 622,
+      "points": 624,
       "alsoSeenAt": []
     },
     {
@@ -684,7 +754,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1612,
+      "points": 1613,
       "alsoSeenAt": []
     },
     {
@@ -1001,7 +1071,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 736,
+      "points": 737,
       "alsoSeenAt": []
     },
     {
@@ -1713,7 +1783,13 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": 399,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "hacker-news",
+          "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise",
+          "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace"
+        }
+      ]
     },
     {
       "id": "fbfedaa618aab83d",
@@ -1873,29 +1949,6 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": 591,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "bfb31ceb6c55c182",
-      "title": "Quoting Ted Sanders",
-      "url": "https://simonwillison.net/2026/Oct/28/ted-sanders",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-10-28T23:23:21.000Z",
-      "excerpt": "In general, LLM performance is incredibly multidimensional. There's no guarantee of a fixed ordering where the model that is best at math is also the model that's best at jokes. Despite that complexity, much of the variation in performance is explained by just a single variable: model size. In general, models that are bigger will (a) be more performant / reliable, (b) cost more per token, and (c) have better recall of esoteric facts. As you note, our…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
       "alsoSeenAt": []
     },
     {
@@ -2099,29 +2152,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "70f2bbbd704a353d",
-      "title": "The October inflection point for vibe game development",
-      "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-10-28T13:55:15.000Z",
-      "excerpt": "I've written before about how November 2025 was an inflection point for coding agents - the point where Opus 4.5 and GPT-5.1 crossed a tipping point that meant their respective coding agents became reliable daily drivers for software engineers. I think we've reached a new inflection point in October 2026, and this time it's for vibe coding computer games . • Tree Appreciator • Emberwick • Battle Drones • Pumpkin Farmer, aka Quarter Sun Cove",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "a395c7da350b5086",
       "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
       "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
@@ -2251,29 +2281,6 @@
       ],
       "actionLine": null,
       "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "68b12007f7f44855",
-      "title": "Game Boy Color on My Conference Badge",
-      "url": "https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-10-27T19:34:18.000Z",
-      "excerpt": "I'm at GitHub Universe this week and, similar to last year , the conference badge is a full-blown color screen computer. I've been hacking around with it again, and then I ran into with Steve Francia... who worked with Gemini to get a full NES emulator working on it, and then went a step further and deployed an emulator for both the Game Boy and the Game Boy Color. Which means, if you can obtain the ROM, you can run The Legend of Zelda: Link's Awakening…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
