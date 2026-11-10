@@ -1,6 +1,144 @@
 {
-  "generatedAt": "2026-11-10T14:58:33.270Z",
+  "generatedAt": "2026-11-10T21:20:36.726Z",
   "items": [
+    {
+      "id": "4d5c082f37b5c574",
+      "title": "Release v0.68.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.68.0",
+      "sourceId": "gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-11-10T21:17:07.000Z",
+      "excerpt": "• Changelog for v0.67.0-preview.0 by @gemini-cli-robot in #29990 • Changelog for v0.66.0 by @gemini-cli-robot in #29992 • docs(readme): clarify Gemini CLI scope, limitations, and tool landscape by @LyalinDotCom in #29995 • fix(cli): bound inline history re-render after terminal width changes by @jvargassanchez-dot in #29904 • fix(ui): handle surrogate pairs when truncating in sanitizeForDisplay by @diegogodinezr in #29993",
+      "version": "0.68.0",
+      "category": "overig",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Stabiele release, geen patch (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "5bf610d1dd7d8e14",
+      "title": "llm-gemini 0.36",
+      "url": "https://simonwillison.net/2026/Nov/10/llm-gemini",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-10T20:09:44.000Z",
+      "excerpt": "Gemini 4 Carbon was announced two weeks ago for \"a subset of cyber defenders\", but today it's available to everyone else . This is Google's best ever Gemini, priced at $2/million input and $10/million output at launch (that's GPT-6.1 Sol / Claude Sonnet 5.5 prices) but scheduled to double in price to $4/$20 on December 1st (same as Opus 5.5). Here are three pelicans for the low, medium and high thinking efforts (it defaults to medium). This is the…",
+      "version": null,
+      "category": "model",
+      "score": 3,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Model in de titel (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "78c954e9f04a3e5c",
+      "title": "Gemini 4 Carbon in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-10T19:26:51.000Z",
+      "excerpt": "Gemini 4 Carbon, Google&rsquo;s latest model, is now generally available in GitHub Copilot. It is designed for complex coding, agentic, and reasoning tasks, with a focus on secure code generation and security-focused work. This model is billed at provider list pricing under usage-based billing. See Models and pricing for GitHub Copilot for details. Gemini 4 Carbon is available to Copilot Pro+, Max, Business, and Enterprise users. You can select the model…",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "3d3fe24ae54746b9",
+      "title": "rust-v0.167.1",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.1",
+      "sourceId": "codex",
+      "tool": "codex",
+      "publishedAt": "2026-11-10T18:02:26.000Z",
+      "excerpt": "Release 0.167.1",
+      "version": "0.167.1",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "codex:2026-11-10",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "a4978faa7e166cdb",
+      "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-10T18:01:15.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 160,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "ce169ea5d1f169f1",
+      "title": "C++ language server now auto-configures MSBuild builds",
+      "url": "https://github.blog/changelog/2026-11-10-c-language-server-now-auto-configures-msbuild-builds",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-10T17:04:10.000Z",
+      "excerpt": "The Microsoft C++ Language Server for GitHub Copilot CLI now bundles its MSBuild compile commands extractor and invokes it automatically. An agent no longer needs to discover and run a separate configuration skill before it can get precise code intelligence for your project. For more information, including the installation instructions, see the main repository page . Previously, setting up go-to-definition, find references, and other language server…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "cba41f0395d50b9e",
       "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
@@ -162,7 +300,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 358,
+      "points": 368,
       "alsoSeenAt": []
     },
     {
@@ -412,7 +550,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 891,
+      "points": 896,
       "alsoSeenAt": []
     },
     {
@@ -1783,13 +1921,7 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": 399,
-      "alsoSeenAt": [
-        {
-          "sourceId": "hacker-news",
-          "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise",
-          "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "fbfedaa618aab83d",
@@ -1867,29 +1999,6 @@
       "tool": "simon-willison",
       "publishedAt": "2026-10-29T17:00:26.000Z",
       "excerpt": "How I Built the Most AI-Pilled Company in the World Don't be put off by the clickbait headline, this piece by Jacob Sansbury describing how they are building Spawn is a fascinating exploration of the bleeding edge of what's possible with agentic engineering against frontier models. Spawn is a massively multiplayer gaming environment where players can use prompts (to the in-game agent, Savi) to modify the game world. I fired it up on my phone for a few…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "2d0c2102a7199551",
-      "title": "Quoting Ben Hylak",
-      "url": "https://simonwillison.net/2026/Oct/29/ben-hylak",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-10-29T14:06:27.000Z",
-      "excerpt": "every product i use should just be a headless mcp, that feeds into an agent, where i never have to think about anything underneath. in our product, customers love the ui and love us very much.",
       "version": null,
       "category": "overig",
       "score": 2,
