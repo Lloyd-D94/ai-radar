@@ -1,6 +1,100 @@
 {
-  "generatedAt": "2026-11-09T19:53:04.012Z",
+  "generatedAt": "2026-11-10T03:37:54.343Z",
   "items": [
+    {
+      "id": "dbc58eacee5d52ba",
+      "title": "v2.1.322",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.322",
+      "sourceId": "claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-10T02:29:43.000Z",
+      "excerpt": "• Added fast mode on Vertex in the global, us and eu regions, falling back to standard speed if Vertex refuses it",
+      "version": "2.1.322",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "claude-code:2026-11-10",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "9a8fde6cfa9ab68c",
+      "title": "llm-anthropic 0.31",
+      "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-09T23:58:46.000Z",
+      "excerpt": "Anthropic released Fable 5.2 and Mythos 5.2 today. I've added them to llm-anthropic , so you can now run prompts through Fable 5.2 like this: llm -m claude-fable-5.2 \"Generate an SVG of a pelican riding a bicycle\" I ran pelicans at all five reasoning levels - low , medium , high , xhigh , and max . You can see them all here - here's the best result I got, from xhigh : max failed to return an image at all, running out of tokens after spending 128,000…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 3,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Nieuwe functie volgens de brontekst (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": "De bron: “you can now run prompts through Fable 5.”",
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "1cd01b15863e291a",
+      "title": "Locating the source of a mysterious beep with Claude",
+      "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-09T23:57:21.000Z",
+      "excerpt": "Our house has a box room, full of boxes that we still haven't unpacked from our last move. A couple of weeks ago something in that room started intermittently beeping . The beeps were far enough apart that standing in the room and trying to determine the source of the noise was frustrating, and I really didn't want to dig through every one of those boxes. So I had Claude Code build Beep Locator , a software system for triangulating the source of a…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "fbdf36c6d0b0b031",
+      "title": "Claude Fable 5.2 scores 65 on Artificial Analysis, highest so far",
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-09T20:04:55.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Hoge community-score, 200+ punten (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 302,
+      "alsoSeenAt": []
+    },
     {
       "id": "ace31f3b0bb1b6f0",
       "title": "v2.1.321",
@@ -25,6 +119,29 @@
       "alsoSeenAt": []
     },
     {
+      "id": "a3eb4dc7ae89c15a",
+      "title": "Claude Fable 5.2 in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-09T16:46:43.000Z",
+      "excerpt": "Claude Fable 5.2, Anthropic&rsquo;s newest Fable model, is now generally available in GitHub Copilot. You can use it for complex, multistep coding tasks across large codebases. In early testing, Fable 5.2 solved more tasks than Claude Fable 5.1 while using fewer steps and tool calls. It also completed hard tasks that earlier models missed. Claude Fable 5.2 requires data retention by default to operate Anthropic&rsquo;s safety classifiers. Zero data…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "6fe95617291bfea7",
       "title": "App + chat connectors: Jira and Mailjet",
       "url": "https://docs.lovable.dev/changelog#nov-9-2026",
@@ -32,6 +149,28 @@
       "tool": "lovable",
       "publishedAt": "2026-11-09T13:52:36.000Z",
       "excerpt": "Jira lets apps search, create, and update issues on your Jira Cloud site and read its projects, boards, and sprints. Use it for sprint dashboards, bug and feedback intake forms, and triage views. Mailjet lets apps send transactional email from a sender or domain you validated in Mailjet, add contacts to your contact lists, and read delivery status, such as sent, opened, clicked, or bounced. Use it for order confirmations, newsletter signups, and delivery…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "02e9abf47eaf3fa0",
+      "title": "CodeRabbit scales agentic software development and ships 20x more",
+      "url": "https://openai.com/index/coderabbit-codex-daybreak",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-09T08:00:00.000Z",
+      "excerpt": "CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.",
       "version": null,
       "category": "overig",
       "score": 3,
@@ -203,7 +342,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 873,
+      "points": 885,
       "alsoSeenAt": []
     },
     {
@@ -250,7 +389,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 621,
+      "points": 622,
       "alsoSeenAt": []
     },
     {
@@ -545,7 +684,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1609,
+      "points": 1612,
       "alsoSeenAt": []
     },
     {
@@ -862,7 +1001,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 734,
+      "points": 736,
       "alsoSeenAt": []
     },
     {
@@ -1574,13 +1713,7 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": 399,
-      "alsoSeenAt": [
-        {
-          "sourceId": "hacker-news",
-          "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise",
-          "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "fbfedaa618aab83d",
@@ -2327,30 +2460,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "670bdc25a85edb18",
-      "title": "GPT-6.1 Terra",
-      "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-10-26T23:53:07.000Z",
-      "excerpt": "It's always interesting to note which aspects of a new model are emphasized in the release announcement. In the case of GPT-6.1 Terra, OpenAI went with visual reasoning and computer use: We’re introducing GPT-6.1 Terra , a fast, efficient model that combines detailed visual reasoning and precise computer use alongside clearer, more natural writing. A significant step up from GPT‑5.6 Terra, it excels at the communication and computer-based tasks that fill…",
-      "version": null,
-      "category": "model",
-      "score": 3,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Model in de titel (+1)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "a9c488820a62ac4a",
       "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
       "url": "https://openai.com/index/greptile-code-review-codex-astra",
@@ -2488,29 +2597,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "0186c0f1dfec08d5",
-      "title": "Seam Cutter",
-      "url": "https://simonwillison.net/2026/Oct/25/seam-cutter",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-10-25T15:10:19.000Z",
-      "excerpt": "I built this weird and very specific cropping tool - it lets you create a horizontal or vertical cut across an image, then slide the two sides relative to each other. Effectively it lets you crop out a section in the middle of an image. I wanted this because I often use Tailor on my iPhone to stitch several screenshots together into lot long image, but sometimes I find myself wanting to crop out a section in the middle - to redact an irrelevant prompt…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "97c5df49eed3f0cf",
       "title": "v2.1.310",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
@@ -2586,7 +2672,7 @@
       "sourceId": "claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-10-22T22:18:57.000Z",
-      "excerpt": "• Fixed sandboxed Bash commands on macOS and Linux running the shell's startup files outside the sandbox before each command • Fixed macOS sandbox denyWrite glob patterns not applying at a path's real location when the pattern's folder is reached through a symlink • Fixed sandboxed commands and auto-accepted edits being able to modify the MCP config file passed with --mcp-config • Fixed a disabled MCP server being reconnected by a later permission prompt…",
+      "excerpt": "- Fixed sandboxed Bash commands on macOS and Linux running the shell's startup files outside the sandbox before each command - Fixed macOS sandbox `denyWrite` glob patterns not applying at a path's real location when the pattern's folder is reached through a symlink - Fixed sandboxed commands and auto-accepted edits being able to modify the MCP config file passed with `--mcp-config` - Fixed a disabled MCP server being reconnected by a later permission…",
       "version": "2.1.309",
       "category": "overig",
       "score": 2,
