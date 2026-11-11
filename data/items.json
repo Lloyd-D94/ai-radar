@@ -1,6 +1,51 @@
 {
-  "generatedAt": "2026-11-10T21:20:36.726Z",
+  "generatedAt": "2026-11-11T01:19:07.332Z",
   "items": [
+    {
+      "id": "b5d37a4739ec4800",
+      "title": "GitHub App support for Enterprise Copilot seat management",
+      "url": "https://github.blog/changelog/2026-11-10-github-app-support-for-enterprise-copilot-seat-management",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-11T00:10:31.000Z",
+      "excerpt": "Enterprise GitHub Apps can now call the enterprise-level Copilot seat management APIs to control which users and enterprise teams are assigned Copilot seats. The Copilot seat management APIs are accessible with a new enterprise fine-grained permission for Apps: Enterprise Copilot license management .",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "3d3fe24ae54746b9",
+      "title": "0.167.1",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.1",
+      "sourceId": "codex",
+      "tool": "codex",
+      "publishedAt": "2026-11-10T21:32:01.000Z",
+      "excerpt": "Full Changelog: rust-v0.167.0...rust-v0.167.1",
+      "version": "0.167.1",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "codex:2026-11-10",
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "4d5c082f37b5c574",
       "title": "Release v0.68.0",
@@ -72,29 +117,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "3d3fe24ae54746b9",
-      "title": "rust-v0.167.1",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.1",
-      "sourceId": "codex",
-      "tool": "codex",
-      "publishedAt": "2026-11-10T18:02:26.000Z",
-      "excerpt": "Release 0.167.1",
-      "version": "0.167.1",
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "codex:2026-11-10",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "a4978faa7e166cdb",
       "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
       "url": "https://github.com/GoogleChrome/modern-web-guidance",
@@ -104,9 +126,10 @@
       "excerpt": "",
       "version": null,
       "category": "overig",
-      "score": 2,
+      "score": 3,
       "scoreReasons": [
         "Communitybron (start op 2)",
+        "Hoge community-score, 200+ punten (+1)",
         "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
       ],
       "actionLine": null,
@@ -114,7 +137,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 160,
+      "points": 253,
       "alsoSeenAt": []
     },
     {
@@ -300,7 +323,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 368,
+      "points": 372,
       "alsoSeenAt": []
     },
     {
@@ -550,7 +573,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 896,
+      "points": 898,
       "alsoSeenAt": []
     },
     {
@@ -892,7 +915,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1613,
+      "points": 1614,
       "alsoSeenAt": []
     },
     {
