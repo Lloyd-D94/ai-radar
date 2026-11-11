@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T01:19:07.332Z",
+  "generatedAt": "2026-11-11T11:06:05.484Z",
   "items": [
     {
       "id": "b5d37a4739ec4800",
@@ -137,7 +137,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 253,
+      "points": 376,
       "alsoSeenAt": []
     },
     {
@@ -256,6 +256,28 @@
       "alsoSeenAt": []
     },
     {
+      "id": "37e4452e64c861cf",
+      "title": "Cogent and OpenAI build cyber defense factories for enterprises",
+      "url": "https://openai.com/index/cogent-security",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-10T00:00:00.000Z",
+      "excerpt": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "9a8fde6cfa9ab68c",
       "title": "llm-anthropic 0.31",
       "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic",
@@ -323,7 +345,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 372,
+      "points": 375,
       "alsoSeenAt": []
     },
     {
@@ -573,7 +595,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 898,
+      "points": 901,
       "alsoSeenAt": []
     },
     {
@@ -620,7 +642,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 624,
+      "points": 626,
       "alsoSeenAt": []
     },
     {
@@ -3524,28 +3546,6 @@
         "Nieuwe functie volgens de brontekst (+1)"
       ],
       "actionLine": "De bron meldt dat dit nu beschikbaar is.",
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "b6756c0a180ee554",
-      "title": "Benefit Street Partners answers questions faster with Codex",
-      "url": "https://openai.com/index/benefit-street-partners",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-10-16T00:00:00.000Z",
-      "excerpt": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
       "priority": "secundair",
       "isPatch": false,
       "belangrijk": false,
