@@ -1,6 +1,76 @@
 {
-  "generatedAt": "2026-11-11T11:06:05.484Z",
+  "generatedAt": "2026-11-11T19:40:55.220Z",
   "items": [
+    {
+      "id": "73a487a9dee9c904",
+      "title": "Browse tools.simonwillison.net by tag",
+      "url": "https://simonwillison.net/2026/Nov/11/tools-tags",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-11T18:42:50.000Z",
+      "excerpt": "I've been wanting a better way to browse my collection of vibe-coded tools (244 and counting) for a while. I had a few Fable 5.2 credits left over before my weekly reset so I set it to work using tree-sitter to analyze the code for JavaScript APIs, libraries, and web API hosts used by each tool. The homepage now features tag clouds for browsing by each of those categories of tag: 5, AbortController 6, Blob URLs 38, BroadcastChannel 1, Built-in AI 1,…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "88d1ecd11797604c",
+      "title": "llm 0.37.2",
+      "url": "https://simonwillison.net/2026/Nov/11/llm",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-11T17:19:52.000Z",
+      "excerpt": "Fixes a security issue reported by Daniel de Araujo in GHSA-v9h7-jj4g-f862 and GHSA-r639-rr7r-x72w . LLM has a mechanism called extra-openai-models.yaml - now managed by the new-in-0.37 llm openai endpoint add command - for using LLM with OpenAI-compatible API endpoints from other providers. Daniel reported two ways this could accidentally send your configured OpenAI API key to one of those providers: if the key named by api_key_name had never been…",
+      "version": "0.37.2",
+      "category": "overig",
+      "score": 1,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Patchrelease (−1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "simon-willison:2026-11-11",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "d7414ba9c6092537",
+      "title": "Anthropic's IPO roadshow video",
+      "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-11T15:11:59.000Z",
+      "excerpt": "Anthropic kicked off their IPO roadshow yesterday, and their roadshow video has some previously unreleased information about how their business works. The section on \"Approach to compute\" with co-founder Tom Brown is particularly interesting, describing how Anthropic train and serve Claude across AWS Trainium, Google TPUs, NVIDIA GPUs, and AMD GPUs. I'm not sure why there's no official video transcript, but here's one that I extracted using MacWhisper.…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "b5d37a4739ec4800",
       "title": "GitHub App support for Enterprise Copilot seat management",
@@ -137,7 +207,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 376,
+      "points": 421,
       "alsoSeenAt": []
     },
     {
@@ -345,7 +415,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 375,
+      "points": 378,
       "alsoSeenAt": []
     },
     {
@@ -1851,22 +1921,22 @@
       "alsoSeenAt": []
     },
     {
-      "id": "9fc5ee213b01bfec",
-      "title": "datasette-llm 0.1a9",
-      "url": "https://simonwillison.net/2026/Oct/31/datasette-llm",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-10-31T22:10:01.000Z",
-      "excerpt": "I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: uvx --with datasette-agent datasette content.db --internal internal.db Previously you would also need to specify a model with -s…",
+      "id": "e31c17dbbe3f7930",
+      "title": "Introducing Grok Bot 1.0",
+      "url": "https://x.ai/news/grok-bot-1-0",
+      "sourceId": "xai-news",
+      "tool": "grok-bot",
+      "publishedAt": "2026-11-02T00:00:00.000Z",
+      "excerpt": "Bots now work with your whole team, take on work without being asked, and get more done, faster.",
       "version": null,
-      "category": "overig",
-      "score": 2,
+      "category": "nieuwe-functie",
+      "score": 5,
       "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+        "Prioriteitsbron (start op 4)",
+        "Nieuwe functie volgens de brontekst (+1)"
       ],
       "actionLine": null,
-      "priority": "community",
+      "priority": "primair",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
@@ -2030,29 +2100,6 @@
       ],
       "actionLine": null,
       "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "e65fcafff408f808",
-      "title": "Building a multiplayer game world with autonomous Fable-class models",
-      "url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-10-29T17:00:26.000Z",
-      "excerpt": "How I Built the Most AI-Pilled Company in the World Don't be put off by the clickbait headline, this piece by Jacob Sansbury describing how they are building Spawn is a fascinating exploration of the bleeding edge of what's possible with agentic engineering against frontier models. Spawn is a massively multiplayer gaming environment where players can use prompts (to the in-game agent, Savi) to modify the game world. I fired it up on my phone for a few…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,

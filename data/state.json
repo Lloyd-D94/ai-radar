@@ -5,8 +5,8 @@
       "etag": null,
       "urls": [
         {
-          "loc": "https://x.ai/news/grok-voice-3",
-          "lastmod": "2026-10-14T00:00:00.000Z"
+          "loc": "https://x.ai/news/grok-bot-1-0",
+          "lastmod": "2026-11-02T00:00:00.000Z"
         },
         {
           "loc": "https://x.ai/news/data-bot",
@@ -23,6 +23,10 @@
         {
           "loc": "https://x.ai/news/incident-sweep",
           "lastmod": "2026-10-20T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-voice-3",
+          "lastmod": "2026-10-14T00:00:00.000Z"
         },
         {
           "loc": "https://x.ai/news/x-subscription",
@@ -373,7 +377,7 @@
   },
   "pages": {
     "https://docs.x.ai/docs/release-notes": {
-      "hash": "f982e4ca2d5696b417459e1dffc5dd1eb3f12afa35b686d31fc45b40e726a1a5",
+      "hash": "cf2939d5c525ff6bacf67a7875f44788af2289635e95650744323ccb45b2df62",
       "etag": null
     }
   },
@@ -741,6 +745,10 @@
     "https://x.ai/news/grok": {
       "lastmod": "2023-11-03T00:00:00.000Z",
       "fetchedAt": "2026-11-07T06:06:49.548Z"
+    },
+    "https://x.ai/news/grok-bot-1-0": {
+      "lastmod": "2026-11-02T00:00:00.000Z",
+      "fetchedAt": "2026-11-11T19:40:56.297Z"
     }
   }
 }
