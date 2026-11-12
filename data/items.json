@@ -1,6 +1,29 @@
 {
-  "generatedAt": "2026-11-12T11:24:15.394Z",
+  "generatedAt": "2026-11-12T19:59:59.286Z",
   "items": [
+    {
+      "id": "fc634031254e8825",
+      "title": "Replit Agent can now buy for your business and help you reach customers",
+      "url": "https://replit.com/blog/replit-agent-ads-commerce",
+      "sourceId": "replit",
+      "tool": "replit",
+      "publishedAt": "2026-11-12T16:45:00.000Z",
+      "excerpt": "Today we’re giving Replit Agent two new jobs: buying supplies for your business with Link and Visa, and helping you reach customers with Google Ads. In September 2024, we launched Replit Agent, the first generally available coding agent that enabled anyone to build software by describing it in their own words. That opened the door to a new class of founders: people whose ideas had been held back by the high upfront cost and capability required to build…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "4922ca6fb0dd9299",
       "title": "Holiday Extras is rethinking what it can build with Codex",
@@ -25,7 +48,7 @@
     },
     {
       "id": "a247f031d5c2a46c",
-      "title": "Humble Bundle just killed most of their security through vibecoding",
+      "title": "\"Humble Bundle just killed most of their security through vibecoding\"",
       "url": "https://forums.spacebattles.com/threads/humble-bundle-just-completely-killed-most-of-their-security-through-vibecoding.1346295",
       "sourceId": "hacker-news",
       "tool": "hacker-news",
@@ -44,7 +67,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 292,
+      "points": 343,
       "alsoSeenAt": []
     },
     {
@@ -164,6 +187,29 @@
       "alsoSeenAt": []
     },
     {
+      "id": "359bb99c45677a93",
+      "title": "Show HN: Klad, a paint app your coding agent can drive (source-available)",
+      "url": "https://github.com/klad-app/klad",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-11T16:00:50.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 82,
+      "alsoSeenAt": []
+    },
+    {
       "id": "d7414ba9c6092537",
       "title": "Anthropic's IPO roadshow video",
       "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
@@ -215,7 +261,7 @@
       "sourceId": "codex",
       "tool": "codex",
       "publishedAt": "2026-11-10T21:32:01.000Z",
-      "excerpt": "Full Changelog: rust-v0.167.0...rust-v0.167.1",
+      "excerpt": "Full Changelog: https://github.com/openai/codex/compare/rust-v0.167.0...rust-v0.167.1",
       "version": "0.167.1",
       "category": "overig",
       "score": 2,
@@ -322,7 +368,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 430,
+      "points": 434,
       "alsoSeenAt": []
     },
     {
@@ -1122,7 +1168,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1614,
+      "points": 1615,
       "alsoSeenAt": []
     },
     {
