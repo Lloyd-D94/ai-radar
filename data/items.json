@@ -1,6 +1,75 @@
 {
-  "generatedAt": "2026-11-11T19:40:55.220Z",
+  "generatedAt": "2026-11-12T02:18:35.549Z",
   "items": [
+    {
+      "id": "917e81f74d6a6479",
+      "title": "0.167.2",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.2",
+      "sourceId": "codex",
+      "tool": "codex",
+      "publishedAt": "2026-11-11T22:44:46.000Z",
+      "excerpt": "• Codex now sends tool updates incrementally by default on Google Cloud Vertex AI. To opt out, set incremental_tools_legacy_gcp = false under [features] in config.toml . ( #60617 , #60848 ) Full Changelog: rust-v0.167.1...rust-v0.167.2",
+      "version": "0.167.2",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "codex:2026-11-11",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "8cfe95d5a7efcad0",
+      "title": "Gemini Decisions API",
+      "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-11T22:03:25.000Z",
+      "excerpt": "Google join Jev and OpenAI in the decision model category with \"Gemini Decision 1\". This new model API is almost identical to Jev: it supports the same three types of questions (yes/no, choice, and rubric-scoring) and even reuses Jev's term \"Noul\" for a yes/no question. It's priced the same as the GPT-6 Luna decision model: 10 cents per million input tokens, and output is free. Jev remains the cheapest of the three, at 4.2 cents per million. Jev is text…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "fd0e38b70a90d204",
+      "title": "aws-emulator",
+      "url": "https://simonwillison.net/2026/Nov/11/aws-emulator",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-11T21:18:30.000Z",
+      "excerpt": "Finally, an official emulator from AWS to run tests against a local clone of their many different services without having to provision a paid API key to do so. It's written in Rust by a huge swarm of agents - 29,684 commits in the first three weeks of the project. Swaminathan (Swami) Sivasubramanian wrote about how it came to be in a guest post on Werner Vogels' blog. It currently requires Docker to run on macOS or Windows. I'm hoping they fix that in…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "73a487a9dee9c904",
       "title": "Browse tools.simonwillison.net by tag",
@@ -207,7 +276,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 421,
+      "points": 425,
       "alsoSeenAt": []
     },
     {
@@ -263,7 +332,7 @@
       "sourceId": "simon-willison",
       "tool": "simon-willison",
       "publishedAt": "2026-11-10T05:34:14.000Z",
-      "excerpt": "Claude Fable 5.2 responds closely to what the prompt says about who owns the code it works on. In Anthropic’s testing on small coding tasks, when a prompt said nothing about ownership or presented the code base as someone else’s, the model tended to add to the existing structure, even when that repeated existing code. [...] If you want the model to improve the structure as it works, say that the code is its own: This codebase is yours: what it's for and…",
+      "excerpt": "Claude Fable 5.2 pays close attention to who owns the code it works on. In Anthropic’s testing on small coding tasks, the model tended to add to the existing structure when the prompt said nothing about ownership or presented the code base as someone else’s, even when that duplicated existing code. When the prompt said the code base was the model’s own, it often consolidated duplicated code and sometimes made related fixes without being asked. If you…",
       "version": null,
       "category": "overig",
       "score": 2,
@@ -415,7 +484,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 378,
+      "points": 379,
       "alsoSeenAt": []
     },
     {
@@ -1673,29 +1742,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "9d52bf97ae057251",
-      "title": "llm 0.37",
-      "url": "https://simonwillison.net/2026/Nov/2/llm",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-02T23:49:30.000Z",
-      "excerpt": "There's a lot of stuff in this new release of my LLM CLI tool and Python library, representing around two months of accumulated features and fixes. I added gpt-6.1-sol and gpt-6.1-terra , plus a new llm openai endpoint add command to make it easier to configure additional models that use OpenAI-compatible endpoints. I switched the default model (if you have not set your own default) to gpt-6-luna - half the price of the previous default, gpt-5.6-luna .…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "174017dbf3b16c2f",
       "title": "Open a page of your app from Chats",
       "url": "https://docs.lovable.dev/changelog#oct-31-2026",
@@ -1802,29 +1848,6 @@
       ],
       "actionLine": null,
       "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "1e75cc35b491a310",
-      "title": "The U.S. Census Bureau and “Super Intelligence”",
-      "url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-02T13:31:26.000Z",
-      "excerpt": "I was reminded today of AI Adoption Rate Trending Down for Large Companies , a chart produced by Apollo Global Management in September 2025, which appeared to show a slowdown in U.S. corporate AI adoption based on numbers collected by the U.S. Census Bureau. At the time I used that chart to demonstrate GPT-5 data analysis , and then to experiment with Claude's new Code Interpreter . I decided to try running those numbers again to see what had changed…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
