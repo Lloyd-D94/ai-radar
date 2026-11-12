@@ -1,6 +1,52 @@
 {
-  "generatedAt": "2026-11-12T02:18:35.549Z",
+  "generatedAt": "2026-11-12T11:24:15.394Z",
   "items": [
+    {
+      "id": "4922ca6fb0dd9299",
+      "title": "Holiday Extras is rethinking what it can build with Codex",
+      "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-12T09:30:00.000Z",
+      "excerpt": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "a247f031d5c2a46c",
+      "title": "Humble Bundle just killed most of their security through vibecoding",
+      "url": "https://forums.spacebattles.com/threads/humble-bundle-just-completely-killed-most-of-their-security-through-vibecoding.1346295",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-12T06:52:48.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Hoge community-score, 200+ punten (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 292,
+      "alsoSeenAt": []
+    },
     {
       "id": "917e81f74d6a6479",
       "title": "0.167.2",
@@ -276,7 +322,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 425,
+      "points": 430,
       "alsoSeenAt": []
     },
     {
@@ -734,7 +780,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 901,
+      "points": 902,
       "alsoSeenAt": []
     },
     {
@@ -3437,28 +3483,6 @@
       "isPatch": true,
       "belangrijk": false,
       "bundleKey": "claude-code:2026-10-19",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "1dbe22633003a2af",
-      "title": "Advancing coding in low‑resource programming languages",
-      "url": "https://openai.com/index/low-resource-programming-languages",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-10-19T12:00:00.000Z",
-      "excerpt": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
       "points": null,
       "alsoSeenAt": []
     },
