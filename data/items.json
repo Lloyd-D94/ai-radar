@@ -1,6 +1,75 @@
 {
-  "generatedAt": "2026-11-13T01:53:10.884Z",
+  "generatedAt": "2026-11-13T11:07:41.694Z",
   "items": [
+    {
+      "id": "1a09f77a4836fe9e",
+      "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+      "url": "https://status.claude.com/incidents/nn11wk485zfn",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-13T10:18:13.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 150,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "a0c08c461d827e1c",
+      "title": "0.169.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+      "sourceId": "codex",
+      "tool": "codex",
+      "publishedAt": "2026-11-13T08:37:05.000Z",
+      "excerpt": "• The opt-in terminal workspace supports multiple side-chat tabs. Switch between them with the keyboard or mouse, and reopen saved local side chats after restarting Codex. ( #59784 , #60152 , #60181 ) • Search older tasks from the agent command center by name, prompt preview, or working directory. ( #60286 ) • Turn on Collapse turn details in the full-screen transcript to fold completed activity beneath each prompt while keeping answers visible and tool…",
+      "version": "0.169.0",
+      "category": "overig",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Stabiele release, geen patch (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "6cfc942e5da70ee0",
+      "title": "0.168.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.168.0",
+      "sourceId": "codex",
+      "tool": "codex",
+      "publishedAt": "2026-11-13T03:54:29.000Z",
+      "excerpt": "• Browse model providers under Sessions → Model providers and choose the default for new chats. ( #59541 , #59722 ) • Enable features.tui_workspace to view a side conversation beside the main chat. Drag the divider to resize the panes or press leader z to zoom the focused pane. ( #58992 , #59527 , #59595 ) • Attach recordings when using an audio-capable model. Codex skips confirmed rejected recordings on later turns and uses clip duration to keep more…",
+      "version": "0.168.0",
+      "category": "overig",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Stabiele release, geen patch (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "8427d4fee9a7d1b9",
       "title": "v2.1.323",
@@ -21,29 +90,6 @@
       "isPatch": true,
       "belangrijk": false,
       "bundleKey": "claude-code:2026-11-12",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "6cfc942e5da70ee0",
-      "title": "rust-v0.168.0",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.168.0",
-      "sourceId": "codex",
-      "tool": "codex",
-      "publishedAt": "2026-11-12T21:29:07.000Z",
-      "excerpt": "Release 0.168.0",
-      "version": "0.168.0",
-      "category": "overig",
-      "score": 4,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)",
-        "Stabiele release, geen patch (+1)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
       "points": null,
       "alsoSeenAt": []
     },
@@ -224,7 +270,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 370,
+      "points": 384,
       "alsoSeenAt": []
     },
     {
@@ -234,7 +280,7 @@
       "sourceId": "codex",
       "tool": "codex",
       "publishedAt": "2026-11-11T22:44:46.000Z",
-      "excerpt": "• Codex now sends tool updates incrementally by default on Google Cloud Vertex AI. To opt out, set incremental_tools_legacy_gcp = false under [features] in config.toml . ( #60617 , #60848 ) Full Changelog: rust-v0.167.1...rust-v0.167.2",
+      "excerpt": "- Codex now sends tool updates incrementally by default on Google Cloud Vertex AI. To opt out, set `incremental_tools_legacy_gcp = false` under `[features]` in `config.toml`. ([#60617](https://github.com/openai/codex/pull/60617), [#60848](https://github.com/openai/codex/pull/60848)) Full Changelog: https://github.com/openai/codex/compare/rust-v0.167.1...rust-v0.167.2",
       "version": "0.167.2",
       "category": "overig",
       "score": 2,
@@ -531,7 +577,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 434,
+      "points": 439,
       "alsoSeenAt": []
     },
     {
@@ -989,7 +1035,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 902,
+      "points": 903,
       "alsoSeenAt": []
     },
     {
