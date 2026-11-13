@@ -1,6 +1,141 @@
 {
-  "generatedAt": "2026-11-12T19:59:59.286Z",
+  "generatedAt": "2026-11-13T01:53:10.884Z",
   "items": [
+    {
+      "id": "8427d4fee9a7d1b9",
+      "title": "v2.1.323",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+      "sourceId": "claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-12T22:12:13.000Z",
+      "excerpt": "• Added Code Mode, an experimental opt-in in which Claude writes JavaScript to call its tools; see https://code.claude.com/docs/en/code-mode to turn it on, or to turn it off for an organization • Added engines[\"claude-code\"] to plugin.json : plugins outside their stated Claude Code version range are not installed, updated or loaded, and install and update pick the newest version that fits • Added type checking of a plugin's TypeScript hooks module to…",
+      "version": "2.1.323",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "claude-code:2026-11-12",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "6cfc942e5da70ee0",
+      "title": "rust-v0.168.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.168.0",
+      "sourceId": "codex",
+      "tool": "codex",
+      "publishedAt": "2026-11-12T21:29:07.000Z",
+      "excerpt": "Release 0.168.0",
+      "version": "0.168.0",
+      "category": "overig",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Stabiele release, geen patch (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "45753e9da3eccbf6",
+      "title": "Hand recurring work to Lovable with automations",
+      "url": "https://docs.lovable.dev/changelog#nov-11-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-12T21:21:49.000Z",
+      "excerpt": "Hand recurring work to Lovable with automations Automations let Lovable take care of the work you repeat, such as a morning check of your published sites, a weekly summary of new signups, or a Friday list of the oldest items in your backlog. Ask for one in Chats and say how often, and Lovable posts what it finds there. Automations are available on Free, Pro, and Business plans, and each run is chat usage. Invitations are no longer accepted automatically…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "d6f3b9342712fc9b",
+      "title": "See when your monthly credits renew",
+      "url": "https://docs.lovable.dev/changelog#nov-10-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-12T21:21:49.000Z",
+      "excerpt": "On Pro and Business plans, the credit bar in your workspace menu now shows the date your monthly credits renew next , whether you pay monthly or annually. You can now add personal skills , playbooks that only you can use, with a separate set in each workspace. Lovable applies one when a task matches it. Add them in your account settings, or ask Lovable in a project chat to write one. You can now set personal instructions , rules and preferences that…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now add personal skills , playbooks that only you can use, with a separate set in each workspace.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "e7b80eebd934fddf",
+      "title": "App + chat connectors: Deel and Retool",
+      "url": "https://docs.lovable.dev/changelog#nov-12-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-12T21:21:49.000Z",
+      "excerpt": "Deel lets apps read and update your company's contracts, people, timesheets, and time off, and read its payments. Use it for team directories, timesheet approval queues, and payroll reports. Retool lets apps manage the members, groups, and permissions of your Retool organization and embed your existing Retool apps. Use it for team administration dashboards, access reviews, and portals that bring your Retool tools together. Add it from Connectors , or ask…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "67672a694e389b29",
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "url": "https://openai.com/business/customer-stories/amplitude",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-12T20:00:00.000Z",
+      "excerpt": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "fc634031254e8825",
       "title": "Replit Agent can now buy for your business and help you reach customers",
@@ -15,6 +150,28 @@
       "scoreReasons": [
         "Secundaire bron (start op 3)",
         "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "b9840fd67063a36a",
+      "title": "Gondola doubles revenue as its team builds more with Codex",
+      "url": "https://openai.com/business/customer-stories/gondola",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-12T12:00:00.000Z",
+      "excerpt": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
       ],
       "actionLine": null,
       "priority": "secundair",
@@ -67,7 +224,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 343,
+      "points": 370,
       "alsoSeenAt": []
     },
     {
@@ -206,7 +363,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 82,
+      "points": 83,
       "alsoSeenAt": []
     },
     {
@@ -322,7 +479,13 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "simon-willison",
+          "url": "https://simonwillison.net/2026/Nov/12/llm-gemini",
+          "title": "llm-gemini 0.37"
+        }
+      ]
     },
     {
       "id": "78c954e9f04a3e5c",
@@ -2926,7 +3089,7 @@
       "sourceId": "claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-10-23T23:39:00.000Z",
-      "excerpt": "• Added the Monitor tool and plugin monitors on Bedrock, Vertex, and Foundry, and when telemetry or nonessential traffic is disabled; long foreground sleeps are now blocked there too • Fixed requests failing behind some gateways and compatible servers that reject the effort-2025-11-24 beta value or mid-conversation system messages; Claude Code now retries without them • Fixed background cleanup deleting some recent files, such as pasted images, when…",
+      "excerpt": "- Added the Monitor tool and plugin monitors on Bedrock, Vertex, and Foundry, and when telemetry or nonessential traffic is disabled; long foreground sleeps are now blocked there too - Fixed requests failing behind some gateways and compatible servers that reject the `effort-2025-11-24` beta value or mid-conversation system messages; Claude Code now retries without them - Fixed background cleanup deleting some recent files, such as pasted images, when…",
       "version": "2.1.310",
       "category": "overig",
       "score": 2,
@@ -3223,50 +3386,6 @@
       "tool": "openai",
       "publishedAt": "2026-10-21T12:00:00.000Z",
       "excerpt": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "de9db6f384cbc788",
-      "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
-      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-10-21T07:00:00.000Z",
-      "excerpt": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "64ddfb139fec8a1c",
-      "title": "Using thousands of AI agents to uncover new leads in biological data",
-      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-10-21T04:50:00.000Z",
-      "excerpt": "See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.",
       "version": null,
       "category": "overig",
       "score": 3,
