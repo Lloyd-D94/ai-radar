@@ -1,6 +1,29 @@
 {
-  "generatedAt": "2026-11-14T01:29:04.700Z",
+  "generatedAt": "2026-11-14T10:34:21.499Z",
   "items": [
+    {
+      "id": "60e5719ddad5001d",
+      "title": "Anthropic upgrades Claude Code Projects to run parallel AI workers",
+      "url": "https://claude.com/resources/articles/projects-redesigned",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-14T00:28:11.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 88,
+      "alsoSeenAt": []
+    },
     {
       "id": "2053de078f05bd0a",
       "title": "datasette-cluster-map 0.19",
@@ -204,7 +227,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 484,
+      "points": 488,
       "alsoSeenAt": []
     },
     {
@@ -453,7 +476,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 401,
+      "points": 406,
       "alsoSeenAt": []
     },
     {
@@ -1218,7 +1241,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 903,
+      "points": 904,
       "alsoSeenAt": []
     },
     {
@@ -1560,7 +1583,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1615,
+      "points": 1616,
       "alsoSeenAt": []
     },
     {
@@ -2109,7 +2132,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 535,
+      "points": 536,
       "alsoSeenAt": []
     },
     {
