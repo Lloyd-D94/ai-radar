@@ -1,6 +1,97 @@
 {
-  "generatedAt": "2026-11-13T19:48:04.209Z",
+  "generatedAt": "2026-11-14T01:29:04.700Z",
   "items": [
+    {
+      "id": "2053de078f05bd0a",
+      "title": "datasette-cluster-map 0.19",
+      "url": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-13T23:02:45.000Z",
+      "excerpt": "One of the oldest Datasette plugins, and still one of my favorites. It now works with Datasette 1.0a42, and depends on the new datasette-leaflet to ensure OpenStreetMap tiles are requested with a referrer header. Here's a map of power plants owned by California's PG&E , also demonstrating Datasette's recently redesigned facets :",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "a840b1604a3a5e19",
+      "title": "datasette-leaflet 0.3",
+      "url": "https://simonwillison.net/2026/Nov/13/datasette-leaflet",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-13T22:30:54.000Z",
+      "excerpt": "OpenStreetMap have a very reasonable policy that hits to their hosted tile server should send a referrer header . Datasette table pages used the Referrer-Policy: no-referrer HTTP header, causing plugins that loaded tiles from OpenStreetMap to violate that policy. datasette-leaflet is the plugin that loads a bundled Leaflet so other Datasette plugins can depend on it. It now sets the referrer policy on the tile requests themselves to…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "995c4a805a2dae47",
+      "title": "Upcoming deprecation of selected GitHub Copilot models in December",
+      "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-13T20:40:05.000Z",
+      "excerpt": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on December 14, 2026: *Claude Haiku 4.5 will remain available to individual GitHub Copilot subscribers on annual plans. The deprecation of Claude Haiku 4.5 does not apply to these customers. Please update your workflows and integrations to use the supported models before this date. Under default…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "e58a3ce1f17ad846",
+      "title": "v2.1.325",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+      "sourceId": "claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-13T20:40:01.000Z",
+      "excerpt": "• Fixed a security issue in how zstd-compressed responses are decoded • Added a spinner tip in VS Code and similar integrated terminals about re-running a notebook cell, shown once Claude has read or edited a Jupyter notebook • Added a line under the error shown when your organization's policy blocks a request, saying how to continue: run /rewind and change the message, or run /clear • Added a note for Claude when a sandboxed git checkout , git stash or…",
+      "version": "2.1.325",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "claude-code:2026-11-13",
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "a82a582d254d179c",
       "title": "GitHub Enterprise Server support in the GitHub Copilot app",
@@ -113,7 +204,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 462,
+      "points": 484,
       "alsoSeenAt": []
     },
     {
@@ -130,6 +221,28 @@
       "scoreReasons": [
         "Secundaire bron (start op 3)",
         "Stabiele release, geen patch (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "a99dfdd20d85acbb",
+      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+      "url": "https://openai.com/business/customer-stories/shield",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-13T08:00:00.000Z",
+      "excerpt": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
       ],
       "actionLine": null,
       "priority": "secundair",
@@ -340,7 +453,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 400,
+      "points": 401,
       "alsoSeenAt": []
     },
     {
@@ -1953,29 +2066,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "b5cba0d011349b3b",
-      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
-      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-03T16:29:48.000Z",
-      "excerpt": "Yesterday's hot paper was Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights by Rikiya Takehi, Jayden Teoh, Alex Zhang, and Omar Khattab. The paper (OK, the authors classify is as a \"blog post\", but it's paper-shaped) found that frontier models, in particular GPT-6 Astra, can both interpret and modify the raw weights of a machine learning model - literally a text description of the model containing a bunch of…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "2b4786f99076579d",
       "title": "GitHub Copilot is now available in JetBrains Air",
       "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air",
@@ -2060,29 +2150,6 @@
       ],
       "actionLine": null,
       "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "449ed68b90056fbb",
-      "title": "October sponsors-only newsletter",
-      "url": "https://simonwillison.net/2026/Nov/3/october-newsletter",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-03T05:28:59.000Z",
-      "excerpt": "I sent out the October edition of my sponsors-only monthly newsletter . If you are a sponsor (or start a sponsorship now) you can access it here . This month: • The October inflection point for vibe game development • The vulnerability apocalypse gets hot • LLM releases • API credits for $100+/month subscriptions",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
@@ -3091,7 +3158,7 @@
       "sourceId": "claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-10-26T21:51:23.000Z",
-      "excerpt": "• Added --hold-idle-file and --max-hold-min to self-hosted-runner , to keep an idle session while your host reports processes it left running • Added a tip for the Explanatory output style, shown when you ask Claude for explanations • Fixed long freezes at startup and after reading or editing files when a CLAUDE.md file holds a very long list item • Fixed interrupting Claude not taking effect until a timeout while an MCP server had not answered a…",
+      "excerpt": "- Added `--hold-idle-file` and `--max-hold-min` to `self-hosted-runner`, to keep an idle session while your host reports processes it left running - Added a tip for the Explanatory output style, shown when you ask Claude for explanations - Fixed long freezes at startup and after reading or editing files when a CLAUDE.md file holds a very long list item - Fixed interrupting Claude not taking effect until a timeout while an MCP server had not answered a…",
       "version": "2.1.311",
       "category": "overig",
       "score": 2,
@@ -3480,28 +3547,6 @@
       "tool": "lovable",
       "publishedAt": "2026-10-21T19:57:52.000Z",
       "excerpt": "Group your workspaces into an organization Enterprise companies that run several Lovable workspaces can now manage them together in an organization . The company sets up SSO once for all of them, and with SCIM the identity provider adds and removes members automatically. Org admins see every member and role in one place, and teams can publish internal apps to everyone in the company. Each workspace keeps its own projects, members, groups, and billing.…",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "95dedf578de78f3e",
-      "title": "OpenAI models are coming to Google Cloud",
-      "url": "https://openai.com/index/openai-models-google-cloud",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-10-21T12:00:00.000Z",
-      "excerpt": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
       "version": null,
       "category": "overig",
       "score": 3,
@@ -4924,7 +4969,13 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "xai-release-notes",
+          "url": "https://docs.x.ai/developers/release-notes#image-api-updates",
+          "title": "Image API updates"
+        }
+      ]
     },
     {
       "id": "13d1b5dab0dfabb7",
@@ -6286,6 +6337,28 @@
       "tool": "cursor",
       "publishedAt": "2026-06-10T00:00:00.000Z",
       "excerpt": "The average review time for Bugbot is now ~90 seconds, down from ~5 minutes. Bugbot also finds 10% more bugs per review on average — 0.62, up from 0.56 — and costs ~22% less per run. Bugbot is now over 3x faster, 22% cheaper, and finds 10% more bugs per review. These performance gains are made possible by progress we've made training Composer 2.5, which now powers Bugbot. Bugbot respects model block lists, and speed and performance can vary depending on…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "9b837273d5cd90e4",
+      "title": "Public URLs and Files API ↔ image & video integration",
+      "url": "https://docs.x.ai/developers/release-notes#public-urls-and-files-api--image--video-integration",
+      "sourceId": "xai-release-notes",
+      "tool": "xai-api",
+      "publishedAt": "2026-06-10T00:00:00.000Z",
+      "excerpt": "• Public URLs for Files — turn any file in your Files API storage into a permanent, unauthenticated URL that anyone can open, embed, or share. Revocable at any time, or set an auto-expiry between 1 hour and 30 days. See the Public URLs docs . • Reference stored files as image & video inputs — substitute image_file_id , video_file_id , or reference_image_file_ids for URL inputs across every image & video endpoint, with no need to re-upload bytes or make…",
       "version": null,
       "category": "overig",
       "score": 3,
