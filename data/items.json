@@ -1,6 +1,29 @@
 {
-  "generatedAt": "2026-11-14T22:30:38.068Z",
+  "generatedAt": "2026-11-15T06:42:16.839Z",
   "items": [
+    {
+      "id": "9c481a0931060f36",
+      "title": "datasette-llm 0.1a11",
+      "url": "https://simonwillison.net/2026/Nov/14/datasette-llm",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-14T23:59:28.000Z",
+      "excerpt": "datasette-llm is the intermediate plugin for Datasette that supports configuring LLMs for use with other Datasette plugins. This release adds support for OpenAI-compatible endpoints, so you can configure Datasette to use an LLM hosted anywhere that talks the OpenAI pseudo-standard web protocol. This means that if you're running local models with LM Studio or Ollama or llama.cpp (which just hit v1.0.0 ) you can run Datasette via uvx like this: -s…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "c3342fe5a033ee5f",
       "title": "Lovable apps expose passport details and more than 200K private messages",
@@ -22,7 +45,30 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 513,
+      "points": 752,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "c7271b7ac99ecdcd",
+      "title": "datasette-vega 0.7",
+      "url": "https://simonwillison.net/2026/Nov/14/datasette-vega",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-14T17:09:09.000Z",
+      "excerpt": "A new release of Datasette's longest untouched plugin, for rendering charts (using Vega-Lite ) against data in a table or custom query. The last release was in July 2018! I finally bumped it for compatibility with the latest Datasette alphas, plus some cosmetic tweaks to make it work better with Datasette Lite . (Datasette Lite just gained the ability to run JavaScript plugins like this! I'll write more about that soon.) Since it works with Datasette…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
       "alsoSeenAt": []
     },
     {
@@ -500,7 +546,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 406,
+      "points": 409,
       "alsoSeenAt": []
     },
     {
@@ -865,7 +911,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 443,
+      "points": 444,
       "alsoSeenAt": []
     },
     {
@@ -1985,29 +2031,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "b3ab12a34ee36e8a",
-      "title": "datasette-apps 0.3a0",
-      "url": "https://simonwillison.net/2026/Nov/4/datasette-apps",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-04T00:29:36.000Z",
-      "excerpt": "Datasette Apps adds support for hosting and editing custom HTML applications inside of Datasette. These can be created by hand, but it's easier to create them using LLMs via Datasette Agent . This release improves that integration: • Apps can now be tagged in Datasette Agent chat messages by typing # , which autocompletes from the apps the user has permission to view. • New app_add_stored_queries() and app_remove_stored_queries() tools let the agent…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "797aba84ba3e9103",
       "title": "v2.1.318",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
@@ -2074,13 +2097,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-11-04",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-76",
-          "title": "Grok Build 1.0.76"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "d5fe14b7b77af79b",
@@ -2102,36 +2119,6 @@
       "isPatch": true,
       "belangrijk": false,
       "bundleKey": "grok-build:2026-11-04",
-      "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-75",
-          "title": "Grok Build 1.0.75"
-        }
-      ]
-    },
-    {
-      "id": "b0671b3fa0f50f91",
-      "title": "datasette-agent 0.5a0",
-      "url": "https://simonwillison.net/2026/Nov/3/datasette-agent",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-03T23:13:45.000Z",
-      "excerpt": "This is a significant release of Datasette Agent . The most notable new feature is called the panel - it lets the agent chat open and then sit next to pages from Datasette, for example a table or query page. When combined with datasette-apps this means you can prompt a database-backed app into existence and then modify it from the chat that sits next to that app. You can try it by signing in with your GitHub account to agent.datasette.io .",
-      "version": null,
-      "category": "nieuwe-functie",
-      "score": 3,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Nieuwe functie volgens de brontekst (+1)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
       "points": null,
       "alsoSeenAt": []
     },
@@ -2949,13 +2936,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-28",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-73",
-          "title": "Grok Build 1.0.73"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "451b839194f1d8cc",
@@ -3203,13 +3184,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-27",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-72",
-          "title": "Grok Build 1.0.72"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "a9c488820a62ac4a",
@@ -3421,13 +3396,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-23",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-70",
-          "title": "Grok Build 1.0.70"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "f19299fd1a8be18c",
@@ -3450,13 +3419,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-23",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-69",
-          "title": "Grok Build 1.0.69"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "0307ec1244417a61",
@@ -3729,13 +3692,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-21",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-67",
-          "title": "Grok Build 1.0.67"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "e9d62472858a055c",
@@ -3894,13 +3851,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-20",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-66",
-          "title": "Grok Build 1.0.66"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "637ddeb38167e8ce",
