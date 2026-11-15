@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T16:25:27.588Z",
+  "generatedAt": "2026-11-15T22:54:14.006Z",
   "items": [
     {
       "id": "9c481a0931060f36",
@@ -45,7 +45,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 938,
+      "points": 970,
       "alsoSeenAt": []
     },
     {
@@ -91,7 +91,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 99,
+      "points": 100,
       "alsoSeenAt": []
     },
     {
@@ -352,7 +352,7 @@
       "sourceId": "codex",
       "tool": "codex",
       "publishedAt": "2026-11-13T03:54:29.000Z",
-      "excerpt": "• Browse model providers under Sessions → Model providers and choose the default for new chats. ( #59541 , #59722 ) • Enable features.tui_workspace to view a side conversation beside the main chat. Drag the divider to resize the panes or press leader z to zoom the focused pane. ( #58992 , #59527 , #59595 ) • Attach recordings when using an audio-capable model. Codex skips confirmed rejected recordings on later turns and uses clip duration to keep more…",
+      "excerpt": "- Browse model providers under Sessions → Model providers and choose the default for new chats. (#59541, #59722) - Enable `features.tui_workspace` to view a side conversation beside the main chat. Drag the divider to resize the panes or press `leader z` to zoom the focused pane. (#58992, #59527, #59595) - Attach recordings when using an audio-capable model. Codex skips confirmed rejected recordings on later turns and uses clip duration to keep more short…",
       "version": "0.168.0",
       "category": "overig",
       "score": 4,
@@ -547,6 +547,30 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": 413,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "a12cad2621895b8a",
+      "title": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
+      "url": "https://youtube.com/watch?v=WPj3aQ-xxpI",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-12T05:29:24.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Hoge community-score, 200+ punten (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 280,
       "alsoSeenAt": []
     },
     {
