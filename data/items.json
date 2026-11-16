@@ -1,6 +1,121 @@
 {
-  "generatedAt": "2026-11-15T22:54:14.006Z",
+  "generatedAt": "2026-11-16T06:39:47.453Z",
   "items": [
+    {
+      "id": "c6febd82e4661f8d",
+      "title": "datasette-maplibre 0.1a0",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-15T23:58:36.000Z",
+      "excerpt": "The first new Datasette geospatial plugin in quite a while! This one combines the excellent MapLibre GL library with OpenFreeMap , the free vector map server operated by Zsolt Ero (you should sponsor Zsolt on GitHub .) I built most of this with a single prompt to Claude Fable 5.2: Look at datasette-cluster-map and datasette-leaflet-geojson plugins, then look at ~/dev/tools/openfreemap-demo.html - then build a brand new Datasette plugin that uses…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "601a53017054bbca",
+      "title": "datasette 1.0a43",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-15T23:20:27.000Z",
+      "excerpt": "I've been leaning hard into Claude Fable 5.2 to help knock things off the 1.0 milestone , which is now 53% complete. The biggest 1.0 item in this release is streaming support for output renderers - the built-in TSV and CSV export mechanisms now use this as well, and plugins can register themselves as capable of streaming every row in a table in one go via the new Response.stream() method. There are a couple of security fixes, one of which I deemed…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "ad61f4db9d2a336e",
+      "title": "datasette 0.65.6",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-2",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-15T23:18:17.000Z",
+      "excerpt": "I backported a minor security fix from 1.0a43: Fixed a security issue where a database registered using add_database(db, name=..., route=...) with a route that differs from its name could be downloaded from / .db by actors who were denied access to it. [...]",
+      "version": "0.65.6",
+      "category": "beveiliging",
+      "score": 5,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Beveiliging, prijs of breaking change (+2, minimaal 5)"
+      ],
+      "actionLine": "De bron meldt een beveiligingswijziging voor Simon Willison.",
+      "priority": "community",
+      "isPatch": true,
+      "belangrijk": true,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "756ac6b73c7a6695",
+      "title": "datasette-apps 0.4a0",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-apps",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-15T04:02:45.000Z",
+      "excerpt": "Datasette Apps are sandboxed HTML and JavaScript applications that live inside Datasette - think Claude Artifacts, but these ones can run SQL queries against your data. 0.4a0 adds support for linking: you can link to an app with #fragments in the URL and the app can see and use those, plus supported URL schemes are reported back to Datasette Agent so it can help write apps that link to each other. This means you can have e.g. an app that shows details…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "a434c2daa44c258b",
+      "title": "datasette-agent 0.6a0",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-agent",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-15T03:49:47.000Z",
+      "excerpt": "Accumulated small fixes for Datasette Agent, my agent plugin for Datasette that lets you ask questions about your data. Most notably, it now adds an agent prompt directly to the Datasette homepage, with support for hash-mentions of tables and queries:",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "9c481a0931060f36",
       "title": "datasette-llm 0.1a11",
@@ -45,7 +160,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 970,
+      "points": 980,
       "alsoSeenAt": []
     },
     {
@@ -546,7 +661,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 413,
+      "points": 414,
       "alsoSeenAt": []
     },
     {
@@ -570,7 +685,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 280,
+      "points": 404,
       "alsoSeenAt": []
     },
     {
@@ -1143,7 +1258,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 379,
+      "points": 380,
       "alsoSeenAt": []
     },
     {
@@ -1350,29 +1465,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "71c843041955ebc1",
-      "title": "parse_number() as a SQLite extension: C vs Rust",
-      "url": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-08T22:26:00.000Z",
-      "excerpt": "Research: parse_number() as a SQLite extension: C vs Rust I was out walking the dog when I got curious about how easy/difficult it would be to write a SQLite C extension that adds a parse_number() function for turning strings like -$1,234.56 or '12.5%' into numeric values that could be summed and sorted. I fired up regular Claude chat (Opus 5.5) and prompted : I'm thinking about a SQLite custom function 'parse_number(value)' that strips ',', '$', '£' and…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "79a426483352990d",
       "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
       "url": "https://thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
@@ -1397,29 +1489,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "5f8103aa8ad8e667",
-      "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
-      "url": "https://simonwillison.net/2026/Nov/7/link-rel-next",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-07T23:57:46.000Z",
-      "excerpt": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening because Datasette pages serve an HTTP link header like this: This is bad. A tiny fraction of the visitors to one of those pages will click the \"next\" link, which means for…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "10bdc73097cfd238",
       "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
       "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
@@ -1440,7 +1509,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 626,
+      "points": 627,
       "alsoSeenAt": []
     },
     {
@@ -1550,29 +1619,6 @@
       ],
       "actionLine": null,
       "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "b7aa5d4fa5c79c45",
-      "title": "Quoting Nilay Patel",
-      "url": "https://simonwillison.net/2026/Nov/6/nilay-patel",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-06T17:13:12.000Z",
-      "excerpt": "The products aren't good enough to sell people on the costs. You cannot tell people that you have to listen to the whine of a data center in their backyard for AI overviews and some of the most hilarious deep fake slop in history. It's not worth it. It just isn't worth it to anyone. And agents aren't real and they might not be being used the way that anyone wants them to yet. All these companies are spending more than they're making on these products.…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
@@ -1957,29 +2003,6 @@
       ],
       "actionLine": null,
       "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "cd09dc87fba0a54b",
-      "title": "datasette-llm 0.1a10",
-      "url": "https://simonwillison.net/2026/Nov/4/datasette-llm",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-04T15:26:02.000Z",
-      "excerpt": "Fixes a bug that affected my agent.datasette.io demo site, where the set of available LLM models was not correctly restricted to just those in the configuration.",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
