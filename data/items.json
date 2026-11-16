@@ -1,6 +1,141 @@
 {
-  "generatedAt": "2026-11-16T06:39:47.453Z",
+  "generatedAt": "2026-11-16T19:40:29.959Z",
   "items": [
+    {
+      "id": "9b6e721056f66ec2",
+      "title": "Connect your app to Intercom",
+      "url": "https://docs.lovable.dev/changelog#nov-15-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-16T15:13:19.000Z",
+      "excerpt": "You can now connect your Lovable app to Intercom to search and reply to support conversations, manage contacts and tickets, and search and publish help center articles. It fits a support inbox, a customer lookup page, or help center search. Add it from Connectors , or ask Lovable in a project to connect it. Improved comments in the preview and on shared preview links Comments in the preview have several updates: • Each thread has a number, such as #3 ,…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now connect your Lovable app to Intercom to search and reply to support conversations, manage contacts and tickets, and search and publish help center articles.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "9dff17bb40c2b19a",
+      "title": "Lovable asks you to replace a password found in a data leak",
+      "url": "https://docs.lovable.dev/changelog#nov-14-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-16T15:13:19.000Z",
+      "excerpt": "Lovable asks you to replace a password found in a data leak When you sign up or log in with an email and password, or reset your password, Lovable now checks the password against known data leaks and asks you to replace a leaked one. If your password is in a leak when you log in, Lovable logs you out on all your devices and asks you to reset it before you continue. Apps and tools connected to your Lovable account then need to connect again.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "c1e4dd7ce43442fb",
+      "title": "Test database changes in a draft",
+      "url": "https://docs.lovable.dev/changelog#nov-16-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-16T15:13:19.000Z",
+      "excerpt": "On a project that uses the built-in backend, a draft now has a backend of its own , filled with example data. In the draft, test a change that stores new information, such as a new form field, without changing your live app. When you accept the draft, Lovable applies the change to your live database before you publish and leaves the test data behind. You can now archive a chat in Chats to remove it from your chat list without deleting it. Find it later…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now archive a chat in Chats to remove it from your chat list without deleting it.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "feef1bb9b367bb66",
+      "title": "Bring company workspaces into your organization",
+      "url": "https://docs.lovable.dev/changelog#nov-13-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-16T10:24:24.000Z",
+      "excerpt": "Bring company workspaces into your organization On Enterprise plans, org admins can now claim workspaces whose primary owner uses one of the organization's verified domains. The primary owner gets 14 days' notice and can approve the claim sooner. When the claim completes, the workspace joins the organization and takes the organization's identity and security settings. The workspace keeps its plan and billing. Send email from the domain you bought through…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "21b4758ab52123ac",
+      "title": "Advancing computer-use agents for healthcare teams",
+      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-16T06:00:00.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "21e886491b30cfff",
+      "title": "More ways to move care forward with ChatGPT for Healthcare",
+      "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-16T06:00:00.000Z",
+      "excerpt": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "c6febd82e4661f8d",
       "title": "datasette-maplibre 0.1a0",
@@ -160,7 +295,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 980,
+      "points": 999,
       "alsoSeenAt": []
     },
     {
@@ -661,7 +796,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 414,
+      "points": 415,
       "alsoSeenAt": []
     },
     {
@@ -685,7 +820,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 404,
+      "points": 444,
       "alsoSeenAt": []
     },
     {
@@ -1050,7 +1185,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 447,
+      "points": 448,
       "alsoSeenAt": []
     },
     {
@@ -3316,28 +3451,6 @@
       "scoreReasons": [
         "Secundaire bron (start op 3)",
         "Model in de titel (+1)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "742d30efdc4090c1",
-      "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
-      "url": "https://openai.com/index/openai-cut-incident-investigation",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-10-26T07:00:00.000Z",
-      "excerpt": "See how OpenAI engineers use Codex Ultrafast to investigate incidents in minutes. Explore faster security analysis, code refactoring, and daily workflows.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
       ],
       "actionLine": null,
       "priority": "secundair",
