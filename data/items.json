@@ -1,6 +1,29 @@
 {
-  "generatedAt": "2026-11-17T03:57:18.343Z",
+  "generatedAt": "2026-11-17T16:08:12.921Z",
   "items": [
+    {
+      "id": "9a0aa0e71b450c03",
+      "title": "How the Claude Code team thinks about verification",
+      "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-17T10:20:40.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 128,
+      "alsoSeenAt": []
+    },
     {
       "id": "eb3125817116c9db",
       "title": "llm 0.37.3",
@@ -228,6 +251,28 @@
       "alsoSeenAt": []
     },
     {
+      "id": "b82b64ef90f76e66",
+      "title": "How Revolut raises ambition without lowering the bar",
+      "url": "https://openai.com/business/customer-stories/revolut",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-16T09:30:00.000Z",
+      "excerpt": "Discover how Revolut uses OpenAI models and Codex to cut coding time by 30–60%, scale financial crime investigations, and innovate without compromising security.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "21b4758ab52123ac",
       "title": "Advancing computer-use agents for healthcare teams",
       "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
@@ -431,7 +476,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1002,
+      "points": 1004,
       "alsoSeenAt": []
     },
     {
@@ -683,7 +728,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 493,
+      "points": 494,
       "alsoSeenAt": []
     },
     {
@@ -956,7 +1001,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 450,
+      "points": 454,
       "alsoSeenAt": []
     },
     {
@@ -1164,7 +1209,13 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-11-11",
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "grok-build",
+          "url": "https://x.ai/changelog/build#v1.0.77-2026-11-05",
+          "title": "Grok Build 1.0.77"
+        }
+      ]
     },
     {
       "id": "ee2d4da213dcacbe",
@@ -1187,7 +1238,13 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-11-11",
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "grok-build",
+          "url": "https://x.ai/changelog/build#v1.0.74-2026-11-02",
+          "title": "Grok Build 1.0.74"
+        }
+      ]
     },
     {
       "id": "3d3fe24ae54746b9",
@@ -2403,13 +2460,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-11-04",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-76",
-          "title": "Grok Build 1.0.76"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "d5fe14b7b77af79b",
@@ -2432,13 +2483,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-11-04",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-75",
-          "title": "Grok Build 1.0.75"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "0eec722f11509f67",
@@ -3254,13 +3299,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-28",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-73",
-          "title": "Grok Build 1.0.73"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "451b839194f1d8cc",
@@ -3421,28 +3460,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "c417f8e3d39d0b89",
-      "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
-      "url": "https://openai.com/index/oracle-apps-in-chatgpt",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-10-27T07:00:00.000Z",
-      "excerpt": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "2cf69418651c9e4a",
       "title": "Your next sales teammate should be a Grok Bot",
       "url": "https://x.ai/news/grok-bot-sales",
@@ -3508,13 +3525,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-27",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-72",
-          "title": "Grok Build 1.0.72"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "a9c488820a62ac4a",
@@ -3629,7 +3640,13 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-26",
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "grok-build",
+          "url": "https://x.ai/changelog/build#v1.0.68-2026-10-22",
+          "title": "Grok Build 1.0.68"
+        }
+      ]
     },
     {
       "id": "7351d769425bb326",
@@ -3698,13 +3715,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-23",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-70",
-          "title": "Grok Build 1.0.70"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "f19299fd1a8be18c",
@@ -3727,13 +3738,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-23",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-69",
-          "title": "Grok Build 1.0.69"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "0307ec1244417a61",
@@ -4006,13 +4011,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-21",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-67",
-          "title": "Grok Build 1.0.67"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "e9d62472858a055c",
@@ -4171,13 +4170,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-20",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "releasebot-xai",
-          "url": "https://releasebot.io/updates/xai#grok-build-1-0-66",
-          "title": "Grok Build 1.0.66"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "637ddeb38167e8ce",
