@@ -1,6 +1,142 @@
 {
-  "generatedAt": "2026-11-16T19:40:29.959Z",
+  "generatedAt": "2026-11-17T03:57:18.343Z",
   "items": [
+    {
+      "id": "eb3125817116c9db",
+      "title": "llm 0.37.3",
+      "url": "https://simonwillison.net/2026/Nov/16/llm",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-16T23:57:26.000Z",
+      "excerpt": "A bug fix release for LLM , mainly to cover a problem with the most recent Homebrew package of the software. Homebrew now ships the latest SQLite, 3.54.1 , which includes a fix that broke LLM's logging code . Short version: in SQLite 3.54.0 the following SQL: select json_object('a', (select json_array(1))) But in 3.54.1 the same query returns this:",
+      "version": "0.37.3",
+      "category": "overig",
+      "score": 1,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Patchrelease (−1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "simon-willison:2026-11-16",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "4e2b4f1543d14800",
+      "title": "v2.1.326",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+      "sourceId": "claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-16T22:11:05.000Z",
+      "excerpt": "• Added support for turning on Code Mode while agent teams are enabled; if you already turned it on, sessions with teams on now start in Code Mode • Added a startup warning when an --allowedTools , --disallowedTools or --tools value has an entry that doesn't look like a complete rule • Added a message explaining why MCP servers stop loading when an administrator adds managed-mcp.json during a session • Added a row to /status that says when your provider…",
+      "version": "2.1.326",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "claude-code:2026-11-16",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "fd96ccdd509bd958",
+      "title": "GitHub Copilot weekly releases — November 9",
+      "url": "https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-16T21:34:53.000Z",
+      "excerpt": "This week, bring GitHub Enterprise Server repositories into the Copilot app and see which agent sessions need you first in VS Code. You can also try two new models, Claude Fable 5.2 and Gemini 4 Carbon. • Claude Fable 5.2 is available to Copilot Pro+, Max, Business, and Enterprise users. It requires data retention by default, and Copilot Business and Enterprise administrators must turn on its policy, which is off by default. Learn more about Claude Fable…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "ff1caf51baeac277",
+      "title": "GitHub Copilot models deprecated on November 16, 2026",
+      "url": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-16T20:25:20.000Z",
+      "excerpt": "As of today, November 16, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). Note that Claude Opus 4.8 is still available to individual GitHub Copilot subscribers on annual plans. These deprecations were announced on October 15, 2026 . Claude Opus 5 has been removed from the model picker but remains available for runtime refusal fallback…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "a06076806a0e698d",
+      "title": "Control where GitHub Copilot customizations come from",
+      "url": "https://github.blog/changelog/2026-11-16-control-where-github-copilot-customizations-come-from",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-16T19:48:33.000Z",
+      "excerpt": "As an enterprise administrator, you can now require selected GitHub Copilot customizations to come from plugins or managed settings, rather than standalone user or project configuration. Combined with marketplace restrictions, this lets you distribute approved MCP tools and canvases through a shared plugin library without disabling those capabilities entirely. Choose which customizations require plugins The strictPluginOnlyCustomization managed setting…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now require selected GitHub Copilot customizations to come from plugins or managed settings, rather than standalone user or project configuration.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "c04e20070f0fc9a3",
+      "title": "VS Code retires the Local harness in February 2027",
+      "url": "https://github.blog/changelog/2026-11-16-vs-code-retires-the-local-harness-in-february-2027",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-16T19:22:56.000Z",
+      "excerpt": "Visual Studio Code 1.146 deprecates the Local harness, the older software that coordinates the model, context, and tools for GitHub Copilot agent sessions in the editor. The Local harness will be removed in February 2027. Its replacement, the Microsoft Copilot harness , is built into VS Code and has been the default for new sessions since VS Code 1.143. You can keep working in VS Code and running agent commands on your machine. Choosing the Copilot…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "9b6e721056f66ec2",
       "title": "Connect your app to Intercom",
@@ -295,7 +431,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 999,
+      "points": 1002,
       "alsoSeenAt": []
     },
     {
@@ -557,7 +693,7 @@
       "sourceId": "codex",
       "tool": "codex",
       "publishedAt": "2026-11-13T08:37:05.000Z",
-      "excerpt": "• The opt-in terminal workspace supports multiple side-chat tabs. Switch between them with the keyboard or mouse, and reopen saved local side chats after restarting Codex. ( #59784 , #60152 , #60181 ) • Search older tasks from the agent command center by name, prompt preview, or working directory. ( #60286 ) • Turn on Collapse turn details in the full-screen transcript to fold completed activity beneath each prompt while keeping answers visible and tool…",
+      "excerpt": "- The opt-in terminal workspace supports multiple side-chat tabs. Switch between them with the keyboard or mouse, and reopen saved local side chats after restarting Codex. (#59784, #60152, #60181) - Search older tasks from the agent command center by name, prompt preview, or working directory. (#60286) - Turn on **Collapse turn details** in the full-screen transcript to fold completed activity beneath each prompt while keeping answers visible and tool…",
       "version": "0.169.0",
       "category": "overig",
       "score": 4,
@@ -820,7 +956,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 444,
+      "points": 450,
       "alsoSeenAt": []
     },
     {
@@ -1028,13 +1164,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-11-11",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "grok-build",
-          "url": "https://x.ai/changelog/build#v1.0.77-2026-11-05",
-          "title": "Grok Build 1.0.77"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "ee2d4da213dcacbe",
@@ -1057,13 +1187,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-11-11",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "grok-build",
-          "url": "https://x.ai/changelog/build#v1.0.74-2026-11-02",
-          "title": "Grok Build 1.0.74"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "3d3fe24ae54746b9",
@@ -2279,7 +2403,13 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-11-04",
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "releasebot-xai",
+          "url": "https://releasebot.io/updates/xai#grok-build-1-0-76",
+          "title": "Grok Build 1.0.76"
+        }
+      ]
     },
     {
       "id": "d5fe14b7b77af79b",
@@ -2302,7 +2432,13 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-11-04",
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "releasebot-xai",
+          "url": "https://releasebot.io/updates/xai#grok-build-1-0-75",
+          "title": "Grok Build 1.0.75"
+        }
+      ]
     },
     {
       "id": "0eec722f11509f67",
@@ -3118,7 +3254,13 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-28",
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "releasebot-xai",
+          "url": "https://releasebot.io/updates/xai#grok-build-1-0-73",
+          "title": "Grok Build 1.0.73"
+        }
+      ]
     },
     {
       "id": "451b839194f1d8cc",
@@ -3150,7 +3292,7 @@
       "sourceId": "claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-10-27T20:24:20.000Z",
-      "excerpt": "• Added oidc.user_id_claim to the Claude apps gateway, to identify people by an id_token claim other than sub , such as Microsoft Entra ID's oid • Added click to send: in fullscreen, clicking the \"to send now\" hint under a queued message sends it right away, as its key does • Fixed managed settings and organization policy not being fetched for the rest of the session after signing in from the VS Code extension • Fixed Claude overwriting a very large…",
+      "excerpt": "- Added `oidc.user_id_claim` to the Claude apps gateway, to identify people by an id_token claim other than `sub`, such as Microsoft Entra ID's `oid` - Added click to send: in fullscreen, clicking the \"to send now\" hint under a queued message sends it right away, as its key does - Fixed managed settings and organization policy not being fetched for the rest of the session after signing in from the VS Code extension - Fixed Claude overwriting a very large…",
       "version": "2.1.312",
       "category": "overig",
       "score": 2,
@@ -3366,7 +3508,13 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-27",
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "releasebot-xai",
+          "url": "https://releasebot.io/updates/xai#grok-build-1-0-72",
+          "title": "Grok Build 1.0.72"
+        }
+      ]
     },
     {
       "id": "a9c488820a62ac4a",
@@ -3481,13 +3629,7 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-26",
       "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "grok-build",
-          "url": "https://x.ai/changelog/build#v1.0.68-2026-10-22",
-          "title": "Grok Build 1.0.68"
-        }
-      ]
+      "alsoSeenAt": []
     },
     {
       "id": "7351d769425bb326",
@@ -3556,7 +3698,13 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-23",
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "releasebot-xai",
+          "url": "https://releasebot.io/updates/xai#grok-build-1-0-70",
+          "title": "Grok Build 1.0.70"
+        }
+      ]
     },
     {
       "id": "f19299fd1a8be18c",
@@ -3579,7 +3727,13 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-23",
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "releasebot-xai",
+          "url": "https://releasebot.io/updates/xai#grok-build-1-0-69",
+          "title": "Grok Build 1.0.69"
+        }
+      ]
     },
     {
       "id": "0307ec1244417a61",
@@ -3852,7 +4006,13 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-21",
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "releasebot-xai",
+          "url": "https://releasebot.io/updates/xai#grok-build-1-0-67",
+          "title": "Grok Build 1.0.67"
+        }
+      ]
     },
     {
       "id": "e9d62472858a055c",
@@ -4011,7 +4171,13 @@
       "belangrijk": false,
       "bundleKey": "grok-build:2026-10-20",
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "releasebot-xai",
+          "url": "https://releasebot.io/updates/xai#grok-build-1-0-66",
+          "title": "Grok Build 1.0.66"
+        }
+      ]
     },
     {
       "id": "637ddeb38167e8ce",
