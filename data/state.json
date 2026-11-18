@@ -6,7 +6,11 @@
       "urls": [
         {
           "loc": "https://x.ai/news/grok-bot-1-0",
-          "lastmod": "2026-11-02T00:00:00.000Z"
+          "lastmod": "2026-11-11T00:00:00.000Z"
+        },
+        {
+          "loc": "https://x.ai/news/grok-bot-accounting",
+          "lastmod": "2026-11-16T00:00:00.000Z"
         },
         {
           "loc": "https://x.ai/news/data-bot",
@@ -377,7 +381,7 @@
   },
   "pages": {
     "https://docs.x.ai/docs/release-notes": {
-      "hash": "d0b0df94d33d4e62f27239f1016f45b38345f731b0b49f9dcf7a9a2dc71d5863",
+      "hash": "c41e6313b11ea899e77133e6cccbdda541e43ecbfd3dff9fe2c5bce42c734872",
       "etag": null
     }
   },
@@ -747,8 +751,12 @@
       "fetchedAt": "2026-11-07T06:06:49.548Z"
     },
     "https://x.ai/news/grok-bot-1-0": {
-      "lastmod": "2026-11-02T00:00:00.000Z",
-      "fetchedAt": "2026-11-11T19:40:56.297Z"
+      "lastmod": "2026-11-11T00:00:00.000Z",
+      "fetchedAt": "2026-11-18T01:00:10.430Z"
+    },
+    "https://x.ai/news/grok-bot-accounting": {
+      "lastmod": "2026-11-16T00:00:00.000Z",
+      "fetchedAt": "2026-11-18T01:00:10.374Z"
     }
   }
 }

@@ -1,14 +1,37 @@
 {
-  "generatedAt": "2026-11-17T16:08:12.921Z",
+  "generatedAt": "2026-11-18T01:00:08.799Z",
   "items": [
     {
-      "id": "9a0aa0e71b450c03",
-      "title": "How the Claude Code team thinks about verification",
-      "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification",
-      "sourceId": "hacker-news",
-      "tool": "hacker-news",
-      "publishedAt": "2026-11-17T10:20:40.000Z",
-      "excerpt": "",
+      "id": "8f7a055a1b360233",
+      "title": "v2.1.327",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
+      "sourceId": "claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-17T23:17:45.000Z",
+      "excerpt": "• Added a confirmation before /install-github-app changes a repository • Added claude mcp add-json - to read the server's JSON from stdin, so tokens can stay off the command line; not available inside a Claude Code session • Added a line when a resumed session's earlier messages can't be loaded • Added a list in /status of broken agent, skill, command and output style files, keybinding errors, an unavailable sandbox, ignored permission settings and hook…",
+      "version": "2.1.327",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "claude-code:2026-11-17",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "e45fd791e1fe03c2",
+      "title": "External sandboxes for coding agents",
+      "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-17T22:52:29.000Z",
+      "excerpt": "I've been exploring new ways to sandbox code that is executed by agents, with a focus on making it safer to try out local models without worrying that a mistake or prompt injection attack might cause them to take damaging actions on a machine. I worked on this project with Prime Radiant , the AI research lab behind Superpowers and other projects . My post on the Prime Radiant blog introduces the external sandbox pattern, where code executed by the agent…",
       "version": null,
       "category": "overig",
       "score": 2,
@@ -21,7 +44,332 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 128,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "cf3bd3dc31c3f29b",
+      "title": "0.169.1",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.1",
+      "sourceId": "codex",
+      "tool": "codex",
+      "publishedAt": "2026-11-17T22:21:10.000Z",
+      "excerpt": "No verified release highlights available. Full Changelog: rust-v0.169.0...rust-v0.169.1",
+      "version": "0.169.1",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "codex:2026-11-17",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "57e7781a892d4960",
+      "title": "OpenAI’s GPT-6.2 Astra and GPT-6.2 Sol now available",
+      "url": "https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-17T20:20:29.000Z",
+      "excerpt": "OpenAI&rsquo;s GPT-6.2 Astra and GPT-6.2 Sol are now generally available in GitHub Copilot. Both models are designed for agentic coding and code review, with stronger coding judgment than earlier GPT-6 models. In early testing, both caught significantly more real issues in code review than earlier GPT-6 models while using fewer tokens. • GPT-6.2 Astra: OpenAI&rsquo;s latest Astra model for agentic coding and terminal work. In early testing, it caught…",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "75073ab854943bd9",
+      "title": "GitHub Copilot Fusion updates: more availability, benchmarks, and models",
+      "url": "https://github.blog/changelog/2026-11-17-github-copilot-fusion-updates-more-availability-benchmarks-and-models",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-17T18:04:48.000Z",
+      "excerpt": "Today, we&rsquo;re expanding GitHub Copilot Fusion with new models, available on more Copilot surfaces, and results on two public Terminal-Bench leaderboards, giving you more ways to use Fusion and compare its performance. GitHub Copilot Fusion joins public Terminal-Bench 4.1 leaderboard Copilot Fusion is now listed on Terminal-Bench 4.1 public leaderboards hosted by Stanford, Harbor, and the Laude Institute: Terminal-Bench 4.1 measures how well AI…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "c381f1f20c433e7d",
+      "title": "GitHub Copilot app, Microsoft Ignite releases",
+      "url": "https://github.blog/changelog/2026-11-17-github-copilot-app-microsoft-ignite-releases",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-17T18:03:42.000Z",
+      "excerpt": "Copilot is most useful when it can work where you do. The GitHub Copilot app now supports your Azure DevOps repositories, your GitHub Enterprise Server instance, and the browser you&rsquo;re already signed in to. Work with Azure DevOps repositories in the GitHub Copilot app Clone an Azure DevOps repository, ask an agent to create a branch, make code changes, and open a pull request, then see it through to completion without leaving the GitHub Copilot…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "6beb5088ff95eeea",
+      "title": "Copilot code review: Adaptive effort, secret detection, and more",
+      "url": "https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-17T18:02:05.000Z",
+      "excerpt": "GitHub Copilot code review now helps you catch more issues earlier, with less effort. Adaptive matches review depth to each pull request, so routine changes get a quick pass and risky changes get a deeper look. Reviews can also draw on related repositories and flag exposed secrets before they reach your main branch. Features in public preview are subject to change. Adaptive, cross-repository context, and secret detection are available to Copilot Pro,…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "467e19c06d56952c",
+      "title": "MAI Code 2 and MAI Code 2 Flash in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-17T18:01:45.000Z",
+      "excerpt": "The next generation of Microsoft AI (MAI) coding models has arrived in GitHub Copilot. Introducing MAI Code 2 and MAI Code 2 Flash , two new models that represent a major step forward for the MAI-Code family, expanding from lightweight coding assistance to complex, agentic software engineering. • MAI Code 2: A powerful, general purpose coding model built to help developers get from request to result with focused responses, practical code changes, and…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "453bf04922152159",
+      "title": "GitHub Copilot in JetBrains, Ignite releases",
+      "url": "https://github.blog/changelog/2026-11-17-github-copilot-in-jetbrains-ignite-releases",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-17T18:00:59.000Z",
+      "excerpt": "This update brings remote access, on-device voice dictation, and browser use controls to GitHub Copilot for JetBrains. Copilot users in JetBrains IDEs also get context usage shortcuts, historical diffs, simpler follow-up controls, and improvements to chat reliability. Cloud sandbox runs Copilot sessions in an isolated, GitHub-hosted environment instead of on your computer. Copilot can make code changes and run commands and tests there, freeing local…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "4cc1e304d76813ff",
+      "title": "Monitor GitHub Copilot activity through Microsoft Agent 365",
+      "url": "https://github.blog/changelog/2026-11-17-monitor-github-copilot-activity-through-microsoft-agent-365",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-17T18:00:59.000Z",
+      "excerpt": "Enterprises can now stream GitHub Copilot agent activity directly into Microsoft Agent 365 . This lets you bring audit data from across GitHub Copilot clients into Microsoft&rsquo;s agent control plane, where you can review Copilot activity alongside other AI workloads. • See activity across Copilot clients, including cloud agents on GitHub.com, Copilot CLI, Visual Studio Code, Visual Studio, and partner IDEs such as JetBrains and Eclipse. • Review user…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "7be142154dd5bd1a",
+      "title": "Track Copilot code review outcomes in Repository insights",
+      "url": "https://github.blog/changelog/2026-11-17-track-copilot-code-review-outcomes-in-repository-insights",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-17T18:00:35.000Z",
+      "excerpt": "You can now see how Copilot code review feedback lands in each repository. A new &ldquo;Repository insights&rdquo; page, the first item in a repository&rsquo;s Insights tab, brings Copilot code review outcomes together in one place. Repository insights show four summary signals for each repository: • Comments addressed: Copilot code review comments that were acted on. • High-severity comments addressed: High-severity Copilot code review comments that…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now see how Copilot code review feedback lands in each repository.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "f822af8ae648479f",
+      "title": "Introducing Replit Missions",
+      "url": "https://replit.com/blog/introducing-replit-missions",
+      "sourceId": "replit",
+      "tool": "replit",
+      "publishedAt": "2026-11-17T18:00:00.000Z",
+      "excerpt": "Today, we’re launching Replit Missions to help your teams take on the complex work they haven't had time or capacity for: winning more enterprise customers, improving product performance, or replacing legacy software. You define the outcome, and Replit coordinates a swarm of agents to plan, build, test, and iterate toward it within the budget and boundaries you set. At Replit, we wanted to explore bringing application monitoring in-house to reduce costs…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "8f6af8c44a4a1bfb",
+      "title": "Introducing GPT-6.2 Astra and Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-17T17:45:00.000Z",
+      "excerpt": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": [
+        {
+          "sourceId": "simon-willison",
+          "url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol",
+          "title": "GPT‑6.2 Astra and GPT‑6.2 Sol"
+        }
+      ]
+    },
+    {
+      "id": "6f0fb0223e38d4b7",
+      "title": "Running the full server-side Datasette Python app in the browser with service workers and Pyodide",
+      "url": "https://simonwillison.net/2026/Nov/17/datasette-lite",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-17T16:48:33.000Z",
+      "excerpt": "Datasette Lite is my port of the Datasette Python application to run directly in the browser using WebAssembly and Pyodide . I've released a complete rewrite of Datasette Lite using service workers, and it's now almost indistinguishable from the real server-side application. You can now do all of the following, using a carefully crafted URL to lite.datasette.io : • Load client-side Datasette to browse any SQLite database, JSON file, CSV file or SQL…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 3,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Nieuwe functie volgens de brontekst (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": "De bron: “you can now do all of the following, using a carefully crafted URL to lite.”",
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "9a0aa0e71b450c03",
+      "title": "How the Claude Code team thinks about verification",
+      "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-17T10:20:40.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Hoge community-score, 200+ punten (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 261,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "3047d7657748ea76",
+      "title": "Introducing ChatGPT for Sales",
+      "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-17T08:00:00.000Z",
+      "excerpt": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
       "alsoSeenAt": []
     },
     {
@@ -318,6 +666,51 @@
       "alsoSeenAt": []
     },
     {
+      "id": "1475c813785174f2",
+      "title": "Building an accounting team with Grok Bot",
+      "url": "https://x.ai/news/grok-bot-accounting",
+      "sourceId": "xai-news",
+      "tool": "grok-bot",
+      "publishedAt": "2026-11-16T00:00:00.000Z",
+      "excerpt": "Five Grok Bots at SpaceXSI each own an accounting job end to end, from provisioning a customer account to collecting payment. They only involve a person when the work needs judgment.",
+      "version": null,
+      "category": "overig",
+      "score": 4,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "1680aebdcd0e9c5f",
+      "title": "Grok Build 1.0.88",
+      "url": "https://x.ai/changelog/build#v1.0.88-2026-11-16",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-16T00:00:00.000Z",
+      "excerpt": "• /release-notes , /docs and /help now open when the dashboard is active • MCP servers can now specify a headers_helper command to provide dynamic request headers • Links keep showing the hand pointer when Cmd is pressed or released while the pointer rests on them • The dashboard peek now highlights the selected permission or question option with the same caret and band used elsewhere • Prompt border and mode banner now truncate long model or mode names…",
+      "version": "1.0.88",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-16",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "c6febd82e4661f8d",
       "title": "datasette-maplibre 0.1a0",
       "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre",
@@ -523,6 +916,52 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": 100,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "0809cd770c57c37f",
+      "title": "Grok Build 1.0.87",
+      "url": "https://x.ai/changelog/build#v1.0.87-2026-11-14",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-14T00:00:00.000Z",
+      "excerpt": "• Key hints in fullscreen dialogs now appear with consistent capitalization • Persona names and descriptions in the agents modal no longer overflow the window when they contain wide characters • The /mcps panel in minimal mode now shows the same loading, error and layout style as the full view, plus a search bar and the full set of action hints, and opens forms when their keys are pressed • Dragging to select text now skips collapsed tool calls and the…",
+      "version": "1.0.87",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-14",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "2c7dc8bf95a5e372",
+      "title": "Grok Build 1.0.86",
+      "url": "https://x.ai/changelog/build#v1.0.86-2026-11-14",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-14T00:00:00.000Z",
+      "excerpt": "• Pretty mode shows reference-style links the same as inline links • Loading messages and input placeholders use a consistent Unicode ellipsis character • Resume session cards keep long text and their ellipsis on a single line • Auth token box on the welcome screen has rounded corners • Long file paths shown in narrow columns stay recognizable",
+      "version": "1.0.86",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-14",
+      "points": null,
       "alsoSeenAt": []
     },
     {
@@ -800,6 +1239,29 @@
       "alsoSeenAt": []
     },
     {
+      "id": "8c1e962e45b4cb6c",
+      "title": "Grok Build 1.0.85",
+      "url": "https://x.ai/changelog/build#v1.0.85-2026-11-13",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-13T00:00:00.000Z",
+      "excerpt": "• Question, MCP input, and plan-approval cards now send the same terminal notification as permission requests • The /resume picker now searches session contents as you type and lets you open a match • /skills with a name now opens the Skills tab filtered to that name • Slash command autocomplete now shows each command's argument hint after the name • grok inspect now counts hooks and MCP servers from inline plugins",
+      "version": "1.0.85",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-13",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "8427d4fee9a7d1b9",
       "title": "v2.1.323",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
@@ -1001,7 +1463,30 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 454,
+      "points": 455,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "1e837a697707ed43",
+      "title": "Grok Build 1.0.84",
+      "url": "https://x.ai/changelog/build#v1.0.84-2026-11-12",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-12T00:00:00.000Z",
+      "excerpt": "• Open /model and /context-window dropdowns now update their rows and markers immediately when the session's model list changes • Model picker now updates its list live when your account models change or another client switches the model • A newer settings pick is no longer overwritten by a delayed older write • grok update now explains when it ran from a different copy and what to do next • API-key model note now appears only in the first list the user…",
+      "version": "1.0.84",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-12",
+      "points": null,
       "alsoSeenAt": []
     },
     {
@@ -1140,7 +1625,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 84,
+      "points": 85,
       "alsoSeenAt": []
     },
     {
@@ -1216,6 +1701,98 @@
           "title": "Grok Build 1.0.77"
         }
       ]
+    },
+    {
+      "id": "8605b9f00a5a12cb",
+      "title": "Grok Build 1.0.82",
+      "url": "https://x.ai/changelog/build#v1.0.82-2026-11-11",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "excerpt": "• grok update now delegates to the self-updating build in ~/.grok/bin when needed • Enter (or Ctrl+F ) expands or collapses long user messages directly in the transcript • The API-key model note now appears only the first time you open any model list and never again • New minimal sandbox profile and workspace_write option let custom profiles control launch-folder writes • Ctrl+O now copies the latest assistant reply",
+      "version": "1.0.82",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-11",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "da505c2f8ce64719",
+      "title": "Grok Build 1.0.81",
+      "url": "https://x.ai/changelog/build#v1.0.81-2026-11-11",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "excerpt": "• Tasks pane and list panes now correctly align search status and truncate scheduled-task previews when prompts contain wide Unicode characters • Labels for MCP servers, LSP servers and URL copy hints now use consistent uppercase spelling throughout the UI • Foldable rows in modals now show a down chevron when open, making expanded groups easier to distinguish from leaf rows • Send-now and interjection failure toasts now clearly state the original error…",
+      "version": "1.0.81",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-11",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "e31c17dbbe3f7930",
+      "title": "Introducing Grok Bot 1.0",
+      "url": "https://x.ai/news/grok-bot-1-0",
+      "sourceId": "xai-news",
+      "tool": "grok-bot",
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "excerpt": "Bots now work with your whole team, take on work without being asked, and get more done, faster.",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 5,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "ed6b6f46155f35d6",
+      "title": "Grok Build 1.0.83",
+      "url": "https://x.ai/changelog/build#v1.0.83-2026-11-11",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "excerpt": "• Welcome screens display correctly on terminals with one or two rows or fewer than eight columns • A follow-up click after you accept the consent notice or trust a folder no longer acts on the next screen before it is drawn • Bundled MinGit on Windows uses the schannel backend for HTTPS operations",
+      "version": "1.0.83",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-11",
+      "points": null,
+      "alsoSeenAt": []
     },
     {
       "id": "ee2d4da213dcacbe",
@@ -1668,48 +2245,25 @@
       "alsoSeenAt": []
     },
     {
-      "id": "45e8de741ea9e45e",
-      "title": "The Web Is More Than Enough, by Paul Ford",
-      "url": "https://simonwillison.net/2026/Nov/9/hn-50421091",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-09T04:32:33.000Z",
-      "excerpt": "My comment on The Web Is More Than Enough, by Paul Ford &mdash; Hacker News. OK, this comment convinced me to give that a shot. Here's a thing I made in Three.js this morning - a Nudibranch themed Faberge Egg: https://static.simonwillison.net/static/2026/Hidden-Reef-Egg... (77KB) I just asked Claude (Opus 5.5 Medium running in regular Claude Chat) to port that to Vanilla JS, in the same thread where it had built it, and got this:…",
-      "version": null,
+      "id": "4c0ab071e77924ea",
+      "title": "Grok Build 1.0.80",
+      "url": "https://x.ai/changelog/build#v1.0.80-2026-11-09",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-09T00:00:00.000Z",
+      "excerpt": "• Failed web fetches now show the actual error reason when expanded • Grep results now display tab characters as spaces so columns line up correctly • Thinking blocks stay expanded while streaming after pressing Ctrl+E to expand all • Pending todos now render correctly on legacy Windows consoles • Usage modal no longer clips the credit bar or billing URL on narrow terminals",
+      "version": "1.0.80",
       "category": "overig",
-      "score": 2,
+      "score": 3,
       "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
       ],
       "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
+      "priority": "primair",
+      "isPatch": true,
       "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "7a56e2062f93f8c0",
-      "title": "Hide your slop PR descriptions behind",
-      "url": "https://simonwillison.net/2026/Nov/9/details-summary",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-09T04:25:05.000Z",
-      "excerpt": "Most of the changes I make to my projects these days come in the form of PRs opened for me by Claude Code or Codex. The PR is my unit of work - I use them to bundle commits together, iterating on them until a feature is complete, document decisions and then merge the finished result. Today's coding agents are great at writing PR descriptions. The problem is that they are too good. An agent-written PR description is accurate and comprehensive. It…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
+      "bundleKey": "grok-build:2026-11-09",
       "points": null,
       "alsoSeenAt": []
     },
@@ -1805,6 +2359,29 @@
       "alsoSeenAt": []
     },
     {
+      "id": "4adfac9b44298375",
+      "title": "Grok Build 1.0.79",
+      "url": "https://x.ai/changelog/build#v1.0.79-2026-11-08",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-08T00:00:00.000Z",
+      "excerpt": "• /rewind now works in place for paged sessions without reloading every turn • Link cards now appear by default for links that cannot be opened • /vim-mode all enables full Vim editing inside the agent prompt • Auto-review mode now tints the entire prompt bar blue, matching plan and ask modes • /doctor now warns when tmux holds Esc for more than 50 ms",
+      "version": "1.0.79",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-08",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "10bdc73097cfd238",
       "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
       "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
@@ -1825,7 +2402,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 627,
+      "points": 628,
       "alsoSeenAt": []
     },
     {
@@ -2050,6 +2627,29 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "974eed63f6003b54",
+      "title": "Grok Build 1.0.78",
+      "url": "https://x.ai/changelog/build#v1.0.78-2026-11-06",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-06T00:00:00.000Z",
+      "excerpt": "• @ file chips can now be edited in place; typed @~/ paths resolve to the home folder • Dragging in the transcript now selects and copies colored text across message blocks instead of whole blocks • @ mentions now support :N line suffixes and @!hidden files • Always-approve help text now correctly says the setting is saved to config • Dropped-image notice no longer appears inside the user's own message in transcripts or history",
+      "version": "1.0.78",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-06",
       "points": null,
       "alsoSeenAt": []
     },
@@ -2803,29 +3403,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "e31c17dbbe3f7930",
-      "title": "Introducing Grok Bot 1.0",
-      "url": "https://x.ai/news/grok-bot-1-0",
-      "sourceId": "xai-news",
-      "tool": "grok-bot",
-      "publishedAt": "2026-11-02T00:00:00.000Z",
-      "excerpt": "Bots now work with your whole team, take on work without being asked, and get more done, faster.",
-      "version": null,
-      "category": "nieuwe-functie",
-      "score": 5,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Nieuwe functie volgens de brontekst (+1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "4ea2bbfbe1de5d96",
       "title": "ChatGPT and Codex usage limits merging",
       "url": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
@@ -2927,7 +3504,7 @@
       "sourceId": "claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-10-30T01:06:26.000Z",
-      "excerpt": "• Added permissions.blockWritesOutsideWorkingDirectories : Write, Edit and NotebookEdit refuse paths outside the working directories in every permission mode • Added an optional groups list to Claude apps gateway upstreams: only developers in the listed IdP groups are sent to that upstream, on failover too • Added guardrail_trace to Claude apps gateway Bedrock upstreams, to log which Amazon Bedrock guardrail filter fired on a request, without the matched…",
+      "excerpt": "- Added `permissions.blockWritesOutsideWorkingDirectories`: Write, Edit and NotebookEdit refuse paths outside the working directories in every permission mode - Added an optional `groups` list to Claude apps gateway upstreams: only developers in the listed IdP groups are sent to that upstream, on failover too - Added `guardrail_trace` to Claude apps gateway Bedrock upstreams, to log which Amazon Bedrock guardrail filter fired on a request, without the…",
       "version": "2.1.314",
       "category": "overig",
       "score": 2,
@@ -3198,28 +3775,6 @@
       "tool": "copilot",
       "publishedAt": "2026-10-28T15:35:00.000Z",
       "excerpt": "Shared Copilot Automations are rolling out, enabling teams to build and maintain AI-powered workflows together. With Copilot Automations, you can combine prompts, triggers, and tools to design workflows around the way your team works. Copilot runs autonomously in the cloud, using only the tools you&rsquo;ve allowed. For example, you could create automations to: • Reproduce bugs as soon as an issue is opened. • Capture screenshots of the changes when a…",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "1e84e499960d1fc4",
-      "title": "GitHub Copilot in VS Code, Universe releases",
-      "url": "https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases",
-      "sourceId": "copilot",
-      "tool": "copilot",
-      "publishedAt": "2026-10-28T15:33:00.000Z",
-      "excerpt": "This year, we focused on giving you more choice in how you work with GitHub Copilot in Visual Studio Code: which models you use, where your agents run, and how you stay involved. Keep work moving without staying at your desk or in one tool. With GitHub Copilot in Visual Studio Code, start a cloud agent session from your phone at standup, steer it from VS Code at your desk, and check on it from github.com at lunch. Session continuity lets you pick up the…",
       "version": null,
       "category": "overig",
       "score": 3,
@@ -4540,52 +5095,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "c869449dc77caf19",
-      "title": "Grok Build 1.0.57",
-      "url": "https://x.ai/changelog/build#v1.0.57-2026-10-14",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-14T00:00:00.000Z",
-      "excerpt": "• Minor bug fixes",
-      "version": "1.0.57",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-14",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "e4c96035932938b1",
-      "title": "Grok Build 1.0.59",
-      "url": "https://x.ai/changelog/build#v1.0.59-2026-10-14",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-14T00:00:00.000Z",
-      "excerpt": "• Dashboard /loop without a prompt shows its usage instead of starting a new session • grok --resume matches a title whatever separates its words, so fix-login-bug finds \"Fix login bug\" • [Copy] buttons appear under code blocks in finished replies, labeled with the language or file name of the code • Dashboard peek replies waiting on a clipboard paste are canceled with a toast when you move the peek to another row or press Esc, instead of being sent…",
-      "version": "1.0.59",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-14",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "8fd767be8ab94f79",
       "title": "Introducing Replit Solutions Partners",
       "url": "https://replit.com/blog/introducing-replit-solutions-partners",
@@ -4631,98 +5140,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "5cbc72a4f8e62587",
-      "title": "Grok Build 1.0.55",
-      "url": "https://x.ai/changelog/build#v1.0.55-2026-10-13",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-13T00:00:00.000Z",
-      "excerpt": "• Minor bug fixes",
-      "version": "1.0.55",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-13",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "c5509abb5e1de96e",
-      "title": "Grok Build 1.0.56",
-      "url": "https://x.ai/changelog/build#v1.0.56-2026-10-13",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-13T00:00:00.000Z",
-      "excerpt": "• Minor bug fixes",
-      "version": "1.0.56",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-13",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "1ba9b5026a8d898e",
-      "title": "Grok Build 1.0.54",
-      "url": "https://x.ai/changelog/build#v1.0.54-2026-10-12",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-12T00:00:00.000Z",
-      "excerpt": "• /resume takes an optional session id or title and opens the picker filtered to matching sessions • Pasted Windows line endings reach the model as newlines, markdown images no longer show a stray \"!\", and dollar amounts that are not math stay plain text • Write approval cards show a binary or unreadable file as unreadable instead of garbled text • Prompts you send while a session is resuming at startup are queued and sent once it loads instead of…",
-      "version": "1.0.54",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-12",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "66098f4771679899",
-      "title": "Grok Build 1.0.53",
-      "url": "https://x.ai/changelog/build#v1.0.53-2026-10-12",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-12T00:00:00.000Z",
-      "excerpt": "• Wrapped shell commands in tool and background-task rows copy back as one line • /hooks lists load errors from inline hooks and from plugins • --tools and --disallowed-tools also apply in the interactive TUI • /goal pauses after three continuations in a row with no tool call; run /goal resume to continue • Quitting warns when it would stop a running workflow and asks you to confirm with a second quit",
-      "version": "1.0.53",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-12",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "ec0714e7c8ff9438",
       "title": "Introducing The X Subscription",
       "url": "https://x.ai/news/x-subscription",
@@ -4746,29 +5163,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "d9aaa5f2d872121a",
-      "title": "Grok Build 1.0.52",
-      "url": "https://x.ai/changelog/build#v1.0.52-2026-10-11",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-11T00:00:00.000Z",
-      "excerpt": "• Added support for OSC 7501 and the Rex terminal • Expanded tool-call groups stay expanded as new calls join them, and Ctrl+E expands or collapses thinking faster in long transcripts • Project hooks in a repository subfolder load when you launch inside that folder • HTTP hooks to localhost work, and bad hook URLs are reported at load time • Command status-line scripts see the current turn prompt ID and start time while the turn is active",
-      "version": "1.0.52",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-11",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "e75aaf1e12900808",
       "title": "v2.1.296",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
@@ -4788,29 +5182,6 @@
       "isPatch": true,
       "belangrijk": false,
       "bundleKey": "claude-code:2026-10-09",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "fdcc749fe1a20552",
-      "title": "Grok Build 1.0.51",
-      "url": "https://x.ai/changelog/build#v1.0.51-2026-10-09",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-09T00:00:00.000Z",
-      "excerpt": "• Cancel and edit-resend on long sessions no longer revert workspace files • Memory is only an on or off switch ( [memory] enabled ) • The /share command and session sharing are removed from the CLI • Headless grok -p waits for background goals to finish and reports their outcome • /density and the Tool call density setting control how much detail tool calls show",
-      "version": "1.0.51",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-09",
       "points": null,
       "alsoSeenAt": []
     },
@@ -4857,75 +5228,6 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "e148a8c6589fa70c",
-      "title": "Grok Build 1.0.50",
-      "url": "https://x.ai/changelog/build#v1.0.50-2026-10-06",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-06T00:00:00.000Z",
-      "excerpt": "• grok worktree rm without -f refuses to delete worktrees that are in use or have unsaved changes, and exits with an error • Compact mode collapses recaps and keeps inner spacing on tall terminals • Clicking the git branch in the header copies the full branch name • Long branch names abbreviate on narrow terminals and stay copyable • A targeted cancel stops only the response the client asked to stop",
-      "version": "1.0.50",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-06",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "330d16b176fe21be",
-      "title": "Grok Build 1.0.48",
-      "url": "https://x.ai/changelog/build#v1.0.48-2026-10-02",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-02T00:00:00.000Z",
-      "excerpt": "• /rewind lists only prompts you typed, and skips automatic runtime turns • Custom model tables in config.toml keep the original model notice banner • read_file , search_replace , and grep handle large files, special files, and binary content more reliably, and surface clearer errors • Ask rules for WebSearch and WebFetch show a prompt instead of running on their own • Cancelling one tool call no longer kills commands started by other parallel calls",
-      "version": "1.0.48",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-02",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "cda183348b448ff2",
-      "title": "Grok Build 1.0.49",
-      "url": "https://x.ai/changelog/build#v1.0.49-2026-10-02",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-02T00:00:00.000Z",
-      "excerpt": "• Hook permission prompts appear in every approval mode • Web searches, fetches, and image generation follow the prompt_policy setting and rule decisions before they prompt • Allow once on a permission card applies only to the next shell command • pkill -f and pgrep -f are rejected earlier when the pattern would kill their own shell wrapper",
-      "version": "1.0.49",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-02",
       "points": null,
       "alsoSeenAt": []
     },
