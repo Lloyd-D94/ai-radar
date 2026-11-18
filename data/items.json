@@ -1,6 +1,29 @@
 {
-  "generatedAt": "2026-11-18T01:00:08.799Z",
+  "generatedAt": "2026-11-18T11:51:50.733Z",
   "items": [
+    {
+      "id": "ad076a99b8923baf",
+      "title": "0.170.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.170.0",
+      "sourceId": "codex",
+      "tool": "codex",
+      "publishedAt": "2026-11-18T03:40:48.000Z",
+      "excerpt": "• Added WebRTC negotiation for realtime voice calls in the TUI. ( #61172 ) • Added automatically refreshed authentication headers for OpenTelemetry HTTP exporters. ( #61028 ) • Added experimental support for using identically named MCP servers across environments. ( #60905 ) • Oversized WebSocket requests now fall back to HTTP without unnecessary retries. ( #60840 , #60841 ) • Fixed MCP OAuth credential races during cancellation, login, and logout. (…",
+      "version": "0.170.0",
+      "category": "overig",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Stabiele release, geen patch (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "8f7a055a1b360233",
       "title": "v2.1.327",
@@ -346,7 +369,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 261,
+      "points": 282,
       "alsoSeenAt": []
     },
     {
@@ -869,7 +892,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1004,
+      "points": 1006,
       "alsoSeenAt": []
     },
     {
