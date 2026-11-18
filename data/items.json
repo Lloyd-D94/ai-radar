@@ -1,6 +1,74 @@
 {
-  "generatedAt": "2026-11-18T11:51:50.733Z",
+  "generatedAt": "2026-11-18T20:38:01.107Z",
   "items": [
+    {
+      "id": "6e93a4cc09914f56",
+      "title": "Customize GitHub Copilot for your team",
+      "url": "https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-18T16:00:13.000Z",
+      "excerpt": "You can now share the GitHub Copilot plugins your team relies on without asking every member to repeat the same setup. Team customizations are generally available for organization teams. Team maintainers and organization owners can select approved Agent Plugins as team defaults. This gives your team a shared starting point between individual customization and organization-wide policy. If you&rsquo;re a team maintainer or organization owner, open your…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now share the GitHub Copilot plugins your team relies on without asking every member to repeat the same setup.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "1c2cff6fe54921ce",
+      "title": "Quoting Daniel Stenberg",
+      "url": "https://simonwillison.net/2026/Nov/18/daniel-stenberg",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-18T15:58:27.000Z",
+      "excerpt": "During the time these agents converted 185,000 lines of C code into 340,000 lines of Rust code (I counted), we merged over 300 commits in the actual curl project. We actually improved curl during these a little more than three weeks. A little over 200 bugfixes actually. 200 bugfixes that none of those rust rewrites have. We also fixed a few vulnerabilities. In another month we have done another 200 and maybe fixed a few more vulnerabilities. Will these…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "67952d9a918d2536",
+      "title": "Inside the Codex sandbox",
+      "url": "https://openai.com/index/inside-the-codex-sandbox",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-18T08:00:00.000Z",
+      "excerpt": "See how Codex runs commands on your machine while enforcing the filesystem and network limits you control across macOS, Linux, and Windows.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "ad076a99b8923baf",
       "title": "0.170.0",
@@ -369,7 +437,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 282,
+      "points": 290,
       "alsoSeenAt": []
     },
     {
@@ -2123,29 +2191,6 @@
         "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
       ],
       "actionLine": "De bron: “you can now run prompts through Fable 5.”",
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "1cd01b15863e291a",
-      "title": "Locating the source of a mysterious beep with Claude",
-      "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-09T23:57:21.000Z",
-      "excerpt": "Our house has a box room, full of boxes that we still haven't unpacked from our last move. A couple of weeks ago something in that room started intermittently beeping . The beeps were far enough apart that standing in the room and trying to determine the source of the noise was frustrating, and I really didn't want to dig through every one of those boxes. So I had Claude Code build Beep Locator , a software system for triangulating the source of a…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
       "priority": "community",
       "isPatch": false,
       "belangrijk": false,
@@ -4001,28 +4046,6 @@
       "tool": "lovable",
       "publishedAt": "2026-10-27T15:08:24.000Z",
       "excerpt": "Workspace admins and owners on Business and Enterprise plans now map IdP groups to workspace roles in the Provisioning groups section of the workspace's Identity settings. On Enterprise plans, SCIM provisioning uses the same mappings. Workspace owners can also map a group to the Owner role. Each connector's page now has a Connect button that creates the first connection type the connector supports. More options lists the other types. The connector's…",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "1e3ebf94e41ebe19",
-      "title": "Retell uses OpenAI models to help power 100M monthly calls",
-      "url": "https://openai.com/index/retell-ai",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-10-27T15:00:00.000Z",
-      "excerpt": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
       "version": null,
       "category": "overig",
       "score": 3,
