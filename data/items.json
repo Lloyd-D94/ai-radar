@@ -1,6 +1,122 @@
 {
-  "generatedAt": "2026-11-18T20:38:01.107Z",
+  "generatedAt": "2026-11-19T02:37:46.828Z",
   "items": [
+    {
+      "id": "352723699d6c2a14",
+      "title": "Release v0.69.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.69.0",
+      "sourceId": "gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-11-19T01:45:47.000Z",
+      "excerpt": "• fix(core,cli): preserve literal $ characters during template placeholder replacement by @jesussamuel-byte in #30136 • feat(cli): add /stats heatmap subcommand for daily token usage by @jvargassanchez-dot in #30135 • fix(core): prevent GCLI_EXPAND_TARGET env collision in expandEnvVars by @villahernandez-coder in #30138 • chore(release): bump version to 0.69.0-nightly.20261104.g89e9d25d6 by @gemini-cli-robot in #30140 • fix(cli): serialize AnsiOutput to…",
+      "version": "0.69.0",
+      "category": "overig",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Stabiele release, geen patch (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "1590e3f6387642d1",
+      "title": "v2.1.328",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+      "sourceId": "claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-19T01:14:04.000Z",
+      "excerpt": "• Added auto mode for Claude Opus 4.6 and Sonnet 4.6 on Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry and Claude apps gateway; interactive sessions with no permission mode start in it • Added \"onFailure\": \"block\" for mcp_tool hooks, as for command and HTTP hooks: a hook whose call fails blocks the action • Added a warning when a message from a session that skips permission prompts may be held and dropped by a cloud session • Added a…",
+      "version": "2.1.328",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "claude-code:2026-11-19",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "8d685e65acd09825",
+      "title": "Gemini 4 Neon looks like an Opus 5.5 competitor",
+      "url": "https://micjm.com/blog/gemini-4-neon-looks-like-a-top-model",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-19T00:29:45.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "model",
+      "score": 3,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Model in de titel (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 91,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "8e2ce054ff040c2d",
+      "title": "Connect Supabase, Box, Calendly, and more to Copilot",
+      "url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-18T22:04:50.000Z",
+      "excerpt": "You can now connect eight more services to Copilot using GitHub-verified MCP servers, or connectors, available in public preview. They join more than 25 services you can already connect, like Slack, Figma, and Sentry. To see the full list, open Customize in the Copilot app or browse the Copilot customization page . • Box : Search and manage content, and use Box AI. • Buildkite : Work with pipelines and builds. • Calendly : Manage scheduling and meetings.…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now connect eight more services to Copilot using GitHub-verified MCP servers, or connectors, available in public preview.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "362ee7bc4f192047",
+      "title": "Gemini 4 Neon in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-18T21:49:21.000Z",
+      "excerpt": "Gemini 4 Neon is now generally available in GitHub Copilot. It is designed for agentic coding, multistep tool use, and knowledge work. According to Google, Gemini 4 Neon delivers quality close to Gemini 4 Carbon at a lower token cost per task. Google also reports that, compared with Gemini 4 Carbon, it starts responding faster and makes fewer unrequested changes on coding tasks. It is also less likely to make unsupported claims about code, tool, or test…",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "6e93a4cc09914f56",
       "title": "Customize GitHub Copilot for your team",
@@ -41,6 +157,28 @@
       ],
       "actionLine": null,
       "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "58da586369f33999",
+      "title": "Research acceleration: The jagged frontier",
+      "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-18T08:00:00.000Z",
+      "excerpt": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
@@ -437,7 +575,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 290,
+      "points": 292,
       "alsoSeenAt": []
     },
     {
@@ -460,6 +598,29 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "66aba47836d0a1cc",
+      "title": "Grok Build 1.0.89",
+      "url": "https://x.ai/changelog/build#v1.0.89-2026-11-17",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-17T00:00:00.000Z",
+      "excerpt": "• New /rename command on the dashboard renames the selected session without opening it • New /models command refreshes the available model list from the server • /hooks rows now show the hook file name and list settings in readable fields instead of dumping raw commands • /mcps now shows hosted sections expanded by default unless they contain more than ten servers • Enter on a workflow in the /workflows list now opens its file for viewing and searching",
+      "version": "1.0.89",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-17",
       "points": null,
       "alsoSeenAt": []
     },
@@ -960,7 +1121,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1006,
+      "points": 1007,
       "alsoSeenAt": []
     },
     {
@@ -1530,7 +1691,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 415,
+      "points": 416,
       "alsoSeenAt": []
     },
     {
@@ -1554,7 +1715,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 455,
+      "points": 456,
       "alsoSeenAt": []
     },
     {
@@ -3501,7 +3662,7 @@
       "sourceId": "claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-10-31T01:01:35.000Z",
-      "excerpt": "• Added CLAUDE_CODE_DISABLE_ULTRATHINK , which turns the ultrathink keyword off • Added pooled group budgets to the Claude apps gateway: one monthly budget that a group's members share, on top of each member's own limit, set with pooled_budget on the spend limits admin API • Added CLAUDE_CODE_DISABLE_LOOPED_CROSS_CERT_DROP to keep system cross-certificates that certify each other in a loop, for servers whose private CA needs one • Added…",
+      "excerpt": "- Added `CLAUDE_CODE_DISABLE_ULTRATHINK`, which turns the `ultrathink` keyword off - Added pooled group budgets to the Claude apps gateway: one monthly budget that a group's members share, on top of each member's own limit, set with `pooled_budget` on the spend limits admin API - Added `CLAUDE_CODE_DISABLE_LOOPED_CROSS_CERT_DROP` to keep system cross-certificates that certify each other in a loop, for servers whose private CA needs one - Added…",
       "version": "2.1.316",
       "category": "overig",
       "score": 2,
@@ -3880,28 +4041,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "709cc8e2bd467b79",
-      "title": "Legora is building the agentic operating system for legal work",
-      "url": "https://openai.com/index/legora",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-10-28T09:30:00.000Z",
-      "excerpt": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "fc3b92ca54b15e29",
       "title": "Grok Build 1.0.73",
       "url": "https://x.ai/changelog/build#v1.0.73-2026-10-28",
@@ -4172,29 +4311,6 @@
       "belangrijk": false,
       "bundleKey": "claude-code:2026-10-26",
       "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "f93d4d5cf699810a",
-      "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
-      "url": "https://github.com/FrigadeHQ/hob",
-      "sourceId": "hacker-news",
-      "tool": "hacker-news",
-      "publishedAt": "2026-10-26T16:12:29.000Z",
-      "excerpt": "",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": 180,
       "alsoSeenAt": []
     },
     {
@@ -5069,29 +5185,6 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "41dd7e8734238249",
-      "title": "Grok Build 1.0.58",
-      "url": "https://x.ai/changelog/build#v1.0.58-2026-10-14",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-14T00:00:00.000Z",
-      "excerpt": "• Minor bug fixes",
-      "version": "1.0.58",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-14",
       "points": null,
       "alsoSeenAt": []
     },
