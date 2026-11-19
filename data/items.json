@@ -1,14 +1,81 @@
 {
-  "generatedAt": "2026-11-19T11:48:15.669Z",
+  "generatedAt": "2026-11-19T20:43:27.971Z",
   "items": [
+    {
+      "id": "4eb85862b82f65b8",
+      "title": "App + chat connectors: Adyen and Airwallex",
+      "url": "https://docs.lovable.dev/changelog#nov-19-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-19T14:13:47.000Z",
+      "excerpt": "App + chat connectors: Adyen and Airwallex Adyen lets apps create checkout sessions and payment links, take cards, wallets, and local payment methods such as iDEAL, and refund or cancel payments. Use it for shops, invoicing tools, and booking apps that take payment online. Airwallex lets apps take card and local payments, share payment links, manage subscriptions and invoices, and show balances by currency. Use it for ticket checkouts, deposit requests,…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "6e9ae4c06b93e227",
       "title": "Build in a draft from your AI client",
       "url": "https://docs.lovable.dev/changelog#nov-17-2026",
       "sourceId": "lovable",
       "tool": "lovable",
-      "publishedAt": "2026-11-19T10:25:46.000Z",
-      "excerpt": "AI clients connected to the Lovable MCP server , such as ChatGPT and Claude, can now create a draft of your project and build in it. Code changes stay in the draft until you accept the draft into your project, in Lovable or by asking the client. Building in a draft is treated as standard build usage and consumes credits. On Enterprise plans, the Connector requests policy now lets workspace editors request a connector that is disabled or that only…",
+      "publishedAt": "2026-11-19T14:13:47.000Z",
+      "excerpt": "AI clients connected to the Lovable MCP server, such as ChatGPT and Claude, can now create a draft of your project and build in it . Code changes stay in the draft until you accept the draft into your project, in Lovable or by asking the client. Building in a draft is treated as standard build usage and consumes credits. On Enterprise plans, the Connector requests policy now lets workspace editors request a connector that is disabled or that only…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "c109fb1ed0da15b8",
+      "title": "Connect your app to ClickUp",
+      "url": "https://docs.lovable.dev/changelog#nov-18-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-19T14:13:47.000Z",
+      "excerpt": "You can now connect your Lovable app to ClickUp to list, create, and update tasks, comment on tasks, browse spaces, folders, and lists, read and write docs, and read and record time entries. It fits intake forms, project dashboards, and weekly time reports. Add it from Connectors , or ask Lovable in a project to connect it. Upgrade your database from the publish dialog When you publish changes to an app whose built-in database runs on Tiny , the smallest…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now connect your Lovable app to ClickUp to list, create, and update tasks, comment on tasks, browse spaces, folders, and lists, read and write docs, and read and re.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "9342dbf934e428aa",
+      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+      "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-19T08:00:00.000Z",
+      "excerpt": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
       "version": null,
       "category": "overig",
       "score": 3,
@@ -91,7 +158,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 233,
+      "points": 249,
       "alsoSeenAt": []
     },
     {
@@ -645,7 +712,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 294,
+      "points": 295,
       "alsoSeenAt": []
     },
     {
@@ -2265,7 +2332,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 448,
+      "points": 449,
       "alsoSeenAt": []
     },
     {
@@ -2654,7 +2721,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 628,
+      "points": 629,
       "alsoSeenAt": []
     },
     {
@@ -4027,28 +4094,6 @@
       "tool": "copilot",
       "publishedAt": "2026-10-28T15:35:00.000Z",
       "excerpt": "Shared Copilot Automations are rolling out, enabling teams to build and maintain AI-powered workflows together. With Copilot Automations, you can combine prompts, triggers, and tools to design workflows around the way your team works. Copilot runs autonomously in the cloud, using only the tools you&rsquo;ve allowed. For example, you could create automations to: • Reproduce bugs as soon as an issue is opened. • Capture screenshots of the changes when a…",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "a395c7da350b5086",
-      "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
-      "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-10-28T13:15:00.000Z",
-      "excerpt": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
       "version": null,
       "category": "overig",
       "score": 3,
