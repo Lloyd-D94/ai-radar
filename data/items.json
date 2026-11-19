@@ -1,6 +1,28 @@
 {
-  "generatedAt": "2026-11-19T02:37:46.828Z",
+  "generatedAt": "2026-11-19T11:48:15.669Z",
   "items": [
+    {
+      "id": "6e9ae4c06b93e227",
+      "title": "Build in a draft from your AI client",
+      "url": "https://docs.lovable.dev/changelog#nov-17-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-19T10:25:46.000Z",
+      "excerpt": "AI clients connected to the Lovable MCP server , such as ChatGPT and Claude, can now create a draft of your project and build in it. Code changes stay in the draft until you accept the draft into your project, in Lovable or by asking the client. Building in a draft is treated as standard build usage and consumes credits. On Enterprise plans, the Connector requests policy now lets workspace editors request a connector that is disabled or that only…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "352723699d6c2a14",
       "title": "Release v0.69.0",
@@ -57,6 +79,31 @@
       "excerpt": "",
       "version": null,
       "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Model in de titel (+1)",
+        "Hoge community-score, 200+ punten (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 233,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "8c4432adfe17d06c",
+      "title": "llm-gemini 0.38",
+      "url": "https://simonwillison.net/2026/Nov/18/llm-gemini",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-18T23:59:20.000Z",
+      "excerpt": "Today Google introduced Gemini 4 Neon . I wrote recently about how confusing the pricing for the Gemini 4 series was - Neon has somehow made this even worse. Previously the Gemini 4 lineup was Hydrogen, Argon, and Carbon - where Argon and Carbon were the same price , and Hydrogen was 3/4 of that price now but will be 1/4 of that price when the other two double an 1st December once their initial discount pricing expires. The Neon announcement pretends…",
+      "version": null,
+      "category": "model",
       "score": 3,
       "scoreReasons": [
         "Communitybron (start op 2)",
@@ -68,7 +115,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 91,
+      "points": null,
       "alsoSeenAt": []
     },
     {
@@ -111,6 +158,29 @@
       ],
       "actionLine": null,
       "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "6b2d356ac9f74f19",
+      "title": "datasette-arrows 0.1a0",
+      "url": "https://simonwillison.net/2026/Nov/18/datasette-arrows",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-18T17:09:59.000Z",
+      "excerpt": "Datasette 1.0a43 added the ability for plugins to implement streaming export formats. Datasette core supports streaming CSV and TSV - you can export millions of lines of data from a table without needing to load it all into memory, because those two file formats support streaming data in chunks. The register_output_renderer() plugin hook can now be used to implement the same pattern for other formats. I've learned never to release a new plugin feature…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
@@ -575,7 +645,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 292,
+      "points": 294,
       "alsoSeenAt": []
     },
     {
@@ -2268,29 +2338,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "7a8b85431c54289a",
-      "title": "Yonkers Rises",
-      "url": "https://simonwillison.net/2026/Nov/10/yonkers-rises",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-10T03:53:04.000Z",
-      "excerpt": "I realized I didn't know where Yonkers was, so I looked it up on Google Maps and then, to help embed its location and shape in my head (and to try out Claude Fable 5.2's 3D modeling and animation skills), I prompted Fable 5.2 Medium to: Make a three js animation where yonkers stands up as a big mech (cool stand up motion) and átomos around manhattan and queens and Brooklyn, use openstreetmap mapping data It correctly deduced that \"átomos\" was a mobile…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "dbc58eacee5d52ba",
       "title": "v2.1.322",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.322",
@@ -2329,30 +2376,6 @@
       ],
       "actionLine": null,
       "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "9a8fde6cfa9ab68c",
-      "title": "llm-anthropic 0.31",
-      "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-09T23:58:46.000Z",
-      "excerpt": "Anthropic released Fable 5.2 and Mythos 5.2 today. Fable 5.2 is currently ranked first on Artificial Analysis . Anthropic say it \"solved two open problems in the physics of black holes\", so clearly their internal benchmarks have become more ambitious! I've added the new models to llm-anthropic , so you can now run prompts through Fable 5.2 like this: llm -m claude-fable-5.2 \"Generate an SVG of a pelican riding a bicycle\" I ran pelicans at all five…",
-      "version": null,
-      "category": "nieuwe-functie",
-      "score": 3,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Nieuwe functie volgens de brontekst (+1)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": "De bron: “you can now run prompts through Fable 5.”",
-      "priority": "community",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
