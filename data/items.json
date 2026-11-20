@@ -1,6 +1,74 @@
 {
-  "generatedAt": "2026-11-20T11:48:09.340Z",
+  "generatedAt": "2026-11-20T20:27:43.301Z",
   "items": [
+    {
+      "id": "7220e54bdf8a93f9",
+      "title": "Quoting Levent Alpöge",
+      "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-20T16:30:48.000Z",
+      "excerpt": "I believe I have, working with Claude, discovered a proof of the Riemann Hypothesis. In fact, the method easily extends much further, resolving the so-called Generalized Riemann Hypothesis, and I expect, with more time, the Extended Riemann Hypothesis too. Claude and I have also formalized the arguments without assumptions. It is natural to feel that this is an end, in my case a loss of a principal guiding light, but what I saw during the course of…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "4eb85862b82f65b8",
+      "title": "Lovable keeps working while you answer its questions",
+      "url": "https://docs.lovable.dev/changelog#nov-19-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-20T15:42:29.000Z",
+      "excerpt": "Lovable keeps working while you answer its questions Lovable can now ask you a question and keep working while you decide. Lovable builds what doesn't depend on your answer and picks an option for the rest. If you choose a different option, Lovable reworks what it built. Before a step that is hard to undo, such as deleting data, Lovable waits for your answer. App + chat connectors: Adyen, Airwallex, GoCardless, Mercado Pago, and Razorpay Adyen lets apps…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "83b50bd5becf42cb",
+      "title": "GPT-6.2 Astra and GPT-6.2 Sol for your app's AI features",
+      "url": "https://docs.lovable.dev/changelog#nov-20-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-20T15:42:29.000Z",
+      "excerpt": "GPT-6.2 Astra and GPT-6.2 Sol for your app's AI features Your app's AI features can now use two new OpenAI models: • GPT-6.2 Astra ( openai/gpt-6.2-astra ) for complex reasoning, coding, research, and document creation, at lower cost than GPT-6 Astra. • GPT-6.2 Sol ( openai/gpt-6.2-sol ) for everyday reasoning, coding, and professional work. Both accept text and image input and respond with text. Ask Lovable to use one in your app, or describe what you…",
+      "version": null,
+      "category": "model",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Model in de titel (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "3f7f7cffebe4ba59",
       "title": "Token fraud is here and it’s BAD (YouTube)",
@@ -84,28 +152,6 @@
       "scoreReasons": [
         "Secundaire bron (start op 3)",
         "Stabiele release, geen patch (+1)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "4eb85862b82f65b8",
-      "title": "App + chat connectors: Adyen and Airwallex",
-      "url": "https://docs.lovable.dev/changelog#nov-19-2026",
-      "sourceId": "lovable",
-      "tool": "lovable",
-      "publishedAt": "2026-11-19T14:13:47.000Z",
-      "excerpt": "App + chat connectors: Adyen and Airwallex Adyen lets apps create checkout sessions and payment links, take cards, wallets, and local payment methods such as iDEAL, and refund or cancel payments. Use it for shops, invoicing tools, and booking apps that take payment online. Airwallex lets apps take card and local payments, share payment links, manage subscriptions and invoices, and show balances by currency. Use it for ticket checkouts, deposit requests,…",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
       ],
       "actionLine": null,
       "priority": "secundair",
@@ -293,6 +339,29 @@
       "priority": "secundair",
       "isPatch": false,
       "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "9bbaaefd081a66de",
+      "title": "grok-build-0.1 end of life",
+      "url": "https://docs.x.ai/developers/release-notes#grok-build-01-end-of-life",
+      "sourceId": "xai-release-notes",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-19T00:00:00.000Z",
+      "excerpt": "grok-build-0.1 reached end of life on November 19, 2026 and is no longer served on the API.",
+      "version": null,
+      "category": "breaking-change",
+      "score": 5,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Beveiliging, prijs of breaking change (+2, minimaal 5)"
+      ],
+      "actionLine": "De bron noemt een breaking change of uitfasering bij Grok Build.",
+      "priority": "primair",
+      "isPatch": false,
+      "belangrijk": true,
       "bundleKey": null,
       "points": null,
       "alsoSeenAt": []
@@ -1394,7 +1463,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1007,
+      "points": 1008,
       "alsoSeenAt": []
     },
     {
@@ -1988,7 +2057,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 456,
+      "points": 457,
       "alsoSeenAt": []
     },
     {
@@ -2100,6 +2169,28 @@
       ],
       "actionLine": null,
       "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "62eb27d671a64f0a",
+      "title": "Securely connect Replit to your private network with Tunnels",
+      "url": "https://replit.com/blog/build-with-private-data-using-tunnels",
+      "sourceId": "replit",
+      "tool": "replit",
+      "publishedAt": "2026-11-11T17:55:00.000Z",
+      "excerpt": "A self-driving company needs agents that can investigate issues, prepare reports and build with company data. When that data sits on a private network, teams shouldn’t have to choose between keeping it secure and putting it to work. Replit’s enterprise controls include governance tools, separate development and production databases, and single-tenant infrastructure. Bring Your Own Cloud adds options for running Replit in your own cloud. A tunnel connects…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
@@ -2487,30 +2578,6 @@
       ],
       "actionLine": null,
       "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "cba41f0395d50b9e",
-      "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
-      "url": "https://simonwillison.net/2026/Nov/10/muse-ember",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-10T07:28:21.000Z",
-      "excerpt": "Introducing Our Smallest, Most Efficient Model: Muse Ember Meta AI just launched their entry in the Claude Haiku/GPT Luna category: Muse Ember, which they describe as: [...] our smallest and most efficient model designed for complex reasoning execution and the work agents repeat all day: tool calls, coding subtasks, routing, extraction, and long document parsing. For shorter prompts it's priced the same as GPT-6 Luna and Claude Haiku 5.5 - both are…",
-      "version": null,
-      "category": "nieuwe-functie",
-      "score": 3,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Nieuwe functie volgens de brontekst (+1)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
