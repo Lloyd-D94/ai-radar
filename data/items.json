@@ -1,6 +1,75 @@
 {
-  "generatedAt": "2026-11-19T20:43:27.971Z",
+  "generatedAt": "2026-11-20T02:22:58.937Z",
   "items": [
+    {
+      "id": "1e02ab9c34ce90d4",
+      "title": "0.171.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
+      "sourceId": "codex",
+      "tool": "codex",
+      "publishedAt": "2026-11-20T00:44:47.000Z",
+      "excerpt": "• Added GPT-6.2 Sol and Astra to model catalogs, with Sol as the default catalog selection. ( #62106 ) • Enabled the TUI workspace by default, with searchable document previews, image previews, and subagent transcripts alongside the main conversation. ( #61352 , #61888 , #61889 , #61919 , #62157 ) • Added configurable undo and redo shortcuts to the non-Vim prompt composer, including restoration of attachments and large pastes. ( #61954 ) • Added codex…",
+      "version": "0.171.0",
+      "category": "overig",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Stabiele release, geen patch (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "f3d370a5121afbf2",
+      "title": "v2.1.329",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+      "sourceId": "claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-19T22:14:41.000Z",
+      "excerpt": "• Added a trust dialog warning that says where a folder's hooks are declared • Added a warning in the conversation, in Claude Desktop and other non-interactive hosts, when hooks in managed settings fail to load • Added this session's scheduled tasks, /loop wakeups, the goal and this conversation's forks to /tasks ; x stops one after asking • Added a \"Server message\" row to a server's page in /mcp that shows the JSON-RPC error message of a remote HTTP MCP…",
+      "version": "2.1.329",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "claude-code:2026-11-19",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "b4928e127abfbfc2",
+      "title": "Release v0.70.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.70.0",
+      "sourceId": "gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-11-19T21:08:05.000Z",
+      "excerpt": "• Changelog for v0.69.0-preview.0 by @gemini-cli-robot in #30222 • Changelog for v0.68.0 by @gemini-cli-robot in #30224 • chore(release): bump version to 0.70.0-nightly.20261110.g1603e9bab by @gemini-cli-robot in #30223 • test(cli): remove redundant lowercase restart test in AdminSettingsChangedDialog by @luisfelipe-alt in #30221 • fix(cli): preserve Unicode prompts and strip ANSI fragments in session previews ( #29915 ) by @urielefrenvirtusa in #30220",
+      "version": "0.70.0",
+      "category": "overig",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Stabiele release, geen patch (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "4eb85862b82f65b8",
       "title": "App + chat connectors: Adyen and Airwallex",
@@ -158,7 +227,51 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 249,
+      "points": 251,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "17b7a2b39f098895",
+      "title": "See PR scans in action",
+      "url": "https://openai.com/business/learn/pr-scans-demo",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-19T00:00:00.000Z",
+      "excerpt": "Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "82fe289fe466dcc1",
+      "title": "Explore the Codex Security Plugin",
+      "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-19T00:00:00.000Z",
+      "excerpt": "Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
       "alsoSeenAt": []
     },
     {
@@ -420,7 +533,7 @@
       "sourceId": "codex",
       "tool": "codex",
       "publishedAt": "2026-11-17T22:21:10.000Z",
-      "excerpt": "No verified release highlights available. Full Changelog: rust-v0.169.0...rust-v0.169.1",
+      "excerpt": "No verified release highlights available. Full Changelog: https://github.com/openai/codex/compare/rust-v0.169.0...rust-v0.169.1",
       "version": "0.169.1",
       "category": "overig",
       "score": 2,
@@ -712,7 +825,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 295,
+      "points": 296,
       "alsoSeenAt": []
     },
     {
@@ -1304,7 +1417,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 100,
+      "points": 101,
       "alsoSeenAt": []
     },
     {
@@ -3526,7 +3639,7 @@
       "sourceId": "claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-11-03T01:25:46.000Z",
-      "excerpt": "• Added a warning to /schedule when a new cloud scheduled task gets connectors you did not ask for, with how to remove them • Added a check that asks before a web or shell tool call sends your account email address to the network • Added onFailure: \"block\" for Agent SDK hook callbacks, so a callback that fails blocks the action instead of letting it run • Added a notice in Claude Desktop's Code tab when your organization's remote managed settings haven't…",
+      "excerpt": "- Added a warning to `/schedule` when a new cloud scheduled task gets connectors you did not ask for, with how to remove them - Added a check that asks before a web or shell tool call sends your account email address to the network - Added `onFailure: \"block\"` for Agent SDK hook callbacks, so a callback that fails blocks the action instead of letting it run - Added a notice in Claude Desktop's Code tab when your organization's remote managed settings…",
       "version": "2.1.317",
       "category": "overig",
       "score": 2,
@@ -3641,28 +3754,6 @@
       "tool": "openai",
       "publishedAt": "2026-11-02T15:30:00.000Z",
       "excerpt": "How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "4094d4340f9e66f9",
-      "title": "Qodo builds context into AI code review with Codex",
-      "url": "https://openai.com/index/qodo-codex-plugin",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-11-02T00:00:00.000Z",
-      "excerpt": "Qodo brings company knowledge and coding standards into Codex, helping developers catch P0 issues across repositories before opening a pull request.",
       "version": null,
       "category": "overig",
       "score": 3,
@@ -3875,28 +3966,6 @@
       "scoreReasons": [
         "Secundaire bron (start op 3)",
         "Stabiele release, geen patch (+1)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "0f01adb2acab0a67",
-      "title": "How we detect frontier model misalignment",
-      "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-10-29T09:00:00.000Z",
-      "excerpt": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
       ],
       "actionLine": null,
       "priority": "secundair",
