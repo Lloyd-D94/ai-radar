@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T02:23:40.743Z",
+  "generatedAt": "2026-11-21T11:15:22.847Z",
   "items": [
     {
       "id": "fdc4cffb6fa79465",
@@ -44,7 +44,29 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 117,
+      "points": 151,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "62eb27d671a64f0a",
+      "title": "Securely connect Replit to your private network with Tunnels",
+      "url": "https://replit.com/blog/build-with-private-data-using-tunnels",
+      "sourceId": "replit",
+      "tool": "replit",
+      "publishedAt": "2026-11-20T17:55:00.000Z",
+      "excerpt": "A self-driving company needs agents that can investigate issues, prepare reports and build with company data. When that data sits on a private network, teams shouldn’t have to choose between keeping it secure and putting it to work. Replit’s enterprise controls include governance tools, separate development and production databases, and single-tenant infrastructure. Bring Your Own Cloud adds options for running Replit in your own cloud. A tunnel connects…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
       "alsoSeenAt": []
     },
     {
@@ -2215,28 +2237,6 @@
       ],
       "actionLine": null,
       "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "62eb27d671a64f0a",
-      "title": "Securely connect Replit to your private network with Tunnels",
-      "url": "https://replit.com/blog/build-with-private-data-using-tunnels",
-      "sourceId": "replit",
-      "tool": "replit",
-      "publishedAt": "2026-11-11T17:55:00.000Z",
-      "excerpt": "A self-driving company needs agents that can investigate issues, prepare reports and build with company data. When that data sits on a private network, teams shouldn’t have to choose between keeping it secure and putting it to work. Replit’s enterprise controls include governance tools, separate development and production databases, and single-tenant infrastructure. Bring Your Own Cloud adds options for running Replit in your own cloud. A tunnel connects…",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
