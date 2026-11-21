@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T11:15:22.847Z",
+  "generatedAt": "2026-11-21T19:23:15.337Z",
   "items": [
     {
       "id": "fdc4cffb6fa79465",
@@ -44,7 +44,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 151,
+      "points": 169,
       "alsoSeenAt": []
     },
     {
@@ -456,7 +456,13 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": null,
-      "alsoSeenAt": []
+      "alsoSeenAt": [
+        {
+          "sourceId": "simon-willison",
+          "url": "https://simonwillison.net/2026/Nov/20/llm-gemini",
+          "title": "llm-gemini 0.38.1"
+        }
+      ]
     },
     {
       "id": "8e2ce054ff040c2d",
@@ -985,7 +991,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 296,
+      "points": 297,
       "alsoSeenAt": []
     },
     {
@@ -1531,7 +1537,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1009,
+      "points": 1010,
       "alsoSeenAt": []
     },
     {
