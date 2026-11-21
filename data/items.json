@@ -1,6 +1,52 @@
 {
-  "generatedAt": "2026-11-20T20:27:43.301Z",
+  "generatedAt": "2026-11-21T02:23:40.743Z",
   "items": [
+    {
+      "id": "fdc4cffb6fa79465",
+      "title": "v2.1.330",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+      "sourceId": "claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-20T22:32:56.000Z",
+      "excerpt": "• Added sign-in to organizations managed in Anthropic's Enterprise Admin Console: after claude auth login , Claude Code applies the organization's settings and uses its cloud provider or gateway • Added easel, a built-in mod that draws charts when asked and under MCP metrics results, on Pro, Max and, where available, Team and Enterprise on macOS and Linux; turn automatic charts off in /config • Added CLAUDE_CODE_FULL_SIGN_IN_LINK=1 to print the full…",
+      "version": "2.1.330",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "claude-code:2026-11-20",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "111a51744cb7f878",
+      "title": "Vibecoding an inference chip",
+      "url": "https://ankitg.me/blog/vibecoding-inference-chip",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-20T18:15:16.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 117,
+      "alsoSeenAt": []
+    },
     {
       "id": "7220e54bdf8a93f9",
       "title": "Quoting Levent Alpöge",
@@ -1463,7 +1509,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1008,
+      "points": 1009,
       "alsoSeenAt": []
     },
     {
@@ -3499,7 +3545,7 @@
       "sourceId": "claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-11-04T00:01:03.000Z",
-      "excerpt": "• Added a record of your answer when Claude Code asks to turn on the mods it writes in a session • Added assume_role on mantle upstreams of the Claude apps gateway, for a role in another AWS account and for per-developer AWS cost attribution • Added an effort option to a mod's $.model.fork , so a quick side job can run at low whatever effort the session uses; the result reports the effort sent • Added the date a stored claude.ai sign-in ends to claude…",
+      "excerpt": "- Added a record of your answer when Claude Code asks to turn on the mods it writes in a session - Added `assume_role` on `mantle` upstreams of the Claude apps gateway, for a role in another AWS account and for per-developer AWS cost attribution - Added an `effort` option to a mod's `$.model.fork`, so a quick side job can run at `low` whatever effort the session uses; the result reports the effort sent - Added the date a stored claude.ai sign-in ends to…",
       "version": "2.1.318",
       "category": "overig",
       "score": 2,
