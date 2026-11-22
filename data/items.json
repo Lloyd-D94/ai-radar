@@ -1,6 +1,28 @@
 {
-  "generatedAt": "2026-11-22T11:33:54.947Z",
+  "generatedAt": "2026-11-22T19:46:18.572Z",
   "items": [
+    {
+      "id": "1a10f1676d46fc01",
+      "title": "Perplexity and Intelligence",
+      "url": "https://openai.com/index/perplexity-and-intelligence",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-22T00:00:00.000Z",
+      "excerpt": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "fdc4cffb6fa79465",
       "title": "v2.1.330",
@@ -44,7 +66,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 175,
+      "points": 176,
       "alsoSeenAt": []
     },
     {
@@ -991,7 +1013,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 297,
+      "points": 298,
       "alsoSeenAt": []
     },
     {
@@ -3851,28 +3873,6 @@
       "tool": "lovable",
       "publishedAt": "2026-11-02T15:56:16.000Z",
       "excerpt": "Lovable now remembers the preferences, decisions, and facts you state as you build, and applies them in later conversations without being reminded. Project memory belongs to one project and is shared by everyone who can edit it. Personal memory covers how you want Lovable to work with you, in every project you build. Your workspace and project Memory settings show a plain-language summary of what Lovable remembers. To correct something, select the text…",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "277870ffc8d71544",
-      "title": "Scaling Git at OpenAI",
-      "url": "https://openai.com/index/scaling-git-at-openai",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-11-02T15:30:00.000Z",
-      "excerpt": "How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.",
       "version": null,
       "category": "overig",
       "score": 3,
