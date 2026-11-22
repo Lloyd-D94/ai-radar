@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T19:23:15.337Z",
+  "generatedAt": "2026-11-22T01:23:32.159Z",
   "items": [
     {
       "id": "fdc4cffb6fa79465",
@@ -44,7 +44,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 169,
+      "points": 173,
       "alsoSeenAt": []
     },
     {
@@ -364,7 +364,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 255,
+      "points": 256,
       "alsoSeenAt": []
     },
     {
@@ -3370,7 +3370,7 @@
       "sourceId": "gemini-cli",
       "tool": "gemini-cli",
       "publishedAt": "2026-11-04T20:27:11.000Z",
-      "excerpt": "• Changelog for v0.65.0 by @gemini-cli-robot in #29853 • chore(release): bump version to 0.67.0-nightly.20261020.gb041de017 by @gemini-cli-robot in #29854 • Changelog for v0.66.0-preview.0 by @gemini-cli-robot in #29852 • feat(cli): bridge the IDE companion into container sandboxes over exec stdio by @elberthc-byte in #29858 • fix(core): prevent duplicate agent loading when workspace is home directory ( #27692 ) by @urielefrenvirtusa in #29847",
+      "excerpt": "* Changelog for v0.65.0 by @gemini-cli-robot in https://github.com/google-gemini/gemini-cli/pull/29853 * chore(release): bump version to 0.67.0-nightly.20261020.gb041de017 by @gemini-cli-robot in https://github.com/google-gemini/gemini-cli/pull/29854 * Changelog for v0.66.0-preview.0 by @gemini-cli-robot in https://github.com/google-gemini/gemini-cli/pull/29852 * feat(cli): bridge the IDE companion into container sandboxes over exec stdio by…",
       "version": "0.67.0",
       "category": "overig",
       "score": 4,
