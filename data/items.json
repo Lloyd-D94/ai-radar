@@ -1,6 +1,29 @@
 {
-  "generatedAt": "2026-11-22T19:46:18.572Z",
+  "generatedAt": "2026-11-23T01:48:00.182Z",
   "items": [
+    {
+      "id": "71ff2ee8bf23be9b",
+      "title": "Select Styling Specimens",
+      "url": "https://simonwillison.net/2026/Nov/22/select-styling",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-22T19:45:06.000Z",
+      "excerpt": "I got frustrated at how HTML boxes default to looking different in different browsers, and are (I think) quite ugly in Chrome: So I had Claude Fable 5.2 build me this page showing all of the ways they can be styled: Build an HTML page that shows all of the ways a select box can be styled, I plan to take screenshots in every desktop and mobile browser After some experimentation I've decided my favorite CSS for select boxes is this: padding : 0.5 em 2.25…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "1a10f1676d46fc01",
       "title": "Perplexity and Intelligence",
@@ -386,7 +409,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 256,
+      "points": 257,
       "alsoSeenAt": []
     },
     {
@@ -2558,36 +2581,6 @@
       "bundleKey": null,
       "points": null,
       "alsoSeenAt": []
-    },
-    {
-      "id": "5bf610d1dd7d8e14",
-      "title": "llm-gemini 0.36",
-      "url": "https://simonwillison.net/2026/Nov/10/llm-gemini",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-10T20:09:44.000Z",
-      "excerpt": "Gemini 4 Carbon was announced two weeks ago for \"a subset of cyber defenders\", but today it's available to everyone else . This is Google's best ever Gemini, priced at $2/million input and $10/million output at launch (that's GPT-6.1 Sol / Claude Sonnet 5.5 prices) but scheduled to double in price to $4/$20 on December 1st (same as Opus 5.5). Here are three pelicans for the low, medium and high thinking efforts (it defaults to medium). This is the…",
-      "version": null,
-      "category": "model",
-      "score": 3,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Model in de titel (+1)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": [
-        {
-          "sourceId": "simon-willison",
-          "url": "https://simonwillison.net/2026/Nov/12/llm-gemini",
-          "title": "llm-gemini 0.37"
-        }
-      ]
     },
     {
       "id": "78c954e9f04a3e5c",
