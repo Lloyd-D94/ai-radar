@@ -1,6 +1,119 @@
 {
-  "generatedAt": "2026-11-24T13:51:38.512Z",
+  "generatedAt": "2026-11-24T23:56:37.428Z",
   "items": [
+    {
+      "id": "5e8eba5b15ac6044",
+      "title": "Three LLM inflection points in twelve months",
+      "url": "https://simonwillison.net/2026/Nov/24/llm-inflection-points",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-24T23:02:07.000Z",
+      "excerpt": "I gave a keynote at the AI Engineer Code Summit a couple of weeks ago, constructed around the idea that there have been three significant inflection points in the abilities of LLMs and coding agents in the past twelve months. Here's the video of the talk. In this post I'm going to pull out the major inflection point theme and interrogate it more deeply. • Today, November 24th 2026, is the one year anniversary of the release of Claude Opus 4.5 . With…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "29350d7ef0932c55",
+      "title": "Managed Google Maps Platform now works on custom domains",
+      "url": "https://docs.lovable.dev/changelog#nov-24-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-24T17:03:11.000Z",
+      "excerpt": "Managed Google Maps Platform now works on custom domains Maps from a Google Maps Platform connection set up with Managed by Lovable now load on your project's custom domains . If the project is already published, publish it again. The option to set a color on a project folder has been removed. Folders that had a color now show the same icon as every other folder. Your folders and the projects in them stay as they are.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "7eea171611f31c8f",
+      "title": "GPT 6.2 Astra Solves a Historical Mystery",
+      "url": "https://simonwillison.net/2026/Nov/24/astra-historical-mystery",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-24T16:53:59.000Z",
+      "excerpt": "GPT 6.2 Astra Solves a Historical Mystery Here's an interesting case-study in using GPT-6.2 Astra for historical research, from history professor Mark Humphries: With only minimal prompting, GPT-6.2 Astra was able to autonomously identify the creator of an anonymous 1808 sketchbook held at Yale’s Beinecke Library . It did so extremely quickly (in just 22 minutes), using publicly available primary and secondary sources. To do so, it discovered a little…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "7bb380170d84fe12",
+      "title": "Publish your app to Databricks",
+      "url": "https://docs.lovable.dev/changelog#nov-23-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-24T16:26:32.000Z",
+      "excerpt": "When a Databricks connection is linked to your project, you can now publish the app to Databricks from the publish dialog. The app runs as a Databricks App in your workspace, where Databricks manages who can open it. With a service principal connection, you choose whether the app queries data with each person's own permissions or with shared access. Let Lovable create a test user for browser testing When Lovable tests a page that needs a signed-in user…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 4,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Nieuwe functie volgens de brontekst (+1)"
+      ],
+      "actionLine": "De bron: “you can now publish the app to Databricks from the publish dialog.”",
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "7758c04a629331bf",
+      "title": "Searching for distant planets with Astra",
+      "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-24T11:00:00.000Z",
+      "excerpt": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler and TESS space telescopes.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "07fffdf07c77b17b",
       "title": "datasette-charts 0.2a0",
@@ -55,7 +168,7 @@
       "sourceId": "simon-willison",
       "tool": "simon-willison",
       "publishedAt": "2026-11-24T03:45:57.000Z",
-      "excerpt": "I small improvement to Datasette Agent : chat sessions can open an iframe side panel, and that panel can then navigate to different pages. This version improves navigation by fragment hashes, for deeper integration with other Datasette plugins that update fragment hashes when the user interacts with the plugin in a way that changes state. I built this in order to fix some bugs with the much more exciting datasette-charts 0.2a0 release .",
+      "excerpt": "A small improvement to Datasette Agent : chat sessions could already open an iframe side panel that could then navigate to different pages. This version improves navigation by fragment hashes, for deeper integration with other Datasette plugins that update fragment hashes when the user interacts with the plugin in a way that changes state. I built this in order to fix some bugs with the much more exciting datasette-charts 0.2a0 release .",
       "version": null,
       "category": "overig",
       "score": 2,
@@ -108,6 +221,50 @@
       "scoreReasons": [
         "Secundaire bron (start op 3)",
         "Stabiele release, geen patch (+1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "89a905d5eae9fa3e",
+      "title": "How iFood scales coding agents across 15,000 repositories",
+      "url": "https://openai.com/business/customer-stories/ifood",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-24T00:00:00.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "a3c9028eefd69cfd",
+      "title": "Clay helps sales teams win with Codex and ChatGPT",
+      "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+      "sourceId": "openai-news",
+      "tool": "openai",
+      "publishedAt": "2026-11-24T00:00:00.000Z",
+      "excerpt": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 models handling the reasoning.",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
       ],
       "actionLine": null,
       "priority": "secundair",
@@ -297,7 +454,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 179,
+      "points": 180,
       "alsoSeenAt": []
     },
     {
@@ -617,7 +774,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 257,
+      "points": 258,
       "alsoSeenAt": []
     },
     {
@@ -639,6 +796,52 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "3ce89d130fb5a45e",
+      "title": "Grok Build 1.0.92",
+      "url": "https://x.ai/changelog/build#v1.0.92-2026-11-19",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-19T00:00:00.000Z",
+      "excerpt": "• MCP tool results that contain images now include those images in headless streaming and JSON output • Clickable file:// links to local files now open the file the same way bare paths do • Question cards in minimal mode now keep the first option visible instead of scrolling it off-screen • Session resume errors now give the same helpful instruction on every route instead of suggesting the TUI picker • grok inspect now shows the hooks a headless run…",
+      "version": "1.0.92",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-19",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "5cfd974f5d1d6fcb",
+      "title": "Grok Build 1.0.91",
+      "url": "https://x.ai/changelog/build#v1.0.91-2026-11-19",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-19T00:00:00.000Z",
+      "excerpt": "• Arrow keys on the welcome screen now move through the menu directly from the prompt • Ctrl+F or /fork now offers to fork a session that another Grok window has open, shown as a notice instead of a turn-failed error • --system-prompt-file lets you load a system prompt override from a file • -p now accepts flags after it and joins any extra words into the prompt; bare -p reads from stdin • Ctrl+[ and Ctrl+] now switch between all open sessions, including…",
+      "version": "1.0.91",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-19",
       "points": null,
       "alsoSeenAt": []
     },
@@ -896,6 +1099,29 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "2f099c17ef2d475f",
+      "title": "Grok Build 1.0.90",
+      "url": "https://x.ai/changelog/build#v1.0.90-2026-11-18",
+      "sourceId": "grok-build",
+      "tool": "grok-build",
+      "publishedAt": "2026-11-18T00:00:00.000Z",
+      "excerpt": "• /mcps now shows the hosted connectors section even before any have been added, and lets you re-authenticate a hosted connector with i then y to choose fresh permissions • Answering No with text on a subagent card shows the subagent reply in the main chat • Sessions switch models when their model is removed from the available list • Queued subagent messages no longer show the queued label or surrounding quotes; the marker reads read-only • Caret no…",
+      "version": "1.0.90",
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Prioriteitsbron (start op 4)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "primair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "grok-build:2026-11-18",
       "points": null,
       "alsoSeenAt": []
     },
@@ -1244,7 +1470,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 299,
+      "points": 300,
       "alsoSeenAt": []
     },
     {
@@ -1790,7 +2016,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 1010,
+      "points": 1011,
       "alsoSeenAt": []
     },
     {
@@ -1882,52 +2108,6 @@
       "isPatch": true,
       "belangrijk": false,
       "bundleKey": "grok-build:2026-11-14",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "2053de078f05bd0a",
-      "title": "datasette-cluster-map 0.19",
-      "url": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-13T23:02:45.000Z",
-      "excerpt": "One of the oldest Datasette plugins, and still one of my favorites. It now works with Datasette 1.0a42, and depends on the new datasette-leaflet to ensure OpenStreetMap tiles are requested with a referrer header. Here's a map of power plants owned by California's PG&E , also demonstrating Datasette's recently redesigned facets :",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "a840b1604a3a5e19",
-      "title": "datasette-leaflet 0.3",
-      "url": "https://simonwillison.net/2026/Nov/13/datasette-leaflet",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-13T22:30:54.000Z",
-      "excerpt": "OpenStreetMap have a very reasonable policy that hits to their hosted tile server should send a referrer header . Datasette table pages used the Referrer-Policy: no-referrer HTTP header, causing plugins that loaded tiles from OpenStreetMap to violate that policy. datasette-leaflet is the plugin that loads a bundled Leaflet so other Datasette plugins can depend on it. It now sets the referrer policy on the tile requests themselves to…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
       "points": null,
       "alsoSeenAt": []
     },
@@ -2384,7 +2564,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 457,
+      "points": 458,
       "alsoSeenAt": []
     },
     {
@@ -3451,28 +3631,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "db9792e954d44701",
-      "title": "Merge builds product and business tools with OpenAI technology",
-      "url": "https://openai.com/index/merge-builds-with-openai",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-11-05T08:00:00.000Z",
-      "excerpt": "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to plan executive dinners and prepare sales updates.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "c30b322513faf4e6",
       "title": "Build Live Apps in Cursor",
       "url": "https://cursor.com/changelog/build-live-apps",
@@ -3598,28 +3756,6 @@
       "scoreReasons": [
         "Secundaire bron (start op 3)",
         "Nieuwe functie volgens de brontekst (+1)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "1be4fdd8e6ca80f0",
-      "title": "OpenAI to acquire Pierre Computer Company, Inc.",
-      "url": "https://openai.com/index/openai-to-acquire-pierre",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-11-04T14:30:00.000Z",
-      "excerpt": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
       ],
       "actionLine": null,
       "priority": "secundair",
@@ -3836,28 +3972,6 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": 536,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "25493a43cba550c7",
-      "title": "Accelerating engineering for the physical world",
-      "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
-      "sourceId": "openai-news",
-      "tool": "openai",
-      "publishedAt": "2026-11-03T12:00:00.000Z",
-      "excerpt": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
       "alsoSeenAt": []
     },
     {
@@ -5348,52 +5462,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "14f4f16e8c28c372",
-      "title": "Grok Build 1.0.62",
-      "url": "https://x.ai/changelog/build#v1.0.62-2026-10-16",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-16T00:00:00.000Z",
-      "excerpt": "• Headless mode ( grok -p ) waits for the follow-up turn that a finished background task starts before exiting, and a --background-wait-timeout that stops pending work exits with an error instead of success • Cold /resume from the dashboard overlay keeps the overlay attached, so you can still back out with Left or Ctrl+\\ • Enter on a highlighted slash command with optional arguments runs the command instead of leaving a trailing space in the composer •…",
-      "version": "1.0.62",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-16",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "678e1393131a29d9",
-      "title": "Grok Build 1.0.61",
-      "url": "https://x.ai/changelog/build#v1.0.61-2026-10-16",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-16T00:00:00.000Z",
-      "excerpt": "• Resume picker finds sessions whose titles contain every word you type, in any order • /resume opens the session directly when the ID or title matches exactly one session, instead of always opening the picker • Dashboard peek text can be selected by dragging over it with the mouse, and the selection is copied to the clipboard when you release • Workflow run views scroll toward newer agents when you wheel down the agent roster, instead of snapping back •…",
-      "version": "1.0.61",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-16",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "a39e7daa0f724775",
       "title": "Cloud Agent Canvases and Environment Improvements",
       "url": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
@@ -5436,29 +5504,6 @@
       "isPatch": true,
       "belangrijk": false,
       "bundleKey": "claude-code:2026-10-15",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "f1b7189e9243c5e0",
-      "title": "Grok Build 1.0.60",
-      "url": "https://x.ai/changelog/build#v1.0.60-2026-10-15",
-      "sourceId": "grok-build",
-      "tool": "grok-build",
-      "publishedAt": "2026-10-15T00:00:00.000Z",
-      "excerpt": "• grok --resume lists matching sessions newest first with when each was last updated, and suggests similar titles when nothing matches • Shift+Y in the fullscreen markdown viewer copies the code block under the cursor • grok --resume with a title that matches no local session reports the miss right away instead of trying a remote restore and asking you to sign in • Esc on the first question in a session opened from the dashboard moves focus to the…",
-      "version": "1.0.60",
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Prioriteitsbron (start op 4)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "primair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "grok-build:2026-10-15",
       "points": null,
       "alsoSeenAt": []
     },
