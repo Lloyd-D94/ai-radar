@@ -1,6 +1,76 @@
 {
-  "generatedAt": "2026-11-24T02:16:38.320Z",
+  "generatedAt": "2026-11-24T13:51:38.512Z",
   "items": [
+    {
+      "id": "07fffdf07c77b17b",
+      "title": "datasette-charts 0.2a0",
+      "url": "https://simonwillison.net/2026/Nov/24/datasette-charts",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-24T04:24:29.000Z",
+      "excerpt": "I introduced this new charting plugin for Datasette yesterday . Today it's gained integration with Datasette Agent , so now you can ask chat for a chart and it will create one for you using the same underlying chart suggestion and generation tools. Here's a demo video, recorded on agent.datasette.io where you can sign in with GitHub to try the plugin yourself: I prompt Datasette Agent to \"Use #stats to show sqlite-utils downloads over time as a chart\" -…",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 3,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Nieuwe functie volgens de brontekst (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "20e80028cf9841fc",
+      "title": "Release v0.71.1",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.71.1",
+      "sourceId": "gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-11-24T03:50:24.000Z",
+      "excerpt": "• fix(patch): cherry-pick aafdfdf to release/v0.71.0-pr-30420 to patch version v0.71.0 and create version 0.71.1 by @gemini-cli-robot in #30429",
+      "version": "0.71.1",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "gemini-cli:2026-11-24",
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "3d5981388f51900a",
+      "title": "datasette-agent 0.7a1",
+      "url": "https://simonwillison.net/2026/Nov/24/datasette-agent",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-24T03:45:57.000Z",
+      "excerpt": "I small improvement to Datasette Agent : chat sessions can open an iframe side panel, and that panel can then navigate to different pages. This version improves navigation by fragment hashes, for deeper integration with other Datasette plugins that update fragment hashes when the user interacts with the plugin in a way that changes state. I built this in order to fix some bugs with the much more exciting datasette-charts 0.2a0 release .",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "45a96695d7c0e997",
       "title": "Release v0.71.0",
@@ -2360,52 +2430,6 @@
       "isPatch": true,
       "belangrijk": false,
       "bundleKey": "codex:2026-11-11",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "8cfe95d5a7efcad0",
-      "title": "Gemini Decisions API",
-      "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-11T22:03:25.000Z",
-      "excerpt": "Google join Jev and OpenAI in the decision model category with \"Gemini Decision 1\". This new model API is almost identical to Jev: it supports the same three types of questions (yes/no, choice, and rubric-scoring) and even reuses Jev's term \"Noul\" for a yes/no question. It's priced the same as the GPT-6 Luna decision model: 10 cents per million input tokens, and output is free. Jev remains the cheapest of the three, at 4.2 cents per million. Jev is text…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "fd0e38b70a90d204",
-      "title": "aws-emulator",
-      "url": "https://simonwillison.net/2026/Nov/11/aws-emulator",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-11T21:18:30.000Z",
-      "excerpt": "Finally, an official emulator from AWS to run tests against a local clone of their many different services without having to provision a paid API key to do so. It's written in Rust by a huge swarm of agents - 29,684 commits in the first three weeks of the project. Swaminathan (Swami) Sivasubramanian wrote about how it came to be in a guest post on Werner Vogels' blog. It currently requires Docker to run on macOS or Windows. I'm hoping they fix that in…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
       "points": null,
       "alsoSeenAt": []
     },
