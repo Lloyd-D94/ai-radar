@@ -1,6 +1,75 @@
 {
-  "generatedAt": "2026-11-24T23:56:37.428Z",
+  "generatedAt": "2026-11-25T08:44:01.924Z",
   "items": [
+    {
+      "id": "cff23344ab60a570",
+      "title": "Treasury CIO is too busy vibecoding instead of doing his job #147",
+      "url": "https://github.com/samcorcos/legatum/issues/147",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-25T04:56:36.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 126,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "6e701ed04efb49f2",
+      "title": "Gemini refused to give me the lyrics to Twinkle Twinkle Little Star",
+      "url": "https://comentr.com/technology/01M88DWQ0R4NCMYR17AFEWRG1F",
+      "sourceId": "hacker-news",
+      "tool": "hacker-news",
+      "publishedAt": "2026-11-25T04:03:33.000Z",
+      "excerpt": "",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": 162,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "d1a8a8c302ae6a4a",
+      "title": "v2.1.332",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "sourceId": "claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-25T01:32:14.000Z",
+      "excerpt": "• Added skills from MCP servers (beta). They show as server:skill in the / menu; other skills keep their names • Added a PreSkillShellCommand hook event that can refuse a skill or command's inline shell commands as it loads; on 2.1.331 and older, a settings file naming it opens a dialog at start • Added \"Always deliver\" to the prompt for held messages from other sessions • Added a footer line that stays while a flagged message has your session on a…",
+      "version": "2.1.332",
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)",
+        "Patchrelease (−1)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": true,
+      "belangrijk": false,
+      "bundleKey": "claude-code:2026-11-25",
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "5e8eba5b15ac6044",
       "title": "Three LLM inflection points in twelve months",
@@ -774,7 +843,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 258,
+      "points": 259,
       "alsoSeenAt": []
     },
     {
@@ -3023,7 +3092,7 @@
       "sourceId": "claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-11-09T19:22:30.000Z",
-      "excerpt": "• Added Claude Fable 5.2 ( claude-fable-5-2 ), now the default Fable model — 1M context, $8/$40 per Mtok with $0.20/Mtok cache reads • Added --settings to claude remote-control , which applies a settings file to every session it starts; if the file changes, no new session starts until you restart claude remote-control • Fixed MCP OAuth requests sending secrets such as refresh tokens to another host when a server redirected them • Fixed a case where a…",
+      "excerpt": "- Added Claude Fable 5.2 (`claude-fable-5-2`), now the default Fable model — 1M context, $8/$40 per Mtok with $0.20/Mtok cache reads - Added `--settings ` to `claude remote-control`, which applies a settings file to every session it starts; if the file changes, no new session starts until you restart `claude remote-control` - Fixed MCP OAuth requests sending secrets such as refresh tokens to another host when a server redirected them - Fixed a case where…",
       "version": "2.1.321",
       "category": "overig",
       "score": 2,
@@ -4204,30 +4273,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "6300099f83ab9ce2",
-      "title": "Claude Code VS Code extension with backdoor released on Cursor marketplace",
-      "url": "https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2",
-      "sourceId": "hacker-news",
-      "tool": "hacker-news",
-      "publishedAt": "2026-10-30T10:22:51.000Z",
-      "excerpt": "",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Hoge community-score, 200+ punten (+1)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": 399,
-      "alsoSeenAt": []
-    },
-    {
       "id": "fbfedaa618aab83d",
       "title": "v2.1.314",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
@@ -4293,30 +4338,6 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "94430ceaa839cbc6",
-      "title": "Claude Code regularly sends each background agent’s transcript to its model",
-      "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
-      "sourceId": "hacker-news",
-      "tool": "hacker-news",
-      "publishedAt": "2026-10-29T03:33:42.000Z",
-      "excerpt": "",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Hoge community-score, 200+ punten (+1)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": 591,
       "alsoSeenAt": []
     },
     {
@@ -5686,29 +5707,6 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "e75aaf1e12900808",
-      "title": "v2.1.296",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
-      "sourceId": "claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-09T19:28:59.000Z",
-      "excerpt": "- Added a `code` key to the Claude apps gateway's `managed.policies[]`: the same settings as `cli`, also applied in Claude Desktop's Code tab; beside `desktop`, it turns on Claude Desktop's gateway mode - Added `autoCompactWindow` to subagent frontmatter and `--agents` definitions, so a subagent can auto-compact earlier than the main conversation's window - Added `CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL` to run every workflow agent on one model while other…",
-      "version": "2.1.296",
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)",
-        "Patchrelease (−1)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": true,
-      "belangrijk": false,
-      "bundleKey": "claude-code:2026-10-09",
       "points": null,
       "alsoSeenAt": []
     },
