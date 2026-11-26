@@ -1,6 +1,51 @@
 {
-  "generatedAt": "2026-11-26T03:37:23.694Z",
+  "generatedAt": "2026-11-26T16:59:56.980Z",
   "items": [
+    {
+      "id": "d5a61247f23339a6",
+      "title": "App + chat connectors: Cal.com, Ghost, Magento (Adobe Commerce), and Squarespace Commerce",
+      "url": "https://docs.lovable.dev/changelog#nov-26-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-26T15:58:58.000Z",
+      "excerpt": "App + chat connectors: Cal.com, Ghost, Magento (Adobe Commerce), and Squarespace Commerce Cal.com lets apps read event types and available appointment times, create bookings, and reschedule or cancel appointments. Use it for booking forms, appointment dashboards, and customer portals. Ghost lets apps read and publish posts and pages, manage tags and members, subscribe members to newsletters, and upload images to a Ghost site. Use it for custom blog front…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "dbe542754cd16121",
+      "title": "Quoting Jack Despain Zhou",
+      "url": "https://simonwillison.net/2026/Nov/26/jack-despain-zhou",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-26T15:09:31.000Z",
+      "excerpt": "Among the many already existing effects of AI has been a great de-individualization. I open a YouTube video, and I hear Claude. I sit in a conference presentation, and I hear Claude. I open my email inbox, and I find pitches and articles from ostensibly serious people with ostensibly serious credentials attached to ostensibly serious institutions who want to publish things attached to their reputations and mine, and I see Claude . &mdash; Jack Despain…",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "69c0601d70f93f1e",
       "title": "Copilot code review billing will default to the organization",
@@ -46,6 +91,30 @@
       "alsoSeenAt": []
     },
     {
+      "id": "9685432920849ecf",
+      "title": "datasette-charts 0.3a0",
+      "url": "https://simonwillison.net/2026/Nov/25/datasette-charts",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-25T18:16:50.000Z",
+      "excerpt": "I added chart annotations to datasette-charts ! You can now render a chart and then annotate it with lines, shaded areas, labels, or a combination of the three. A chart with annotations looks like this: Here's that same chart in Datasette Lite , where you can tweak the annotations using the chart builder UI: If you also install Datasette Agent the agent can build annotated charts for you. Here's what I got on the agent.datasette.io demo for this prompt:",
+      "version": null,
+      "category": "nieuwe-functie",
+      "score": 3,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Nieuwe functie volgens de brontekst (+1)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": "De bron: “you can now render a chart and then annotate it with lines, shaded areas, labels, or a combination of the three.”",
+      "priority": "community",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
       "id": "cff23344ab60a570",
       "title": "Treasury CIO is too busy vibecoding instead of doing his job #147",
       "url": "https://github.com/samcorcos/legatum/issues/147",
@@ -65,7 +134,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 148,
+      "points": 154,
       "alsoSeenAt": []
     },
     {
@@ -89,7 +158,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 215,
+      "points": 219,
       "alsoSeenAt": []
     },
     {
@@ -222,6 +291,29 @@
       ],
       "actionLine": null,
       "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "e22d419cf18743cb",
+      "title": "datasette-charts 0.2a1",
+      "url": "https://simonwillison.net/2026/Nov/24/datasette-charts-2",
+      "sourceId": "simon-willison",
+      "tool": "simon-willison",
+      "publishedAt": "2026-11-24T06:07:19.000Z",
+      "excerpt": "• Collapsing the suggested charts section now leaves the chart visible. • Following a link to a chart opens it with the suggestions collapsed for that visit. • On table pages the panel now sits below the \"4,235 rows where country = CHN\" line. • The \"Data\" table under each chart has been replaced by Copy TSV and Copy CSV buttons. • Removed the \"Chart this data\" item from the table, view and query action menus.",
+      "version": null,
+      "category": "overig",
+      "score": 2,
+      "scoreReasons": [
+        "Communitybron (start op 2)",
+        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
+      ],
+      "actionLine": null,
+      "priority": "community",
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
@@ -2064,52 +2156,6 @@
       "alsoSeenAt": []
     },
     {
-      "id": "a434c2daa44c258b",
-      "title": "datasette-agent 0.6a0",
-      "url": "https://simonwillison.net/2026/Nov/15/datasette-agent",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-15T03:49:47.000Z",
-      "excerpt": "Accumulated small fixes for Datasette Agent, my agent plugin for Datasette that lets you ask questions about your data. Most notably, it now adds an agent prompt directly to the Datasette homepage, with support for hash-mentions of tables and queries:",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "9c481a0931060f36",
-      "title": "datasette-llm 0.1a11",
-      "url": "https://simonwillison.net/2026/Nov/14/datasette-llm",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-14T23:59:28.000Z",
-      "excerpt": "datasette-llm is the intermediate plugin for Datasette that supports configuring LLMs for use with other Datasette plugins. This release adds support for OpenAI-compatible endpoints, so you can configure Datasette to use an LLM hosted anywhere that talks the OpenAI pseudo-standard web protocol. This means that if you're running local models with LM Studio or Ollama or llama.cpp (which just hit v1.0.0 ) you can run Datasette via uvx like this: -s…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
       "id": "c3342fe5a033ee5f",
       "title": "Lovable apps expose passport details and more than 200K private messages",
       "url": "https://crissyfield.de/research/lovable-en",
@@ -2131,29 +2177,6 @@
       "belangrijk": false,
       "bundleKey": null,
       "points": 1011,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "c7271b7ac99ecdcd",
-      "title": "datasette-vega 0.7",
-      "url": "https://simonwillison.net/2026/Nov/14/datasette-vega",
-      "sourceId": "simon-willison",
-      "tool": "simon-willison",
-      "publishedAt": "2026-11-14T17:09:09.000Z",
-      "excerpt": "A new release of Datasette's longest untouched plugin, for rendering charts (using Vega-Lite ) against data in a table or custom query. The last release was in July 2018! I finally bumped it for compatibility with the latest Datasette alphas, plus some cosmetic tweaks to make it work better with Datasette Lite . (Datasette Lite just gained the ability to run JavaScript plugins like this! I'll write more about that soon.) Since it works with Datasette…",
-      "version": null,
-      "category": "overig",
-      "score": 2,
-      "scoreReasons": [
-        "Communitybron (start op 2)",
-        "Community blijft maximaal 4, tenzij beveiliging, prijs of breaking change"
-      ],
-      "actionLine": null,
-      "priority": "community",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
       "alsoSeenAt": []
     },
     {
@@ -5133,28 +5156,6 @@
         "Nieuwe functie volgens de brontekst (+1)"
       ],
       "actionLine": "De bron: “you can now ask for edit access without leaving the project.”",
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "f09485bd7a83f20a",
-      "title": "Group your workspaces into an organization",
-      "url": "https://docs.lovable.dev/changelog#oct-20-2026",
-      "sourceId": "lovable",
-      "tool": "lovable",
-      "publishedAt": "2026-10-21T19:57:52.000Z",
-      "excerpt": "Group your workspaces into an organization Enterprise companies that run several Lovable workspaces can now manage them together in an organization . The company sets up SSO once for all of them, and with SCIM the identity provider adds and removes members automatically. Org admins see every member and role in one place, and teams can publish internal apps to everyone in the company. Each workspace keeps its own projects, members, groups, and billing.…",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
       "priority": "secundair",
       "isPatch": false,
       "belangrijk": false,
