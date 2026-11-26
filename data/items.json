@@ -1,6 +1,50 @@
 {
-  "generatedAt": "2026-11-25T19:22:28.143Z",
+  "generatedAt": "2026-11-26T03:37:23.694Z",
   "items": [
+    {
+      "id": "69c0601d70f93f1e",
+      "title": "Copilot code review billing will default to the organization",
+      "url": "https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization",
+      "sourceId": "copilot",
+      "tool": "copilot",
+      "publishedAt": "2026-11-25T22:18:03.000Z",
+      "excerpt": "If you haven&rsquo;t chosen how to bill Copilot code review for members with a Copilot license, those reviews will be billed to your organization starting December 30, 2026. To keep billing unchanged, select Member before then. This change applies to organizations and enterprises with Copilot Business or Copilot Enterprise. Today, when no billing choice is saved, reviews by members who have a paid Copilot license use the member&rsquo;s Copilot…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
+    {
+      "id": "1a47d7fab1609a43",
+      "title": "ElevenLabs speech and music models for your app's AI features",
+      "url": "https://docs.lovable.dev/changelog#nov-25-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-25T21:25:48.000Z",
+      "excerpt": "ElevenLabs speech and music models for your app's AI features Your app's AI features can now use four ElevenLabs models, with no ElevenLabs account or API key: • Eleven v3 ( elevenlabs/eleven_v3 ) for expressive narration, such as dialogue in a story. • Eleven Multilingual v2 ( elevenlabs/eleven_multilingual_v2 ) for natural-sounding narration across languages. • Eleven Flash v2.5 ( elevenlabs/eleven_flash_v2_5 ) for fast responses, such as reading a…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "cff23344ab60a570",
       "title": "Treasury CIO is too busy vibecoding instead of doing his job #147",
@@ -21,7 +65,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 144,
+      "points": 148,
       "alsoSeenAt": []
     },
     {
@@ -45,7 +89,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 209,
+      "points": 215,
       "alsoSeenAt": []
     },
     {
@@ -4483,28 +4527,6 @@
       "tool": "copilot",
       "publishedAt": "2026-10-28T15:40:00.000Z",
       "excerpt": "Agents should understand more than your codebase&mdash;they should understand how your team works. Your preferences, repository conventions, skills, and custom instructions guide how changes should be made, while code in related repositories can show how the pieces fit together. Without that context, agents spend time rediscovering knowledge and can miss your team&rsquo;s conventions. GitHub intelligence is the context and learning layer sourced from the…",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "e825f4123d0c16bf",
-      "title": "Build shared workflows for your team with Copilot Automations",
-      "url": "https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations",
-      "sourceId": "copilot",
-      "tool": "copilot",
-      "publishedAt": "2026-10-28T15:35:00.000Z",
-      "excerpt": "Shared Copilot Automations are rolling out, enabling teams to build and maintain AI-powered workflows together. With Copilot Automations, you can combine prompts, triggers, and tools to design workflows around the way your team works. Copilot runs autonomously in the cloud, using only the tools you&rsquo;ve allowed. For example, you could create automations to: • Reproduce bugs as soon as an issue is opened. • Capture screenshots of the changes when a…",
       "version": null,
       "category": "overig",
       "score": 3,
