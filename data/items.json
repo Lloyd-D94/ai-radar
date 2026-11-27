@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T16:59:56.980Z",
+  "generatedAt": "2026-11-27T01:46:58.076Z",
   "items": [
     {
       "id": "d5a61247f23339a6",
@@ -158,7 +158,7 @@
       "isPatch": false,
       "belangrijk": false,
       "bundleKey": null,
-      "points": 219,
+      "points": 222,
       "alsoSeenAt": []
     },
     {
@@ -6466,7 +6466,7 @@
       "sourceId": "xai-release-notes",
       "tool": "xai-api",
       "publishedAt": "2026-08-12T00:00:00.000Z",
-      "excerpt": "Grok 4.6, SpaceXSI's frontier model for coding, agentic tasks, and knowledge work, is now available on the xAI API. It has a 500k context window, text and image inputs with text-only output, and no text output limit. Pricing is $2 / $0.50 / $6 per 1M tokens (input / cached input / output) below 200k prompt tokens, and $4 / $1 / $12 above. Reasoning effort supports low, medium, high (default), and xhigh. See the Grok 4.6 overview and the announcement .",
+      "excerpt": "Grok 4.6, SpaceXSI's frontier model for coding, agentic tasks, and knowledge work, is now available on the xAI API. It has a 500k context window, text and image inputs with text-only output, and no text output limit. Pricing is $2 / $0.50 / $6 per 1M tokens (input / cached input / output) below 200k prompt tokens, and $4 / $1 / $12 above. Reasoning effort supports low, medium, high (default), and xhigh. See the Grok 4.6 model page and the announcement .",
       "version": null,
       "category": "model",
       "score": 4,
@@ -6963,7 +6963,7 @@
       "sourceId": "xai-release-notes",
       "tool": "xai-api",
       "publishedAt": "2026-07-17T00:00:00.000Z",
-      "excerpt": "Grok 4.5 is now available in the API console for EU users. See the Grok 4.5 overview .",
+      "excerpt": "Grok 4.5 is now available in the API console for EU users. See the Grok 4.5 model page .",
       "version": null,
       "category": "model",
       "score": 4,
@@ -7097,7 +7097,7 @@
       "sourceId": "xai-release-notes",
       "tool": "xai-api",
       "publishedAt": "2026-07-08T00:00:00.000Z",
-      "excerpt": "Grok 4.5, SpaceXSI's model for coding, agentic tasks, and knowledge work, is now available on the xAI API. Priced at $2 / 1M input tokens and $6 / 1M output tokens, with configurable reasoning effort (low, medium, or high; default high). See the Grok 4.5 overview and the announcement .",
+      "excerpt": "Grok 4.5, SpaceXSI's model for coding, agentic tasks, and knowledge work, is now available on the xAI API. Priced at $2 / 1M input tokens and $6 / 1M output tokens, with configurable reasoning effort (low, medium, or high; default high). See the Grok 4.5 model page and the announcement .",
       "version": null,
       "category": "model",
       "score": 4,
