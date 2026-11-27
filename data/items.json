@@ -1,6 +1,28 @@
 {
-  "generatedAt": "2026-11-27T12:34:58.044Z",
+  "generatedAt": "2026-11-27T23:30:44.458Z",
   "items": [
+    {
+      "id": "c8d105cca6df77f4",
+      "title": "Reuse IP addresses across API keys with IP groups",
+      "url": "https://docs.lovable.dev/changelog#nov-27-2026",
+      "sourceId": "lovable",
+      "tool": "lovable",
+      "publishedAt": "2026-11-27T20:18:37.000Z",
+      "excerpt": "Reuse IP addresses across API keys with IP groups Workspace admins and owners on Business and Enterprise plans can now create IP groups for API key allowlists, the addresses a key accepts requests from. Put addresses that several keys share, such as your office's IP range, in a group, then update them in one place. Manage groups in your workspace settings under Privacy & security . App + chat connectors: Contentstack and Webflow Contentstack lets apps…",
+      "version": null,
+      "category": "overig",
+      "score": 3,
+      "scoreReasons": [
+        "Secundaire bron (start op 3)"
+      ],
+      "actionLine": null,
+      "priority": "secundair",
+      "isPatch": false,
+      "belangrijk": false,
+      "bundleKey": null,
+      "points": null,
+      "alsoSeenAt": []
+    },
     {
       "id": "d5a61247f23339a6",
       "title": "App + chat connectors: Cal.com, Ghost, Magento (Adobe Commerce), and Squarespace Commerce",
@@ -420,7 +442,7 @@
       "sourceId": "codex",
       "tool": "codex",
       "publishedAt": "2026-11-24T00:03:55.000Z",
-      "excerpt": "• Follow thread links from search results and transcripts to open saved conversations and nested agents in the terminal. ( #62332 ) • Press Tab to complete arguments for supported slash commands. For example, /mcp lo completes to /mcp login . ( #62343 ) • Jump between task groups in the agent command center with Shift+Up and Shift+Down . ( #62200 ) • Optional stdio MCP servers with cached tool lists now start on their first tool call by default. ( #62366…",
+      "excerpt": "- Follow thread links from search results and transcripts to open saved conversations and nested agents in the terminal. (#62332) - Press `Tab` to complete arguments for supported slash commands. For example, `/mcp lo` completes to `/mcp login`. (#62343) - Jump between task groups in the agent command center with `Shift+Up` and `Shift+Down`. (#62200) - Optional stdio MCP servers with cached tool lists now start on their first tool call by default.…",
       "version": "0.172.0",
       "category": "overig",
       "score": 4,
@@ -5092,28 +5114,6 @@
       "isPatch": true,
       "belangrijk": false,
       "bundleKey": "claude-code:2026-10-21",
-      "points": null,
-      "alsoSeenAt": []
-    },
-    {
-      "id": "3b314d83fb1b3e7e",
-      "title": "See adoption by department without SCIM",
-      "url": "https://docs.lovable.dev/changelog#oct-21-2026",
-      "sourceId": "lovable",
-      "tool": "lovable",
-      "publishedAt": "2026-10-21T20:50:36.000Z",
-      "excerpt": "Workspace admins and owners on Business and Enterprise plans can now see adoption by department in Insights when your workspace uses SSO without SCIM. To set it up, map the department attribute in your SAML or OIDC app. Lovable then reads it at each sign-in, so the breakdown fills as your members return.",
-      "version": null,
-      "category": "overig",
-      "score": 3,
-      "scoreReasons": [
-        "Secundaire bron (start op 3)"
-      ],
-      "actionLine": null,
-      "priority": "secundair",
-      "isPatch": false,
-      "belangrijk": false,
-      "bundleKey": null,
       "points": null,
       "alsoSeenAt": []
     },
